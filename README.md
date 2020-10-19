@@ -1,2 +1,0 @@
-# Weavin-functional-test-automation
-
