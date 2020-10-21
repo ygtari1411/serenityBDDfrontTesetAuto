@@ -35,5 +35,9 @@ public class setUp {
             scenario.attach(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png","failurescreenshot.png");
         }
         driver.manage().deleteAllCookies();
+
+        if (!datastore.isEmpty()){
+            datastore.clear();
+        }
     }
 }

@@ -23,15 +23,19 @@ public class ConnectVerifications {
 
     // Vérification Scénario publication d'un nouveau statut
     @Then("Vérifier que le statut est publié")
-    public void vérifierQueLeStatutEstPublié() {
+    public void vérifierQueLeStatutEstPublié() throws InterruptedException {
+
         logger.info("Vérification de la publication correct du statut");
+
         //Waiting for the first publication of timeline to refresh
-        Boolean specialwait = (new WebDriverWait(driver, 100))
-                .until(ExpectedConditions.refreshed
-                        (ExpectedConditions.attributeContains
-                                (generalobjectsmap.get("Texte_Premiere_Publication_Timeline"),
-                                        "innerText",
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"),"innerText",
                                         datastore.get("champ_statut"))));
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver){driver.wait(3000);}
+
         //Asserting that first publication contains the text published in the scenario
         assertThat(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"), equalTo(datastore.get("champ_statut")));
     }
