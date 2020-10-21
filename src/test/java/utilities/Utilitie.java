@@ -3,17 +3,33 @@ package utilities;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class Utilitie {
 
     @Managed
     WebDriver driver;
 
-    public Utilitie (WebDriver driver){
-        this.driver = driver;
-    }
-    public void pause(WebDriver driver, int time) throws InterruptedException {
-        synchronized (driver) {
-            driver.wait(time);
+    public static Properties readers() throws IOException {
+
+        Properties config = new Properties();
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/serenity.properties");
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
         }
+        try {
+            config.load(fis);
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+        assert fis != null;
+        fis.close();
+        return config;
     }
 }

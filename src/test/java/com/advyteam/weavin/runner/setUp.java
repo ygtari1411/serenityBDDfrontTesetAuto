@@ -10,17 +10,23 @@ import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class setUp {
 
     private static final Logger logger = LoggerFactory.getLogger(setUp.class);
+    public static Map<String,String> datastore = new HashMap<>();
 
     @Managed
     WebDriver driver;
 
     @Before
-    public static void startUp(Scenario scenario) {
-
+    public static void startUp() {
+        if (!datastore.isEmpty()){
+            datastore.clear();
+        }
     }
 
     @After
@@ -28,5 +34,6 @@ public class setUp {
         if (scenario.isFailed()) {
             scenario.attach(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES), "image/png","failurescreenshot.png");
         }
+        driver.manage().deleteAllCookies();
     }
 }

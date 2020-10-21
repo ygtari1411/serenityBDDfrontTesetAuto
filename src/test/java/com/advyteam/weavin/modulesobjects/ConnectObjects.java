@@ -16,6 +16,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Publier')]")
     public static WebElement bouton_publier_statut;
 
+    @FindBy(css = "#newsfeed-items-grid .ui-block:nth-child(1) .d-inline")
+    public static WebElement Texte_Premiere_Publication_Timeline;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
