@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.advyteam.weavin.runner.setUp.datastore;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -89,7 +90,7 @@ public class CommonSteps {
     @And("l utilisateur saisit {string} dans le champs {string}")
     public void lUtilisateurSaisitDansLeChamps(String text, String textbox) {
         logger.info("l'utilisateur saisit " + text + " dans " + textbox);
-        setUp.datastore.put(textbox, text);
+        datastore.put(textbox, text);
         specialwait = (new WebDriverWait(driver, 20))
                 .until(ExpectedConditions.visibilityOf(generalobjectsmap.get(textbox)));
         generalobjectsmap.get(textbox).clear();
@@ -99,7 +100,7 @@ public class CommonSteps {
     @And("l utilisateur selectionne {string} dans la liste deroulante {string}")
     public void lUtilisateurSelectionneDansLaListeDeroulante(String option, String dropdownlist) {
         logger.info("l'utilisateur sélectionne l'option " + option + " dans la " + dropdownlist);
-        setUp.datastore.put(dropdownlist, option);
+        datastore.put(dropdownlist, option);
 
     }
 
@@ -113,9 +114,11 @@ public class CommonSteps {
     }
 
     @Then("l utilisateur se deconnecte")
-    public void lUtilisateurSeDeconnecte() throws IOException {
-        driver.manage().deleteAllCookies();
-        driver.get(Utilitie.readers().getProperty("webdriver.base.url"));
+    public void lUtilisateurSeDeconnecte() throws IOException, InterruptedException {
+        logger.info("Déconexion de l'utilisateur " + datastore.get("champ_username"));
+        actions.moveToElement(generalobjectsmap.get("Username_menu")).perform();
+        synchronized (driver){driver.wait(1000);}
+        generalobjectsmap.get("logout_button").click();
     }
 
     @And("l utilisateur selectionne {string} dans la liste {string}")

@@ -14,16 +14,22 @@ public class CommonObjects extends PageObject {
 
 
     @FindBy(css = ".submit")
-    @CacheLookup
     public static WebElement login_button;
 
     @FindBy(css = "#username")
-    @CacheLookup
     public static WebElement champ_username;
 
     @FindBy(css = "#password")
-    @CacheLookup
     public static WebElement champ_password;
+
+    @FindBy(xpath = "//span[contains(text(),'Se déconnecter')]")
+    public static WebElement logout_button;
+
+    @FindBy(css = "#site-header")
+    public static WebElement Acceuil_header;
+
+    @FindBy(css = "div.author-title")
+    public static WebElement Username_menu;
 
 
 
