@@ -75,7 +75,6 @@ public class CommonSteps {
         generalobjectsmap.get("champ_username").sendKeys(username);
         generalobjectsmap.get("champ_password").clear();
         generalobjectsmap.get("champ_password").sendKeys(CredentialProvider.pwProvider(username));
-        actions.moveToElement(generalobjectsmap.get("login_button")).perform();
         generalobjectsmap.get("login_button").click();
     }
 
@@ -134,5 +133,11 @@ public class CommonSteps {
 
     @And("l utilisateur modifie {string} dans le champs {string}")
     public void lUtilisateurModifieDansLeChamps(String nouveautext, String champtext) {
+    }
+
+    @When("l utilisateur effectue un hover sur {string}")
+    public void lUtilisateurEffectueUnHoverSur(String element) {
+        logger.info("l'utilisateur effectue un hover sur " + element);
+        actions.moveToElement(generalobjectsmap.get(element)).perform();
     }
 }

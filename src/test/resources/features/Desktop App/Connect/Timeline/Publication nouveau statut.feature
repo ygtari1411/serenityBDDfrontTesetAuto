@@ -16,7 +16,7 @@ Feature: Timeline: Publication d'un nouveau statut
       #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "wael.boufaden@advyteam.com" est connecté
+    And l'utilisateur "admin" est connecté
 
       #Etape 2 : Creation statut
 
