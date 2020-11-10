@@ -79,6 +79,9 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".h4")
     public static WebElement titre_page_news;
 
+    @FindBy(css = "#swal2-title")
+    public static WebElement Message_resultat_action;
+
 
 
 

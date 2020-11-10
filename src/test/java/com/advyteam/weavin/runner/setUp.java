@@ -43,7 +43,7 @@ public class setUp {
         }
         driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
         if (driver.findElements(By.cssSelector("div.author-title")).size() != 0) {
-            logger.info("Déconexion de l'utilisateur " + datastore.get("champ_username"));
+            logger.info("Déconnexion de l'utilisateur " + datastore.get("champ_username"));
             actions = new Actions(driver);
             actions.moveToElement(generalobjectsmap.get("Username_menu")).perform();
             synchronized (driver) {

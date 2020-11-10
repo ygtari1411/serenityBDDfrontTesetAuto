@@ -10,6 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.core.annotations.events.BeforeScenario;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,7 @@ import utilities.Utilitie;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
@@ -71,6 +73,7 @@ public class CommonSteps {
     @And("l'utilisateur {string} est connecté")
     public void lUtilisateurEstConnecté(String username) throws JAXBException {
         logger.info("l'utilisateur " + username + " est en cours de connexion");
+        datastore.put("champ_username",username);
         generalobjectsmap.get("champ_username").clear();
         generalobjectsmap.get("champ_username").sendKeys(username);
         generalobjectsmap.get("champ_password").clear();
@@ -113,10 +116,12 @@ public class CommonSteps {
     }
 
     @Then("l utilisateur se deconnecte")
-    public void lUtilisateurSeDeconnecte() throws IOException, InterruptedException {
+    public void lUtilisateurSeDeconnecte() throws InterruptedException {
         logger.info("Déconexion de l'utilisateur " + datastore.get("champ_username"));
         actions.moveToElement(generalobjectsmap.get("Username_menu")).perform();
-        synchronized (driver){driver.wait(1000);}
+        synchronized (driver) {
+            driver.wait(1000);
+        }
         generalobjectsmap.get("logout_button").click();
     }
 
@@ -124,11 +129,6 @@ public class CommonSteps {
     public void lUtilisateurSelectionneDansLaListe(String option, String liste) {
         logger.info("l'utilisateur selectionne l'option " + option + " dans la " + liste);
 
-    }
-
-    @And("vérifier que le message {string} s affiche")
-    public void vérifierQueLeMessageSAffiche(String message) {
-        logger.info("Vérification de l'affichage du message " + message);
     }
 
     @And("l utilisateur modifie {string} dans le champs {string}")
@@ -139,5 +139,79 @@ public class CommonSteps {
     public void lUtilisateurEffectueUnHoverSur(String element) {
         logger.info("l'utilisateur effectue un hover sur " + element);
         actions.moveToElement(generalobjectsmap.get(element)).perform();
+    }
+
+    //    Add "H_" in the start of the WebElement variable name to use the first condition: Hidden attribute remove
+    //    Otherwise if the target for the upload is not hidden don't use the "H_" to use the second condition for the upload
+    @And("l utilisateur upload {string} dans le champs {string}")
+    public void lUtilisateurUploadDansLeChamps(String fichier, String champsupload) throws Exception {
+        logger.info("uploading " + fichier + " dans le champs " + champsupload);
+
+        switch (fichier) {
+            case "image1":
+                if (champsupload.startsWith("H_")) {
+                    jsDriver.executeScript("document.getElementById('bg-cover-file').removeAttribute('hidden');");
+                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg");
+                    synchronized (driver) {
+                        driver.wait(1000);
+                    }
+                    jsDriver.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
+                } else {
+                    driver.findElement(By.id("shareBoxImages")).clear();
+                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg");
+                    synchronized (driver) {
+                        driver.wait(1000);
+                    }
+                    List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                }
+                break;
+            case "image2":
+                if (champsupload.startsWith("H_")) {
+                    jsDriver.executeScript("document.getElementById('bg-cover-file').removeAttribute('hidden');");
+                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest2.jpg");
+                    synchronized (driver) {
+                        driver.wait(1000);
+                    }
+                    jsDriver.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
+                } else {
+                    driver.findElement(By.id("shareBoxImages")).clear();
+                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest2.jpg");
+                    synchronized (driver) {
+                        driver.wait(1000);
+                    }
+                    List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                }
+                break;
+            case "vidéo":
+                if (champsupload.startsWith("H_")) {
+                    jsDriver.executeScript("document.getElementById('bg-cover-file').removeAttribute('hidden');");
+                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest.mp4");
+                } else {
+                    driver.findElement(By.id("shareBoxImages")).clear();
+                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest.mp4");
+                    synchronized (driver) {
+                        driver.wait(1000);
+                    }
+                    List<WebElement> specialwait = (new WebDriverWait(driver, 100)).until(
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                }
+                break;
+            default:
+                throw new Exception("Le fichier choisi pour l'upload est incorrect!");
+        }
+    }
+
+    @Then("vérifier que le message {string} s'affiche dans la notification")
+    public void vérifierQueLeMessageSAfficheDansLaNotification(String textnotif) {
+        logger.info("vérification de l'affichage du message " + textnotif);
+
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Message_resultat_action"))));
+
+        assertThat(generalobjectsmap.get("Message_resultat_action").getText().equals(textnotif), equalTo(true));
+
     }
 }

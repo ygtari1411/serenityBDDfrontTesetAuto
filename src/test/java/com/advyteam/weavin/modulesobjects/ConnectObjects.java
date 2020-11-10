@@ -19,6 +19,42 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#newsfeed-items-grid .ui-block:nth-child(1) .d-inline")
     public static WebElement Texte_Premiere_Publication_Timeline;
 
+    @FindBy(css = ".photo-album-item.create-album.cursor")
+    public static WebElement Buton_ajout_ideation;
+
+    @FindBy(css = ".blog-post-wrap")
+    public static WebElement  Modal_ajout_ideation;
+
+    @FindBy(xpath = "//input[@formcontrolname=\"title\"]")
+    public static WebElement Titre_nouvelle_idee;
+
+    @FindBy(xpath = "//input[@formcontrolname=\"item\"]")
+    public static WebElement Tag_nouvelle_idee;
+
+    @FindBy(css = ".ql-editor")
+    public static WebElement Description_nouvelle_idee;
+
+    @FindBy(css = "#bg-cover-file")
+    public static WebElement H_Upload_photo_nouvelle_idee;
+
+    @FindBy(css = "#shareBoxImages")
+    public static WebElement Fichier_attache_nouvelle_idee;
+
+    @FindBy(css = ".add-options-message .btn-primary")
+    public static WebElement Bouton_publier_nouvelle_idee;
+
+    @FindBy(css = ".btn.btn-success")
+    public static WebElement Bouton_enregistrer_upload_image;
+
+    @FindBy(css = ".btn.btn-primary.btn-md-2")
+    public static WebElement Bouton_enregistrer_nouvelle_idee;
+
+
+
+
+
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
