@@ -49,6 +49,24 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".btn.btn-primary.btn-md-2")
     public static WebElement Bouton_enregistrer_nouvelle_idee;
 
+    @FindBy(css = ".calendar")
+    public static WebElement Calendrier_recherche_publication_par_date;
+
+    @FindBy(css = ".ngb-dp-today")
+    public static WebElement Case_aujoudhui_Calendrier;
+
+    @FindBy(css = ".card-container-list:last-child .dropdown")
+    public static WebElement Bouton_option_derniere_ideation;
+
+    @FindBy(css = ".dropdown-menu.show .dropdown-item:nth-child(1)")
+    public static WebElement Bouton_modifier_ideation;
+
+    @FindBy(css = ".dropdown-menu.show .dropdown-item:nth-child(2)")
+    public static WebElement Bouton_supprimer_ideation;
+
+
+
+
 
 
 

@@ -2,7 +2,6 @@ package com.advyteam.weavin.steps;
 
 import com.advyteam.weavin.modulesobjects.CommonObjects;
 import com.advyteam.weavin.modulesobjects.ConnectObjects;
-import com.advyteam.weavin.runner.setUp;
 import com.paulhammant.ngwebdriver.NgWebDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -73,7 +72,7 @@ public class CommonSteps {
     @And("l'utilisateur {string} est connecté")
     public void lUtilisateurEstConnecté(String username) throws JAXBException {
         logger.info("l'utilisateur " + username + " est en cours de connexion");
-        datastore.put("champ_username",username);
+        datastore.put("champ_username", username);
         generalobjectsmap.get("champ_username").clear();
         generalobjectsmap.get("champ_username").sendKeys(username);
         generalobjectsmap.get("champ_password").clear();
@@ -84,6 +83,7 @@ public class CommonSteps {
     @When("l utilisateur clique sur {string}")
     public void lUtilisateurCliqueSur(String elementtoclick) {
         logger.info("l'utilisateur clique sur " + elementtoclick);
+        actions.moveToElement(generalobjectsmap.get(elementtoclick)).perform();
         specialwait = (new WebDriverWait(driver, 20))
                 .until(ExpectedConditions.elementToBeClickable(generalobjectsmap.get(elementtoclick)));
         generalobjectsmap.get(elementtoclick).click();
@@ -133,6 +133,14 @@ public class CommonSteps {
 
     @And("l utilisateur modifie {string} dans le champs {string}")
     public void lUtilisateurModifieDansLeChamps(String nouveautext, String champtext) {
+        logger.info("Saisie du nouveau texte : " + nouveautext + " dans le champs " + champtext);
+        if (datastore.containsKey(champtext)) {
+            datastore.replace(champtext, nouveautext);
+        } else {
+            datastore.put(champtext, nouveautext);
+        }
+        generalobjectsmap.get(champtext).clear();
+        generalobjectsmap.get(champtext).sendKeys(nouveautext);
     }
 
     @When("l utilisateur effectue un hover sur {string}")
@@ -163,7 +171,7 @@ public class CommonSteps {
                         driver.wait(1000);
                     }
                     List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
-                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"), 0)));
                 }
                 break;
             case "image2":
@@ -181,7 +189,7 @@ public class CommonSteps {
                         driver.wait(1000);
                     }
                     List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
-                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"), 0)));
                 }
                 break;
             case "vidéo":
@@ -195,7 +203,7 @@ public class CommonSteps {
                         driver.wait(1000);
                     }
                     List<WebElement> specialwait = (new WebDriverWait(driver, 100)).until(
-                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),0)));
+                            (ExpectedConditions.numberOfElementsToBe(By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"), 0)));
                 }
                 break;
             default:

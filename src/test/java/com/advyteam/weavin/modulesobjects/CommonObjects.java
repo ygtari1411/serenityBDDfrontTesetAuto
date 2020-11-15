@@ -3,7 +3,6 @@ package com.advyteam.weavin.modulesobjects;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -81,6 +80,9 @@ public class CommonObjects extends PageObject {
 
     @FindBy(css = "#swal2-title")
     public static WebElement Message_resultat_action;
+
+    @FindBy(css = ".swal2-confirm.btn")
+    public static WebElement Bouton_confirmer_action;
 
 
 

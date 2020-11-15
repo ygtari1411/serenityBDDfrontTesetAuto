@@ -58,7 +58,7 @@ public class ConnectVerifications {
     @Then("vérifier la publication correct de l idee")
     public void vérifierLaPublicationCorrectDeLIdee() {
         logger.info("vérification de la publication correct de la nouvelle idée");
-        assertThat(!driver.findElements(By.xpath(("//a[contains(text(),'")+datastore.get("Titre_nouvelle_idee")+("')]"))).isEmpty(),equalTo(true));
+        assertThat(!driver.findElements(By.xpath(("//a[contains(text(),\"")+datastore.get("Titre_nouvelle_idee")+("\")]"))).isEmpty(),equalTo(true));
 
     }
 }
