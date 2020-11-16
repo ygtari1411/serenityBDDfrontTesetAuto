@@ -20,8 +20,9 @@ Feature: News
 
   #Etape2  : Ajout News
 
-    When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
+    #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
     And l utilisateur clique sur "Bouton_news_menu_gauche"
+    And pause 15 secondes
     Then vérifier que la page affichée est la page news
     And l utilisateur clique sur "Bouton_Ajout_News"
     Then vérifier que la page affichée est la page annoncez une actualité
