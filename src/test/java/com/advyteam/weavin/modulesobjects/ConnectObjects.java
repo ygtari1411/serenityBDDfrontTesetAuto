@@ -64,12 +64,20 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".dropdown-menu.show .dropdown-item:nth-child(2)")
     public static WebElement Bouton_supprimer_ideation;
 
+    @FindBy(css = "*> app-news-administration > div > div > div > span:nth-child(5)")
+    public static WebElement  Modal_ajout_news;
 
+    @FindBy(css = ".photo-album-item.create-album.cursor")
+    public static WebElement Bouton_Ajout_News;
 
+    @FindBy(css = "input[ng-reflect-name=\"titleNews\"]")
+    public static WebElement Champ_Input_Titre_News;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[2]/div/weavin-editor/div/quill-editor/div[2]/div[1]/p")
+    public static WebElement Champ_Input_Description_News;
 
-
-
+    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/input")
+    public static WebElement Champ_Input_Date_News;
 
 
 

@@ -2,6 +2,7 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.core.IsEqual;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,4 +62,19 @@ public class ConnectVerifications {
         assertThat(!driver.findElements(By.xpath(("//a[contains(text(),\"")+datastore.get("Titre_nouvelle_idee")+("\")]"))).isEmpty(),equalTo(true));
 
     }
+
+    //Vérification pour  News
+    @Then("vérifier que le modal de création d'une news est affiché")
+    public void vérifierQueLeModalDeCréationDUneNewsEstAffiché() {
+        logger.info("Vérification de l'affichage du modal de création d'une news");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_ajout_news"))));
+        assertThat(generalobjectsmap.get("Modal_ajout_news").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_ajout_news").getAttribute("innerText"), equalTo("Annoncez une actualité"));
+
+
+    }
+
+
 }
