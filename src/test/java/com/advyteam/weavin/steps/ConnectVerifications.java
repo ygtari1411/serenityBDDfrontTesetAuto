@@ -1,9 +1,11 @@
 package com.advyteam.weavin.steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.core.IsEqual;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -76,5 +78,25 @@ public class ConnectVerifications {
 
     }
 
+    //test
+    @And("saisir date")
+    public void saisirDate() throws InterruptedException {
 
+        WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/div/button"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+
+        WebElement element2 = driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[5]/div[3]"));
+        JavascriptExecutor executor2 = (JavascriptExecutor)driver;
+        executor2.executeScript("arguments[0].click();", element2);
+
+
+    }
 }

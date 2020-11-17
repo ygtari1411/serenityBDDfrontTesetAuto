@@ -79,8 +79,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/input")
     public static WebElement Champ_Input_Date_News;
 
+    @FindBy(css = "button[id=\"btnSubmit\"]")
+    public static WebElement Bouton_Sauvegarder_Creation_News;
 
+    @FindBy(css = "input[ng-reflect-name=\"beginningHourNews\"]")
+    public static WebElement Champ_Input_Heure_Debut_News;
 
+    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
+    public static WebElement Bouton_Publier_News;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
