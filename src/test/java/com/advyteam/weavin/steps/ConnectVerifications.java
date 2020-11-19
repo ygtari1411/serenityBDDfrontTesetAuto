@@ -13,6 +13,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -78,25 +84,46 @@ public class ConnectVerifications {
 
     }
 
-    //test
-    @And("saisir date")
-    public void saisirDate() throws InterruptedException {
 
-        WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/div/button"));
+    //Vérification pour  News
+    @And("l utilisitateur saisit la date du jour dans le champs debut date news")
+    public void lUtilisitateurSaisitLaDateDuJourDansLeChampsDebutDateNews() {
+        logger.info("saisit de la date de la publication de la news par l'utilisateur");
+
+        //récupérer le jour actuel
+        Calendar cal = Calendar.getInstance( );  // date du jour
+        int jourActuel=cal.get(Calendar.DAY_OF_MONTH);
+        //Convertir le jour en String
+        String jourActuelS = String.valueOf(jourActuel);
+
+
+        //activer le calendrier
+        WebElement element = driver.findElement(By.xpath("//div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/div/button"));
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
 
 
-        //Waiting for the refreshed first publication to render
-        synchronized (driver) {
-            driver.wait(3000);
+        //Parcour le calendrier afficher
+
+        List<WebElement> elements = driver.findElements(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[*]/div[*]"));
+        for (WebElement element1 : elements) {
+
+            String str1 = element1.getAttribute("innerText");
+            String str2 = element1.getAttribute("className");
+            if(str1.equals(jourActuelS) && str2.equals("ngb-dp-day ngb-dp-today")){
+
+                executor.executeScript("arguments[0].click();", element1);
+                break;
+
+            }
+
+
         }
 
 
-        WebElement element2 = driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[5]/div[3]"));
-        JavascriptExecutor executor2 = (JavascriptExecutor)driver;
-        executor2.executeScript("arguments[0].click();", element2);
-
-
     }
+
+
+
+
 }

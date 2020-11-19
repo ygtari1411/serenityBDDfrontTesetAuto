@@ -27,19 +27,13 @@ Feature: News
     Then vérifier que le modal de création d'une news est affiché
     And l utilisateur saisit "Test automatique création news" dans le champs "Champ_Input_Titre_News"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'une news" dans le champs "Champ_Input_Description_News"
-    #And l utilisateur saisit "17/11/2020" dans le champs "Champ_Input_Date_News"
-    And saisir date
-
-    And pause 30 secondes
-
-
+    And l utilisitateur saisit la date du jour dans le champs debut date news
+    And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
-
-    And pause 25 secondes
-
-
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And l utilisateur clique sur "Bouton_Publier_News"
+    And pause 10 secondes
 
 
     #Etape 3 : Vérification de la création de la News
