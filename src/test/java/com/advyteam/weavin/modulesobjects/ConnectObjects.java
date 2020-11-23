@@ -88,6 +88,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
     public static WebElement Bouton_Publier_News;
 
+    @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/a")
+    public static WebElement Titre_Premiere_News_publier;
+
+    @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
+    public static WebElement Statut_Premiere_News_publier;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

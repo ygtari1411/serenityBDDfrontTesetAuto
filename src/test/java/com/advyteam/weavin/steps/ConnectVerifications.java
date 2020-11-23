@@ -123,7 +123,58 @@ public class ConnectVerifications {
 
     }
 
+    //Vérification pour  News
+    @Then("vérifier la création de la nouvelle news")
+    public void vérifierLaCréationDeLaNouvelleNews() throws InterruptedException {
 
+        logger.info("Vérification de la publication correct de la news");
+
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
+
+    }
+
+    //Vérification pour  News
+    @And("l utilisateur saisit une heure supérieure à l'heure systéme")
+    public void lUtilisateurSaisitUneHeureSupérieureÀLHeureSystéme() {
+        logger.info("saisit de l'heure de  début de la publication de la news");
+
+       //récuperer l'heure systéme et l'incrémenter
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.HOUR, 1); //here n is no.of hour you want to increase
+        SimpleDateFormat format1 = new SimpleDateFormat("hh:mm");
+
+
+        String formatted = format1.format(cal.getTime());
+
+        generalobjectsmap.get("Champ_Input_Heure_Debut_News").sendKeys(formatted);
+
+
+
+
+    }
+
+    //Vérification pour  News
+    @Then("Vérifier que l actualité ne s affiche que si l heure  est égale à l heure de date de début de l'actualité")
+    public void vérifierQueLActualitéNeSAfficheQueSiLHeureEstÉgaleÀLHeureDeDateDeDébutDeLActualité() {
+
+        logger.info("vérification du statut de la news");
+
+        assertThat(generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"), equalTo("PROGRAMMÉ"));
+
+    }
 
 
 }
