@@ -32,13 +32,14 @@ Feature: News
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"
     And pause 10 secondes
 
 
     #Etape 3 : Vérification de la création de la News
 
-    #Then vérifier la création de la nouvelle news
+    Then vérifier la création de la nouvelle news
 
 
 
