@@ -28,19 +28,23 @@ Feature: News
     Then vérifier que le modal de création d'une news est affiché
     And l utilisateur saisit "Test automatique création news avec date de fin" dans le champs "Champ_Input_Titre_News"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'une news avec date de fin" dans le champs "Champ_Input_Description_News"
+    And pause 10 secondes
     And l utilisitateur saisit la date du jour dans le champs debut date news
+    And pause 10 secondes
     And l utilisitateur saisit la date du jour dans le champs fin date news
-    #And l utilisateur saisit "09/11/2020" dans le champs "Champ_Input_Date_News"
-    #And l utilisateur saisit "09/11/2020" dans le champs "Champ_Input_Date_Fin_Publication_News"
-    And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
-    And l utilisateur clique sur "Bouton_Enregistrer_Cropper_Picture"
+    And pause 10 secondes
+    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"
+    And pause 10 secondes
 
 
     #Etape 3 : Vérification de la création de la News
 
-    Then Vérifier que l'actualité ne s'affiche plus si la date systéme est égale à la date de fin de publication
+    Then vérifier la création de la nouvelle news
+    #Then Vérifier que l'actualité ne s'affiche plus si la date systéme est égale à la date de fin de publication
 
 
 

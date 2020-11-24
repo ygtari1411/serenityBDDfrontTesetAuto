@@ -21,7 +21,7 @@ import java.util.List;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
-import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ConnectVerifications {
@@ -173,6 +173,94 @@ public class ConnectVerifications {
         logger.info("vérification du statut de la news");
 
         assertThat(generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"), equalTo("PROGRAMMÉ"));
+
+    }
+
+    //Vérification pour  News
+    @And("l utilisitateur saisit la date du jour dans le champs fin date news")
+    public void lUtilisitateurSaisitLaDateDuJourDansLeChampsFinDateNews() {
+        logger.info("saisit de la date de fin de publication de la news par l'utilisateur");
+
+
+        //récupérer le jour actuel
+
+
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat format1 = new SimpleDateFormat("dd-MM-yyyy");
+
+
+        String formattedDate = format1.format(cal.getTime());
+
+        //activer le calendrier
+        WebElement element = driver.findElement(By.xpath("//div/div/form/div[1]/div[1]/div[3]/div[3]/div/app-floating-label-form/div/div/div/button"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+
+        //Parcour le calendrier afficher
+
+        List<WebElement> elements = driver.findElements(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[3]/div/app-floating-label-form/div/div/ngb-datepicker/div[2]/div/ngb-datepicker-month/div[*]/div[*]"));
+        for (WebElement element1 : elements) {
+
+            String str1 = element1.getAttribute("ariaLabel");
+            if(str1.equals(formattedDate)){
+
+                executor.executeScript("arguments[0].click();", element1);
+                break;
+
+            }
+
+        }
+
+
+
+    }
+
+    //Vérification pour  News
+    @Then("Vérifier que l'actualité a été modifiée avec succés")
+    public void vérifierQueLActualitéAÉtéModifiéeAvecSuccés() throws InterruptedException {
+
+        logger.info("Vérification de la modification correct de la news");
+
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
+
+
+
+    }
+
+
+    @Then("Vérifier que l'actualité a été spprimer avec succés")
+    public void vérifierQueLActualitéAÉtéSpprimerAvecSuccés() throws InterruptedException {
+
+        logger.info("Vérification de la suppression correct de la news");
+
+
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news  do not contains the text published in the scenario
+
+        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), is(not(equalTo(  datastore.get("Champ_Input_Titre_News")  ))))     ;
 
     }
 
