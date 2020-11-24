@@ -240,7 +240,7 @@ public class ConnectVerifications {
 
     }
 
-
+    //Vérification pour  News
     @Then("Vérifier que l'actualité a été spprimer avec succés")
     public void vérifierQueLActualitéAÉtéSpprimerAvecSuccés() throws InterruptedException {
 
@@ -249,9 +249,9 @@ public class ConnectVerifications {
 
         //Waiting for the first news to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
-                (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
-                                datastore.get("Champ_Input_Titre_News"))));
+                (ExpectedConditions.not(
+                        ExpectedConditions .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News")))) );
 
         //Waiting for the refreshed first news to render
         synchronized (driver) {
