@@ -108,6 +108,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(2)")
     public static WebElement Bouton_Supprimer_News;
 
+    @FindBy(css = "input[placeholder=\"Rechercher par titre\"]")
+    public static WebElement Champ_Input_Rechercher_News_Par_Titre;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

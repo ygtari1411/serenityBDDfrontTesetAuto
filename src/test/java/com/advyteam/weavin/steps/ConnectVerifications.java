@@ -264,5 +264,26 @@ public class ConnectVerifications {
 
     }
 
+    //Vérification pour  News
+    @Then("Vérifier que l'actualité affiche")
+    public void vérifierQueLActualitéAffiche() throws InterruptedException {
+
+        logger.info("Vérifier que la news rechercher s'affiche");
+
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
+
+    }
 
 }
