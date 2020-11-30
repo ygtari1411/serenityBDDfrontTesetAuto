@@ -100,9 +100,19 @@ public class CommonSteps {
     }
 
     @And("l utilisateur selectionne {string} dans la liste deroulante {string}")
-    public void lUtilisateurSelectionneDansLaListeDeroulante(String option, String dropdownlist) {
+    public void lUtilisateurSelectionneDansLaListeDeroulante(String option, String dropdownlist) throws InterruptedException {
         logger.info("l'utilisateur sélectionne l'option " + option + " dans la " + dropdownlist);
         datastore.put(dropdownlist, option);
+        generalobjectsmap.get(dropdownlist).click();
+        synchronized (driver) {
+            driver.wait(1000);
+        }
+        for (WebElement element : driver.findElements(By.cssSelector(".ng-dropdown-panel .ng-option-label"))) {
+            actions.moveToElement(element).perform();
+            if (element.getText().equalsIgnoreCase(option)) {
+                element.click();
+            }
+        }
 
     }
 
