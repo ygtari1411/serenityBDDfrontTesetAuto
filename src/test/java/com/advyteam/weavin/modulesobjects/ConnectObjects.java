@@ -111,7 +111,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "input[placeholder=\"Rechercher par titre\"]")
     public static WebElement Champ_Input_Rechercher_News_Par_Titre;
 
-    @FindBy(css = "*> div:nth-child(2) > div > ng-select > div > span")
+    @FindBy(xpath= "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div[2]/div/div/div/div[2]/div/ng-select/div/span")
     public static WebElement Liste_Deroulante_Statut_News;
 
 

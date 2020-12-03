@@ -2,8 +2,10 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.core.IsEqual;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -285,5 +287,27 @@ public class ConnectVerifications {
         assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
 
     }
+
+    //Vérification pour  News
+    @Then("Vérifier que seuls les actualités {string} s'affichent")
+    public void vérifierQueSeulsLesActualitésSAffichent(String statut) {
+
+        Boolean result=true;
+
+        //Parcourir la liste des tous les statut affichés
+
+        List<WebElement> elements = driver.findElements(By.cssSelector(".post-category"));
+        for (WebElement element1 : elements) {
+
+            String str1 =element1.getAttribute("innerText");
+            if(!str1.equalsIgnoreCase(statut)){
+                result=false;
+                break;
+            }
+        }
+        Assert.assertTrue(result);
+    }
+
+
 
 }

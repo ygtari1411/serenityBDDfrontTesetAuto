@@ -38,12 +38,14 @@ Feature: News
 
     #Etape 3 : Vérification de la création de la News
 
-    Then vérifier la création de la nouvelle news
+     Then vérifier la création de la nouvelle news
+     And pause 10 secondes
 
    #Etape 4 : Rechercher Les news avec le statut publié
 
-    When l utilisateur selectionne "Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
-    Then Vérifier que seuls les actualités "Publié" s'affichent
+     When l utilisateur selectionne "Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
+     And pause 20 secondes
+     Then Vérifier que seuls les actualités "PUBLIÉ" s'affichent
 
 
 

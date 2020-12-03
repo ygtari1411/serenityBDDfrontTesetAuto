@@ -111,6 +111,7 @@ public class CommonSteps {
             actions.moveToElement(element).perform();
             if (element.getText().equalsIgnoreCase(option)) {
                 element.click();
+                break;
             }
         }
 
