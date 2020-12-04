@@ -4,10 +4,10 @@
 # Date de création: 09/11/2020
 
 
-#@WEAVIN
-#@WEAVIN-CONNECT
-#@WEAVIN-NEWS
-#@WEAVIN-NEWS-0008
+@WEAVIN
+@WEAVIN-CONNECT
+@WEAVIN-NEWS
+@WEAVIN-NEWS-0009
 
 Feature: News
 
@@ -28,6 +28,7 @@ Feature: News
     And l utilisateur saisit "Test automatique de la recherche news par statut programmé" dans le champs "Champ_Input_Titre_News"
     And l utilisateur saisit "C'est un test automatique de la recherche d 'une news par statut programmé" dans le champs "Champ_Input_Description_News"
     And l utilisitateur saisit la date du jour dans le champs debut date news
+    And l utilisateur saisit une heure supérieure à l'heure systéme
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes

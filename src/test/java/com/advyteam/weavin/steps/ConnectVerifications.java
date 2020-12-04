@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -154,9 +155,12 @@ public class ConnectVerifications {
 
        //récuperer l'heure systéme et l'incrémenter
 
+
+        //DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.HOUR, 1); //here n is no.of hour you want to increase
-        SimpleDateFormat format1 = new SimpleDateFormat("hh:mm");
+        SimpleDateFormat format1 = new SimpleDateFormat("HH:mm");
 
 
         String formatted = format1.format(cal.getTime());
