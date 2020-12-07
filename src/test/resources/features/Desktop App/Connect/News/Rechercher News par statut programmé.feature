@@ -4,10 +4,10 @@
 # Date de création: 09/11/2020
 
 
-#@WEAVIN
-#@WEAVIN-CONNECT
-#@WEAVIN-NEWS
-#@WEAVIN-NEWS-0008
+@WEAVIN
+@WEAVIN-CONNECT
+@WEAVIN-NEWS
+@WEAVIN-NEWS-0009
 
 Feature: News
 
@@ -20,18 +20,23 @@ Feature: News
 
   #Etape2  : Ajout News
 
-    When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
+     #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
     And l utilisateur clique sur "Bouton_news_menu_gauche"
     Then vérifier que la page affichée est la page news
     And l utilisateur clique sur "Bouton_Ajout_News"
-    Then vérifier que la page affichée est la page annoncez une actualité
-    And l utilisateur saisit "Test automatique rechercher news par statut programmé" dans le champs "Champ_Input_Titre_News"
-    And l utilisateur saisit "C'est un test automatique de l'ajout d'une news" dans le champs "Champ_Input_Description_News"
-    And l utilisateur saisit une date supérieure a la date systéme dans le champs "Champ_Input_Date_News"
-    And  l utilisateur upload "une image" dans le champs "Upload_Image_News"
-    And l utilisateur clique sur "Bouton_Enregistrer_Cropper_Picture"
+    Then vérifier que le modal de création d'une news est affiché
+    And l utilisateur saisit "Test automatique de la recherche news par statut programmé" dans le champs "Champ_Input_Titre_News"
+    And l utilisateur saisit "C'est un test automatique de la recherche d 'une news par statut programmé" dans le champs "Champ_Input_Description_News"
+    And l utilisitateur saisit la date du jour dans le champs debut date news
+    And l utilisateur saisit une heure supérieure à l'heure systéme
+    And pause 10 secondes
+    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"
+    And pause 10 secondes
+
 
 
     #Etape 3 : Vérification de la création de la News
@@ -41,7 +46,7 @@ Feature: News
    #Etape 4 : Rechercher Les news avec le statut programmé
 
     When l utilisateur selectionne "Programmé" dans la liste deroulante "Liste_Deroulante_Statut_News"
-    Then Vérifier que seuls les actualités "Programmé" s'affichent
+    Then Vérifier que seuls les actualités "PROGRAMMÉ" s'affichent
 
 
 

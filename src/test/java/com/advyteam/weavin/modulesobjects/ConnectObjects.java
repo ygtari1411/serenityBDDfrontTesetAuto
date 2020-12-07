@@ -64,14 +64,55 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".dropdown-menu.show .dropdown-item:nth-child(2)")
     public static WebElement Bouton_supprimer_ideation;
 
+    @FindBy(css = "*> app-news-administration > div > div > div > span:nth-child(5)")
+    public static WebElement  Modal_ajout_news;
+
+    @FindBy(css = ".photo-album-item.create-album.cursor")
+    public static WebElement Bouton_Ajout_News;
+
+    @FindBy(css = "input[ng-reflect-name=\"titleNews\"]")
+    public static WebElement Champ_Input_Titre_News;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[2]/div/weavin-editor/div/quill-editor/div[2]/div[1]/p")
+    public static WebElement Champ_Input_Description_News;
+
+    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/input")
+    public static WebElement Champ_Input_Date_News;
+
+    @FindBy(css = "button[id=\"btnSubmit\"]")
+    public static WebElement Bouton_Sauvegarder_Creation_News;
+
+    @FindBy(css = "input[ng-reflect-name=\"beginningHourNews\"]")
+    public static WebElement Champ_Input_Heure_Debut_News;
+
+    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
+    public static WebElement Bouton_Publier_News;
+
+    @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/a")
+    public static WebElement Titre_Premiere_News_publier;
+
+    @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
+    public static WebElement Statut_Premiere_News_publier;
 
 
+    @FindBy(xpath = "//app-news-administration/section/div/div[2]/app-post-card/div/article/div[2]/div[2]/div/div[1]")
+    public static WebElement Bouton_Options_Premiere_News_Afficher;
+
+    @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
+    public static WebElement Bouton_Editer_News;
 
 
+    @FindBy(xpath = "//button[contains(text(),'Editer')]")
+    public static WebElement Bouton_Editer_Modification_News;
 
+    @FindBy(css = "div.dropdown-menu.show > button:nth-child(2)")
+    public static WebElement Bouton_Supprimer_News;
 
+    @FindBy(css = "input[placeholder=\"Rechercher par titre\"]")
+    public static WebElement Champ_Input_Rechercher_News_Par_Titre;
 
-
+    @FindBy(xpath= "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div[2]/div/div/div/div[2]/div/ng-select/div/span")
+    public static WebElement Liste_Deroulante_Statut_News;
 
 
 
