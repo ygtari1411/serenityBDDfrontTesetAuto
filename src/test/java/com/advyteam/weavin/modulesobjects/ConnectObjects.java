@@ -114,6 +114,29 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath= "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div[2]/div/div/div/div[2]/div/ng-select/div/span")
     public static WebElement Liste_Deroulante_Statut_News;
 
+    @FindBy(css = "app-ideations > section > app-list > div.row > div:nth-child(2)")
+    public static WebElement Derniere_Idee_Ajoutee;
+
+    @FindBy(css = " div.row > div:nth-child(2) > app-post-card > div > article > div.post-content > a")
+    public static WebElement Titre_Derniere_Idee_Ajoutee;
+
+    @FindBy(css = "input[formcontrolname=\"titleTextSearch\"]")
+    public static WebElement Champ_Input_Rechercher_Ideation_Par_Titre;
+
+    @FindBy(css = " div > div.comments-shared.ng-star-inserted > a")
+    public static WebElement Bouton_Commenter_Ideation;
+
+    @FindBy(css = " div > div.ql-editor.ql-blank > p")
+    public static WebElement Champ_Input_Commenter_Ideation;
+
+    @FindBy(css = "button[title=\"Envoyer\"]")
+    public static WebElement Envoyer_Commenteraire_Ideation;
+
+    @FindBy(css = "div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")
+    public static WebElement Icone_Commenteraire_Ideation;
+
+    @FindBy(css = "ul > app-post-comment > li > div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_Ideation_Afficher;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

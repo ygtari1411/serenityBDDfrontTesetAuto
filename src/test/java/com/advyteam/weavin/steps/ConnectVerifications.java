@@ -312,6 +312,24 @@ public class ConnectVerifications {
         Assert.assertTrue(result);
     }
 
+    //    Vérification pour Idéation
+    @Then("vérifier l ajout  correct du commentaire")
+    public void vérifierLAjoutCorrectDuCommentaire() throws InterruptedException {
+
+        //Vérifier que lnombre de commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a > span")).size(),0);
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commenteraire_Ideation").click();
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Vérifier que le commentaire est celui qu'on a introduit
+        Assert.assertTrue(datastore.get("Champ_Input_Commenter_Ideation").contains(generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText")));
+
+
+
+    }
 
 
 }
