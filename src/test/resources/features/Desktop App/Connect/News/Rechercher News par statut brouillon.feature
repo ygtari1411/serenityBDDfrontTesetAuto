@@ -34,7 +34,7 @@ Feature: News
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Publier_News"
+    And l utilisateur clique sur "Onglet_Liste_Des_News"
     And pause 10 secondes
 
 

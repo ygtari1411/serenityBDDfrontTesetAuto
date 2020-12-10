@@ -138,6 +138,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "ul > app-post-comment > li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Ideation_Afficher;
 
+    @FindBy(xpath = "//a[contains(text(),'Liste des news')]")
+    public static WebElement Onglet_Liste_Des_News;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
