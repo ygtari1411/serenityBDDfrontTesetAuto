@@ -1,6 +1,6 @@
 # Auteur: YGtari
 # Feature: News
-# Scénario: Rechercher News par statut programmé
+# Scénario: Rechercher News par statut brouillon
 # Date de création: 09/11/2020
 
 
@@ -11,7 +11,7 @@
 
 Feature: News
 
-  Scenario: Rechercher News par statut programmé
+  Scenario: Rechercher News par statut brouillon
 
   #Etape 1 : Connexion
 
