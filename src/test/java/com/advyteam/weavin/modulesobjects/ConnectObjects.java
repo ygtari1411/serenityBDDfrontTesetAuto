@@ -142,6 +142,16 @@ public class ConnectObjects extends PageObject {
     public static WebElement Onglet_Liste_Des_News;
 
 
+    @FindBy(css = "div > div.like-action.mr-lg")
+    public static WebElement Bouton_Interaction_Ideation;
+
+    @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(3)")
+    public static WebElement Bouton_Like_Ideation;
+
+    @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_Ideation;
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[] allFields = ConnectObjects.class.getFields();

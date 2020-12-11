@@ -296,6 +296,8 @@ public class ConnectVerifications {
     @Then("Vérifier que seuls les actualités {string} s'affichent")
     public void vérifierQueSeulsLesActualitésSAffichent(String statut) {
 
+        logger.info("Vérifier le statut des news affichées");
+
         Boolean result=true;
 
         //Parcourir la liste des tous les statut affichés
@@ -312,11 +314,14 @@ public class ConnectVerifications {
         Assert.assertTrue(result);
     }
 
-    //    Vérification pour Idéation
+    //   Vérification pour Idéation
     @Then("vérifier l ajout  correct du commentaire")
     public void vérifierLAjoutCorrectDuCommentaire() throws InterruptedException {
 
-        //Vérifier que lnombre de commentaire s'affiche
+        logger.info("Vérifier que le commentaire a été ajouté");
+
+
+        //Vérifier que le nombre de commentaire s'affiche
         Assert.assertNotEquals(driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a > span")).size(),0);
         //cliquer sur l icone commentaire
         generalobjectsmap.get("Icone_Commenteraire_Ideation").click();
@@ -328,6 +333,21 @@ public class ConnectVerifications {
         Assert.assertTrue(datastore.get("Champ_Input_Commenter_Ideation").contains(generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText")));
 
 
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier l ajout  correct du Like")
+    public void vérifierLAjoutCorrectDuLike() {
+
+        logger.info("Vérifier que le like a été ajouté");
+
+        //Vérifier que l icone <3 s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+
+        //Vérifier que le like a été comptabilé
+
+        Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Ideation").getAttribute("innerText"),"1");
 
     }
 

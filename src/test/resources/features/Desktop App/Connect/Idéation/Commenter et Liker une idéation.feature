@@ -37,14 +37,14 @@ Feature: Idéation
      #Etape 3 : Vérification de la création de l'idée
 
     Then vérifier la publication correct de l idee
-    And l utilisateur saisit "test automatisé  commenter et Liker une idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+    And l utilisateur saisit "test automatisé commenter et Liker une idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
 
      #Etape 4 : Commenter  l'idée
 
     When l utilisateur clique sur "Derniere_Idee_Ajoutee"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Commenter_Ideation"
-    And l utilisateur saisit "test automatisé  commenter et Liker une idée" dans le champs "Champ_Input_Commenter_Ideation"
+    And l utilisateur saisit "test automatisé commenter et Liker une idée" dans le champs "Champ_Input_Commenter_Ideation"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_Ideation"
     And pause 10 secondes
@@ -52,6 +52,9 @@ Feature: Idéation
 
     #Etape 4 : Liker  l'idée
 
-    When l utilisateur clique sur "Bouton_Like_Ideation"
+    When l utilisateur effectue un hover sur "Bouton_Interaction_Ideation"
+    And pause 15 secondes
+    And l utilisateur clique sur "Bouton_Like_Ideation"
+    And pause 15 secondes
     Then vérifier l ajout  correct du Like
 
