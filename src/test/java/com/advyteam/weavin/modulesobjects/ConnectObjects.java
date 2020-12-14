@@ -151,6 +151,12 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_Ideation;
 
+    @FindBy(css = "li > div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div")
+    public static WebElement Bouton_Option_Commentaire_Ideation;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_Editer_Commentaire_Ideation;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
