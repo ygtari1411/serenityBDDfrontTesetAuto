@@ -141,7 +141,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Liste des news')]")
     public static WebElement Onglet_Liste_Des_News;
 
-
     @FindBy(css = "div > div.like-action.mr-lg")
     public static WebElement Bouton_Interaction_Ideation;
 
@@ -156,6 +155,15 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
     public static WebElement Bouton_Editer_Commentaire_Ideation;
+
+    @FindBy(css = "li > div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor > p")
+    public static WebElement Champ_Input_Modification_Commenteraire_Ideation;
+
+    @FindBy(xpath = "//li/div[1]/app-post-comment-form/form/div/div[2]/div/button[1]")
+    public static WebElement Envoyer_Commenteraire_Modifier_Ideation;
+
+    @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
+    public static WebElement Bouton_Praise_Ideation;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

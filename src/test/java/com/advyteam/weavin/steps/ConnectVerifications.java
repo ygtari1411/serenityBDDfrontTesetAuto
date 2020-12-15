@@ -330,10 +330,8 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
         //Vérifier que le commentaire est celui qu'on a introduit
-        Assert.assertTrue(datastore.get("Champ_Input_Commenter_Ideation").contains(generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText")));
-
-
-
+        //Assert.assertTrue(datastore.get("Champ_Input_Commenter_Ideation").contains(generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText")));
+        Assert.assertEquals(datastore.get("Champ_Input_Commenter_Ideation"),generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText"));
     }
 
     //   Vérification pour Idéation
@@ -351,5 +349,34 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Idéation
+    @And("l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Ideation")
+    public void lUtilisateurCliqueSurLeBoutonEnvoyer_Commenteraire_Modifier_Ideation() {
+        logger.info("l'utilisateur clique sur le bouton Envoyer_Commentaire_Modifier_Ideation ");
+
+        WebElement element = generalobjectsmap.get("Envoyer_Commenteraire_Modifier_Ideation");
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que le commentaire est modifié")
+    public void verifierQueLeCommentaireEstModifié() {
+        logger.info("vérifier que le commentaire a été modifié avec succés");
+
+        Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire_Ideation"),generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText"));
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que l'interaction a été modifiée avec succés")
+    public void verifierQueLInteractionAÉtéModifiéeAvecSuccés() {
+        logger.info("vérifier que l'interaction a été modifiée avec succés");
+
+        //Vérifier que l icone praise s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+
+    }
 
 }
