@@ -54,7 +54,7 @@ Feature: Idéation
 
     When l utilisateur effectue un hover sur "Bouton_Interaction_Ideation"
     And pause 15 secondes
-    And l utilisateur clique sur "Bouton_Like_Ideation"
+    And l utilisateur clique sur "Bouton_Jadore_Ideation"
     And pause 15 secondes
     Then vérifier l ajout  correct du Like
     And pause 10 secondes

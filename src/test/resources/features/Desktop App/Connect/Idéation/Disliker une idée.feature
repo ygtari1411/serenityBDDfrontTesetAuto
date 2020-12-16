@@ -1,18 +1,18 @@
 # Auteur: ygtari
 # Feature: Idéation
-# Scénario: Commenter et Liker une idée
-# Date de création: 10/12/2020
+# Scénario: Disliker une idée
+# Date de création: 16/12/2020
 
 @WEAVIN
 @WEAVIN-CONNECT
 @WEAVIN-IDEATION
-@WEAVIN-IDEATION-0005
+@WEAVIN-IDEATION-0008
 
 
 
 Feature: Idéation
 
-  Scenario: Commenter et Liker une idée
+  Scenario: Disliker une idée
 
     #Etape 1 : Connexion
 
@@ -25,7 +25,7 @@ Feature: Idéation
     Then vérifier que la page affichée est la page idéation
     When l utilisateur clique sur "Buton_ajout_ideation"
     Then vérifier que le modal de création d'une idée est affiché
-    When l utilisateur saisit "test automatisé  commenter et Liker une idée" dans le champs "Titre_nouvelle_idee"
+    When l utilisateur saisit "Disliker une idée" dans le champs "Titre_nouvelle_idee"
     And l utilisateur saisit "idée_test_auto" dans le champs "Tag_nouvelle_idee"
     And l utilisateur saisit "Ceci est la description de l'idée publiée par un test auto" dans le champs "Description_nouvelle_idee"
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
@@ -37,24 +37,20 @@ Feature: Idéation
      #Etape 3 : Vérification de la création de l'idée
 
     Then vérifier la publication correct de l idee
-    And l utilisateur saisit "test automatisé commenter et Liker une idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+    And l utilisateur saisit "test automatisé commenter idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
 
-     #Etape 4 : Commenter  l'idée
+     #Etape 4 : Liker  l'idée
 
     When l utilisateur clique sur "Derniere_Idee_Ajoutee"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Commenter_Ideation"
-    And l utilisateur saisit "test automatisé commenter et Liker une idée" dans le champs "Champ_Input_Commenter_Ideation"
+    And l utilisateur clique sur "Bouton_Like_Ideation"
+    Then verifier que le like a été ajouté
     And pause 10 secondes
-    And l utilisateur clique sur "Envoyer_Commenteraire_Ideation"
-    And pause 10 secondes
-    Then vérifier l ajout  correct du commentaire
 
-    #Etape 4 : Liker  l'idée
+    #Etape  : DiLiker  l'idée
 
-    When l utilisateur effectue un hover sur "Bouton_Interaction_Ideation"
-    And pause 15 secondes
-    And l utilisateur clique sur "Bouton_Jadore_Ideation"
-    And pause 15 secondes
-    Then vérifier l ajout  correct du Like
+
+    And l utilisateur clique sur "Bouton_Like_Ideation"
+    And pause 20 secondes
+    Then vérifier que le dilike a été effectué
 

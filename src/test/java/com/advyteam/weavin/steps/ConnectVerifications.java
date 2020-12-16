@@ -389,5 +389,25 @@ public class ConnectVerifications {
         Assert.assertEquals(0,driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")).size());
 
     }
+    //   Vérification pour Idéation
+    @Then("verifier que le like a été ajouté")
+    public void verifierQueLeLikeAÉtéAjouté() {
+        logger.info("vérifier que le like a été ajouté");
+
+        //Verifier que l'icone Like s'affiche
+        Assert.assertNotEquals(0,driver.findElements(By.cssSelector(" li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size());
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier que le dilike a été effectué")
+    public void vérifierQueLeDilikeAÉtéEffectué() {
+        logger.info("vérifier que le Dislike a été effectué");
+
+        //Verifier que l'icone Like ne s'affiche
+        Assert.assertEquals(0,driver.findElements(By.cssSelector(" li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size());
+
+
+    }
 
 }

@@ -145,7 +145,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_Interaction_Ideation;
 
     @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(3)")
-    public static WebElement Bouton_Like_Ideation;
+    public static WebElement Bouton_Jadore_Ideation;
 
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_Ideation;
@@ -167,6 +167,10 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
     public static WebElement Bouton_Supprimer_Commentaire_Ideation;
+
+    @FindBy(css = "*> div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
+    public static WebElement Bouton_Like_Ideation;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
