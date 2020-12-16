@@ -165,6 +165,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_Ideation;
 
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Commentaire_Ideation;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

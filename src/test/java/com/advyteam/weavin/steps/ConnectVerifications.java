@@ -343,7 +343,7 @@ public class ConnectVerifications {
         //Vérifier que l icone <3 s'affiche
         Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
 
-        //Vérifier que le like a été comptabilé
+        //Vérifier que le like a été comptabilisé
 
         Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Ideation").getAttribute("innerText"),"1");
 
@@ -376,6 +376,17 @@ public class ConnectVerifications {
 
         //Vérifier que l icone praise s'affiche
         Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que le commentaire est supprimé")
+    public void verifierQueLeCommentaireEstSupprimé() {
+        logger.info("vérifier que le commentaire a été supprimé");
+
+      //Vérifier que l'icone commentaire ne s'affiche plus
+
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")).size());
 
     }
 
