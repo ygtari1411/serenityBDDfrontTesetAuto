@@ -171,6 +171,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "*> div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
     public static WebElement Bouton_Like_Ideation;
 
+    @FindBy(css = "*> div:nth-child(3) > div > ng-select > div > span")
+    public static WebElement Liste_Deroulante_Tags_Ideation;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

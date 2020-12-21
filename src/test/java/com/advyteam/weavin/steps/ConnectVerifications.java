@@ -410,4 +410,41 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Idéation
+    @Then("vérifier que l idée afficher est l'idée recherchée")
+    public void vérifierQueLIdéeAfficherEstLIdéeRecherchée() {
+        logger.info("vérifier que l'idée rechercher s'affiche");
+
+        Assert.assertTrue(generalobjectsmap.get("Derniere_Idee_Ajoutee").getAttribute("innerText").contains(datastore.get("Titre_nouvelle_idee")));
+
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier que les idées affichées contiennent le tag{string}")
+    public void vérifierQueLesIdéesAffichéesContiennentLeTag(String tag) {
+
+        logger.info("Vérifier que le tag s'affiche ");
+
+        Boolean result=true;
+
+
+        //Parcourir la liste des tous les tags affichés
+
+        List<WebElement> elements = driver.findElements(By.cssSelector("div.post-content > div.tags-container > a"));
+        for (WebElement element1 : elements) {
+
+            String str1 =element1.getAttribute("innerText");
+            if(!str1.equalsIgnoreCase(tag)){
+                result=false;
+                break;
+            }
+        }
+        Assert.assertTrue(result);
+    }
+
+
+
+
+
 }
