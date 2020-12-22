@@ -443,7 +443,74 @@ public class ConnectVerifications {
         Assert.assertTrue(result);
     }
 
+    //   Vérification pour Idéation
+    @Then("verifier que les idées sont affichées par ordre ascendant")
+    public void verifierQueLesIdéesSontAffichéesParOrdreAscendant() {
 
+        logger.info("Vérifier l'ordre de tri ascendant");
+
+        Boolean triOK=true;
+
+        //Parcourir la liste des notes
+
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        for (WebElement element1 : elements) {
+
+            int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
+            if( LastValue>ActualValue){
+                triOK=false;
+                break;
+            }
+            else{
+                LastValue=ActualValue;
+            }
+
+        }
+        Assert.assertTrue(triOK);
+
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que les idées sont affichées par ordre descendant")
+    public void verifierQueLesIdéesSontAffichéesParOrdreDescendant() {
+
+
+        logger.info("Vérifier l'ordre de tri descendant");
+
+        Boolean triOK=true;
+
+        //Parcourir la liste des notes
+
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        for (WebElement element1 : elements) {
+
+            int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
+            if( LastValue<ActualValue){
+                triOK=false;
+                break;
+            }
+            else{
+                LastValue=ActualValue;
+            }
+
+        }
+        Assert.assertTrue(triOK);
+
+
+    }
+
+    //   Vérification pour Idéation
+    @And("vérifier qu un message d'erreur s affiche pour chaque champs requis")
+    public void vérifierQuUnMessageDErreurSAffichePourChaqueChampsRequis() {
+
+        logger.info("Vérifier que les messages champs requis s'affichent");
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),4);
+
+    }
 
 
 

@@ -174,6 +174,16 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "*> div:nth-child(3) > div > ng-select > div > span")
     public static WebElement Liste_Deroulante_Tags_Ideation;
 
+    @FindBy(css = "div.col.col-xl-2.col-lg-2.col-md-2.col-sm-2 > button")
+    public static WebElement Bouton_Trier_Ideation;
+
+    @FindBy(css = "div.popover-body > div > div > ng-select > div")
+    public static WebElement Liste_Deroulante_Choix_Tri_Ideation;
+
+    @FindBy(css = "div.form-group.label-floating.mt-2.mb-0 > ng-select > div")
+    public static WebElement Liste_Deroulante_Tri_ASC_DES;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
