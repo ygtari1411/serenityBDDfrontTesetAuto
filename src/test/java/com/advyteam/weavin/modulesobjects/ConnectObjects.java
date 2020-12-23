@@ -114,6 +114,76 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath= "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div[2]/div/div/div/div[2]/div/ng-select/div/span")
     public static WebElement Liste_Deroulante_Statut_News;
 
+    @FindBy(css = "app-ideations > section > app-list > div.row > div:nth-child(2)")
+    public static WebElement Derniere_Idee_Ajoutee;
+
+    @FindBy(css = " div.row > div:nth-child(2) > app-post-card > div > article > div.post-content > a")
+    public static WebElement Titre_Derniere_Idee_Ajoutee;
+
+    @FindBy(css = "input[formcontrolname=\"titleTextSearch\"]")
+    public static WebElement Champ_Input_Rechercher_Ideation_Par_Titre;
+
+    @FindBy(css = " div > div.comments-shared.ng-star-inserted > a")
+    public static WebElement Bouton_Commenter_Ideation;
+
+    @FindBy(css = " div > div.ql-editor.ql-blank > p")
+    public static WebElement Champ_Input_Commenter_Ideation;
+
+    @FindBy(css = "button[title=\"Envoyer\"]")
+    public static WebElement Envoyer_Commenteraire_Ideation;
+
+    @FindBy(css = "div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")
+    public static WebElement Icone_Commenteraire_Ideation;
+
+    @FindBy(css = "ul > app-post-comment > li > div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_Ideation_Afficher;
+
+    @FindBy(xpath = "//a[contains(text(),'Liste des news')]")
+    public static WebElement Onglet_Liste_Des_News;
+
+    @FindBy(css = "div > div.like-action.mr-lg")
+    public static WebElement Bouton_Interaction_Ideation;
+
+    @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(3)")
+    public static WebElement Bouton_Jadore_Ideation;
+
+    @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_Ideation;
+
+    @FindBy(css = "li > div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div")
+    public static WebElement Bouton_Option_Commentaire_Ideation;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_Editer_Commentaire_Ideation;
+
+    @FindBy(css = "li > div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor > p")
+    public static WebElement Champ_Input_Modification_Commenteraire_Ideation;
+
+    @FindBy(xpath = "//li/div[1]/app-post-comment-form/form/div/div[2]/div/button[1]")
+    public static WebElement Envoyer_Commenteraire_Modifier_Ideation;
+
+    @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
+    public static WebElement Bouton_Praise_Ideation;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Commentaire_Ideation;
+
+    @FindBy(css = "*> div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
+    public static WebElement Bouton_Like_Ideation;
+
+    @FindBy(css = "*> div:nth-child(3) > div > ng-select > div > span")
+    public static WebElement Liste_Deroulante_Tags_Ideation;
+
+    @FindBy(css = "div.col.col-xl-2.col-lg-2.col-md-2.col-sm-2 > button")
+    public static WebElement Bouton_Trier_Ideation;
+
+    @FindBy(css = "div.popover-body > div > div > ng-select > div")
+    public static WebElement Liste_Deroulante_Choix_Tri_Ideation;
+
+    @FindBy(css = "div.form-group.label-floating.mt-2.mb-0 > ng-select > div")
+    public static WebElement Liste_Deroulante_Tri_ASC_DES;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

@@ -296,6 +296,8 @@ public class ConnectVerifications {
     @Then("Vérifier que seuls les actualités {string} s'affichent")
     public void vérifierQueSeulsLesActualitésSAffichent(String statut) {
 
+        logger.info("Vérifier le statut des news affichées");
+
         Boolean result=true;
 
         //Parcourir la liste des tous les statut affichés
@@ -310,6 +312,204 @@ public class ConnectVerifications {
             }
         }
         Assert.assertTrue(result);
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier l ajout  correct du commentaire")
+    public void vérifierLAjoutCorrectDuCommentaire() throws InterruptedException {
+
+        logger.info("Vérifier que le commentaire a été ajouté");
+
+
+        //Vérifier que le nombre de commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a > span")).size(),0);
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commenteraire_Ideation").click();
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Vérifier que le commentaire est celui qu'on a introduit
+        //Assert.assertTrue(datastore.get("Champ_Input_Commenter_Ideation").contains(generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText")));
+        Assert.assertEquals(datastore.get("Champ_Input_Commenter_Ideation"),generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText"));
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier l ajout  correct du Like")
+    public void vérifierLAjoutCorrectDuLike() {
+
+        logger.info("Vérifier que le like a été ajouté");
+
+        //Vérifier que l icone <3 s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+
+        //Vérifier que le like a été comptabilisé
+
+        Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Ideation").getAttribute("innerText"),"1");
+
+    }
+
+    //   Vérification pour Idéation
+    @And("l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Ideation")
+    public void lUtilisateurCliqueSurLeBoutonEnvoyer_Commenteraire_Modifier_Ideation() {
+        logger.info("l'utilisateur clique sur le bouton Envoyer_Commentaire_Modifier_Ideation ");
+
+        WebElement element = generalobjectsmap.get("Envoyer_Commenteraire_Modifier_Ideation");
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que le commentaire est modifié")
+    public void verifierQueLeCommentaireEstModifié() {
+        logger.info("vérifier que le commentaire a été modifié avec succés");
+
+        Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire_Ideation"),generalobjectsmap.get("Premiere_Commentaire_Ideation_Afficher").getAttribute("innerText"));
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que l'interaction a été modifiée avec succés")
+    public void verifierQueLInteractionAÉtéModifiéeAvecSuccés() {
+        logger.info("vérifier que l'interaction a été modifiée avec succés");
+
+        //Vérifier que l icone praise s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que le commentaire est supprimé")
+    public void verifierQueLeCommentaireEstSupprimé() {
+        logger.info("vérifier que le commentaire a été supprimé");
+
+      //Vérifier que l'icone commentaire ne s'affiche plus
+
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")).size());
+
+    }
+    //   Vérification pour Idéation
+    @Then("verifier que le like a été ajouté")
+    public void verifierQueLeLikeAÉtéAjouté() {
+        logger.info("vérifier que le like a été ajouté");
+
+        //Verifier que l'icone Like s'affiche
+        Assert.assertNotEquals(0,driver.findElements(By.cssSelector(" li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size());
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier que le dilike a été effectué")
+    public void vérifierQueLeDilikeAÉtéEffectué() {
+        logger.info("vérifier que le Dislike a été effectué");
+
+        //Verifier que l'icone Like ne s'affiche
+        Assert.assertEquals(0,driver.findElements(By.cssSelector(" li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size());
+
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier que l idée afficher est l'idée recherchée")
+    public void vérifierQueLIdéeAfficherEstLIdéeRecherchée() {
+        logger.info("vérifier que l'idée rechercher s'affiche");
+
+        Assert.assertTrue(generalobjectsmap.get("Derniere_Idee_Ajoutee").getAttribute("innerText").contains(datastore.get("Titre_nouvelle_idee")));
+
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("vérifier que les idées affichées contiennent le tag{string}")
+    public void vérifierQueLesIdéesAffichéesContiennentLeTag(String tag) {
+
+        logger.info("Vérifier que le tag s'affiche ");
+
+        Boolean result=true;
+
+
+        //Parcourir la liste des tous les tags affichés
+
+        List<WebElement> elements = driver.findElements(By.cssSelector("div.post-content > div.tags-container > a"));
+        for (WebElement element1 : elements) {
+
+            String str1 =element1.getAttribute("innerText");
+            if(!str1.equalsIgnoreCase(tag)){
+                result=false;
+                break;
+            }
+        }
+        Assert.assertTrue(result);
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que les idées sont affichées par ordre ascendant")
+    public void verifierQueLesIdéesSontAffichéesParOrdreAscendant() {
+
+        logger.info("Vérifier l'ordre de tri ascendant");
+
+        Boolean triOK=true;
+
+        //Parcourir la liste des notes
+
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        for (WebElement element1 : elements) {
+
+            int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
+            if( LastValue>ActualValue){
+                triOK=false;
+                break;
+            }
+            else{
+                LastValue=ActualValue;
+            }
+
+        }
+        Assert.assertTrue(triOK);
+
+
+    }
+
+    //   Vérification pour Idéation
+    @Then("verifier que les idées sont affichées par ordre descendant")
+    public void verifierQueLesIdéesSontAffichéesParOrdreDescendant() {
+
+
+        logger.info("Vérifier l'ordre de tri descendant");
+
+        Boolean triOK=true;
+
+        //Parcourir la liste des notes
+
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        for (WebElement element1 : elements) {
+
+            int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
+            if( LastValue<ActualValue){
+                triOK=false;
+                break;
+            }
+            else{
+                LastValue=ActualValue;
+            }
+
+        }
+        Assert.assertTrue(triOK);
+
+
+    }
+
+    //   Vérification pour Idéation
+    @And("vérifier qu un message d'erreur s affiche pour chaque champs requis")
+    public void vérifierQuUnMessageDErreurSAffichePourChaqueChampsRequis() {
+
+        logger.info("Vérifier que les messages champs requis s'affichent");
+
+        Assert.assertEquals(driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),4);
+
     }
 
 
