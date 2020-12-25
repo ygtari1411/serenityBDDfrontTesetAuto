@@ -146,8 +146,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page know's store");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/usefulinformation/list")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/usefulinformation/list"),equalTo(true));
+                        .urlMatches("https://weavin-qa.accretio.io/portal/knowstore/list")));
+        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/knowstore/list"),equalTo(true));
         assertThat(generalobjectsmap.get("titre_page_knowstore").getText().equals("Know'store"),equalTo(true));
     }
 

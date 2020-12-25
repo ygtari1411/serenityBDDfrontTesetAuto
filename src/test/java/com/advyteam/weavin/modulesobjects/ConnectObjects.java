@@ -183,6 +183,32 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.form-group.label-floating.mt-2.mb-0 > ng-select > div")
     public static WebElement Liste_Deroulante_Tri_ASC_DES;
 
+    @FindBy(css = "div > span:nth-child(5)")
+    public static WebElement  Modal_ajout_Article;
+
+    @FindBy(css = ".photo-album-item.create-album.cursor")
+    public static WebElement  Bouton_Ajout_Article;
+
+    @FindBy(css = "div.fieldsTxt > div:nth-child(1) > input")
+    public static WebElement  Champ_Input_Titre_Article;
+
+    @FindBy(css = "div:nth-child(2) > ng-select > div > div")
+    public static WebElement  categorie_article;
+
+    @FindBy(xpath = "//div/div/form/div[1]/div[2]/div[1]/quill-editor/div[2]/div[1]")
+    public static WebElement  Champ_Input_Description_Article;
+
+    @FindBy(css = "div.add-options-message > button.btn.btn-primary.btn-md-2")
+    public static WebElement  Bouton_sauvegarder_article;
+
+    @FindBy(css = "div:nth-child(2) > div > app-post-card > div > article > div.post-content > a")
+    public static WebElement  Titre_Premier_Article_publier;
+
+    @FindBy(xpath = "//div[2]/div/app-post-card/div/article/div[2]/div[2]/div")
+    public static WebElement  Bouton_options_article;
+
+    @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
+    public static WebElement  Bouton_modifier_article;
 
 
 

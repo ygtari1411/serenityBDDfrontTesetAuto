@@ -512,6 +512,68 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("vérifier que le modal de création d'un article est affiché")
+    public void vérifierQueLeModalDeCréationDUnArticleEstAffiché() {
+
+        logger.info("Vérification de l'affichage du modal de création d'un article");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_ajout_Article"))));
+        assertThat(generalobjectsmap.get("Modal_ajout_Article").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_ajout_Article").getAttribute("innerText"), equalTo("Publiez un article"));
+
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @Then("vérifier la création du nouveau article")
+    public void vérifierLaCréationDuNouveauArticle() throws InterruptedException {
+        logger.info("Vérification de la publication correct de l'article");
+
+
+        //Waiting for the first article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @Then("Vérifier que l'article a été modifié avec succés")
+    public void vérifierQueLArticleAÉtéModifiéAvecSuccés() throws InterruptedException {
+
+        logger.info("Vérification de la modification correct de l'article");
+
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
+
+    }
+
 
 
 }
