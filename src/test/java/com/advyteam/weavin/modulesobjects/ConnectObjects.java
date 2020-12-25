@@ -210,6 +210,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
     public static WebElement  Bouton_modifier_article;
 
+    @FindBy(css = "div.dropdown-menu.show > button:nth-child(2)")
+    public static WebElement  Bouton_supprimer_article;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

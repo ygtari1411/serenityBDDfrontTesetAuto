@@ -557,6 +557,33 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("Vérifier que l'article a été supprimé avec succés")
+    public void vérifierQueLArticleAÉtéSuppriméAvecSuccés() throws InterruptedException {
+
+
+
+
+        logger.info("Vérification de la suppression correct de l'article");
+
+
+        //Waiting for the first Article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions.not(
+                        ExpectedConditions .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article")))) );
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first Article  do not contains the text published in the scenario
+
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), is(not(equalTo(  datastore.get("Champ_Input_Titre_Article")  ))))     ;
+
+
+    }
 
 
 }
