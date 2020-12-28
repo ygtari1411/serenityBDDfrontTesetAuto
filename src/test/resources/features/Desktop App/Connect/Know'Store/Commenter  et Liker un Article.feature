@@ -45,19 +45,24 @@ Feature: Article
     #Etape 4 : l'utilisateur admin se deconnecte
 
      And  l utilisateur se deconnecte
+     And pause 10 secondes
 
-    #Etape 4 : Le deuxieme utilisateur   se connecte  pour liker et commenter l'article
+    #Etape 5 : Le deuxieme utilisateur   se connecte  pour liker et commenter l'article
 
-    When l'utilisateur "josephine.berard@yopmail.com" est connecté
+    And l'utilisateur "josephine.berard@yopmail.com" est connecté
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 10 secondes
-    And l utilisateur saisit "Test automatique commenter et liker un article" dans le champs "Champ_Input_Rechercher_Article_Par_Titre"
-    And pause 15 secondes
-    And l utilisateur clique sur "Titre_Premier_Article_publier"
+    And l utilisateur clique sur "Premier_Article_Afficher_Utilisateur"
     And l utilisateur saisit "Commenter et liker un article" dans le champs "Champ_Input_Commenter_Article"
     And l utilisateur clique sur "Envoyer_Commenteraire_Article"
     Then vérifier que le commentaire a été ajouté
+    When l utilisateur effectue un hover sur "Bouton_Interaction_Article"
+    And pause 15 secondes
+    And l utilisateur clique sur "Bouton_Like_Article"
+    And pause 15 secondes
+    Then vérifier  l ajout  correct du Like
+    And pause 30 secondes
 
 
 
