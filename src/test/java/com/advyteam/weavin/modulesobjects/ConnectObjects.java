@@ -213,6 +213,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(2)")
     public static WebElement  Bouton_supprimer_article;
 
+    @FindBy(css = "div > div.ql-editor.ql-blank > p")
+    public static WebElement  Champ_Input_Commenter_Article;
+
+
+    @FindBy(css = "button[title=\"Envoyer\"]")
+    public static WebElement Envoyer_Commenteraire_Article;
+
 
 
 

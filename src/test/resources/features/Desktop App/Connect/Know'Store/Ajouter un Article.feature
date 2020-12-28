@@ -1,5 +1,5 @@
 # Auteur: YGtari
-# Feature: News
+# Feature: Article
 # Scénario: Ajouter un article
 # Date de création: 23/12/2020
 
@@ -9,7 +9,7 @@
 @WEAVIN-KnowStore
 @WEAVIN-KnowStore-0001
 
-Feature: News
+Feature: Article
 
   Scenario: Ajouter un article
 
