@@ -585,5 +585,26 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("vérifier que le commentaire a été ajouté")
+    public void vérifierQueLeCommentaireAÉtéAjouté() throws InterruptedException {
+        logger.info("Vérifier que le commentaire a été ajouté");
+
+
+
+        //Vérifier que l'icone commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("app-post-statistics > div > ul > li > a > span")).size(),0);
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commentaire_Article").click();
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Vérifier que le commentaire est celui qu'on a introduit
+
+        Assert.assertEquals(datastore.get("Champ_Input_Commenter_Article"),generalobjectsmap.get("Premiere_Commentaire_Article_Afficher").getAttribute("innerText"));
+
+
+    }
 
 }
