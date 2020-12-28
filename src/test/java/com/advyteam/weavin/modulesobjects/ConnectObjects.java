@@ -220,6 +220,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "button[title=\"Envoyer\"]")
     public static WebElement Envoyer_Commenteraire_Article;
 
+    @FindBy(xpath = "//div/article/div[6]/app-post-statistics/div/ul/li/a")
+    public static WebElement Icone_Commentaire_Article;
+
+    @FindBy(css = "li > div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_Article_Afficher;
+
+
+
+    @FindBy(css = "form > div > div:nth-child(1) > div > input")
+    public static WebElement Champ_Input_Rechercher_Article_Par_Titre;
+
 
 
 

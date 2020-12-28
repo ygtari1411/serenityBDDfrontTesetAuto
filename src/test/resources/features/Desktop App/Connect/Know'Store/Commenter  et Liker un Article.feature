@@ -48,13 +48,16 @@ Feature: Article
 
     #Etape 4 : Le deuxieme utilisateur   se connecte  pour liker et commenter l'article
 
-    When l'utilisateur "admin" est connecté
+    When l'utilisateur "josephine.berard@yopmail.com" est connecté
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 10 secondes
+    And l utilisateur saisit "Test automatique commenter et liker un article" dans le champs "Champ_Input_Rechercher_Article_Par_Titre"
+    And pause 15 secondes
     And l utilisateur clique sur "Titre_Premier_Article_publier"
     And l utilisateur saisit "Commenter et liker un article" dans le champs "Champ_Input_Commenter_Article"
     And l utilisateur clique sur "Envoyer_Commenteraire_Article"
+    Then vérifier que le commentaire a été ajouté
 
 
 
