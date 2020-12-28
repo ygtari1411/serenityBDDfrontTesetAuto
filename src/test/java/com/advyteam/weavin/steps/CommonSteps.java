@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.core.annotations.events.AfterScenario;
 import net.serenitybdd.core.annotations.events.BeforeScenario;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.By;
@@ -26,6 +27,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -52,6 +54,27 @@ public class CommonSteps {
         if (generalobjectsmap.isEmpty()) {
             generalobjectsmap.putAll(CommonObjects.objectsMapper());
             generalobjectsmap.putAll(ConnectObjects.objectsMapper());
+        }
+    }
+
+    @AfterScenario
+    public void finishingStep() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
+        if (driver.findElements(By.cssSelector("div.author-title")).size() != 0) {
+            logger.info("Déconnexion de l'utilisateur " + datastore.get("champ_username"));
+            actions = new Actions(driver);
+            actions.moveToElement(generalobjectsmap.get("Username_menu")).perform();
+            synchronized (driver) {
+                driver.wait(3000);
+            }
+            generalobjectsmap.get("logout_button").click();
+            synchronized (driver) {
+                driver.wait(5000);
+            }
+        }
+        driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+        if (!datastore.isEmpty()) {
+            datastore.clear();
         }
     }
 
