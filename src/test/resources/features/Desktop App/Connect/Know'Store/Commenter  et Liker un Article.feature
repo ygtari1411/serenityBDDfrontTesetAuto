@@ -20,7 +20,6 @@ Feature: Article
 
   #Etape2  : Ajout Article
 
-
     When l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     Then vérifier que la page affichée est la page knows store
     And l utilisateur clique sur "Bouton_Ajout_Article"
@@ -61,10 +60,20 @@ Feature: Article
     And pause 15 secondes
     And l utilisateur clique sur "Bouton_Like_Article"
     And pause 15 secondes
-    Then vérifier  l ajout  correct du Like
-    And pause 30 secondes
+    Then vérifier  que le like  a été ajouté
+    And pause 10 secondes
 
 
+   #Etape 6 : le deuxieme utilisateur  se deconnecte
+
+    And  l utilisateur se deconnecte
+
+  #Etape 7 : L'utilisateur admin  se connecte  pour vérifier qu'il a reçu une notification
+
+    When l'utilisateur "admin" est connecté
+    And l utilisateur clique sur "Bouton_Notifications"
+    And pause 10 secondes
+    Then vérifier que l admin a reçu une notification pour l intercation et une notification pour le commentaire
 
 
 
