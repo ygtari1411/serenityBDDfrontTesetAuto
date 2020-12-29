@@ -607,4 +607,30 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("vérifier  que le like  a été ajouté")
+    public void vérifierQueLeLikeAÉtéAjouté() {
+
+        logger.info("Vérifier que le like a été ajouté");
+
+        //Vérifier que l icone LIKE s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")).size(),0);
+
+        //Vérifier que le like a été comptabilisé
+
+        Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Article").getAttribute("innerText"),"1");
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @Then("vérifier que l admin a reçu une notification pour l intercation et une notification pour le commentaire")
+    public void vérifierQueLAdminAReçuUneNotificationPourLIntercationEtUneNotificationPourLeCommentaire() {
+
+        Assert.assertTrue(generalobjectsmap.get("Premiere_Notification_Afficher").getAttribute("innerText").contains("réagi à votre publication"));
+        Assert.assertTrue(generalobjectsmap.get("Deuxieme_Notification_Afficher").getAttribute("innerText").contains("a commenté votre"));
+
+    }
+
+
 }

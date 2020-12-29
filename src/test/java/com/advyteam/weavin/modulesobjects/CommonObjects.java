@@ -84,7 +84,14 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".swal2-confirm.btn")
     public static WebElement Bouton_confirmer_action;
 
+    @FindBy(css = "#dropdownNotification > svg")
+    public static WebElement Bouton_Notifications;
 
+    @FindBy(css = "ul > li:nth-child(1) > div.notification-event > div")
+    public static WebElement Premiere_Notification_Afficher;
+
+    @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
+    public static WebElement Deuxieme_Notification_Afficher;
 
 
 
