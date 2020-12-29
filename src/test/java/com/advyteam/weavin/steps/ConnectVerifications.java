@@ -632,5 +632,39 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("verifier que le commentaire de l article est modifié")
+    public void verifierQueLeCommentaireDeLArticleEstModifié() {
+        logger.info("vérifier que le commentaire a été modifié avec succés");
+
+        Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire_Article"),generalobjectsmap.get("Premiere_Commentaire_Article_Afficher").getAttribute("innerText"));
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @Then("verifier que l interaction de l article a été modifiée avec succés")
+    public void verifierQueLInteractionDeLArticleAÉtéModifiéeAvecSuccés() {
+
+        logger.info("vérifier que l'interaction a été modifiée avec succés");
+
+        //Vérifier que l icone praise s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),0);
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @And("l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Article")
+    public void lUtilisateurCliqueSurLeBoutonEnvoyer_Commenteraire_Modifier_Article() {
+
+        logger.info("l'utilisateur clique sur le bouton Envoyer_Commentaire_Modifier_Article ");
+
+        WebElement element = generalobjectsmap.get("Envoyer_Commenteraire_Modifier_Article");
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+
+    }
 
 }

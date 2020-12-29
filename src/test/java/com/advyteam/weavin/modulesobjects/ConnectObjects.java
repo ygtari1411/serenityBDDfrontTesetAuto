@@ -226,14 +226,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Article_Afficher;
 
-
     @FindBy(css = "form > div > div:nth-child(1) > div > input")
     public static WebElement Champ_Input_Rechercher_Article_Par_Titre;
 
-
     @FindBy(css = "div:nth-child(1) > div > app-post-card > div > article > div.post-content > a")
     public static WebElement Premier_Article_Afficher_Utilisateur;
-
 
     @FindBy(css = "div > div.like-action.mr-lg")
     public static WebElement Bouton_Interaction_Article;
@@ -243,6 +240,21 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_Article;
+
+    @FindBy(css = "li > div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div")
+    public static WebElement Bouton_Option_Commentaire_Article;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_Editer_Commentaire_Article;
+
+    @FindBy(css = "li > div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor > p")
+    public static WebElement Champ_Input_Modification_Commenteraire_Article;
+
+    @FindBy(xpath = "//li/div[1]/app-post-comment-form/form/div/div[2]/div/button[1]")
+    public static WebElement Envoyer_Commenteraire_Modifier_Article;
+
+    @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
+    public static WebElement Bouton_Praise_Article;
 
 
 
