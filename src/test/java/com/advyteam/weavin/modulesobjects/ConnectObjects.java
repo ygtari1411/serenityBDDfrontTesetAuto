@@ -241,7 +241,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.like-action.mr-lg > div > button:nth-child(1)")
     public static WebElement Bouton_Like_Article;
 
-
+    @FindBy(css = "li:nth-child(1) > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_Article;
 
 
 
