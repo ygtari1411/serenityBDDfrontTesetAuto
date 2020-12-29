@@ -95,6 +95,9 @@ public class CommonObjects extends PageObject {
 
 
 
+
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();
         Field[] allFields = CommonObjects.class.getFields();
