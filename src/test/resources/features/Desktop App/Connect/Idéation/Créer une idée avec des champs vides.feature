@@ -4,14 +4,13 @@
 # Date de création: 22/12/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-IDEATION
-@WEAVIN-IDEATION-0015
-
 
 Feature: Idéation
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-IDEATION
+  @WEAVIN-IDEATION-0015
   Scenario: Créer une idée avec des champs vides
 
      #Etape 1 : Connexion
