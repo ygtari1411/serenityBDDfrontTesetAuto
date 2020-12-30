@@ -4,13 +4,13 @@
 # Date de création: 14/10/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-TIMELINE
-@WEAVIN-TIMELINE-0001
 
 Feature: Timeline: Publication d'un nouveau statut
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-TIMELINE
+  @WEAVIN-TIMELINE-0001
   Scenario: Publication d'un nouveau statut
 
       #Etape 1 : Connexion

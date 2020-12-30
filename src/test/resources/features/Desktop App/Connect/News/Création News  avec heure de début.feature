@@ -4,14 +4,13 @@
 # Date de création: 09/11/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-NEWS
-@WEAVIN-NEWS-0002
 
 Feature: News
 
-
+   @WEAVIN
+   @WEAVIN-CONNECT
+   @WEAVIN-NEWS
+   @WEAVIN-NEWS-0002
   Scenario: Création nouvelle news avec heure de début
 
    #Etape 1 : Connexion

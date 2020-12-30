@@ -4,14 +4,14 @@
 # Date de création: 06/11/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-IDEATION
-@WEAVIN-IDEATION-0002
 
 
 Feature: Idéation
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-IDEATION
+  @WEAVIN-IDEATION-0002
   Scenario: Modification d'une idée
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
@@ -26,7 +26,7 @@ Feature: Idéation
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvelle_idee"
     And l utilisateur clique sur "Bouton_enregistrer_nouvelle_idee"
-    Then vérifier que le message "Opération effectuée avec succés" s'affiche dans la notification
+    Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
     And pause 3 secondes
     Then vérifier la publication correct de l idee
     When l utilisateur clique sur "Calendrier_recherche_publication_par_date"
@@ -38,4 +38,4 @@ Feature: Idéation
     And l utilisateur modifie "Ceci est la modification de l'idéation" dans le champs "Titre_nouvelle_idee"
     And l utilisateur modifie "Description modifiée" dans le champs "Description_nouvelle_idee"
     And l utilisateur clique sur "Bouton_enregistrer_nouvelle_idee"
-    Then vérifier que le message "Opération effectuée avec succés" s'affiche dans la notification
+    Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification

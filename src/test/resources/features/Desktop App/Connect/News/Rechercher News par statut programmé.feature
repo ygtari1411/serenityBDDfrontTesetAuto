@@ -4,13 +4,13 @@
 # Date de création: 09/11/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-NEWS
-@WEAVIN-NEWS-0009
 
 Feature: News
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-NEWS
+  @WEAVIN-NEWS-0009
   Scenario: Rechercher News par statut programmé
 
   #Etape 1 : Connexion

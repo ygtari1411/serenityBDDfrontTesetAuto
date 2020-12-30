@@ -4,13 +4,13 @@
 # Date de création: 09/11/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-NEWS
-@WEAVIN-NEWS-0005
 
 Feature: News
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-NEWS
+  @WEAVIN-NEWS-0005
   Scenario: Suppression news
 
   #Etape 1 : Connexion
