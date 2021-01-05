@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.core.annotations.events.AfterScenario;
 import net.serenitybdd.core.annotations.events.BeforeScenario;
 import net.thucydides.core.annotations.Managed;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -30,8 +31,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CommonSteps {
 
@@ -89,7 +88,7 @@ public class CommonSteps {
         ngDriver = new NgWebDriver(jsDriver);
         specialwait = (new WebDriverWait(driver, 100))
                 .until(ExpectedConditions.visibilityOf(generalobjectsmap.get("login_button")));
-        assertThat(generalobjectsmap.get("login_button").isDisplayed(), equalTo(true));
+        Assert.assertTrue(generalobjectsmap.get("login_button").isDisplayed());
     }
 
     @And("l'utilisateur {string} est connecté")
@@ -252,8 +251,6 @@ public class CommonSteps {
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Message_resultat_action"))));
-
-        assertThat(generalobjectsmap.get("Message_resultat_action").getText().equals(textnotif), equalTo(true));
-
+        Assert.assertEquals(generalobjectsmap.get("Message_resultat_action").getText(), textnotif);
     }
 }

@@ -2,9 +2,7 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Managed;
-import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,17 +13,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ConnectVerifications {
 
@@ -53,7 +46,7 @@ public class ConnectVerifications {
         }
 
         //Asserting that first publication contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"), equalTo(datastore.get("champ_statut")));
+        Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
     }
 
     //    Vérification pour Idéation
@@ -63,15 +56,14 @@ public class ConnectVerifications {
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_ajout_ideation"))));
-        assertThat(generalobjectsmap.get("Modal_ajout_ideation").isDisplayed(), equalTo(true));
+        Assert.assertTrue(generalobjectsmap.get("Modal_ajout_ideation").isDisplayed());
     }
 
     //    Vérification pour Idéation
     @Then("vérifier la publication correct de l idee")
     public void vérifierLaPublicationCorrectDeLIdee() {
         logger.info("vérification de la publication correct de la nouvelle idée");
-        assertThat(!driver.findElements(By.xpath(("//a[contains(text(),\"")+datastore.get("Titre_nouvelle_idee")+("\")]"))).isEmpty(),equalTo(true));
-
+        Assert.assertFalse(driver.findElements(By.xpath(("//a[contains(text(),\"") + datastore.get("Titre_nouvelle_idee") + ("\")]"))).isEmpty());
     }
 
     //Vérification pour  News
@@ -81,10 +73,8 @@ public class ConnectVerifications {
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_ajout_news"))));
-        assertThat(generalobjectsmap.get("Modal_ajout_news").isDisplayed(), IsEqual.equalTo(true));
-        assertThat(generalobjectsmap.get("Modal_ajout_news").getAttribute("innerText"), equalTo("Annoncez une actualité"));
-
-
+        Assert.assertTrue(generalobjectsmap.get("Modal_ajout_news").isDisplayed());
+        Assert.assertEquals("Annoncez une actualité",generalobjectsmap.get("Modal_ajout_news").getAttribute("innerText"));
     }
 
 
@@ -144,8 +134,7 @@ public class ConnectVerifications {
         }
 
         //Asserting that first news contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
-
+        Assert.assertEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News
@@ -177,9 +166,7 @@ public class ConnectVerifications {
     public void vérifierQueLActualitéNeSAfficheQueSiLHeureEstÉgaleÀLHeureDeDateDeDébutDeLActualité() {
 
         logger.info("vérification du statut de la news");
-
-        assertThat(generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"), equalTo("PROGRAMMÉ"));
-
+        Assert.assertEquals("PROGRAMMÉ",generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News
@@ -240,8 +227,7 @@ public class ConnectVerifications {
         }
 
         //Asserting that first news contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
-
+        Assert.assertEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
 
 
     }
@@ -265,9 +251,7 @@ public class ConnectVerifications {
         }
 
         //Asserting that first news  do not contains the text published in the scenario
-
-        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), is(not(equalTo(  datastore.get("Champ_Input_Titre_News")  ))))     ;
-
+        Assert.assertNotEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News
@@ -288,8 +272,7 @@ public class ConnectVerifications {
         }
 
         //Asserting that first news contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_News")));
-
+        Assert.assertEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News

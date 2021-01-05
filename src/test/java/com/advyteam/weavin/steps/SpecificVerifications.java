@@ -2,6 +2,7 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SpecificVerifications {
 
@@ -38,9 +37,9 @@ public class SpecificVerifications {
                     WebElement specialwait = (new WebDriverWait(driver, 40)).until(
                             (ExpectedConditions
                                     .visibilityOf(generalobjectsmap.get("Acceuil_header"))));
-                    assertThat(generalobjectsmap.get("Acceuil_header").isDisplayed(), equalTo(true));
+                    Assert.assertTrue(generalobjectsmap.get("Acceuil_header").isDisplayed());
                 } else {
-                    assertThat(generalobjectsmap.get("login_button").isDisplayed(), equalTo(true));
+                    Assert.assertTrue(generalobjectsmap.get("login_button").isDisplayed());
                     //TODO adapt this assertion when notification on wrong username or password is added
 
                 }
@@ -48,8 +47,7 @@ public class SpecificVerifications {
             }
 
             case "ssss": {
-
-                assertThat(generalobjectsmap.get("login_button").isDisplayed(), equalTo(true));
+                Assert.assertTrue(generalobjectsmap.get("login_button").isDisplayed());
                 //TODO adapt this assertion when notification on wrong username or password is added
                 break;
             }
@@ -60,75 +58,75 @@ public class SpecificVerifications {
     }
 
     @Then("vérifier l'affichage correct de tous les sous-menu")
-    public void vérifierLAffichageCorrectDeTousLesSousMenu() throws InterruptedException {
+    public void vérifierLAffichageCorrectDeTousLesSousMenu() {
         logger.info("Vérification de la présence de tous les sous-menu");
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-user-menu-male")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-about")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-idea-2")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(1) .left-menu-title")).getText().equals("Fermer le menu"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(2) .left-menu-title")).getText().equals("Accueil"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(3) .left-menu-title")).getText().equals("Annuaire"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(4) .left-menu-title")).getText().equals("Know'store"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText().equals("Idéation"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText().equals("Calendrier & événements"), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText().equals("News"), equalTo(true));
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-user-menu-male")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-about")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-idea-2")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isDisplayed());
+        Assert.assertEquals("Fermer le menu", driver.findElement(By.cssSelector("li:nth-child(1) .left-menu-title")).getText());
+        Assert.assertEquals("Accueil", driver.findElement(By.cssSelector("li:nth-child(2) .left-menu-title")).getText());
+        Assert.assertEquals("Annuaire", driver.findElement(By.cssSelector("li:nth-child(3) .left-menu-title")).getText());
+        Assert.assertEquals("Know'store", driver.findElement(By.cssSelector("li:nth-child(4) .left-menu-title")).getText());
+        Assert.assertEquals("Idéation", driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText());
+        Assert.assertEquals("Calendrier & événements", driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText());
+        Assert.assertEquals("News", driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText());
     }
 
     @Then("vérifer la fermeture du sous menu")
     public void vériferLaFermetureDuSousMenu() throws IOException {
         logger.info("Vérification de la fermeture du menu");
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-user-menu-male")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-about")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-idea-2")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isEmpty(), equalTo(true));
-        assertThat(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isEmpty(), equalTo(true));
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-user-menu-male")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-about")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-idea-2")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isEmpty());
+        Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isEmpty());
         driver.manage().timeouts().implicitlyWait(Long.parseLong(Utilitie.readers().getProperty("webdriver.timeouts.implicitlywait")), TimeUnit.MILLISECONDS);
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-home-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-happy-faces-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-about")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-idea-2")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-calendar-icon")).isDisplayed(), equalTo(true));
-        assertThat(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-news")).isDisplayed(), equalTo(true));
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-home-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-happy-faces-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-about")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-idea-2")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-calendar-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-news")).isDisplayed());
     }
 
     @Then("Vérifier que le menu s'affiche")
     public void vérifierQueLeMenuSAffiche() {
         logger.info("Vérification de l'affichage correct du menu des paramètres du compte");
-        assertThat(driver.findElement(By.cssSelector(".account-settings")).isDisplayed(), equalTo(true));
+        Assert.assertTrue(driver.findElement(By.cssSelector(".account-settings")).isDisplayed());
     }
 
     @Then("vérifier que l'utilisateur est deconnecté")
     public void vérifierQueLUtilisateurEstDeconnecté() {
         logger.info("Vérification de la déconnexion correct de l'utilisateur");
-        assertThat(generalobjectsmap.get("login_button").isDisplayed(), equalTo(true));
-        assertThat(generalobjectsmap.get("champ_username").isDisplayed(), equalTo(true));
-        assertThat(generalobjectsmap.get("champ_password").isDisplayed(), equalTo(true));
+        Assert.assertTrue(generalobjectsmap.get("login_button").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("champ_username").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("champ_password").isDisplayed());
     }
 
     @Then("vérifier que le mot de passe est masqué")
     public void vérifierQueLeMotDePasseEstMasqué() {
         logger.info("Vérification que le mot de passe est masqué");
-        assertThat(generalobjectsmap.get("champ_password").getAttribute("type").equals("password"),equalTo(true));
+        Assert.assertEquals("password", generalobjectsmap.get("champ_password").getAttribute("type"));
     }
 
     @Then("vérifier que le mot de passe est affiché")
     public void vérifierQueLeMotDePasseEstAffiché() {
         logger.info("Vérification que le mot de passe est affiché");
-        assertThat(generalobjectsmap.get("champ_password").getAttribute("type").equals("text"),equalTo(true));
+        Assert.assertEquals("text", generalobjectsmap.get("champ_password").getAttribute("type"));
     }
 
     @Then("vérifier que la page affichée est la page d'accueil")
     public void vérifierQueLaPageAffichéeEstLaPageDAccueil() {
         logger.info("Vérification que la page affichée est la page d'accueil");
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal"),equalTo(true));
-        assertThat(generalobjectsmap.get("Widget_flux_activite").isDisplayed(),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal", driver.getCurrentUrl());
+        Assert.assertTrue(generalobjectsmap.get("Widget_flux_activite").isDisplayed());
     }
 
     @Then("vérifier que la page affichée est la page annuaire")
@@ -137,8 +135,8 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/collaborators")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/collaborators"),equalTo(true));
-        assertThat(generalobjectsmap.get("Balise_filtre_annuaire").isDisplayed(),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal/collaborators", driver.getCurrentUrl());
+        Assert.assertTrue(generalobjectsmap.get("Balise_filtre_annuaire").isDisplayed());
     }
 
     @Then("vérifier que la page affichée est la page knows store")
@@ -147,8 +145,8 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/usefulinformation/list")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/usefulinformation/list"),equalTo(true));
-        assertThat(generalobjectsmap.get("titre_page_knowstore").getText().equals("Know'store"),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal/usefulinformation/list", driver.getCurrentUrl());
+        Assert.assertEquals("Know'store", generalobjectsmap.get("titre_page_knowstore").getText());
     }
 
     @Then("vérifier que la page affichée est la page idéation")
@@ -157,8 +155,8 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/ideations/list")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/ideations/list"),equalTo(true));
-        assertThat(generalobjectsmap.get("titre_page_ideation").getText().equals("Idéation"),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal/ideations/list", driver.getCurrentUrl());
+        Assert.assertEquals("Idéation", generalobjectsmap.get("titre_page_ideation").getText());
     }
 
     @Then("vérifier que la page affichée est la page calendrier et évenement")
@@ -167,8 +165,8 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/agenda")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/agenda"),equalTo(true));
-        assertThat(generalobjectsmap.get("titre_page_calendrier").getText().equals("Calendrier et événements"),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal/agenda", driver.getCurrentUrl());
+        Assert.assertEquals("Calendrier et événements", generalobjectsmap.get("titre_page_calendrier").getText());
     }
 
     @Then("vérifier que la page affichée est la page news")
@@ -177,7 +175,7 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/news")));
-        assertThat(driver.getCurrentUrl().equals("https://weavin-qa.accretio.io/portal/news"),equalTo(true));
-        assertThat(generalobjectsmap.get("titre_page_news").getText().equals("Actualités"),equalTo(true));
+        Assert.assertEquals("https://weavin-qa.accretio.io/portal/news", driver.getCurrentUrl());
+        Assert.assertEquals("Actualités", generalobjectsmap.get("titre_page_news").getText());
     }
 }
