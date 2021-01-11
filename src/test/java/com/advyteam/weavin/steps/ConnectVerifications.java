@@ -496,5 +496,10 @@ public class ConnectVerifications {
     }
 
 
-
+    // Vérification pour News
+    @And("vérifier que le témoin nouveau est affiché")
+    public void vérifierQueLeTémoinNouveauEstAffiché() {
+        logger.info("vérifier que le témoin nouveau est affiché");
+        Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
+    }
 }
