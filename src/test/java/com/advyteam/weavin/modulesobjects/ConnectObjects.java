@@ -70,7 +70,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".photo-album-item.create-album.cursor")
     public static WebElement Bouton_Ajout_News;
 
-    @FindBy(css = "input[ng-reflect-name=\"titleNews\"]")
+    @FindBy(css = "app-floating-label-form > div > input")
     public static WebElement Champ_Input_Titre_News;
 
     @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[2]/div/weavin-editor/div/quill-editor/div[2]/div[1]/p")
