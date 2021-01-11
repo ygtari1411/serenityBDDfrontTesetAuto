@@ -4,13 +4,15 @@
 # Date de création: 23/12/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-KnowStore
-@WEAVIN-KnowStore-0001
+
 
 Feature: Article
 
+
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-KnowStore
+  @WEAVIN-KnowStore-0001
   Scenario: Ajouter un article
 
   #Etape 1 : Connexion

@@ -4,13 +4,14 @@
 # Date de création: 25/12/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-KnowStore
-@WEAVIN-KnowStore-0003
+
 
 Feature: Article
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-KnowStore
+  @WEAVIN-KnowStore-0003
   Scenario: Supprimer un article
 
   #Etape 1 : Connexion

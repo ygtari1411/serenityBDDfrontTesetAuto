@@ -4,13 +4,14 @@
 # Date de création: 28/12/2020
 
 
-@WEAVIN
-@WEAVIN-CONNECT
-@WEAVIN-KnowStore
-@WEAVIN-KnowStore-0004
+
 
 Feature: Article
 
+  @WEAVIN
+  @WEAVIN-CONNECT
+  @WEAVIN-KnowStore
+  @WEAVIN-KnowStore-0004
   Scenario: Commenter et Liker un article
 
   #Etape 1 : Connexion
