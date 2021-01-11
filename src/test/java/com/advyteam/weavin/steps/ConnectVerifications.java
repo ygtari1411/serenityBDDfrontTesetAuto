@@ -3,7 +3,6 @@ package com.advyteam.weavin.steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
-import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -555,6 +554,12 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
 
+    // Vérification pour News
+    @And("vérifier que le témoin nouveau est affiché")
+    public void vérifierQueLeTémoinNouveauEstAffiché() {
+        logger.info("vérifier que le témoin nouveau est affiché");
+        Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
+    }
         //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
 

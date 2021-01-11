@@ -255,7 +255,14 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_Article;
+    @FindBy(css = "span.toggle")
+    public static WebElement Bouton_Temoin_Nouveau;
 
+    @FindBy(css = "div.flagNew > div.form-group > input")
+    public static WebElement Champ_Input_Temoin_Nouveau_Duree;
+
+    @FindBy(css = "div:nth-child(2) > app-post-card > div > article > div.post-content > div.tags-container > a")
+    public static WebElement Temoin_Premiere_News_Affichee;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
