@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -20,6 +22,7 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
+import org.hamcrest.core.IsEqual;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
@@ -553,18 +556,8 @@ public class ConnectVerifications {
         synchronized (driver) {
             driver.wait(3000);
         }
-
-    // Vérification pour News
-    @And("vérifier que le témoin nouveau est affiché")
-    public void vérifierQueLeTémoinNouveauEstAffiché() {
-        logger.info("vérifier que le témoin nouveau est affiché");
-        Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
-    }
         //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
-
-
-
     }
 
     //   Vérification pour Know'Store
@@ -674,7 +667,16 @@ public class ConnectVerifications {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
 
+    }
 
+
+
+
+    // Vérification pour News
+    @And("vérifier que le témoin nouveau est affiché")
+    public void vérifierQueLeTémoinNouveauEstAffiché() {
+        logger.info("vérifier que le témoin nouveau est affiché");
+        Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
     }
 
 }
