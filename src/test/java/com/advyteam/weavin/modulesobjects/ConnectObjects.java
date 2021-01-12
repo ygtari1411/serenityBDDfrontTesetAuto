@@ -94,13 +94,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
     public static WebElement Statut_Premiere_News_publier;
 
-
     @FindBy(xpath = "//app-news-administration/section/div/div[2]/app-post-card/div/article/div[2]/div[2]/div/div[1]")
     public static WebElement Bouton_Options_Premiere_News_Afficher;
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
     public static WebElement Bouton_Editer_News;
-
 
     @FindBy(xpath = "//button[contains(text(),'Editer')]")
     public static WebElement Bouton_Editer_Modification_News;
