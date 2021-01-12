@@ -94,13 +94,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
     public static WebElement Statut_Premiere_News_publier;
 
-
     @FindBy(xpath = "//app-news-administration/section/div/div[2]/app-post-card/div/article/div[2]/div[2]/div/div[1]")
     public static WebElement Bouton_Options_Premiere_News_Afficher;
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
     public static WebElement Bouton_Editer_News;
-
 
     @FindBy(xpath = "//button[contains(text(),'Editer')]")
     public static WebElement Bouton_Editer_Modification_News;
@@ -192,6 +190,28 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(2) > app-post-card > div > article > div.post-content > div.tags-container > a")
     public static WebElement Temoin_Premiere_News_Affichee;
 
+    @FindBy(css = "app-news-administration > section > div > div:nth-child(2)")
+    public static WebElement Derniere_News_Ajoutee;
+
+    // locators added .............................................................................
+
+    @FindBy(css = "#sidebar-left > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_home_menu_gauche;
+
+    @FindBy(css = "div:nth-child(3) > a > div > div > span.comments > svg")
+    public static WebElement Bouton_Commenter_News;
+
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
+    public static WebElement Bouton_Repondre_News;
+
+    @FindBy(css = "div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Commenter_News;
+
+    @FindBy(css = " div.form-group.with-icon-right > div > button")
+    public static WebElement Envoyer_Commenteraire_News;
+
+    @FindBy(css = " div.form-group.with-icon-right > div > button")
+    public static WebElement Bouton_Interaction_News;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
