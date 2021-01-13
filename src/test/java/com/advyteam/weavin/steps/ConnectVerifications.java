@@ -672,4 +672,27 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("verifier que le like a été supprimé")
+    public void verifierQueLeLikeAÉtéSupprimé(){
+
+        logger.info("Vérifier que le like a été supprimé");
+
+        //Vérifier que l icone LIKE ne s'affiche plus
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("ul > li:nth-child(1) > div > a > span.reactions-menu__icon.reactions-icon-md-LIKE")).size());
+
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @And("verifier que le commentaire a été supprimé")
+    public void verifierQueLeCommentaireAÉtéSupprimé() {
+        logger.info("Vérifier que le commentaire a été supprimé");
+
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")).size());
+
+
+    }
+
 }
