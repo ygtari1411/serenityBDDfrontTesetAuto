@@ -92,7 +92,7 @@ public class CommonSteps {
     }
 
     @And("l'utilisateur {string} est connecté")
-    public void lUtilisateurEstConnecté(String username) throws JAXBException {
+    public void lUtilisateurEstConnecté(String username) throws JAXBException, IOException {
         logger.info("l'utilisateur " + username + " est en cours de connexion");
         datastore.put("champ_username", username);
         generalobjectsmap.get("champ_username").clear();
@@ -100,6 +100,7 @@ public class CommonSteps {
         generalobjectsmap.get("champ_password").clear();
         generalobjectsmap.get("champ_password").sendKeys(CredentialProvider.pwProvider(username));
         generalobjectsmap.get("login_button").click();
+        driver.navigate().to(Utilitie.readers().getProperty("webdriver.base.url"));
     }
 
     @When("l utilisateur clique sur {string}")
