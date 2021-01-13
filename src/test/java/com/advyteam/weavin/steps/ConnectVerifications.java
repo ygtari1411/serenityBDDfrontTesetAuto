@@ -695,4 +695,28 @@ public class ConnectVerifications {
 
     }
 
+    @Then("vérifier que l'article rechercher par titre s affiche")
+    public void vérifierQueLArticleRechercherParTitreSAffiche() throws InterruptedException {
+        logger.info("Vérifier que l'article ajouté s'affiche");
+
+
+        //Waiting for the first article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
+
+    }
+
+
 }

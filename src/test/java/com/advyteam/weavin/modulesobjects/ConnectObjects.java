@@ -216,7 +216,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.ql-editor.ql-blank > p")
     public static WebElement  Champ_Input_Commenter_Article;
 
-
     @FindBy(css = "button[title=\"Envoyer\"]")
     public static WebElement Envoyer_Commenteraire_Article;
 
@@ -261,6 +260,11 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
     public static WebElement Bouton_Editer_Supprimer_Article;
+
+    @FindBy(css = "form > div > div:nth-child(1) > div > input")
+    public static WebElement Champ_Input_Rechercher_Article_Par_titre;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
