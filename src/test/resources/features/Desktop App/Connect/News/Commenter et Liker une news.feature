@@ -40,24 +40,21 @@ Feature: News
 
     Then vérifier la création de la nouvelle news
     And pause 10 secondes
-    And l utilisateur saisit "Test automatique commenter et Liker une news" dans le champs "Champ_Input_Rechercher_News_Par_Titre"
 
   #Etape 4 : Commenter une news
 
-    When l utilisateur clique sur "Bouton_home_menu_gauche"
-    And l utilisateur clique sur "Bouton_Commenter_News"
-    And pause 5 secondes
+    When l utilisateur clique sur "Bouton_accueil_menu_gauche"
+    And l utilisateur clique sur la derniere news ajoutee
     And l utilisateur clique sur "Bouton_Repondre_News"
     And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
     And pause 10 secondes
-    Then vérifier l ajout  correct du commentaire
+    Then vérifier l ajout  correct du commentaire news
 
   #Etape 5 : Liker une news
 
-    #When l utilisateur effectue un hover sur "Bouton_Interaction_Ideation"
-    #And pause 15 secondes
-    #And l utilisateur clique sur "Bouton_Jadore_Ideation"
-    #And pause 15 secondes
-    #Then vérifier l ajout  correct du Like
+    And l utilisateur clique sur "Bouton_aime_News"
+    And pause 20 secondes
+    Then vérifier l ajout  correct du Like news
+

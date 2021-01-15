@@ -280,7 +280,7 @@ public class ConnectVerifications {
         Assert.assertEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
     }
 
-    //Vérification pour  News
+    //Vérification pour News
     @Then("Vérifier que seuls les actualités {string} s'affichent")
     public void vérifierQueSeulsLesActualitésSAffichent(String statut) {
 
@@ -677,4 +677,64 @@ public class ConnectVerifications {
         Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
     }
 
+    // Vérification pour News // div:nth-child(1) > div.news-details > h3
+    @And("l utilisateur clique sur la derniere news ajoutee")
+    public void lUtilisateurCliqueSurLaDerniereNewsAjoutee() {
+        logger.info("l utilisateur clique sur la derniere news ajoutee");
+        String str= datastore.get("Champ_Input_Titre_News");
+        Boolean modules = (new WebDriverWait(driver, 50))
+                .until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(
+                        By.cssSelector("div:nth-child(1) > div.news-details > h3"),
+                        "innerText",
+                        str)));
+        generalobjectsmap.get("Premiere_News_In_Home_List_News").click();
+    }
+
+    // Vérification pour News
+    @Then("vérifier l ajout  correct du commentaire news")
+    public void vérifierLAjoutCorrectDuCommentaireNews() throws InterruptedException {
+
+        logger.info("vérifier l ajout  correct du commentaire news");
+
+        //Vérifier que le nombre de commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector(
+                " div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > span")).size(),
+                0);
+
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commenteraire_News").click();
+
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Vérifier que le commentaire est celui qu'on a introduit
+        Assert.assertEquals(datastore.get("Champ_Input_Commenter_News"),generalobjectsmap.get("Premiere_Commentaire_News_Afficher").getAttribute("innerText"));
+
+
+    }
+
+    // Vérification pour News
+    @And("vérifier qu un message d'erreur s affiche pour chaque champs requis pour news")
+    public void vérifierQuUnMessageDErreurSAffichePourChaqueChampsRequisPourNews() {
+        logger.info("Vérifier que les messages champs requis s'affichent pour news");
+        Assert.assertEquals(
+                driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),
+                3
+        );
+    }
+
+    // Vérification pour News
+    @Then("vérifier l ajout  correct du Like news")
+    public void vérifierLAjoutCorrectDuLikeNews() {
+        logger.info("vérifier l ajout  correct du Like news");
+        //Vérifier que l icone like s'affiche
+        Assert.assertNotEquals(
+                driver.findElements(By.cssSelector("a > span.reactions-icon-md-LIKE.reactions-menu__icon")).size(),
+                0
+        );
+        //Vérifier que le like a été comptabilisé
+        Assert.assertEquals(generalobjectsmap.get("Nombre_Like_News").getAttribute("innerText"),"1");
+    }
 }

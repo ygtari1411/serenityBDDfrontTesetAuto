@@ -73,7 +73,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-floating-label-form > div > input")
     public static WebElement Champ_Input_Titre_News;
 
-    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[2]/div/weavin-editor/div/quill-editor/div[2]/div[1]/p")
+    @FindBy(css = ".ql-container.ql-snow > div.ql-editor.ql-blank")
     public static WebElement Champ_Input_Description_News;
 
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/input")
@@ -136,7 +136,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "ul > app-post-comment > li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Ideation_Afficher;
 
-    @FindBy(xpath = "//a[contains(text(),'Liste des news')]")
+    @FindBy(css = "div > div > div > a:nth-child(3)")
     public static WebElement Onglet_Liste_Des_News;
 
     @FindBy(css = "div > div.like-action.mr-lg")
@@ -253,6 +253,7 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = " div > div.like-action.mr-lg > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_Article;
+
     @FindBy(css = "span.toggle")
     public static WebElement Bouton_Temoin_Nouveau;
 
@@ -267,12 +268,6 @@ public class ConnectObjects extends PageObject {
 
     // locators added .............................................................................
 
-    @FindBy(css = "#sidebar-left > div > ul > li:nth-child(2) > a")
-    public static WebElement Bouton_home_menu_gauche;
-
-    @FindBy(css = "div:nth-child(3) > a > div > div > span.comments > svg")
-    public static WebElement Bouton_Commenter_News;
-
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_News;
 
@@ -284,6 +279,22 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = " div.form-group.with-icon-right > div > button")
     public static WebElement Bouton_Interaction_News;
+
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
+    public static WebElement Icone_Commenteraire_News;
+
+    @FindBy(css = "div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_News_Afficher;
+
+    @FindBy(css = "div:nth-child(1) > div.news-details > h3")
+    public static WebElement Premiere_News_In_Home_List_News;
+
+    @FindBy(css = ".open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > a > span.ml-2")
+    public static WebElement Bouton_aime_News;
+
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_News;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
