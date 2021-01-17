@@ -677,7 +677,7 @@ public class ConnectVerifications {
         Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
     }
 
-    // Vérification pour News // div:nth-child(1) > div.news-details > h3
+    // Vérification pour News
     @And("l utilisateur clique sur la derniere news ajoutee")
     public void lUtilisateurCliqueSurLaDerniereNewsAjoutee() {
         logger.info("l utilisateur clique sur la derniere news ajoutee");
@@ -737,4 +737,25 @@ public class ConnectVerifications {
         //Vérifier que le like a été comptabilisé
         Assert.assertEquals(generalobjectsmap.get("Nombre_Like_News").getAttribute("innerText"),"1");
     }
+
+
+    //   Vérification pour News
+    @And("l utilisateur clique sur le bouton Envoyer commenteraire Modifiee")
+    public void lUtilisateurCliqueSurLeBoutonEnvoyerCommenteraireModifiee() {
+        logger.info("l utilisateur clique sur le bouton Envoyer commenteraire Modifiee");
+        WebElement element = generalobjectsmap.get("Envoyer_Commenteraire_Modifier_News");
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+    }
+
+    //   Vérification pour News
+    @Then("verifier que le commentaire news est modifié")
+    public void verifierQueLeCommentaireNewsEstModifié() {
+        logger.info("verifier que le commentaire est modifié");
+        Assert.assertEquals(
+                datastore.get("Champ_Input_Modification_Commenteraire_News"),
+                generalobjectsmap.get("Premiere_Commentaire_News_Afficher").getAttribute("innerText")
+        );
+    }
+
 }
