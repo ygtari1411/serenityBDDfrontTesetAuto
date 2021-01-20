@@ -1,7 +1,7 @@
 # Auteur: BenYedder
 # Feature: News
-# Scénario: Modification commentaire et like d'une news
-# Date de création: 15/01/2021
+# Scénario: Suppression commentaire et like d'une news
+# Date de création: 19/01/2021
 
 
 
@@ -10,8 +10,8 @@ Feature: News
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-NEWS
-  @WEAVIN-NEWS-0016
-  Scenario: Modification commentaire et like d'une news
+  @WEAVIN-NEWS-0017
+  Scenario: Suppression commentaire et like d'une news
 
   #Etape 1 : Connexion
 
@@ -25,8 +25,8 @@ Feature: News
     Then vérifier que la page affichée est la page news
     And l utilisateur clique sur "Bouton_Ajout_News"
     Then vérifier que le modal de création d'une news est affiché
-    And l utilisateur saisit "Test automatique modifier commentaire et like d'une news" dans le champs "Champ_Input_Titre_News"
-    And l utilisateur saisit "C'est un test automatique modifier commentaire et like d'une news" dans le champs "Champ_Input_Description_News"
+    And l utilisateur saisit "Test automatique supprimer commentaire et like d'une news" dans le champs "Champ_Input_Titre_News"
+    And l utilisateur saisit "C'est un test automatique supprimer commentaire et like d'une news" dans le champs "Champ_Input_Description_News"
     And l utilisitateur saisit la date du jour dans le champs debut date news
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
@@ -46,7 +46,7 @@ Feature: News
     When l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And l utilisateur clique sur la derniere news ajoutee
     And l utilisateur clique sur "Bouton_Repondre_News"
-    And l utilisateur saisit "test automatisé modifier commentaire et like d'une news" dans le champs "Champ_Input_Commenter_News"
+    And l utilisateur saisit "test automatisé supprimer commentaire et like d'une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
     And pause 10 secondes
@@ -55,24 +55,19 @@ Feature: News
   #Etape 5 : Liker une news
 
     And l utilisateur clique sur "Bouton_Interaction_News"
-    And pause 20 secondes
+    And pause 10 secondes
     Then vérifier l ajout  correct du Like news
 
-  #Etape 6 : Modifier le commentaire
+  #Etape 6 : Supprimer le commentaire
 
     When l utilisateur effectue un hover sur "Bouton_Option_Commentaire_News"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Editer_Commentaire_News"
+    And l utilisateur clique sur "Bouton_Supprimer_Commeaire_News"
     And pause 10 secondes
-    And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire_News"
+    Then verifier que le commentaire news est supprimé
+
+  #Etape 7 : Supprimer l'interaction
+
+    When l utilisateur clique sur "Bouton_Interaction_News"
     And pause 5 secondes
-    And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_News"
-    Then verifier que le commentaire news est modifié
-    And pause 20 secondes
-
-  #Etape 7 : Modifier l'interaction
-
-    When l utilisateur effectue un hover sur "Bouton_Interaction_News"
-    And pause 20 secondes
-    And l utilisateur clique sur "Bouton_Praise_News"
-    Then verifier que l'interaction news a été modifiée avec succés
+    Then verifier que l'interaction news a été supprimée avec succés

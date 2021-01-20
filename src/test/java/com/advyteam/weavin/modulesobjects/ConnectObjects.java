@@ -266,8 +266,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-news-administration > section > div > div:nth-child(2)")
     public static WebElement Derniere_News_Ajoutee;
 
-    // locators added .............................................................................
-
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_News;
 
@@ -277,7 +275,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " div.form-group.with-icon-right > div > button")
     public static WebElement Envoyer_Commenteraire_News;
 
-    @FindBy(css = " div.form-group.with-icon-right > div > button")
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1)")
     public static WebElement Bouton_Interaction_News;
 
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
@@ -289,23 +287,26 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div.news-details > h3")
     public static WebElement Premiere_News_In_Home_List_News;
 
-    @FindBy(css = ".open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > a > span.ml-2")
-    public static WebElement Bouton_aime_News;
-
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_News;
 
     @FindBy(css = "div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div > svg")
     public static WebElement Bouton_Option_Commentaire_News;
 
-    @FindBy(css = "div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(1) > a")
+    @FindBy(css = "div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(1)")
     public static WebElement Bouton_Editer_Commentaire_News;
+
+    @FindBy(css = "div.parent-item-comment > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2)")
+    public static WebElement Bouton_Supprimer_Commeaire_News;
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor")
     public static WebElement Champ_Input_Modification_Commenteraire_News;
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
     public static WebElement Envoyer_Commenteraire_Modifier_News;
+
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(2)")
+    public static WebElement Bouton_Praise_News;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

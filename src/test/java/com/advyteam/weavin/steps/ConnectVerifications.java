@@ -668,8 +668,6 @@ public class ConnectVerifications {
     }
 
 
-
-
     // Vérification pour News
     @And("vérifier que le témoin nouveau est affiché")
     public void vérifierQueLeTémoinNouveauEstAffiché() {
@@ -693,26 +691,19 @@ public class ConnectVerifications {
     // Vérification pour News
     @Then("vérifier l ajout  correct du commentaire news")
     public void vérifierLAjoutCorrectDuCommentaireNews() throws InterruptedException {
-
         logger.info("vérifier l ajout  correct du commentaire news");
-
         //Vérifier que le nombre de commentaire s'affiche
         Assert.assertNotEquals(driver.findElements(By.cssSelector(
                 " div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > span")).size(),
                 0);
-
         //cliquer sur l icone commentaire
         generalobjectsmap.get("Icone_Commenteraire_News").click();
-
         //Waiting
         synchronized (driver) {
             driver.wait(3000);
         }
-
         //Vérifier que le commentaire est celui qu'on a introduit
         Assert.assertEquals(datastore.get("Champ_Input_Commenter_News"),generalobjectsmap.get("Premiere_Commentaire_News_Afficher").getAttribute("innerText"));
-
-
     }
 
     // Vérification pour News
@@ -758,4 +749,39 @@ public class ConnectVerifications {
         );
     }
 
+    //   Vérification pour News
+    @Then("verifier que l'interaction news a été modifiée avec succés")
+    public void verifierQueLInteractionNewsAÉtéModifiéeAvecSuccés() {
+        logger.info("verifier que l'interaction news a été modifiée avec succés");
+
+        //Vérifier que l icone praise s'affiche
+        Assert.assertNotEquals(driver.findElements(
+                By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),
+                0
+        );
+
+    }
+
+    //   Vérification pour News
+    @Then("verifier que le commentaire news est supprimé")
+    public void verifierQueLeCommentaireNewsEstSupprimé() {
+        logger.info("verifier que le commentaire news est supprimé");
+        //Vérifier que l icone commentaires ne s'affiche pas
+        Assert.assertEquals(driver.findElements(
+                By.cssSelector("div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg")).size(),
+                0
+        );
+
+    }
+
+    //   Vérification pour News
+    @Then("verifier que l'interaction news a été supprimée avec succés")
+    public void verifierQueLInteractionNewsAÉtéSuppriméeAvecSuccés() {
+        logger.info("verifier que l'interaction news a été supprimée avec succés");
+        //Vérifier que l icone interaction ne s'affiche pas
+        Assert.assertEquals(driver.findElements(
+                By.cssSelector("a > span.reactions-icon-md-LIKE.reactions-menu__icon")).size(),
+                0
+        );
+    }
 }
