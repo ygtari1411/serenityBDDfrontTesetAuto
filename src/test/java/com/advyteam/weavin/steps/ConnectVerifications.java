@@ -3,6 +3,7 @@ package com.advyteam.weavin.steps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
+import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -20,7 +21,6 @@ import java.util.List;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import org.hamcrest.core.IsEqual;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
@@ -784,4 +784,51 @@ public class ConnectVerifications {
                 0
         );
     }
+    //   Vérification pour Know'Store
+    @Then("verifier que le like a été supprimé")
+    public void verifierQueLeLikeAÉtéSupprimé(){
+
+        logger.info("Vérifier que le like a été supprimé");
+
+        //Vérifier que l icone LIKE ne s'affiche plus
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("ul > li:nth-child(1) > div > a > span.reactions-menu__icon.reactions-icon-md-LIKE")).size());
+
+
+
+    }
+
+    //   Vérification pour Know'Store
+    @And("verifier que le commentaire a été supprimé")
+    public void verifierQueLeCommentaireAÉtéSupprimé() {
+        logger.info("Vérifier que le commentaire a été supprimé");
+
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("div.post-additional-info.inline-items.ng-star-inserted > app-post-statistics > div > ul > li > a")).size());
+
+
+    }
+
+    @Then("vérifier que l'article rechercher par titre s affiche")
+    public void vérifierQueLArticleRechercherParTitreSAffiche() throws InterruptedException {
+        logger.info("Vérifier que l'article ajouté s'affiche");
+
+
+        //Waiting for the first article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
+
+    }
+
+
 }

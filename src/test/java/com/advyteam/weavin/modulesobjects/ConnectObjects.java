@@ -94,11 +94,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
     public static WebElement Statut_Premiere_News_publier;
 
+
     @FindBy(xpath = "//app-news-administration/section/div/div[2]/app-post-card/div/article/div[2]/div[2]/div/div[1]")
     public static WebElement Bouton_Options_Premiere_News_Afficher;
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
     public static WebElement Bouton_Editer_News;
+
 
     @FindBy(xpath = "//button[contains(text(),'Editer')]")
     public static WebElement Bouton_Editer_Modification_News;
@@ -214,7 +216,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.ql-editor.ql-blank > p")
     public static WebElement  Champ_Input_Commenter_Article;
 
-
     @FindBy(css = "button[title=\"Envoyer\"]")
     public static WebElement Envoyer_Commenteraire_Article;
 
@@ -301,6 +302,16 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor")
     public static WebElement Champ_Input_Modification_Commenteraire_News;
+    @FindBy(css = "li:nth-child(1) > div > a > span.ml-2")
+    public static WebElement Bouton_Like_Article_Down_Page;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Editer_Supprimer_Article;
+
+    @FindBy(css = "form > div > div:nth-child(1) > div > input")
+    public static WebElement Champ_Input_Rechercher_Article_Par_titre;
+
+
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
     public static WebElement Envoyer_Commenteraire_Modifier_News;
