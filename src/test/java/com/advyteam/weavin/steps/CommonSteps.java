@@ -254,4 +254,18 @@ public class CommonSteps {
                         .visibilityOf(generalobjectsmap.get("Message_resultat_action"))));
         Assert.assertEquals(generalobjectsmap.get("Message_resultat_action").getText(), textnotif);
     }
+
+
+
+    @And("Scroll to{string}")
+    public void scrollTo(String elementToScroll) {
+        logger.info("scroll vers l element "+ elementToScroll);
+
+        WebElement element = generalobjectsmap.get(elementToScroll);
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].scrollIntoView(true);", element);
+
+    }
+
+
 }
