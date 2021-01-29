@@ -312,12 +312,18 @@ public class ConnectObjects extends PageObject {
     public static WebElement Champ_Input_Rechercher_Article_Par_titre;
 
 
-
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
     public static WebElement Envoyer_Commenteraire_Modifier_News;
 
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_News;
+
+    @FindBy(xpath ="//div[@class='row']//div[2]//div[1]//app-datepicker[1]//div[1]//div[1]//button[1]")
+    public static WebElement Calendrier_recherche_article_par_date_debut;
+
+    @FindBy(xpath ="//span[@class='ng-arrow-wrapper']")
+    public static WebElement rechercher_article_categorie;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
