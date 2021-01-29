@@ -830,5 +830,56 @@ public class ConnectVerifications {
 
     }
 
+    //   Vérification pour Know'Store
+    @Then("vérifier que l'article rechercher par date de debut s affiche")
+    public void vérifierQueLArticleRechercherParDateDeDebutSAffiche() throws InterruptedException {
+
+        logger.info("vérifier que l'article rechercher par date de debut s affiche");
+
+        //Waiting for the first article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
+
+    }
+
+
+    @Then("vérifier que seul les articles de {string} s affichent")
+    public void vérifierQueSeulLesArticlesDeSAffichent(String category) {
+        logger.info("vérifier que seul les articles de "+category+" s'affichent");
+
+        //recupérer la liste des catégories
+
+         List<WebElement> elements = driver.findElements(By.cssSelector(".post-category"));
+
+        //parcourir la liste des catégories
+        boolean trouve=false;
+
+        for(int i=1;i<elements.size();i++){
+
+            String str = (elements.get(i)).getAttribute("innerText");
+            if( !str.equals(category) ){
+                System.out.println(str);
+                trouve=true;
+            }
+
+        }
+     //Vérifier si il y a une categorie différente de c'elle rechercher
+
+        Assert.assertFalse(trouve);
+
+    }
+
 
 }
