@@ -854,7 +854,7 @@ public class ConnectVerifications {
 
     }
 
-
+    //   Vérification pour Know'Store
     @Then("vérifier que seul les articles de {string} s affichent")
     public void vérifierQueSeulLesArticlesDeSAffichent(String category) {
         logger.info("vérifier que seul les articles de "+category+" s'affichent");
@@ -878,6 +878,30 @@ public class ConnectVerifications {
      //Vérifier si il y a une categorie différente de c'elle rechercher
 
         Assert.assertFalse(trouve);
+
+    }
+
+    //   Vérification pour Know'Store
+    @Then("vérifier que l'article rechercher par date de fin s affiche")
+    public void vérifierQueLArticleRechercherParDateDeFinSAffiche() throws InterruptedException {
+
+        logger.info("vérifier que l'article rechercher par date de debut s affiche");
+
+        //Waiting for the first article to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Article_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_Article"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
+
+
 
     }
 

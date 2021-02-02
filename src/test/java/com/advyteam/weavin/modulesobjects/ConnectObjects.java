@@ -324,6 +324,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath ="//span[@class='ng-arrow-wrapper']")
     public static WebElement rechercher_article_categorie;
 
+    @FindBy(xpath ="//div[3]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
+    public static WebElement Calendrier_recherche_article_par_date_Fin;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
