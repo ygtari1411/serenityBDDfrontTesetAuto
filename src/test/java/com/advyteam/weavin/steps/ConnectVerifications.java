@@ -929,4 +929,14 @@ public class ConnectVerifications {
     }
 
 
+    //   Vérification pour Know'Store
+    @And("vérifier qu un message d'erreur s affiche pour chaque champs requis pour article")
+    public void vérifierQuUnMessageDErreurSAffichePourChaqueChampsRequisPourArticle() {
+        logger.info("vérifier qu un message d'erreur s affiche pour chaque champs requis pour news");
+        Assert.assertEquals(
+                driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),
+                4
+        );
+    }
+
 }
