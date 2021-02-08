@@ -29,7 +29,7 @@ Feature: Article
     Then vérifier que le modal de création d'un article est affiché
     And l utilisateur saisit "Rechercher par catégorie" dans le champs "Champ_Input_Titre_Article"
     And pause 15 secondes
-    And l utilisateur selectionne "category 1" dans la liste deroulante "categorie_article"
+    And l utilisateur selectionne "Catégorie 1" dans la liste deroulante "categorie_article"
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvel_article"
     And l utilisateur saisit "C'est un test automatique recherche d'un article par catégorie" dans le champs "Champ_Input_Description_Article"
