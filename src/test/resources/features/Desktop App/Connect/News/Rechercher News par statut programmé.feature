@@ -10,7 +10,7 @@ Feature: News
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-NEWS
-  @WEAVIN-NEWS-0009
+  @WEAVIN-NEWS-0010
   Scenario: Rechercher News par statut programmé
 
   #Etape 1 : Connexion

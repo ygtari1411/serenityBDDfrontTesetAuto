@@ -82,7 +82,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "button[id=\"btnSubmit\"]")
     public static WebElement Bouton_Sauvegarder_Creation_News;
 
-    @FindBy(css = "input[ng-reflect-name=\"beginningHourNews\"]")
+    @FindBy(css = "input[formcontrolname=\"beginningHourNews\"]")
     public static WebElement Champ_Input_Heure_Debut_News;
 
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
