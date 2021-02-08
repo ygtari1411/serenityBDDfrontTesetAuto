@@ -63,7 +63,7 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//h6[contains(text(),\"Flux d'activité\")]")
     public static WebElement Widget_flux_activite;
 
-    @FindBy(xpath = "//label[contains(text(),'Filtrer par mot-clé')]")
+    @FindBy(xpath = "//label[contains(text(),'Filtrer par connaissances')]")
     public static WebElement Balise_filtre_annuaire;
 
     @FindBy(css = ".h4")
