@@ -120,7 +120,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " div.row > div:nth-child(2) > app-post-card > div > article > div.post-content > a")
     public static WebElement Titre_Derniere_Idee_Ajoutee;
 
-    @FindBy(css = "input[formcontrolname=\"titleTextSearch\"]")
+    @FindBy(css = "input[placeholder=\"Titre de l'idée\"]")
     public static WebElement Champ_Input_Rechercher_Ideation_Par_Titre;
 
     @FindBy(css = " div > div.comments-shared.ng-star-inserted > a")
