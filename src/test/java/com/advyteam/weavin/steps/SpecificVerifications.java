@@ -62,18 +62,18 @@ public class SpecificVerifications {
         logger.info("Vérification de la présence de tous les sous-menu");
         Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-user-menu-male")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-about")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-idea-2")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(3)")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(5)")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".sidebar--small:nth-child(1) div.mCustomScrollbar ul.left-menu li:nth-child(6) > a.ideation-link")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(8)")).isDisplayed());
         Assert.assertEquals("Fermer le menu", driver.findElement(By.cssSelector("li:nth-child(1) .left-menu-title")).getText());
         Assert.assertEquals("Accueil", driver.findElement(By.cssSelector("li:nth-child(2) .left-menu-title")).getText());
         Assert.assertEquals("Annuaire", driver.findElement(By.cssSelector("li:nth-child(3) .left-menu-title")).getText());
-        Assert.assertEquals("Know'store", driver.findElement(By.cssSelector("li:nth-child(4) .left-menu-title")).getText());
-        Assert.assertEquals("Idéation", driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText());
-        Assert.assertEquals("Calendrier & événements", driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText());
-        Assert.assertEquals("News", driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText());
+        Assert.assertEquals("Know'store", driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText());
+        Assert.assertEquals("Idéation", driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText());
+        Assert.assertEquals("Calendrier & événements", driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText());
+        Assert.assertEquals("News", driver.findElement(By.cssSelector("li:nth-child(8) .left-menu-title")).getText());
     }
 
     @Then("vérifer la fermeture du sous menu")
@@ -89,11 +89,11 @@ public class SpecificVerifications {
         Assert.assertTrue(driver.findElements(By.cssSelector(".fixed-sidebar.open .sidebar--large .left-menu-icon.icons8-news")).isEmpty());
         driver.manage().timeouts().implicitlyWait(Long.parseLong(Utilitie.readers().getProperty("webdriver.timeouts.implicitlywait")), TimeUnit.MILLISECONDS);
         Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-home-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-happy-faces-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-about")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-idea-2")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-collabs-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-knowstore-icon")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-ideation-icon")).isDisplayed());
         Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-calendar-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .icons8-news")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar .sidebar--small .olymp-newspaper-icon")).isDisplayed());
     }
 
     @Then("Vérifier que le menu s'affiche")
