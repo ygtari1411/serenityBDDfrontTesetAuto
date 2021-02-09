@@ -939,4 +939,22 @@ public class ConnectVerifications {
         );
     }
 
+    // Vérification pour calendrier et evenements
+    @Then("vérifier que le modal de création d'un evenement est affiché")
+    public void vérifierQueLeModalDeCréationDUnEvenementEstAffiché() {
+        logger.info("Vérification de l'affichage du modal de création d'un evenement");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_ajout_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_ajout_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_ajout_Evenement").getAttribute("innerText"), equalTo("Créer un évènement"));
+
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement")
+    public void vérifierLaCréationDuNouveauEvenement() {
+        logger.info("vérifier la création du nouveau evenement");
+
+    }
 }

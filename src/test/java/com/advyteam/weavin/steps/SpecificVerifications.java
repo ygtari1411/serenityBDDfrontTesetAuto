@@ -166,7 +166,7 @@ public class SpecificVerifications {
                 (ExpectedConditions
                         .urlMatches("https://weavin-qa.accretio.io/portal/agenda")));
         Assert.assertEquals("https://weavin-qa.accretio.io/portal/agenda", driver.getCurrentUrl());
-        Assert.assertEquals("Calendrier et événements", generalobjectsmap.get("titre_page_calendrier").getText());
+        Assert.assertEquals("Calendrier et évènements", generalobjectsmap.get("titre_page_calendrier").getText());
     }
 
     @Then("vérifier que la page affichée est la page news")
