@@ -311,7 +311,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "form > div > div:nth-child(1) > div > input")
     public static WebElement Champ_Input_Rechercher_Article_Par_titre;
 
-
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
     public static WebElement Envoyer_Commenteraire_Modifier_News;
 
@@ -327,10 +326,54 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath ="//div[3]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
     public static WebElement Calendrier_recherche_article_par_date_Fin;
 
+    // Locators Calendreir et évenements
+
+    @FindBy(css = "div.control-block-button")
+    public static WebElement Bouton_Ajout_Evenement;
+
+    @FindBy(css = "div.modal-header")
+    public static WebElement Modal_ajout_Evenement;
+
+    @FindBy(css = "div:nth-child(1) > ng-select > div")
+    public static WebElement Calendrier;
+
+    @FindBy(css = "div:nth-child(2) > ng-select > div")
+    public static WebElement Type_Evenement;
+
+    @FindBy(css = "div.text-items > div:nth-child(2) > input")
+    public static WebElement Champ_Input_Titre_Evenement;
+
+    @FindBy(css = "div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Description_Evenement;
+
+    @FindBy(css = "div:nth-child(4) > input")
+    public static WebElement Champ_Input_Lieu_Evenement;
+
+    @FindBy(css = "div:nth-child(5) > div:nth-child(1) > div > div > button")
+    public static WebElement Date_Debut_Evenement;
+
+    @FindBy(css = "div:nth-child(6) > div:nth-child(1) > div > div > button")
+    public static WebElement Date_Fin_Evenement;
+
+    @FindBy(xpath ="//input[@id='bg-cover-file']")
+    public static WebElement H_Upload_photo_nouveau_evenement;
+
+    @FindBy(xpath ="//input[@id='shareBoxImages']")
+    public static WebElement Fichier_attache_nouveau_evenement;
+
+    @FindBy(css =" div:nth-child(3) > ng-select")
+    public static WebElement invites_interne_evenement;
+
+    @FindBy(css ="div.add-options-message")
+    public static WebElement Bouton_creer_evenement;
+
+    @FindBy(xpath ="//button[contains(text(),'Décliner')]")
+    public static WebElement Non_envoi_mail_evenement;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
-        Field[] allFields = ConnectObjects.class.getFields();
+        Field[ ] allFields = ConnectObjects.class.getFields();
         for (Field field : allFields) {
             CN_map.put(field.getName(), (WebElement) field.get(field));
         }

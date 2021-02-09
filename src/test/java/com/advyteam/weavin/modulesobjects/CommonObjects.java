@@ -54,7 +54,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".sidebar--small [title=Idéation]")
     public static WebElement Bouton_ideation_menu_gauche;
 
-    @FindBy(css = ".sidebar--small [title='Calendrier & événements']")
+    @FindBy(css = "#sidebar-left > div > ul > li:nth-child(7)")
     public static WebElement Bouton_calendrier_menu_gauche;
 
     @FindBy(css = ".sidebar--small [title=News]")
@@ -72,7 +72,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".h4")
     public static WebElement titre_page_ideation;
 
-    @FindBy(css = "#events-tab")
+    @FindBy(css = "div.row > div > div > div > ul > li:nth-child(1)")
     public static WebElement titre_page_calendrier;
 
     @FindBy(css = ".h4")
