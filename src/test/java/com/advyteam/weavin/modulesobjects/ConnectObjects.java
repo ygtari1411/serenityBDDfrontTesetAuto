@@ -43,7 +43,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".add-options-message .btn-primary")
     public static WebElement Bouton_publier_nouvelle_idee;
 
-    @FindBy(css = ".btn.btn-success")
+    @FindBy(css = "div.modal-footer > button")
     public static WebElement Bouton_enregistrer_upload_image;
 
     @FindBy(css = ".btn.btn-primary.btn-md-2")
