@@ -364,12 +364,23 @@ public class ConnectObjects extends PageObject {
     @FindBy(css =" div:nth-child(3) > ng-select")
     public static WebElement invites_interne_evenement;
 
-    @FindBy(css ="div.add-options-message")
+    @FindBy(xpath ="//button[contains(text(),'Créer un évènement')]")
     public static WebElement Bouton_creer_evenement;
 
     @FindBy(xpath ="//button[contains(text(),'Décliner')]")
     public static WebElement Non_envoi_mail_evenement;
 
+    @FindBy(css ="div:nth-child(5) > div:nth-child(2) > input")
+    public static WebElement Heure_Debut_Evenement;
+
+    @FindBy(css ="div:nth-child(6) > div:nth-child(2) > input")
+    public static WebElement Heure_Fin_Evenement;
+
+    @FindBy(css ="td > a > div > span.fc-title")
+    public static WebElement Evenement_Dans_Calendrier;
+
+    @FindBy(css = "div.private-event-head.inline-items > div.author-date > a")
+    public static WebElement Modal_Evenement;;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

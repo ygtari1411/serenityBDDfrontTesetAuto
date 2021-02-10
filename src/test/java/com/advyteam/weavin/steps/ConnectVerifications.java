@@ -2,6 +2,7 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import net.serenitybdd.core.pages.SerenityActions;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
@@ -9,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -24,6 +26,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
+
 
 public class ConnectVerifications {
 
@@ -950,11 +953,41 @@ public class ConnectVerifications {
         assertThat(generalobjectsmap.get("Modal_ajout_Evenement").getAttribute("innerText"), equalTo("Créer un évènement"));
 
     }
+    
 
+    // Vérification pour calendrier et evenements
+    @And("l utilisateur selectionne {string} dans la liste deroulante des invites interne {string}")
+    public void lUtilisateurSelectionneDansLaListeDeroulanteDesInvitesInterne(String option, String dropdownlist) throws InterruptedException {
+        logger.info("l'utilisateur sélectionne l'option " + option + " dans la " + dropdownlist);
+        datastore.put(dropdownlist, option);
+        generalobjectsmap.get(dropdownlist).click();
+        synchronized (driver) {
+            driver.wait(1000);
+        }
+        Actions actions;
+        actions = new Actions(driver);
+        for (WebElement element : driver.findElements(By.cssSelector(".ng-dropdown-panel-items .ng-option"))) {
+            actions.moveToElement(element).perform();
+            if (element.getText().equalsIgnoreCase(option)) {
+                element.click();
+                break;
+            }
+        }
+
+    }
+    
     // Vérification pour calendrier et evenements
     @Then("vérifier la création du nouveau evenement")
     public void vérifierLaCréationDuNouveauEvenement() {
         logger.info("vérifier la création du nouveau evenement");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement"));
+
 
     }
+    
+    
 }

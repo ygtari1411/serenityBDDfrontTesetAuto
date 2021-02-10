@@ -22,8 +22,9 @@ Feature: Calendrier & évenements
     When l utilisateur clique sur "Bouton_calendrier_menu_gauche"
     And pause 5 secondes
     Then vérifier que la page affichée est la page calendrier et évenement
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajout_Evenement"
-    And pause 10 secondes
+    And pause 5 secondes
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
     And l utilisateur selectionne "Weavin Admin" dans la liste deroulante "Calendrier"
@@ -34,19 +35,22 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     When l utilisateur clique sur "Date_Debut_Evenement"
     And l utilisateur clique sur "Case_aujoudhui_Calendrier"
+    And l utilisateur saisit "15:00" dans le champs "Heure_Debut_Evenement"
     And pause 5 secondes
     When l utilisateur clique sur "Date_Fin_Evenement"
     And l utilisateur clique sur "Case_aujoudhui_Calendrier"
+    And l utilisateur saisit "16:00" dans le champs "Heure_Fin_Evenement"
     And pause 5 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouveau_evenement"
     And pause 5 secondes
-    And l utilisateur selectionne "adriel jacobson" dans la liste deroulante "invites_interne_evenement"
-    And pause 10 secondes
+    And l utilisateur selectionne "adriel jacobson" dans la liste deroulante des invites interne "invites_interne_evenement"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
 
     #Etape 3 : Vérification de la création de l'évenement
 
+    When l utilisateur clique sur "Evenement_Dans_Calendrier"
     Then vérifier la création du nouveau evenement
