@@ -2,7 +2,6 @@ package com.advyteam.weavin.steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import net.serenitybdd.core.pages.SerenityActions;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
@@ -20,12 +19,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 
 public class ConnectVerifications {
