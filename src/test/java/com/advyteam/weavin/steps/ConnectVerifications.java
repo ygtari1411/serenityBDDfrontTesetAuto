@@ -982,9 +982,57 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
         assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la modification de l evenement ajoute")
+    public void vérifierLaModificationDeLEvenementAjoute() {
+        logger.info("vérifier la modification de l evenement ajoute");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique modification evenement"));
+    }
+
+    @Then("vérifier que le commentaire evenement a été ajouté")
+    public void vérifierQueLeCommentaireEvenementAÉtéAjouté() throws InterruptedException {
+
+        logger.info("vérifier que le commentaire evenement a été ajouté");
+
+        //Vérifier que l'icone commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("app-post-statistics > div > ul > li > a > span")).size(),0);
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commentaire_Evenement").click();
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Vérifier que le commentaire est celui qu'on a introduit
+        Assert.assertEquals(
+                datastore.get("Champ_Input_Commentaire_Evenement"),
+                generalobjectsmap.get("Premiere_Commentaire_Evenement_Afficher").getAttribute("innerText"));
 
 
     }
-    
-    
+
+    @Then("vérifier  que le like evenement a été ajouté")
+    public void vérifierQueLeLikeEvenementAÉtéAjouté() {
+
+        logger.info("vérifier  que le like evenement a été ajouté");
+        //Vérifier que l icone LIKE s'affiche
+        Assert.assertNotEquals(
+                driver.findElements(
+                        By.cssSelector(
+                                " article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon"
+                        )
+                ).size(), 0
+        );
+        //Vérifier que le like a été comptabilisé
+        Assert.assertEquals(
+                generalobjectsmap.get("Nombre_Like_Evenement").getAttribute("innerText"),
+                "1"
+        );
+
+    }
 }
