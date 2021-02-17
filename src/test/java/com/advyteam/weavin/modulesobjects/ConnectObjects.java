@@ -343,7 +343,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.text-items > div:nth-child(2) > input")
     public static WebElement Champ_Input_Titre_Evenement;
 
-    @FindBy(css = "div.ql-editor.ql-blank")
+    @FindBy(css = "div.ql-editor")
     public static WebElement Champ_Input_Description_Evenement;
 
     @FindBy(css = "div:nth-child(4) > input")
@@ -380,7 +380,40 @@ public class ConnectObjects extends PageObject {
     public static WebElement Evenement_Dans_Calendrier;
 
     @FindBy(css = "div.private-event-head.inline-items > div.author-date > a")
-    public static WebElement Modal_Evenement;;
+    public static WebElement Modal_Evenement;
+
+    @FindBy(css = "div.private-event-head.inline-items > div.more > svg")
+    public static WebElement Bouton_options_evenement;
+
+    @FindBy(css = "div.private-event-head.inline-items > div.more > ul > li:nth-child(1)")
+    public static WebElement Option_modifier_evenement;
+
+    @FindBy(xpath = "//button[contains(text(),'Modifier un évènement')]")
+    public static WebElement Bouton_modifier_evenement;
+
+    @FindBy(css = "div > div.comments-shared > a")
+    public static WebElement Bouton_commentaire_evenement;
+
+    @FindBy(css = "div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Commentaire_Evenement;
+
+    @FindBy(css = "div.form-group.with-icon-right > div > button")
+    public static WebElement Envoyer_Commentaire_Evenement;
+
+    @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
+    public static WebElement Icone_Commentaire_Evenement;
+
+    @FindBy(css = "li > div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_Evenement_Afficher;
+
+    @FindBy(css = "li:nth-child(1) > div > a > span.ml-2")
+    public static WebElement Bouton_Interaction_Evenement;
+
+    @FindBy(css = "li:nth-child(1) > div > div > button:nth-child(1) > span.reactions-icon-md-LIKE.reactions-menu__icon")
+    public static WebElement Bouton_Like_Evenement;
+
+    @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_Evenement;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
