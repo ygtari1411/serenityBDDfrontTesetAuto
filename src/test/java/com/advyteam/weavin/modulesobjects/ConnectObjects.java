@@ -415,6 +415,33 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_Evenement;
 
+    @FindBy(css = "app-more-dropdown > div")
+    public static WebElement Bouton_Option_Commentaire_Evenement;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_Editer_Commentaire_Evenement;
+
+    @FindBy(xpath = "//li/div[1]/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
+    public static WebElement Champ_Input_Modification_Commenteraire_Evenement;
+
+    @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
+    public static WebElement Envoyer_Commenteraire_Modifier_Evenement;
+
+    @FindBy(xpath = "//div[4]/app-post-reactions[1]/div[1]/ul[1]/li[1]/div[1]/div[1]/button[2]/span[2]")
+    public static WebElement Bouton_Praise_Evenement;
+
+    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Commentaire_Evenement;
+
+    @FindBy(css = "div.row > div > div > div > ul > li:nth-child(3)")
+    public static WebElement Onglet_Mes_Evenements;
+
+    @FindBy(css = ".photo-album-item.create-album.cursor")
+    public static WebElement Bouton_Ajout_Mes_Evenements;
+
+    @FindBy(css = "div.row > div > div > div > ul > li:nth-child(1)")
+    public static WebElement Onglet_Calendrier_et_Evenement;
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();

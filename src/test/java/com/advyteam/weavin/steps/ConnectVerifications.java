@@ -870,7 +870,6 @@ public class ConnectVerifications {
 
             String str = (elements.get(i)).getAttribute("innerText");
             if( !str.equals(category) ){
-                System.out.println(str);
                 trouve=true;
             }
 
@@ -995,6 +994,7 @@ public class ConnectVerifications {
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique modification evenement"));
     }
 
+    //Vérification pour calendrier et événement
     @Then("vérifier que le commentaire evenement a été ajouté")
     public void vérifierQueLeCommentaireEvenementAÉtéAjouté() throws InterruptedException {
 
@@ -1016,6 +1016,7 @@ public class ConnectVerifications {
 
     }
 
+    //Vérification pour calendrier et événement
     @Then("vérifier  que le like evenement a été ajouté")
     public void vérifierQueLeLikeEvenementAÉtéAjouté() {
 
@@ -1035,4 +1036,61 @@ public class ConnectVerifications {
         );
 
     }
+
+    //Vérification pour calendrier et événement
+    @And("l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent")
+    public void lUtilisateurCliqueSurLeBoutonEnvoyer_Commenteraire_Modifier_Evenemeent() {
+        logger.info("l'utilisateur clique sur le bouton Envoyer_Commentaire_Modifier_Evenement");
+
+        WebElement element = generalobjectsmap.get("Envoyer_Commenteraire_Modifier_Evenement");
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+
+    }
+
+    //Vérification pour calendrier et événement
+    @Then("verifier que le commentaire de l evenement est modifié")
+    public void verifierQueLeCommentaireDeLEvenementEstModifié() {
+        logger.info("vérifier que le commentaire a été modifié avec succés");
+
+        Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire_Evenement"),generalobjectsmap.get("Premiere_Commentaire_Evenement_Afficher").getAttribute("innerText"));
+
+
+    }
+
+    //Vérification pour calendrier et événement
+    @Then("verifier que l'interaction de l évenement a été modifiée avec succés")
+    public void verifierQueLInteractionDeLÉvenementAÉtéModifiéeAvecSuccés() {
+        logger.info("vérifier que l'interaction a été modifiée avec succés");
+
+        //Vérifier que l icone praise s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),0);
+
+
+    }
+
+    //Vérification pour calendrier et événement
+    @Then("verifier que le commentaire de l evenement est supprimé")
+    public void verifierQueLeCommentaireDeLEvenementEstSupprimé() {
+
+        logger.info("vérifier que le commentaire a été supprimé");
+
+        //Vérifier que l'icone commentaire ne s'affiche plus
+
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size());
+
+    }
+
+
+    @Then("vérifier  que le like evenement a été supprimé")
+    public void vérifierQueLeLikeEvenementAÉtéSupprimé() {
+        logger.info("vérifier que le liké a été supprimé");
+
+        //Vérifier que l icone LIKE ne  s'affiche
+        Assert.assertEquals(driver.findElements(By.cssSelector(" article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")).size(), 0);
+
+    }
+
+
 }
