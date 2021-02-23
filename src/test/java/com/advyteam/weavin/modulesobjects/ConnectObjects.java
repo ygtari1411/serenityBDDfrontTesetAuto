@@ -442,6 +442,21 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.row > div > div > div > ul > li:nth-child(1)")
     public static WebElement Onglet_Calendrier_et_Evenement;
 
+    @FindBy(css = "div.author-content > a")
+    public static WebElement Profil_username;
+
+    @FindBy(css = "div.author-thumb > span > span.edit-avatar > input")
+    public static WebElement H_Upload_photo_de_profil;
+
+    @FindBy(css = "div.top-header-author > div.author-thumb > img")
+    public static WebElement Photo_profil_user;
+
+    @FindBy(css = "div.top-header-thumb > span > span.edit-avatar > input")
+    public static WebElement H_Upload_photo_de_couverture;
+
+    @FindBy(css = "div.top-header-thumb > div > img")
+    public static WebElement Photo_couverture_user;
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();
