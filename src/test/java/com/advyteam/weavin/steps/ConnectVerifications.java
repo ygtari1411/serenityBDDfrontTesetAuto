@@ -1082,7 +1082,7 @@ public class ConnectVerifications {
 
     }
 
-
+    //Vérification pour calendrier et événement
     @Then("vérifier  que le like evenement a été supprimé")
     public void vérifierQueLeLikeEvenementAÉtéSupprimé() {
         logger.info("vérifier que le liké a été supprimé");
@@ -1092,5 +1092,82 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour profil utilisateur
+    @Then("vérifier que le profil de l utilisateur est affiché")
+    public void vérifierQueLeProfilDeLUtilisateurEstAffiché() {
 
+        logger.info("vérifier que le profil de l utilisateur est affiché");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Profil_username"))));
+        Assert.assertTrue(generalobjectsmap.get("Profil_username").isDisplayed());
+        Assert.assertEquals("Weavin Admin",generalobjectsmap.get("Profil_username").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur upload photo de profil {string} dans le champs {string}")
+    public void lUtilisateurUploadPhotoDeProfilDansLeChamps(String arg0, String arg1) {
+
+        logger.info("l utilisateur upload photo de profil");
+
+        driver.findElement(By.cssSelector(" div.author-thumb > span > span.edit-avatar > input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg"
+        );
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
+
+        List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
+                (
+                        ExpectedConditions.numberOfElementsToBe(
+                                By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),
+                                0)
+                )
+        );
+
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l'image est ajoutée")
+    public void vérifierQueLImageEstAjoutée() {
+        logger.info("vérifier que l'image est ajoutée");
+        Assert.assertNotEquals(
+                generalobjectsmap.get("Photo_profil_user").getAttribute("currentSrc"),
+                ""
+        );
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur upload photo de couverture {string} dans le champs {string}")
+    public void lUtilisateurUploadPhotoDeCouvertureDansLeChamps(String arg0, String arg1) {
+
+        logger.info("l utilisateur upload photo de couverture ");
+
+        driver.findElement(By.cssSelector("div.top-header-thumb > span > span.edit-avatar > input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest2.jpg"
+        );
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
+
+        List<WebElement> specialwait = (new WebDriverWait(driver, 30)).until(
+                (
+                        ExpectedConditions.numberOfElementsToBe(
+                                By.cssSelector(".data-sharing-container [class=ng-star-inserted]:last-child [role=progressbar]"),
+                                0)
+                )
+        );
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l'image de couverture est ajoutée")
+    public void vérifierQueLImageDeCouvertureEstAjoutée() {
+
+        logger.info("vérifier que l'image de couverture est ajoutée");
+        Assert.assertNotEquals(
+                generalobjectsmap.get("Photo_couverture_user").getAttribute("currentSrc"),
+                ""
+        );
+    }
 }
