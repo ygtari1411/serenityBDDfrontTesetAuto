@@ -93,7 +93,8 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
     public static WebElement Deuxieme_Notification_Afficher;
 
-
+    @FindBy(xpath = "//span[contains(text(),'Paramètres du Profil')]")
+    public static WebElement Menu_parametres_profil;
 
 
 

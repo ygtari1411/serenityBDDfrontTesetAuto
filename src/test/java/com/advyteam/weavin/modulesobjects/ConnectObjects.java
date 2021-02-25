@@ -457,6 +457,16 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.top-header-thumb > div > img")
     public static WebElement Photo_couverture_user;
 
+    @FindBy(xpath = "//div[2]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]")
+    public static WebElement Champ_Input_Profil_Citation;
+
+    @FindBy(xpath = "//button[contains(text(),'Enregistre')]")
+    public static WebElement Bouton_Enregistrer_Parametre_Compte;
+
+    @FindBy(xpath = "//app-home/div/div[3]/div[1]/span[1]")
+    public static WebElement Citation_Afficher_Profil;
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();

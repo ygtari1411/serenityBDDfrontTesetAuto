@@ -1170,4 +1170,30 @@ public class ConnectVerifications {
                 ""
         );
     }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que la citaiton a été ajouté")
+    public void vérifierQueLaCitaitonAÉtéAjouté() {
+        logger.info("verifier que la citation a été ajouté");
+
+        Assert.assertEquals(
+                datastore.get("Champ_Input_Profil_Citation"),
+                generalobjectsmap.get("Citation_Afficher_Profil").getAttribute("innerText")
+        );
+
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("verifier que la citation a été modifiée")
+    public void verifierQueLaCitationAÉtéModifiée() {
+        logger.info("verifier que la citation a été modifiée");
+        Assert.assertEquals(
+                datastore.get("Champ_Input_Profil_Citation"),
+                generalobjectsmap.get("Citation_Afficher_Profil").getAttribute("innerText")
+        );
+
+    }
+
+
+
 }
