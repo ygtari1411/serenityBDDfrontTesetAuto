@@ -534,8 +534,6 @@ public class ConnectVerifications {
 
         //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Titre_Premier_Article_publier").getAttribute("innerText"), equalTo(datastore.get("Champ_Input_Titre_Article")));
-
-
     }
 
     //   Vérification pour Know'Store
@@ -1194,6 +1192,56 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour profil utilisateur
+    @Then("vérifier que le numéro de téléphone a été ajouté")
+    public void vérifierQueLeNuméroDeTéléphoneAÉtéAjouté() {
+        logger.info("verifier que le numéro de téléphone a été ajouté");
+        Assert.assertEquals(
+                " +216 "+datastore.get("Champ_Input_Profil_Phone"),
+                generalobjectsmap.get("Phone_Afficher_Profil").getAttribute("innerText")
+        );
+    }
 
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l auteur a été ajouté")
+    public void vérifierQueLAuteurAÉtéAjouté() {
+        logger.info("vérifier que l auteur a été ajouté");
+        Assert.assertEquals(
+                datastore.get("Champ_Input_Profil_Auteur"),
+                generalobjectsmap.get("Auteur_Afficher_Profil").getAttribute("innerText")
+        );
+    }
 
+    // Vérification pour profil utilisateur
+    @And("l utilisateur upload photo {string} dans l album' {string}")
+    public void lUtilisateurUploadPhotoDansLAlbum(String arg0, String arg1) {
+
+        logger.info("l utilisateur upload photo dans l album ");
+
+        driver.findElement(By.cssSelector(" button > input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest2.jpg"
+        );
+
+    }
+
+    @Then("vérifier que l album a été ajouté")
+    public void vérifierQueLAlbumAÉtéAjouté() throws InterruptedException {
+
+        logger.info("vérifier que l album a été ajouté");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premier_Album"), "innerText",
+                                datastore.get("Champ_Input_Titre_Album"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Premier_Album").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Titre_Album")));
+    }
 }

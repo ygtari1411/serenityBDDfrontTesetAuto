@@ -466,6 +466,42 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-home/div/div[3]/div[1]/span[1]")
     public static WebElement Citation_Afficher_Profil;
 
+    @FindBy(xpath = "//input[@id='phoneNumber']")
+    public static WebElement Champ_Input_Profil_Phone;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-6.order-lg-2.col-md-6.col-sm-6.col-12 > div > div:nth-child(1) > div.ui-block-content > ul > li:nth-child(2) > span")
+    public static WebElement Phone_Afficher_Profil;
+
+    @FindBy(css = "div:nth-child(2) > div.form-group.col-md-4 > app-floating-label-form > div > input")
+    public static WebElement Champ_Input_Profil_Auteur;
+
+    @FindBy(css = "span.authorQuote")
+    public static WebElement Auteur_Afficher_Profil;
+
+    @FindBy(xpath = "//a[contains(text(),'Photos')]")
+    public static WebElement Menu_photos_profil;
+
+    @FindBy(css = "#album-page > div > div:nth-child(1) > div > div > button")
+    public static WebElement Bouton_Ajout_Album;
+
+    @FindBy(css = "div:nth-child(1) > app-floating-label-form > div > input")
+    public static WebElement Champ_Input_Titre_Album;
+
+    @FindBy(css = "div:nth-child(2) > app-floating-label-form > div > input")
+    public static WebElement Champ_Input_Description_Album;
+
+    @FindBy(css = "div:nth-child(1) > div > div > button > input")
+    public static WebElement Photo_attache_nouvel_Album;
+
+    @FindBy(xpath = "//button[contains(text(),'Publier un album')]")
+    public static WebElement Bouton_Publier_Album;
+
+    @FindBy(css = "#album-page > div > div:nth-child(2)")
+    public static WebElement Derniere_Album;
+
+    @FindBy(css = "article > h3")
+    public static WebElement Titre_Premier_Album;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
