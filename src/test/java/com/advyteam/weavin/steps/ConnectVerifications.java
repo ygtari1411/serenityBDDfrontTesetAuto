@@ -5,10 +5,7 @@ import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.core.IsEqual;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -1224,6 +1221,7 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour profil utilisateur
     @Then("vérifier que l album a été ajouté")
     public void vérifierQueLAlbumAÉtéAjouté() throws InterruptedException {
 
@@ -1232,8 +1230,8 @@ public class ConnectVerifications {
         //Waiting for the first album to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Titre_Premier_Album"), "innerText",
-                                datastore.get("Champ_Input_Titre_Album"))));
+                        .attributeContains(generalobjectsmap.get("Description_Premier_Album"), "innerText",
+                                datastore.get("Champ_Input_Description_Album"))));
 
         //Waiting for the refreshed first album to render
         synchronized (driver) {
@@ -1241,7 +1239,126 @@ public class ConnectVerifications {
         }
 
         //Asserting that first article contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Titre_Premier_Album").getAttribute("innerText"),
-                equalTo(datastore.get("Champ_Input_Titre_Album")));
+        assertThat(generalobjectsmap.get("Description_Premier_Album").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Description_Album")));
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l album a été modifié")
+    public void vérifierQueLAlbumAÉtéModifié() throws InterruptedException {
+
+        logger.info("vérifier que l album a été modifié");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Description_Premier_Album"), "innerText",
+                                datastore.get("Champ_Input_Description_Album"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Description_Premier_Album").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Description_Album")));
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l album a été supprimé")
+    public void vérifierQueLAlbumAÉtéSupprimé() throws InterruptedException {
+        logger.info("vérifier que l album a été supprimé");
+
+        Assert.assertNotEquals(
+                datastore.get("Champ_Input_Description_Album"),
+                generalobjectsmap.get("Description_Premier_Album").getAttribute("innerText")
+        );
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier l ajout  correct du commentaire album")
+    public void vérifierLAjoutCorrectDuCommentaireAlbum() throws InterruptedException {
+
+        logger.info("vérifier l ajout  correct du commentaire album");
+        //Vérifier que le nombre de commentaire s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector(
+                " div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > span")).size(),
+                0);
+        //cliquer sur l icone commentaire
+        generalobjectsmap.get("Icone_Commenteraire_News").click();
+        //Waiting
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Vérifier que le commentaire est celui qu'on a introduit
+        Assert.assertEquals(datastore.get("Champ_Input_Commenter_News"),generalobjectsmap.get("Premiere_Commentaire_News_Afficher").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur clique sur Entree pour Connaissance")
+    public void lUtilisateurCliqueSurEntreePourConnaissance() {
+        logger.info("l utilisateur clique sur Entree pour Connaissance");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que connaissance a été ajouté")
+    public void vérifierQueConnaissanceAÉtéAjouté() throws InterruptedException {
+
+        logger.info("vérifier que connaissance a été ajouté");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Tag_Connaissances"), "innerText",
+                                datastore.get("Champ_Input_Connaissances"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Tag_Connaissances").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Connaissances")));
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur clique sur Entree pour Loisirs")
+    public void lUtilisateurCliqueSurEntreePourLoisirs() {
+        logger.info("l utilisateur clique sur Entree pour Loisirs");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    @Then("vérifier que loisir a été ajouté")
+    public void vérifierQueLoisirsAÉtéAjouté() throws InterruptedException {
+        logger.info("vérifier que loisir a été ajouté");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Tag_Loisirs"), "innerText",
+                                datastore.get("Champ_Input_Loisirs"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Tag_Loisirs").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Loisirs")));
     }
 }
