@@ -499,9 +499,53 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#album-page > div > div:nth-child(2)")
     public static WebElement Derniere_Album;
 
-    @FindBy(css = "article > h3")
-    public static WebElement Titre_Premier_Album;
+    @FindBy(css = "div.overflow-content > perfect-scrollbar > div > div.ps-content > div")
+    public static WebElement Description_Premier_Album;
 
+    @FindBy(css = "body > ngb-modal-window > div > div > app-modal-post > a")
+    public static WebElement Bouton_Femer_Derniere_Album;
+
+    @FindBy(xpath = "//*[@id=\"album-page\"]/div/div[2]/div/div[1]/a/app-more-dropdown/div")
+    public static WebElement Bouton_Options_Album;
+
+    @FindBy(xpath = "//*[@id=\"album-page\"]/div/div[2]/div/div[1]/a/app-more-dropdown/div/ul/li[1]/a")
+    public static WebElement Bouton_Mettre_Ajour_Album;
+
+    @FindBy(css = "#album-page > div > div:nth-child(2) > div > div.photo-item > a > app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Album;
+
+    @FindBy(css = "button.swal2-confirm.btn.btn-success.ml-sm")
+    public static WebElement Bouton_Confirmation_Suppression_Album;
+
+    @FindBy(xpath = "//button[contains(text(),'OK')]")
+    public static WebElement Bouton_OK_Suppression_Album;
+
+    @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-post-picture-modal[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[2]")
+    public static WebElement Photo_d_Album;
+
+    @FindBy(css = "body > ngb-modal-window > div > div > app-post-picture-modal > div > div > div > div.modal-body > form > div.photo-album-wrapper.col-md-12.ng-untouched.ng-pristine.ng-valid > div:nth-child(2) > div > div > div > div.img > svg")
+    public static WebElement Bouton_annuler_photo;
+
+    @FindBy(css = "app-post-reactions > div > ul > li:nth-child(2) > div")
+    public static WebElement Bouton_Repondre_Album;
+
+    @FindBy(css = "div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Commenter_Album;
+
+    @FindBy(css = "div.form-group.with-icon-right > div > button")
+    public static WebElement Envoyer_Commenteraire_Album;
+
+    @FindBy(css = "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
+    public static WebElement Champ_Input_Connaissances;
+
+    @FindBy(css = "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
+    public static WebElement Tag_Connaissances;
+
+    @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
+    public static WebElement Champ_Input_Loisirs;
+
+    @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
+    public static WebElement Tag_Loisirs;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
