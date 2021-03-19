@@ -1342,6 +1342,7 @@ public class ConnectVerifications {
         TagConnaissance.sendKeys(Keys.ENTER);
     }
 
+    // Vérification pour profil utilisateur
     @Then("vérifier que loisir a été ajouté")
     public void vérifierQueLoisirsAÉtéAjouté() throws InterruptedException {
         logger.info("vérifier que loisir a été ajouté");
@@ -1360,5 +1361,52 @@ public class ConnectVerifications {
         //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Tag_Loisirs").getAttribute("innerText"),
                 equalTo(datastore.get("Champ_Input_Loisirs")));
+    }
+
+    // Vérification pour chat
+    @Then("vérifier que l utilisateur a été ajouté à la liste des favoris")
+    public void vérifierQueLUtilisateurAÉtéAjoutéÀLaListeDesFavoris() throws InterruptedException {
+        logger.info("vérifier que l utilisateur a été ajouté à la liste des favoris");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Premier_utilisateur_Favoris"), "innerText",
+                                "Nicolas Solari")));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Premier_utilisateur_Favoris").getAttribute("innerText"),
+                equalTo("Nicolas Solari"));
+    }
+
+    // Vérification pour Annuaire
+    @Then("vérifier que le modal de Gestion des comptes est affiché")
+    public void vérifierQueLeModalDeGestionDesComptesEstAffiché() {
+
+        logger.info("vérifier que le modal de Gestion des comptes est affiché");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Gestion_utilisateurs"))));
+        Assert.assertTrue(generalobjectsmap.get("Modal_Gestion_utilisateurs").isDisplayed());
+        Assert.assertEquals("Administration > Gestion des comptes",generalobjectsmap.get("Modal_Gestion_utilisateurs").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour Annuaire
+    @Then("vérifier que le nouvel utilisateur a été ajouté")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjouté() {
+
+        logger.info("vérifier que le nouvel utilisateur a été ajouté");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").isDisplayed());
+        Assert.assertEquals("karim.bennasr@yopmail.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+
     }
 }

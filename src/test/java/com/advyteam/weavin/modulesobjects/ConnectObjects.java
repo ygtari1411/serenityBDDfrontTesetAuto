@@ -547,6 +547,54 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
     public static WebElement Tag_Loisirs;
 
+    @FindBy(css = "#sidebar-right > div")
+    public static WebElement Bouton_Ouvrir_List_Chat;
+
+    @FindBy(css = "#sidebar-right-1 > div.search-friend.inline-items > form > input")
+    public static WebElement Champ_Input_Chercher_vos_amis;
+
+    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more")
+    public static WebElement Bouton_Options_utilisateur;
+
+    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more > ul > li:nth-child(2) > svg")
+    public static WebElement Bouton_Ajouter_utilisateur_Favoris;
+
+    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.author-status > a")
+    public static WebElement Premier_utilisateur_Favoris;
+
+    @FindBy(xpath = "//span[contains(text(),'Configuration')]")
+    public static WebElement Bouton_Configuration_utilisateur;
+
+    @FindBy(xpath = "//a[contains(text(),'Utilisateurs')]")
+    public static WebElement Rubrique_utilisateurs;
+
+    @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
+    public static WebElement Modal_Gestion_utilisateurs;
+
+    @FindBy(css = "button.btn.btn-primary.mb-0.ml-2.add-user")
+    public static WebElement Bouton_Ajouter_Nouvel_utilisateur;
+
+    @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Email_Nouvel_utilisateur;
+
+    @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Prenom_Nouvel_utilisateur;
+
+    @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Nom_Nouvel_utilisateur;
+
+    @FindBy(css = "div.modal-footer.mt-4 > button.btn.btn-primary.mb-0.ml-2")
+    public static WebElement Bouton_enregistrer_Nouvel_utilisateur;
+
+    @FindBy(css = "app-text-input > div > input")
+    public static WebElement Champ_Input_Chercher_des_membres;
+
+    @FindBy(css = "div.members-settings-container > div > div > div > ul > li:nth-child(3) > a")
+    public static WebElement invites_utilisateurs;
+
+    @FindBy(css = "div.name-container > small")
+    public static WebElement Email_Nouvel_utilisateur_Ajoute;
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();
