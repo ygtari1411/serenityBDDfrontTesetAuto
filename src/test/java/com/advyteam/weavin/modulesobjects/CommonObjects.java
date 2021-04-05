@@ -96,9 +96,6 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//span[contains(text(),'Paramètres du Profil')]")
     public static WebElement Menu_parametres_profil;
 
-
-
-
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();
         Field[] allFields = CommonObjects.class.getFields();

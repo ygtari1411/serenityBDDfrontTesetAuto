@@ -144,8 +144,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page know's store");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/knowstore/list")));
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal/knowstore/list", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-qa.bubbleyou.com/portal/knowstore/list")));
+        Assert.assertEquals("https://weavin-qa.bubbleyou.com/portal/knowstore/list", driver.getCurrentUrl());
         Assert.assertEquals("Know'store", generalobjectsmap.get("titre_page_knowstore").getText());
     }
 
@@ -154,9 +154,9 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page idéation");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/ideations/list")));
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal/ideations/list", driver.getCurrentUrl());
-        Assert.assertEquals("Idéations", generalobjectsmap.get("titre_page_ideation").getText());
+                        .urlMatches("https://weavin-qa.bubbleyou.com/portal/ideations/list")));
+        Assert.assertEquals("https://weavin-qa.bubbleyou.com/portal/ideations/list", driver.getCurrentUrl());
+        Assert.assertEquals("Idéation", generalobjectsmap.get("titre_page_ideation").getText());
     }
 
     @Then("vérifier que la page affichée est la page calendrier et évenement")

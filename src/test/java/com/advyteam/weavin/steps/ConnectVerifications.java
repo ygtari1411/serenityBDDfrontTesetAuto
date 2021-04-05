@@ -506,7 +506,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_ajout_Article"))));
         assertThat(generalobjectsmap.get("Modal_ajout_Article").isDisplayed(), IsEqual.equalTo(true));
-        assertThat(generalobjectsmap.get("Modal_ajout_Article").getAttribute("innerText"), equalTo("Publiez un article"));
+        assertThat(generalobjectsmap.get("Modal_ajout_Article").getAttribute("innerText"), equalTo("Publier un article"));
 
 
 
@@ -1297,7 +1297,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
-    @And("l utilisateur clique sur Entree pour Connaissance")
+    @And("l utilisateur clique sur Entree pour l ajout de Connaissance")
     public void lUtilisateurCliqueSurEntreePourConnaissance() {
         logger.info("l utilisateur clique sur Entree pour Connaissance");
         WebElement TagConnaissance = driver.findElement(
@@ -1363,6 +1363,29 @@ public class ConnectVerifications {
                 equalTo(datastore.get("Champ_Input_Loisirs")));
     }
 
+    // Vérification pour profil utilisateur
+    @Then("vérifier que connaissance a été supprimé")
+    public void vérifierQueConnaissanceAÉtéSupprimé() throws InterruptedException {
+
+        logger.info("vérifier que connaissance a été supprimé");
+        Assert.assertNotEquals(
+                datastore.get("Champ_Input_Connaissances"),
+                generalobjectsmap.get("Champ_Input_Connaissances").getAttribute("ariaLabel")
+        );
+
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que loisir a été supprimé")
+    public void vérifierQueLoisirAÉtéSupprimé() {
+        logger.info("vérifier que loisir a été supprimé");
+        Assert.assertNotEquals(
+                datastore.get("Champ_Input_Loisirs"),
+                generalobjectsmap.get("Champ_Input_Loisirs").getAttribute("ariaLabel")
+        );
+    }
+
+
     // Vérification pour chat
     @Then("vérifier que l utilisateur a été ajouté à la liste des favoris")
     public void vérifierQueLUtilisateurAÉtéAjoutéÀLaListeDesFavoris() throws InterruptedException {
@@ -1409,4 +1432,149 @@ public class ConnectVerifications {
         Assert.assertEquals("karim.bennasr@yopmail.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
 
     }
+
+    // Vérification pour Journalisation
+    @And("vérifier que la publication est publié")
+    public void vérifierQueLaPublicationEstPublié() throws InterruptedException {
+
+        logger.info("vérifier que la publication est publié");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Contenu_Publication_Publié"), "innerText",
+                                datastore.get("Champ_Input_Publication"))));
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Contenu_Publication_Publié").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Publication")));
+    }
+
+    // Vérification pour Journalisation
+    @Then("vérifier que le modal de Gestion des publications est affiché")
+    public void vérifierQueLeModalDeGestionDesPublicationsEstAffiché() {
+
+        logger.info("vérifier que le modal de Gestion des publications est affiché");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Gestion_publications"))));
+        Assert.assertTrue(generalobjectsmap.get("Modal_Gestion_publications").isDisplayed());
+        Assert.assertEquals("Journalisation > Publications",generalobjectsmap.get("Modal_Gestion_publications").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour Journalisation
+    @Then("vérifier que la publication supprimé est affiché dans la liste journalisation publications")
+    public void vérifierQueLLaPublicationSuppriméEstAffichéDansLaListeJournalisationPublications() {
+
+        logger.info("vérifier que l la publication supprimé est affiché dans la liste journalisation publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("Publication",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+
+    }
+
+    // Vérification pour Journalisation
+    @Then("vérifier que l article supprimé est affiché dans la liste journalisation publications")
+    public void vérifierQueLLArticleSuppriméEstAffichéDansLaListeJournalisationPublications() {
+
+        logger.info("vérifier que l article supprimé est affiché dans la liste journalisation publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("Know'store",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+
+    }
+
+    // Vérification pour Journalisation
+    @Then("vérifier que l idée supprimé est affiché dans la liste journalisation publications")
+    public void vérifierQueLIdéeSuppriméEstAffichéDansLaListeJournalisationPublications() {
+
+        logger.info("vérifier que l article supprimé est affiché dans la liste journalisation publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("Idéation",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+
+
+    }
+
+    // Vérification pour Lien utile
+    @Then("vérifier que le modal de création d'un lien utile est affiché")
+    public void vérifierQueLeModalDeCréationDUnLienUtileEstAffiché() {
+
+        logger.info("vérifier que le modal de création d'un lien utile est affiché");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_ajout_Lien_Utile"))));
+        assertThat(generalobjectsmap.get("Modal_ajout_Lien_Utile").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_ajout_Lien_Utile").getAttribute("outerText"), equalTo("Ajouter un lien utile"));
+
+    }
+
+    // Vérification pour Lien utile
+    @Then("Vérifier que le lien utile est publié")
+    public void vérifierQueLeLienUtileEstPublié() throws InterruptedException {
+
+        logger.info("Vérification de la publication correct du lien utile");
+
+        //Waiting for the first publication of timeline to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_Lien_Utile"), "outerText",
+                                datastore.get("Champ_Input_Titre_Lien_Utile")
+                        )
+                )
+        );
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first publication contains the text published in the scenario
+        Assert.assertEquals(
+                generalobjectsmap.get("Titre_Premiere_Lien_Utile").getAttribute("outerText"),
+                datastore.get("Champ_Input_Titre_Lien_Utile")
+        );
+
+    }
+
+    // Vérification pour Lien utile
+    @Then("Vérifier que le lien utile est supprimé")
+    public void vérifierQueLeLienUtileEstSupprimé() throws InterruptedException {
+
+        logger.info("Vérification de la publication correct du lien utile");
+
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Titre_Premiere_Lien_Utile"))));
+        assertThat(generalobjectsmap.get("Titre_Premiere_Lien_Utile").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Titre_Premiere_Lien_Utile").getAttribute("outerText"), not(equalTo(datastore.get("Champ_Input_Titre_Lien_Utile"))));
+
+    }
+
+    // Vérification pour Lien utile
+    @And("l utilisateur Vider le champ de rechercher Lien utile")
+    public void lUtilisateurViderLeChampDeRechercherLienUtile() {
+
+        logger.info("l utilisateur Vider le champ de rechercher Lien utile");
+
+        WebElement RechercheLienUtile = driver.findElement(
+                By.cssSelector(
+                        "div.useful-link-settings-header > form > div > input"
+                )
+        );
+        RechercheLienUtile.sendKeys(Keys.ENTER);
+    }
+
+
+
 }
