@@ -32,9 +32,9 @@ Feature: Idéation
     And l utilisateur clique sur "Case_aujoudhui_Calendrier"
     And pause 7 secondes
     And l utilisateur clique sur "Bouton_option_derniere_ideation"
-    And pause 3 secondes
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_supprimer_ideation"
-    And pause 1 secondes
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     Then vérifier que le message "Supprimé !" s'affiche dans la notification
     And l utilisateur clique sur "Bouton_confirmer_action"

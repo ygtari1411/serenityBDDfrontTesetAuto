@@ -17,7 +17,7 @@ Feature: Profil utilisateur
     And l'utilisateur "admin" est connecté
     And pause 10 secondes
 
-  #Etape2  : Ajout d'une citation
+  #Etape2  : Ajout d'une Connaissance
 
     When l utilisateur clique sur "Username_menu"
     And pause 10 secondes

@@ -50,16 +50,15 @@ Feature: Profil utilisateur
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Mettre_Ajour_Album"
     And pause 5 secondes
-    And l utilisateur effectue un hover sur "Photo_d_Album"
+    And l utilisateur clique sur "Photo_d_Album"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_annuler_photo"
-    And pause 20 secondes
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_Album"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Confirmation_Suppression_Album"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_OK_Suppression_Album"
-    And pause 15 secondes
+    And l utilisateur clique sur "Bouton_confirmer_action"
+    Then vérifier que le message "Supprimé !" s'affiche dans la notification
+    And l utilisateur clique sur "Bouton_confirmer_action"
 
   #Etape5 : vérifier que l album a été supprimé
 

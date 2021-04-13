@@ -94,13 +94,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
     public static WebElement Statut_Premiere_News_publier;
 
-
     @FindBy(xpath = "//app-news-administration/section/div/div[2]/app-post-card/div/article/div[2]/div[2]/div/div[1]")
     public static WebElement Bouton_Options_Premiere_News_Afficher;
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
     public static WebElement Bouton_Editer_News;
-
 
     @FindBy(xpath = "//button[contains(text(),'Editer')]")
     public static WebElement Bouton_Editer_Modification_News;
@@ -201,10 +199,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.add-options-message > button.btn.btn-primary.btn-md-2")
     public static WebElement  Bouton_sauvegarder_article;
 
-    @FindBy(css = "div:nth-child(2) > div > app-post-card > div > article > div.post-content > a")
+    @FindBy(css = " div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > a")
     public static WebElement  Titre_Premier_Article_publier;
 
-    @FindBy(xpath = "//div[2]/div/app-post-card/div/article/div[2]/div[2]/div")
+    @FindBy(css = "div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > div.d-inline-block.card-action > div")
     public static WebElement  Bouton_options_article;
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(1)")
@@ -523,7 +521,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-post-picture-modal[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[2]")
     public static WebElement Photo_d_Album;
 
-    @FindBy(css = "body > ngb-modal-window > div > div > app-post-picture-modal > div > div > div > div.modal-body > form > div.photo-album-wrapper.col-md-12.ng-untouched.ng-pristine.ng-valid > div:nth-child(2) > div > div > div > div.img > svg")
+    @FindBy(css = "div > div > div > div > div.img.ng-star-inserted > svg")
     public static WebElement Bouton_annuler_photo;
 
     @FindBy(css = "app-post-reactions > div > ul > li:nth-child(2) > div")
@@ -541,11 +539,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
     public static WebElement Tag_Connaissances;
 
+    @FindBy(css = "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag:nth-child(1) > div > div > delete-icon > span")
+    public static WebElement Bouton_Supprimer_Connaissance
+;
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
     public static WebElement Champ_Input_Loisirs;
 
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
     public static WebElement Tag_Loisirs;
+
+    @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > delete-icon > span > svg")
+    public static WebElement Bouton_Supprimer_loisir;
 
     @FindBy(css = "#sidebar-right > div")
     public static WebElement Bouton_Ouvrir_List_Chat;
@@ -594,6 +598,60 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.name-container > small")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
+
+    @FindBy(css = "div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Publication;
+
+    @FindBy(css = "div.add-options-message > button")
+    public static WebElement Bouton_publier_Publication;
+
+    @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p")
+    public static WebElement Contenu_Publication_Publié;
+
+    @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > svg")
+    public static WebElement Bouton_Options_Publication;
+
+    @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Publication;
+
+    @FindBy(xpath = "//a[contains(text(),'Journalisation')]")
+    public static WebElement Rubrique_Journalisation;
+
+    @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
+    public static WebElement Modal_Gestion_publications;
+
+    @FindBy(css = "div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div.row.col-2 > i")
+    public static WebElement Icone_Dernière_element_supprimée;
+
+    @FindBy(xpath = "//a[contains(text(),'Personnaliser')]")
+    public static WebElement Rubrique_Personnaliser;
+
+    @FindBy(xpath = "//a[contains(text(),'Gestion des liens utiles')]")
+    public static WebElement Sous_Rubrique_Gestion_Liens_utiles;
+
+    @FindBy(css = "div.useful-link-settings-header > button")
+    public static WebElement Bouton_Ajout_Lien_Utile;
+
+    @FindBy(css = "app-modal-useful-link > div.modal-header")
+    public static WebElement Modal_ajout_Lien_Utile;
+
+    @FindBy(css = "app-floating-label-form:nth-child(1) > div > input")
+    public static WebElement Champ_Input_Titre_Lien_Utile;
+
+    @FindBy(css = "app-floating-label-form:nth-child(2) > div > input")
+    public static WebElement Champ_Input_Lien_Lien_Utile;
+
+    @FindBy(css = "button.btn.btn-md-2.btn-primary")
+    public static WebElement Bouton_Modal_Ajouter_Lien_Utile;
+
+    @FindBy(css = "div.useful-link-settings-header > form > div > input")
+    public static WebElement Champ_Input_Rechercher_Lien_Utile;
+
+    @FindBy(css = "div.name-container")
+    public static WebElement Titre_Premiere_Lien_Utile;
+
+    @FindBy(css = "div.flex-row.flex-row-action > i")
+    public static WebElement Bouton_Supprimer_Lien_Utile;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
