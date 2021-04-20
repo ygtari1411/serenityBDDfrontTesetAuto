@@ -76,7 +76,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_ajout_news"))));
         Assert.assertTrue(generalobjectsmap.get("Modal_ajout_news").isDisplayed());
-        Assert.assertEquals("Annoncez une actualité",generalobjectsmap.get("Modal_ajout_news").getAttribute("innerText"));
+        Assert.assertEquals("Annoncer une actualité",generalobjectsmap.get("Modal_ajout_news").getAttribute("innerText"));
     }
 
 
@@ -390,9 +390,13 @@ public class ConnectVerifications {
         logger.info("vérifier que le Dislike a été effectué");
 
         //Verifier que l'icone Like ne s'affiche
-        Assert.assertEquals(0,driver.findElements(By.cssSelector(" li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size());
-
-
+        Assert.assertEquals(
+                0,
+                driver.findElements(
+                        By.cssSelector(
+                                " li > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted"
+                        )
+                ).size());
     }
 
     //   Vérification pour Idéation
@@ -1575,6 +1579,98 @@ public class ConnectVerifications {
         RechercheLienUtile.sendKeys(Keys.ENTER);
     }
 
+    // Vérification pour News
+    @Then("Vérifier que l actualité ne s'affiche pas")
+    public void vérifierQueLActualitéNeSAffichePas() throws InterruptedException {
 
+        logger.info("Vérifier que la news rechercher ne s'affiche pas");
 
+        //Waiting for the first news to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
+                                datastore.get("Champ_Input_Titre_News"))));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        Assert.assertNotEquals(datastore.get("Champ_Input_Titre_News"),generalobjectsmap.get("Titre_Premiere_News_publier").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour Know'Store
+    @Then("Vérifier que seulement l option supprimer existe")
+    public void vérifierQueSeulementLOptionSupprimerExiste() throws InterruptedException {
+
+        logger.info("Vérifier que seulement l option supprimer existe");
+
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Bouton_supprimer_article_autre_admin"), "innerText",
+                                "Supprimer")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        assertThat(generalobjectsmap.get("Bouton_supprimer_article_autre_admin").getAttribute("innerText"),
+                equalTo("Supprimer"));
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur Vider le champ de citation")
+    public void lUtilisateurViderLeChampDeCitation() {
+
+        logger.info("l utilisateur Vider le champ de citation");
+
+        WebElement ChampCitation = driver.findElement(
+                By.xpath(
+                        "//div[2]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]"
+                )
+        );
+        ChampCitation.sendKeys(Keys.NULL);
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que l input auteur ne s affiche pas")
+    public void vérifierQueLInputAuteurNeSAffichePas() {
+
+        logger.info("vérifier que l input auteur ne s affiche pasé");
+
+        //Verifier que l'input auteur ne s'affiche
+        Assert.assertEquals(
+                0,
+                driver.findElements(
+                        By.cssSelector(
+                                "div:nth-child(2) > div.form-group.col-md-4 > app-floating-label-form > div > input"
+                        )
+                ).size());
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur valide citation vide")
+    public void lUtilisateurCliqueSurEntreePourCitation() {
+        logger.info("l utilisateur valide citation vide");
+        WebElement InputCitation = driver.findElement(
+                By.xpath(
+                        "//div[2]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]"
+                )
+        );
+        InputCitation.sendKeys(Keys.ENTER);
+        InputCitation.sendKeys(Keys.BACK_SPACE);
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec envoi mail")
+    public void vérifierLaCréationDuNouveauEvenementAvecEnvoiMail() {
+        logger.info("vérifier la création du nouveau evenement avec envoi mail");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement avec envoi de mail"));
+    }
 }

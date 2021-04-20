@@ -88,7 +88,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
     public static WebElement Bouton_Publier_News;
 
-    @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/a")
+    @FindBy(css = "div:nth-child(2) > app-post-card-news > div > article > div.post-content > a")
     public static WebElement Titre_Premiere_News_publier;
 
     @FindBy(xpath = "//section/div/div[2]/app-post-card/div/article/div[2]/div[1]/a")
@@ -210,6 +210,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.dropdown-menu.show > button:nth-child(2)")
     public static WebElement  Bouton_supprimer_article;
+
+    @FindBy(css = "div.dropdown-menu.show > button")
+    public static WebElement  Bouton_supprimer_article_autre_admin;
 
     @FindBy(css = "div > div.ql-editor.ql-blank > p")
     public static WebElement  Champ_Input_Commenter_Article;
@@ -356,11 +359,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath ="//input[@id='bg-cover-file']")
     public static WebElement H_Upload_photo_nouveau_evenement;
 
-    @FindBy(xpath ="//input[@id='shareBoxImages']")
+    @FindBy(xpath = "//input[@id='shareBoxImages']")
     public static WebElement Fichier_attache_nouveau_evenement;
 
-    @FindBy(css =" div:nth-child(3) > ng-select")
-    public static WebElement invites_interne_evenement;
+    @FindBy(css = "div.form-group.label-floating.m0 > app-text-input > div > input")
+    public static WebElement Champ_Input_invites_interne_evenement;
+
+    @FindBy(css = "div.row.members-list > div > div > div > div.birthday-author-name > div")
+    public static WebElement Invite_interne_evenement_selectionne;
+
+    @FindBy(css = "button.btn.btn-md-2.btn-primary.mb-0.ml-3")
+    public static WebElement Bouton_Ajouter_Invite_interne_evenement;
 
     @FindBy(xpath ="//button[contains(text(),'Créer un évènement')]")
     public static WebElement Bouton_creer_evenement;
@@ -652,6 +661,12 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.flex-row.flex-row-action > i")
     public static WebElement Bouton_Supprimer_Lien_Utile;
+
+    @FindBy(css = "div:nth-child(3) > div > a > svg")
+    public static WebElement Bouton_Invités_Internes;
+
+    @FindBy(css = "div.swal2-actions > button.swal2-confirm.btn.btn-success.ml-sm")
+    public static WebElement Accepter_envoi_mail_evenement;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
