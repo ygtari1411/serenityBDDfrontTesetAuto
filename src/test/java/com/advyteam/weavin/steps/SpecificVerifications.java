@@ -164,8 +164,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page calendrier et évenement");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/agenda")));
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal/agenda", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-qa.bubbleyou.com/portal/agenda")));
+        Assert.assertEquals("https://weavin-qa.bubbleyou.com/portal/agenda", driver.getCurrentUrl());
         Assert.assertEquals("Calendrier et évènements", generalobjectsmap.get("titre_page_calendrier").getText());
     }
 
@@ -174,8 +174,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page news");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/news")));
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal/news", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-qa.bubbleyou.com/portal/news")));
+        Assert.assertEquals("https://weavin-qa.bubbleyou.com/portal/news", driver.getCurrentUrl());
         Assert.assertEquals("Actualités", generalobjectsmap.get("titre_page_news").getText());
     }
 }
