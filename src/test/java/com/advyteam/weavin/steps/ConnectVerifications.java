@@ -1673,4 +1673,131 @@ public class ConnectVerifications {
         assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement avec envoi de mail"));
     }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec user externe")
+    public void vérifierLaCréationDuNouveauEvenementAvecUserExterne() {
+        logger.info("vérifier la création du nouveau evenement avec user externe");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création évènement avec user externe"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec user externe avec envoi mail")
+    public void vérifierLaCréationDuNouveauEvenementAvecUserExterneAvecEnvoiMail() {
+        logger.info("vérifier la création du nouveau evenement avec user externe avec envoi de mail");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création évènement avec user externe avec envoi de mail"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement de modifcation avec user externe avec envoi mail")
+    public void vérifierLaCréationDuNouveauEvenementDeModifcationAvecUserExterneAvecEnvoiMail() {
+        logger.info("vérifier la création du nouveau evenement de modifcation avec user externe avec envoi mail");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Modification évènement avec user externe avec envoi de mail"));
+
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement d'acceptaion")
+    public void vérifierLaCréationDuNouveauEvenementDAcceptaion() {
+        logger.info("vérifier la création du nouveau evenement d'acceptaion");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Accepter un évènement"));
+
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier l acceptation de l evenement")
+    public void vérifierLAcceptationDeLEvenement() {
+
+        logger.info("vérifier l acceptation de l evenement");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Invité_Acceptation"))));
+        assertThat(generalobjectsmap.get("Invité_Acceptation").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Invité_Acceptation").getAttribute("innerText"), equalTo("Accepté"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement de Refus")
+    public void vérifierLaCréationDuNouveauEvenementDeRefus() {
+        logger.info("vérifier la création du nouveau evenement de Refus");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Refuser un évènement"));
+
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier le Refus de l evenement")
+    public void vérifierLeRefusDeLEvenement() {
+        logger.info("vérifier le Refus de l evenement");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Invité_Acceptation"))));
+        assertThat(generalobjectsmap.get("Invité_Acceptation").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Invité_Acceptation").getAttribute("innerText"), equalTo("Refusé"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement d'acceptaion à partir de la notification")
+    public void vérifierLaCréationDuNouveauEvenementDAcceptaionÀPartirDeLaNotification() {
+        logger.info("vérifier la création du nouveau evenement d'acceptaion à partir de la notification");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Accepter un évènement à partir de la notification"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement dans le flux d'activité")
+    public void vérifierLaCréationDuNouveauEvenementDansLeFluxDActivité() {
+        logger.info("vérifier la création du nouveau evenement dans le flux d'activité");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Ajouter un évènement dans le flux d'activité"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier l ajout de l evenement dans le flux d'activité")
+    public void vérifierLAjoutDeLEvenementDansLeFluxDActivité() {
+        logger.info("vérifier l ajout de l evenement dans le flux d'activité");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Premiere_Element_Flux_Activite_Afficher"))));
+        assertThat(generalobjectsmap.get("Premiere_Element_Flux_Activite_Afficher").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Premiere_Element_Flux_Activite_Afficher").getAttribute("innerText"), equalTo("Marc Parenteau vous a envoyé une invitation à un évènement ."));
+
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement pour la suppression par un autre administrateur")
+    public void vérifierLaCréationDuNouveauEvenementPourLaSuppressionParUnAutreAdministrateur() {
+        logger.info("vérifier la création du nouveau evenement pour la suppression par un autre administrateur");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Supprimer un événement par un autre administrateur"));
+
+    }
 }
