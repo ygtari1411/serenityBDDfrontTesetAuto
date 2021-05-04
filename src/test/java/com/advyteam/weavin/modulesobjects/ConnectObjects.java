@@ -365,7 +365,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.form-group.label-floating.m0 > app-text-input > div > input")
     public static WebElement Champ_Input_invites_interne_evenement;
 
-    @FindBy(css = "div.row.members-list > div > div > div > div.birthday-author-name > div")
+    @FindBy(css = "div.birthday-author-name")
     public static WebElement Invite_interne_evenement_selectionne;
 
     @FindBy(css = "button.btn.btn-md-2.btn-primary.mb-0.ml-3")
@@ -397,6 +397,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "//button[contains(text(),'Modifier un évènement')]")
     public static WebElement Bouton_modifier_evenement;
+
+    @FindBy(css = "div.private-event-head.inline-items > div.more > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_supprimer_evenement_autre_adminstrateur;
 
     @FindBy(css = "div > div.comments-shared > a")
     public static WebElement Bouton_commentaire_evenement;
@@ -510,7 +513,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Description_Premier_Album;
 
     @FindBy(css = "body > ngb-modal-window > div > div > app-modal-post > a")
-    public static WebElement Bouton_Femer_Derniere_Album;
+    public static WebElement Bouton_Fermer_Derniere_Album;
 
     @FindBy(xpath = "//*[@id=\"album-page\"]/div/div[2]/div/div[1]/a/app-more-dropdown/div")
     public static WebElement Bouton_Options_Album;
@@ -667,6 +670,39 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.swal2-actions > button.swal2-confirm.btn.btn-success.ml-sm")
     public static WebElement Accepter_envoi_mail_evenement;
+
+    @FindBy(css = "div.togglebutton > label > span")
+    public static WebElement Bouton_Invités_Externes;
+
+    @FindBy(css = "td:nth-child(1) > ng2-smart-table-cell > table-cell-edit-mode > div > table-cell-default-editor > div > input-editor > input")
+    public static WebElement Champ_Input_Nom_User_Externe;
+
+    @FindBy(css = "td:nth-child(2) > ng2-smart-table-cell > table-cell-edit-mode > div > table-cell-default-editor > div > input-editor > input")
+    public static WebElement Champ_Input_Email_User_Externe;
+
+    @FindBy(css = "a.ng2-smart-action.ng2-smart-action-add-create")
+    public static WebElement Bouton_Ajouter_User_Externe;
+
+    @FindBy(css = "#notifications-tab")
+    public static WebElement Bouton_Mes_Invitations;
+
+    @FindBy(css = "a.btn.btn-breez.btn-sm")
+    public static WebElement Bouton_Accepter_Ajouter_au_calendrier;
+
+    @FindBy(css = "div.col.col-lg-5.col-md-5.col-sm-12.col-12 > div > guests-by-event > div > div.list-guests > a")
+    public static WebElement Bouton_Evenement_liste_Invités;
+
+    @FindBy(css = "div.member.pull-right.avatar-member")
+    public static WebElement Invité_Acceptation;
+
+    @FindBy(css = "ngb-modal-window > div > div > app-event-detail > a")
+    public static WebElement Bouton_Fermer_Evenement;
+
+    @FindBy(css = "a.btn.btn-sm.btn-border-think.custom-color.c-grey")
+    public static WebElement Bouton_Refuser_Ajouter_au_calendrier;
+
+    @FindBy(css = "app-widget-activity-feed > div > ul > li:nth-child(1) > div > div")
+    public static WebElement Premiere_Element_Flux_Activite_Afficher;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

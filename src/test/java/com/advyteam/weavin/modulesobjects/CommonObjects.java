@@ -54,7 +54,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".sidebar--small [title='Idéations']")
     public static WebElement Bouton_ideation_menu_gauche;
 
-    @FindBy(css = "#sidebar-left > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(7) > a")
+    @FindBy(css = "#sidebar-left > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(6) > a > div > svg")
     public static WebElement Bouton_calendrier_menu_gauche;
 
     @FindBy(css = ".sidebar--small [title=News]")
@@ -87,8 +87,14 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "#dropdownNotification > svg")
     public static WebElement Bouton_Notifications;
 
+    @FindBy(css = "app-notification-list > div > div > ngb-tabset > ul > li:nth-child(2)")
+    public static WebElement Bouton_Notifications_Evenement;
+
     @FindBy(css = "ul > li:nth-child(1) > div.notification-event > div")
     public static WebElement Premiere_Notification_Afficher;
+
+    @FindBy(css = "#T2-panel > perfect-scrollbar > div > div.ps-content > div > ul > li")
+    public static WebElement Premiere_Notification_Evenement_Afficher;
 
     @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
     public static WebElement Deuxieme_Notification_Afficher;
