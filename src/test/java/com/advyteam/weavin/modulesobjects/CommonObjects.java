@@ -99,6 +99,12 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
     public static WebElement Deuxieme_Notification_Afficher;
 
+    @FindBy(css = "#site-header > div > div > div:nth-child(1) > app-chat-notification-list > div")
+    public static WebElement Bouton_Notifications_Chat;
+
+    @FindBy(css = "app-chat-notification-item > li > div.notification-event")
+    public static WebElement Premiere_Notification_chat_Afficher;
+
     @FindBy(xpath = "//span[contains(text(),'Paramètres du Profil')]")
     public static WebElement Menu_parametres_profil;
 

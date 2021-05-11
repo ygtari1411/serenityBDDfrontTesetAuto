@@ -491,8 +491,38 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Photos')]")
     public static WebElement Menu_photos_profil;
 
+    @FindBy(xpath = "//a[contains(text(),'Vidéos')]")
+    public static WebElement Menu_vidéos_profil;
+
+    @FindBy(css = "div.align-right > button")
+    public static WebElement Bouton_Télécharger_vidéo;
+
+    @FindBy(css = "app-floating-label-form > div > input")
+    public static WebElement Champ_Input_Description_Vidéo;
+
+    @FindBy(css = "div.d-flex.justify-content-end > button")
+    public static WebElement Bouton_Sauvgarder_Vidéo;
+
+    @FindBy(css = " div.ui-block-content.video-content")
+    public static WebElement Derniere_Vidéo;
+
+    @FindBy(css = "div:nth-child(2) > div > input")
+    public static WebElement Champ_Input_Telecharger_video;
+
+    @FindBy(css = "div.overflow-content > perfect-scrollbar > div > div.ps-content > div")
+    public static WebElement Description_Premier_vidéo;
+
     @FindBy(css = "#album-page > div > div:nth-child(1) > div > div > button")
     public static WebElement Bouton_Ajout_Album;
+
+    @FindBy(css = "div.align-right > a")
+    public static WebElement Bouton_Ajout_photos;
+
+    @FindBy(css = "button > input")
+    public static WebElement Champ_Input_Ajout_photos;
+
+    @FindBy(css = "div.d-flex.justify-content-end > button")
+    public static WebElement Bouton_telecharger_photo;
 
     @FindBy(css = "div:nth-child(1) > app-floating-label-form > div > input")
     public static WebElement Champ_Input_Titre_Album;
@@ -566,14 +596,32 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#sidebar-right > div")
     public static WebElement Bouton_Ouvrir_List_Chat;
 
+    @FindBy(css = "div.mCustomScrollbar > perfect-scrollbar > div > div.ps-content > div > div")
+    public static WebElement Liste_utilisateurs_Favoris;
+
     @FindBy(css = "#sidebar-right-1 > div.search-friend.inline-items > form > input")
     public static WebElement Champ_Input_Chercher_vos_amis;
 
-    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more")
+    @FindBy(css = "app-speed-access-user-item > li > div.author-status > a")
+    public static WebElement Utilisateur_Chercher;
+
+    @FindBy(css = "div.col-lg-12.p0.chat-input-container > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank > p")
+    public static WebElement Champ_Input_Message_Chat;
+
+    @FindBy(css = "div.options-chat-item.col-lg-12.p0.pull-left > div > button")
+    public static WebElement Bouton_Envoyer_Chat;
+
+    @FindBy(css = "span.chat-message-item")
+    public static WebElement Message_reçu;
+
+    @FindBy(css = "app-speed-access-user-item > li > div.more")
     public static WebElement Bouton_Options_utilisateur;
 
-    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more > ul > li:nth-child(2) > svg")
+    @FindBy(css = "div.more > ul > li:nth-child(2)")
     public static WebElement Bouton_Ajouter_utilisateur_Favoris;
+
+    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more > ul > li:nth-child(2)")
+    public static WebElement Bouton_Supprimer_utilisateur_Favoris;
 
     @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.author-status > a")
     public static WebElement Premier_utilisateur_Favoris;
