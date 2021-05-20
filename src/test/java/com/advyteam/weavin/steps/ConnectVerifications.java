@@ -1395,20 +1395,15 @@ public class ConnectVerifications {
     public void vérifierQueLUtilisateurAÉtéAjoutéÀLaListeDesFavoris() throws InterruptedException {
         logger.info("vérifier que l utilisateur a été ajouté à la liste des favoris");
 
-        //Waiting for the first album to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Premier_utilisateur_Favoris"), "innerText",
-                                "Nicolas Solari")));
-
-        //Waiting for the refreshed first album to render
+                                "Nasser QA")));
         synchronized (driver) {
             driver.wait(3000);
         }
-
-        //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Premier_utilisateur_Favoris").getAttribute("innerText"),
-                equalTo("Nicolas Solari"));
+                equalTo("Nasser QA"));
     }
 
     // Vérification pour Annuaire
@@ -1798,6 +1793,122 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
         assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Supprimer un événement par un autre administrateur"));
+    }
 
+    // Vérification pour chat
+    @Then("vérifier que la liste des favoris est vide")
+    public void vérifierQueLaListeDesFavorisEstVide() throws InterruptedException {
+        logger.info("vérifier que la liste des favoris est vide");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Liste_utilisateurs_Favoris"), "innerText",
+                                "MEMBRES FAVORIS")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Liste_utilisateurs_Favoris").getAttribute("innerText"),
+                equalTo("MEMBRES FAVORIS"));
+
+    }
+
+    // Vérification pour chat
+    @Then("vérifier que l utilisateur chercher affiche")
+    public void vérifierQueLUtilisateurChercherAffiche() throws InterruptedException {
+        logger.info("vérifier que l utilisateur chercher affiche");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Utilisateur_Chercher"), "innerText",
+                                "Nasser QA")));
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Utilisateur_Chercher").getAttribute("innerText"),
+                equalTo("Nasser QA"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement de refus à partir de la notification")
+    public void vérifierLaCréationDuNouveauEvenementDeRefusÀPartirDeLaNotification() {
+        logger.info("vérifier la création du nouveau evenement de refus à partir de la notification");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Refuser un évènement à partir de la notification"));
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que la vidéo a été ajoutée")
+    public void vérifierQueLaVidéoAÉtéAjoutée() throws InterruptedException {
+        logger.info("vérifier que la vidéo a été ajoutée");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Description_Premier_vidéo"), "innerText",
+                                datastore.get("Champ_Input_Description_Vidéo"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Description_Premier_vidéo").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Description_Vidéo")));
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur upload video {string} dans le champs {string}")
+    public void lUtilisateurUploadVideoDansLeChamps(String arg0, String arg1) {
+        logger.info("l utilisateur upload video dans profil utilisateur ");
+        driver.findElement(By.cssSelector("div:nth-child(2) > div > input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4"
+        );
+        List<WebElement> specialwait = (new WebDriverWait(driver, 100)).until(
+                (ExpectedConditions.numberOfElementsToBe(
+                        By.cssSelector("div.d-inline-block.pull-right.progress-video-bar.ng-star-inserted > div"),
+                        0)
+                )
+        );
+    }
+
+    // Vérification pour profil utilisateur
+    @Then("vérifier que la photo a été ajouté")
+    public void vérifierQueLaPhotoAÉtéAjouté() throws InterruptedException {
+        logger.info("vérifier que la photo a été ajouté");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Description_Premier_vidéo"), "innerText",
+                               "Marc Parenteau Album")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Description_Premier_vidéo").getAttribute("innerText"),
+                equalTo("Marc Parenteau Album"));
+    }
+
+    // Vérification pour profil utilisateur
+    @And("l utilisateur ajoute la photo {string} dans le champs {string}")
+    public void lUtilisateurAjouteLaPhotoDansLeChamps(String arg0, String arg1) {
+        logger.info("l utilisateur upload photo dans profil utilisateur ");
+        driver.findElement(By.cssSelector("button > input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg"
+        );
+    }
+
+    // Vérification pour chat
+    @Then("vérifier que le message a été reçu avec succes")
+    public void vérifierQueLeMessageAÉtéReçuAvecSucces() throws InterruptedException {
+        logger.info("vérifier que le message a été reçu avec succes");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
+                                "Message Texte de Test ")));
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
+                equalTo("Message Texte de Test "));
     }
 }
