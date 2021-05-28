@@ -599,7 +599,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.mCustomScrollbar > perfect-scrollbar > div > div.ps-content > div > div")
     public static WebElement Liste_utilisateurs_Favoris;
 
-    @FindBy(css = "#sidebar-right-1 > div.search-friend.inline-items > form > input")
+    @FindBy(css = "#sidebar-right-1 > div.search-friend.inline-items > div > div > input")
     public static WebElement Champ_Input_Chercher_vos_amis;
 
     @FindBy(css = "app-speed-access-user-item > li > div.author-status > a")
@@ -608,7 +608,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.col-lg-12.p0.chat-input-container > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank > p")
     public static WebElement Champ_Input_Message_Chat;
 
-    @FindBy(css = "div.options-chat-item.col-lg-12.p0.pull-left > div > button")
+    @FindBy(css = "#media-chat")
+    public static WebElement Champ_Input_Image_Chat;
+
+    @FindBy(css = "#file-chat")
+    public static WebElement Champ_Input_Fichier_Chat;
+
+    @FindBy(css = "div.options-chat-item.col-lg-12.p0.pull-left > div > button > svg > path")
     public static WebElement Bouton_Envoyer_Chat;
 
     @FindBy(css = "span.chat-message-item")
@@ -751,6 +757,63 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "app-widget-activity-feed > div > ul > li:nth-child(1) > div > div")
     public static WebElement Premiere_Element_Flux_Activite_Afficher;
+
+    @FindBy(xpath = "//a[@id='ngb-nav-1']")
+    public static WebElement Bouton_Ajouter_Formulaire;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(1)")
+    public static WebElement Bouton_Ajouter_champ_titre;
+
+    @FindBy(css = "#title-field-0")
+    public static WebElement Champ_Input_champ_titre;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(2)")
+    public static WebElement Bouton_Ajouter_champ_zone_text;
+
+    @FindBy(css = "#title-field-1")
+    public static WebElement Champ_Input_champ_zone_text;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(3)")
+    public static WebElement Bouton_Ajouter_champ_nombre;
+
+    @FindBy(css = "#title-field-2")
+    public static WebElement Champ_Input_champ_nombre;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(4)")
+    public static WebElement Bouton_Ajouter_champ_Date;
+
+    @FindBy(css = "#title-field-3")
+    public static WebElement Champ_Input_champ_date;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(5)")
+    public static WebElement Bouton_Ajouter_champ_Liste_choix;
+
+    @FindBy(css = "#title-field-4")
+    public static WebElement Champ_Input_champ_Liste_choix;
+
+    @FindBy(css = "tag-input-form > form > input")
+    public static WebElement Champ_Input_choix_Liste_choix;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(6)")
+    public static WebElement Bouton_Ajouter_champ_cases_coucher;
+
+    @FindBy(css = "#title-field-5")
+    public static WebElement Champ_Input_champ_cases_coucher;
+
+    @FindBy(css = "#options-value5 > div > div > tag-input-form > form > input")
+    public static WebElement Champ_Input_case_cases_coucher;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(7)")
+    public static WebElement Bouton_Ajouter_champ_radio;
+
+    @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(8)")
+    public static WebElement Bouton_Ajouter_champ_Document;
+
+    @FindBy(css = "#title-field-6")
+    public static WebElement Champ_Input_champ_Document;
+
+    @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div > button")
+    public static WebElement Bouton_Valider_formulaire;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

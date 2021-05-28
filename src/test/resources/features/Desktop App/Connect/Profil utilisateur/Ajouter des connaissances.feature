@@ -23,7 +23,7 @@ Feature: Profil utilisateur
     And pause 10 secondes
     And l utilisateur saisit "Test Connaissance" dans le champs "Champ_Input_Connaissances"
     And pause 5 secondes
-    And l utilisateur clique sur Entree pour Connaissance
+    And l utilisateur clique sur Entree pour l ajout de Connaissance
 
 
   #Etape3  vérifier que  connaissance a été ajouté

@@ -93,7 +93,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(1) > div.notification-event > div")
     public static WebElement Premiere_Notification_Afficher;
 
-    @FindBy(css = "#T2-panel > perfect-scrollbar > div > div.ps-content > div > ul > li")
+    @FindBy(css = "#T2-panel > perfect-scrollbar > div > div.ps-content > div > ul > li:nth-child(1) > div.notification-event > div")
     public static WebElement Premiere_Notification_Evenement_Afficher;
 
     @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
