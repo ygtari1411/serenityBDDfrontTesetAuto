@@ -1747,7 +1747,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Invité_Acceptation"))));
         assertThat(generalobjectsmap.get("Invité_Acceptation").isDisplayed(), IsEqual.equalTo(true));
-        assertThat(generalobjectsmap.get("Invité_Acceptation").getAttribute("innerText"), equalTo("Refusé"));
+        assertThat(generalobjectsmap.get("Invité_Acceptation").getAttribute("innerText"), equalTo("A refusé"));
     }
 
     // Vérification pour calendrier et evenements
@@ -1904,11 +1904,170 @@ public class ConnectVerifications {
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
-                                "Message Texte de Test ")));
+                                "Message Texte de Test")));
+
         synchronized (driver) {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
-                equalTo("Message Texte de Test "));
+                equalTo("Message Texte de Test"));
+    }
+
+    // Vérification pour chat
+    @And("l utilisateur upload photo {string} dans le chat {string}")
+    public void lUtilisateurUploadPhotoDansLeChat(String arg0, String arg1) {
+        logger.info("l utilisateur upload photo dans le chat");
+
+        driver.findElement(By.cssSelector("#media-chat")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest4.jpg"
+        );
+    }
+
+
+    // Vérification pour chat
+    @Then("vérifier que le message image a été reçu avec succes")
+    public void vérifierQueLeMessageImageAÉtéReçuAvecSucces() throws InterruptedException {
+        logger.info("vérifier que le message image a été reçu avec succes");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
+                                "Message Image de Test")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
+                equalTo("Message Image de Test"));
+    }
+
+    // Vérification pour chat
+    @And("l utilisateur upload fichier {string} dans le chat {string}")
+    public void lUtilisateurUploadFichierDansLeChat(String arg0, String arg1) {
+        logger.info("l utilisateur upload fichier dans le chat");
+        driver.findElement(By.cssSelector("#file-chat")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/FichierTest.pdf"
+        );
+    }
+
+    // Vérification pour chat
+    @Then("vérifier que le message fichier a été reçu avec succes")
+    public void vérifierQueLeMessageFichierAÉtéReçuAvecSucces() throws InterruptedException {
+        logger.info("vérifier que le message fichier a été reçu avec succes");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
+                                "Message Fichier de Test")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
+                equalTo("Message Fichier de Test"));
+    }
+
+    // Vérification pour chat
+    @Then("vérifier que le message video a été reçu avec succes")
+    public void vérifierQueLeMessageVideoAÉtéReçuAvecSucces() throws InterruptedException {
+        logger.info("vérifier que le message video a été reçu avec succes");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
+                                "Message Vidéo de Test")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
+                equalTo("Message Vidéo de Test"));
+    }
+
+    // Vérification pour chat
+    @And("l utilisateur upload video {string} dans le chat {string}")
+    public void lUtilisateurUploadVideoDansLeChat(String arg0, String arg1) {
+        logger.info("l utilisateur upload video dans chat ");
+        driver.findElement(By.cssSelector("#media-chat")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4"
+        );
+        /* List<WebElement> specialwait = (new WebDriverWait(driver, 100)).until(
+                (ExpectedConditions.numberOfElementsToBe(
+                        By.cssSelector("div.d-inline-block.pull-right.progress-video-bar.ng-star-inserted > div"),
+                        0)
+                )
+        );*/
+    }
+
+    // Vérification pour calendrier et evenements
+    @And("l utilisateur clique sur Entree pour l ajout de choix")
+    public void lUtilisateurCliqueSurEntreePourLAjoutDeChoix() {
+
+        logger.info("l utilisateur clique sur Entree pour l ajout de choix");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour calendrier et evenements
+    @And("l utilisateur clique sur Entree pour l ajout de case")
+    public void lUtilisateurCliqueSurEntreePourLAjoutDeCase() {
+        logger.info("l utilisateur clique sur Entree pour l ajout de case");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "#options-value5 > div > div > tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec formulaire")
+    public void vérifierLaCréationDuNouveauEvenementAvecFormulaire() {
+        logger.info("vérifier la création du nouveau evenement avec formulaire");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement avec formulaire d'inscription pour utilisateur interne"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la réception de l'invitation")
+    public void vérifierLaRéceptionDeLInvitation() throws InterruptedException {
+        logger.info("vérifier la réception de l'invitation");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher"), "innerText",
+                                "Marc Parenteau vous a envoyé une invitation à un événement ")));
+
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        assertThat(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher").getAttribute("innerText"),
+                equalTo("Marc Parenteau vous a envoyé une invitation à un événement "));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement de refus avec formulaire")
+    public void vérifierLaCréationDuNouveauEvenementDeRefusAvecFormulaire() {
+        logger.info("vérifier la création du nouveau evenement de refus avec formulaire");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique refus evenement avec formulaire d'inscription pour utilisateur interne"));
+    }
+
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec formulaire pour user externe")
+    public void vérifierLaCréationDuNouveauEvenementAvecFormulairePourUserExterne() {
+        logger.info("vérifier la création du nouveau evenement avec formulaire pour user externe");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement avec formulaire d'inscription pour utilisateur externe"));
+
     }
 }
