@@ -14,7 +14,7 @@ Feature: Idéation
   Scenario: Suppression d'une idée
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_ideation_menu_gauche"
     Then vérifier que la page affichée est la page idéation
     When l utilisateur clique sur "Buton_ajout_ideation"

@@ -15,7 +15,7 @@ Feature: Calendrier & évenements
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And pause 10 secondes
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 10 secondes
 
     #Etape2  : Ajouter un évènement avec user externe avec envoi de mail

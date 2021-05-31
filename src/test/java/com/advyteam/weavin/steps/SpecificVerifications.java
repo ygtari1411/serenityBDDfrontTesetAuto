@@ -164,8 +164,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page calendrier et évenement");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://bubble-qa.bubbleyou.com/portal/agenda")));
-        Assert.assertEquals("https://bubble-qa.bubbleyou.com/portal/agenda", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/agenda")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/agenda", driver.getCurrentUrl());
         Assert.assertEquals("Calendrier et évènements", generalobjectsmap.get("titre_page_calendrier").getText());
     }
 
