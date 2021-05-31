@@ -193,14 +193,14 @@ public class CommonSteps {
             case "image1":
                 if (champsupload.startsWith("H_")) {
                     jsDriver.executeScript("document.getElementById('bg-cover-file').removeAttribute('hidden');");
-                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg");
+                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
                     synchronized (driver) {
                         driver.wait(1000);
                     }
                     jsDriver.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
                 } else {
                     driver.findElement(By.id("shareBoxImages")).clear();
-                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg");
+                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
                     synchronized (driver) {
                         driver.wait(1000);
                     }
@@ -229,10 +229,10 @@ public class CommonSteps {
             case "vidéo":
                 if (champsupload.startsWith("H_")) {
                     jsDriver.executeScript("document.getElementById('bg-cover-file').removeAttribute('hidden');");
-                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest.mp4");
+                    driver.findElement(By.id("bg-cover-file")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4");
                 } else {
                     driver.findElement(By.id("shareBoxImages")).clear();
-                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest.mp4");
+                    driver.findElement(By.id("shareBoxImages")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4");
                     synchronized (driver) {
                         driver.wait(1000);
                     }
