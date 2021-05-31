@@ -15,8 +15,13 @@ Feature: Idéation
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_ideation_menu_gauche"
+    And pause 5 secondes
     Then vérifier que la page affichée est la page idéation
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
     When l utilisateur clique sur "Buton_ajout_ideation"
     Then vérifier que le modal de création d'une idée est affiché
     When l utilisateur saisit "test automatisé publication nouvelle idée" dans le champs "Titre_nouvelle_idee"

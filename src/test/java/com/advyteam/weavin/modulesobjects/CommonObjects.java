@@ -51,7 +51,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".sidebar--small [title=\"Know'store\"]")
     public static WebElement Bouton_knowstore_menu_gauche;
 
-    @FindBy(css = ".sidebar--small [title='Idéations']")
+    @FindBy(css = ".sidebar--small [title=Idéations]")
     public static WebElement Bouton_ideation_menu_gauche;
 
     @FindBy(css = "#sidebar-left > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(6) > a > div > svg")
@@ -59,6 +59,9 @@ public class CommonObjects extends PageObject {
 
     @FindBy(css = ".sidebar--small [title=News]")
     public static WebElement Bouton_news_menu_gauche;
+
+    @FindBy(css = "#sidebar-left-1 > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(1) > a > div")
+    public static WebElement Bouton_Fermer_menu_gauche;
 
     @FindBy(xpath = "//h6[contains(text(),\"Flux d'activité\")]")
     public static WebElement Widget_flux_activite;

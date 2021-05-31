@@ -23,6 +23,8 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     Then vérifier que la page affichée est la page calendrier et évenement
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajout_Evenement"
     And pause 5 secondes
     Then vérifier que le modal de création d'un evenement est affiché

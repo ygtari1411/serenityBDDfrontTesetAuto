@@ -15,7 +15,7 @@ Feature: Journalisation
   #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
 
   #Etape2  : Ajout idée
 
