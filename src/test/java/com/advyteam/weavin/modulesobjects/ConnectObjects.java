@@ -190,10 +190,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.fieldsTxt > div:nth-child(1) > input")
     public static WebElement  Champ_Input_Titre_Article;
 
-    @FindBy(css = "div:nth-child(2) > ng-select > div > div")
+    @FindBy(css = "div:nth-child(3) > ng-select > div > div > div.ng-input > input[type=text]")
     public static WebElement  categorie_article;
 
-    @FindBy(xpath = "//div/div/form/div[1]/div[2]/div[1]/quill-editor/div[2]/div[1]")
+    @FindBy(css = "div:nth-child(2) > quill-editor > div.ql-container.ql-snow > div.ql-editor.ql-blank")
     public static WebElement  Champ_Input_Description_Article;
 
     @FindBy(css = "div.add-options-message > button.btn.btn-primary.btn-md-2")
@@ -318,7 +318,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_News;
 
-    @FindBy(xpath ="//div[@class='row']//div[2]//div[1]//app-datepicker[1]//div[1]//div[1]//button[1]")
+    @FindBy(xpath ="//div[4]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
     public static WebElement Calendrier_recherche_article_par_date_debut;
 
     @FindBy(xpath ="//span[@class='ng-arrow-wrapper']")
@@ -326,6 +326,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath ="//div[3]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
     public static WebElement Calendrier_recherche_article_par_date_Fin;
+
+    @FindBy(css ="div:nth-child(5) > div > app-datepicker > div > input")
+    public static WebElement Champ_Input_Calendrier_article_par_date_Fin;
 
     // Locators Calendreir et évenements
 
@@ -662,7 +665,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.members-settings-container > div > div > div > ul > li:nth-child(3) > a")
     public static WebElement invites_utilisateurs;
 
-    @FindBy(css = "div.name-container > small")
+    @FindBy(xpath = "//small[contains(text(),'karim.bennasr@yopmail.com')]")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
 
     @FindBy(css = "div.ql-editor.ql-blank")
@@ -814,6 +817,31 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div > button")
     public static WebElement Bouton_Valider_formulaire;
+
+    @FindBy(css = "app-floating-label-form > div > div > div > button")
+    public static WebElement Date_de_naissance;
+
+    @FindBy(xpath = "//form[1]/div[3]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]")
+    public static WebElement Champ_Input_Resume;
+
+    @FindBy(xpath = "//a[contains(text(),'Divers')]")
+    public static WebElement rubrique_divers;
+
+    @FindBy(css = "div.col.col-xl-6.order-xl-36.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
+    public static WebElement Champ_Input_Divers_Loisirs;
+
+    @FindBy(css = "div.col.col-xl-6.order-xl-6.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
+    public static WebElement Champ_Input_Divers_Connaissances;
+
+    @FindBy(xpath = "//a[contains(text(),'Réseaux sociaux')]")
+    public static WebElement rubrique_Reseaux_sociaux;
+
+    @FindBy(xpath = "//div[1]/div[1]/app-floating-label-form[1]/div[1]/span[1]/input[1]")
+    public static WebElement Champ_Input_facebook;
+
+    @FindBy(xpath = "//div[1]/div[3]/app-floating-label-form[1]/div[1]/span[1]/input[1]")
+    public static WebElement Champ_Input_linkedin;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
