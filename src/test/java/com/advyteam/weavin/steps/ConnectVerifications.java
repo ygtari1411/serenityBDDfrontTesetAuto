@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
@@ -2112,4 +2113,27 @@ public class ConnectVerifications {
     public void verifierQuePasDArticleRechercherAAfficherParDateDeFinInférieureÀDateDeDébut() {
         logger.info("verifier que pas d article rechercher a afficher par date de fin inférieure à date de début");
     }
+
+    // Vérification pour annuaire
+    @Then("verifier que la carte visite de l'utilisateur{string} n apparait pas dans l annuaire")
+    public void verifierQueLaCarteVisiteDeLUtilisateurNApparaitPasDansLAnnuaire(String nom) {
+        logger.info("vérifier que la carte visite de l'utilisateur "+nom+" n'apparait pas dans l'annuaire");
+
+        //La liste des cartes de visite doit etre null
+
+        Assert.assertEquals(0,driver.findElements(By.xpath("//div[2]/div[1]/div/div/div/div[2]/div[1]/a")).size());
+
+    }
+
+    // Vérification pour annuaire
+    @Then("verifier que la carte visite de l'utilisateur {string} s affiche")
+    public void verifierQueLaCarteVisiteDeLUtilisateurSAffiche(String nom) {
+        logger.info("verifier que la carte visite s'affiche");
+
+        Assert.assertTrue(generalobjectsmap.get("Nom_premier_utilisateur_Afficher_Annuaire").getAttribute("innerText").contains(nom));
+
+
+    }
+
+
 }
