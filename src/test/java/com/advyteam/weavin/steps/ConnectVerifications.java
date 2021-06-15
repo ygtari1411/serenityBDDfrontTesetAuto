@@ -2070,4 +2070,46 @@ public class ConnectVerifications {
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement avec formulaire d'inscription pour utilisateur externe"));
 
     }
+
+    // Vérification pour annuaire
+    @And("l utilisateur clique sur Entree pour ajout Loisirs")
+    public void lUtilisateurCliqueSurEntreePourAjoutLoisirs() {
+        logger.info("l utilisateur clique sur Entree pour ajout Loisirs");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "div.col.col-xl-6.order-xl-36.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour annuaire
+    @And("l utilisateur clique sur Entree pour ajout de Connaissance")
+    public void lUtilisateurCliqueSurEntreePourAjoutDeConnaissance() {
+        logger.info("l utilisateur clique sur Entree pour ajout Connaissance");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "div.col.col-xl-6.order-xl-6.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour annuaire
+    @And("l utilisateur clique sur Entree pour le champ recherche")
+    public void lUtilisateurCliqueSurEntreePourLeChampRecherche() {
+        logger.info("l utilisateur clique sur Entree pour le champ recherche");
+        WebElement TagConnaissance = driver.findElement(
+                By.cssSelector(
+                        "app-text-input > div > input"
+                )
+        );
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour Know'Store
+    @Then("verifier que pas d article rechercher a afficher par date de fin inférieure à date de début")
+    public void verifierQuePasDArticleRechercherAAfficherParDateDeFinInférieureÀDateDeDébut() {
+        logger.info("verifier que pas d article rechercher a afficher par date de fin inférieure à date de début");
+    }
 }
