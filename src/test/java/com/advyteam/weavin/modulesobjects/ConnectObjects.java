@@ -845,6 +845,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".fas.fa-lock-alt.mr-1:nth-child(2)")
     public static WebElement Bouton_Desactiver_Utilisateur;
 
+    @FindBy(css = ".fas.fa-lock-alt.mr-1:nth-child(3)")
+    public static WebElement Bouton_Supprimer_Utilisateur;
+
     @FindBy(css = "a[id=deactivated]")
     public static WebElement Onglet_inactif_utilisateur;
 
