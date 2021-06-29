@@ -2135,5 +2135,14 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete ajoute")
+    public void verifierQueLOpportuniteAEteAjoute() {
+        logger.info("verifier que l'opportnité a été ajoutée");
+
+        Assert.assertEquals(datastore.get("Nom_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText"));
+
+    }
+
 
 }

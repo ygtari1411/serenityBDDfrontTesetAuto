@@ -860,6 +860,43 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/div/div/div/div[2]/div[1]/a")
     public static WebElement Nom_premier_utilisateur_Afficher_Annuaire;
 
+    @FindBy(css = "ul > li:nth-child(8) > a")
+    public static WebElement Gestion_Categorie;
+
+    @FindBy(css = "div > div:nth-child(3) > div > span.category-item.add-category-item")
+    public static WebElement Bouton_Ajouter_CAtegorie_Opportunite;
+
+    @FindBy(css = "form > app-floating-label-form > div > input")
+    public static WebElement Nom_Categorie_Opportunite;
+
+    @FindBy(xpath = "//button[contains(text(),'Enregistrer')]")
+    public static WebElement Enregistrer_Gestion_Categorie;
+
+    @FindBy(css = "app-opportunity-list > div:nth-child(3) > div:nth-child(1) > div")
+    public static WebElement Publier_Une_Opportnite;
+
+    @FindBy(css = "div.fieldsTxt > div:nth-child(1) > input")
+    public static WebElement Nom_Categorie_Opportunite_Menu_Gauche;
+
+    @FindBy(css = "quill-editor > div.ql-container.ql-snow > div.ql-editor")
+    public static WebElement Description_Categorie_Opportunite;
+
+    @FindBy(xpath = "//body/app-root[1]/app-layout-portal[1]/div[2]/app-opportunity[1]/section[1]/app-opportunity-list[1]/div[1]/div[1]/app-opportunity-form[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[4]/tag-input[1]/div[1]/div[1]/tag-input-form[1]/form[1]/input[1]")
+    public static WebElement Liste_tag_Opportunite;
+
+    @FindBy(xpath = "//div/div/form/div[1]/div[1]/div[5]/div[1]/input")
+    public static WebElement email_Opportunite;
+
+    @FindBy(xpath = "//*[@id=\"phoneNumber\"]")
+    public static WebElement tel_Opportunite;
+
+    @FindBy(xpath = "//div[2]/div/app-post-card-opportunity/div/article/div[2]/a")
+    public static WebElement titre_premiere_opportunite_afficher;
+
+    @FindBy(xpath = "//div/app-opportunity-form/div/div/form/div[2]/button[1]")
+    public static WebElement Sauvegarder_Opportunite;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

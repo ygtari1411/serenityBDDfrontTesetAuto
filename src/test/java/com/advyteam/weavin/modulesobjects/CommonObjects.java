@@ -111,6 +111,18 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//span[contains(text(),'Paramètres du Profil')]")
     public static WebElement Menu_parametres_profil;
 
+    @FindBy(xpath = "//div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]")
+    public static WebElement Rubrique_Personnaliser;
+
+
+    @FindBy(css = ".sidebar--small [title=Opportunités]")
+    public static WebElement Bouton_Opportunite_menu_gauche;
+
+    @FindBy(xpath = "//div[3]/ng-select/div/span")
+    public static WebElement Liste_Category_Opportunite;
+
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();
         Field[] allFields = CommonObjects.class.getFields();
