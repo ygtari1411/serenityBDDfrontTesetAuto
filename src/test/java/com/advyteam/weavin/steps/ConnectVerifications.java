@@ -2144,5 +2144,14 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete modifie")
+    public void verifierQueLOpportuniteAEteModifie() {
+
+        Assert.assertEquals(datastore.get("Description_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("Description_Categorie_Opportunite").getAttribute("innerText"));
+
+
+    }
+
 
 }

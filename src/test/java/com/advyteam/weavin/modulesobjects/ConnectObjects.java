@@ -896,6 +896,15 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/app-opportunity-form/div/div/form/div[2]/button[1]")
     public static WebElement Sauvegarder_Opportunite;
 
+    @FindBy(xpath = "//div[2]/div[1]/app-post-card-opportunity[1]/div[1]/article[1]/div[2]/div[2]/div[1]/div[1]")
+    public static WebElement Bouton_Option_Opportunite;
+
+    @FindBy(xpath = "//section/app-opportunity-list/div[3]/div[2]/div/app-post-card-opportunity/div/article/div[2]/div[2]/div/div[2]/button[1]")
+    public static WebElement Bouton_Option_Editer_Opportunite;
+
+    @FindBy(xpath = "//div[2]/div/app-post-card-opportunity/div/article/div[2]/div[3]")
+    public static WebElement Description_Categorie_Opportunite_Menu_Gauche;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
