@@ -54,9 +54,12 @@ Feature: Article
     And pause 20 secondes
     And l utilisateur modifie "opportunité modifiée" dans le champs "Description_Categorie_Opportunite"
     And pause 20 secondes
+    And l utilisateur clique sur "Sauvegarder_Opportunite"
+    And pause 20 secondes
+
 
  #Etape 5: vérifier que l'opportunite a été modifier
 
     Then verifier que l opportunite a ete modifie
-    And l utilisateur clique sur "Sauvegarder_Opportunite"
+
 

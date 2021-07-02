@@ -899,7 +899,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div[1]/app-post-card-opportunity[1]/div[1]/article[1]/div[2]/div[2]/div[1]/div[1]")
     public static WebElement Bouton_Option_Opportunite;
 
-    @FindBy(xpath = "//section/app-opportunity-list/div[3]/div[2]/div/app-post-card-opportunity/div/article/div[2]/div[2]/div/div[2]/button[1]")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-opportunity/section/app-opportunity-list/div[3]/div[2]/div/app-post-card-opportunity/div/article/div[2]/div[2]/div/div[2]/button[1]")
     public static WebElement Bouton_Option_Editer_Opportunite;
 
     @FindBy(xpath = "//div[2]/div/app-post-card-opportunity/div/article/div[2]/div[3]")
