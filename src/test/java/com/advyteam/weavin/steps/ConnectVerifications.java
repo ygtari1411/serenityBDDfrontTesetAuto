@@ -2183,5 +2183,14 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("vérifier que le commentaire a ete comptabilise")
+    public void vérifierQueLeCommentaireAEteComptabilise() {
+        logger.info("verifier que le commentaire a été comptabilisé");
+
+        Assert.assertEquals(" 1",generalobjectsmap.get("Nombre_Commentaire_Premiere_Opportunite_Afficher").getAttribute("innerText"));
+
+
+    }
 
 }
