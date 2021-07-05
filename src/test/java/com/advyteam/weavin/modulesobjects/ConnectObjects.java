@@ -905,6 +905,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/app-post-card-opportunity/div/article/div[2]/div[3]")
     public static WebElement Description_Categorie_Opportunite_Menu_Gauche;
 
+    @FindBy(xpath = "//div[3]/div[2]/div/app-post-card-opportunity/div")
+    public static WebElement Premiere_Opportunite_Afficher;
+
+    @FindBy(css = "body > app-root > app-layout-portal > div.container.wrapper-portal > app-opportunity > section > app-opportunity-detail > div > div > div.col.col-xl-8.col-lg-12.col-md-12.col-sm-12.col-12.ng-star-inserted > div > article > div.post-additional-info.inline-items.mt0 > app-post-reactions > div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
+    public static WebElement Bouton_Like_Opportinite;
+
+    @FindBy(css = "div:nth-child(2) > div > app-post-card-opportunity > div > article > div.post-content > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > span.likes-number.ml-sm")
+    public static WebElement Nombre_Like_Premiere_Opportunite_Afficher;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

@@ -2174,4 +2174,14 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("vérifier que le like a ete comptabilise")
+    public void vérifierQueLeLikeAEteComptabilise() {
+        logger.info("verifier que le like a été comptabilisé");
+
+        Assert.assertEquals("1",generalobjectsmap.get("Nombre_Like_Premiere_Opportunite_Afficher").getAttribute("innerText"));
+
+    }
+
+
 }
