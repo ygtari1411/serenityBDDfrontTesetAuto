@@ -2147,11 +2147,31 @@ public class ConnectVerifications {
     // Vérification pour opportunite
     @Then("verifier que l opportunite a ete modifie")
     public void verifierQueLOpportuniteAEteModifie() {
+        logger.info("verifier que l'opportnité a été modifie");
+
 
         Assert.assertEquals(datastore.get("Description_Categorie_Opportunite"),generalobjectsmap.get("Description_Categorie_Opportunite_Menu_Gauche").getAttribute("innerText"));
 
 
     }
 
+    // Vérification pour opportunite
+    @Then("vérifer que L admin ne peut pas modifier l oportunité")
+    public void vériferQueLAdminNePeutPasModifierLOportunité() {
+        logger.info("verifier l'admin ne peut pas modifier l'opportunité");
+
+        Boolean trouve=false;
+
+        for (WebElement element : driver.findElements(By.cssSelector("div.dropdown-menu.show > button"))) {
+
+            if (element.getText().equalsIgnoreCase(" Éditer ")) {
+                trouve=true;
+                break;
+            }
+        }
+
+        Assert.assertFalse(trouve);
+
+    }
 
 }
