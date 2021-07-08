@@ -2203,4 +2203,22 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("verifier que le role utilisateur ne peut pas supprimer une opportunite")
+    public void verifierQueLeRoleUtilisateurNePeutPasSupprimerUneOpportunite() {
+        logger.info("verifier que le role utilisateur ne peut pas supprimer une opportunite");
+
+        Boolean trouve=false;
+
+        for (WebElement element : driver.findElements(By.cssSelector("div.dropdown-menu.show > button"))) {
+
+            if (element.getText().equalsIgnoreCase("Supprimer")) {
+                trouve=true;
+                break;
+            }
+        }
+
+        Assert.assertFalse(trouve);
+
+    }
 }
