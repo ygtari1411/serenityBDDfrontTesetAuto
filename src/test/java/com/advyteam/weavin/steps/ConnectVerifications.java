@@ -2198,7 +2198,7 @@ public class ConnectVerifications {
     public void verifierQueLOpportuniteAEteSupprime() {
         logger.info("verifier que l'opportnité a été supprimée");
 
-        Assert.assertNotEquals(datastore.get("Nom_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText"));
+        Assert.assertNotEquals(datastore.get("Description_Categorie_Opportunite"),generalobjectsmap.get("Description_Categorie_Opportunite_Menu_Gauche").getAttribute("innerText"));
 
 
     }
