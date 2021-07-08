@@ -923,6 +923,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-post-card-opportunity/div/article/div[2]/div[5]/app-post-statistics/div/ul/li/a/span")
     public static WebElement Nombre_Commentaire_Premiere_Opportunite_Afficher;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-opportunity/section/app-opportunity-list/div[3]/div[2]/div/app-post-card-opportunity/div/article/div[2]/div[2]/div/div[2]/button[1]")
+    public static WebElement Bouton_Option_Supprimer_Opportunite;
+
+    @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
+    public static WebElement Bouton_Confirmer_Supprimer_Opportunite;
 
 
 

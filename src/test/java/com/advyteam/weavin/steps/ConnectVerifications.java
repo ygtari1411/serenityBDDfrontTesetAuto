@@ -2193,4 +2193,14 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete supprime")
+    public void verifierQueLOpportuniteAEteSupprime() {
+        logger.info("verifier que l'opportnité a été supprimée");
+
+        Assert.assertNotEquals(datastore.get("Nom_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText"));
+
+
+    }
+
 }
