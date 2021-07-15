@@ -2135,5 +2135,90 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete ajoute")
+    public void verifierQueLOpportuniteAEteAjoute() {
+        logger.info("verifier que l'opportnité a été ajoutée");
 
+        Assert.assertEquals(datastore.get("Nom_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete modifie")
+    public void verifierQueLOpportuniteAEteModifie() {
+        logger.info("verifier que l'opportnité a été modifie");
+
+
+        Assert.assertEquals(datastore.get("Description_Categorie_Opportunite"),generalobjectsmap.get("Description_Categorie_Opportunite_Menu_Gauche").getAttribute("innerText"));
+
+
+    }
+
+    // Vérification pour opportunite
+    @Then("vérifer que L admin ne peut pas modifier l oportunité")
+    public void vériferQueLAdminNePeutPasModifierLOportunité() {
+        logger.info("verifier l'admin ne peut pas modifier l'opportunité");
+
+        Boolean trouve=false;
+
+        for (WebElement element : driver.findElements(By.cssSelector("div.dropdown-menu.show > button"))) {
+
+            if (element.getText().equalsIgnoreCase(" Éditer ")) {
+                trouve=true;
+                break;
+            }
+        }
+
+        Assert.assertFalse(trouve);
+
+    }
+
+    // Vérification pour opportunite
+    @Then("vérifier que le like a ete comptabilise")
+    public void vérifierQueLeLikeAEteComptabilise() {
+        logger.info("verifier que le like a été comptabilisé");
+
+        Assert.assertEquals("1",generalobjectsmap.get("Nombre_Like_Premiere_Opportunite_Afficher").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour opportunite
+    @Then("vérifier que le commentaire a ete comptabilise")
+    public void vérifierQueLeCommentaireAEteComptabilise() {
+        logger.info("verifier que le commentaire a été comptabilisé");
+
+        Assert.assertEquals(" 1",generalobjectsmap.get("Nombre_Commentaire_Premiere_Opportunite_Afficher").getAttribute("innerText"));
+
+
+    }
+
+    // Vérification pour opportunite
+    @Then("verifier que l opportunite a ete supprime")
+    public void verifierQueLOpportuniteAEteSupprime() {
+        logger.info("verifier que l'opportnité a été supprimée");
+
+        Assert.assertNotEquals(datastore.get("Description_Categorie_Opportunite"),generalobjectsmap.get("Description_Categorie_Opportunite_Menu_Gauche").getAttribute("innerText"));
+
+
+    }
+
+    // Vérification pour opportunite
+    @Then("verifier que le role utilisateur ne peut pas supprimer une opportunite")
+    public void verifierQueLeRoleUtilisateurNePeutPasSupprimerUneOpportunite() {
+        logger.info("verifier que le role utilisateur ne peut pas supprimer une opportunite");
+
+        Boolean trouve=false;
+
+        for (WebElement element : driver.findElements(By.cssSelector("div.dropdown-menu.show > button"))) {
+
+            if (element.getText().equalsIgnoreCase("Supprimer")) {
+                trouve=true;
+                break;
+            }
+        }
+
+        Assert.assertFalse(trouve);
+
+    }
 }
