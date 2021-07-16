@@ -407,6 +407,18 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.comments-shared > a")
     public static WebElement Bouton_commentaire_evenement;
 
+    @FindBy(css = "div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li.ng-star-inserted > div")
+    public static WebElement Bouton_commentaire_publication;
+
+    @FindBy(css = "div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank")
+    public static WebElement Champ_Input_Commentaire_Publication;
+
+    @FindBy(css ="div.form-group.with-icon-right > div > button")
+    public static WebElement Bouton_Envoyer_Commentaire_Publication;
+
+    @FindBy(css ="div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(2) > i")
+    public static WebElement Bouton_Restaurer_Article;
+
     @FindBy(css = "div.ql-editor.ql-blank")
     public static WebElement Champ_Input_Commentaire_Evenement;
 
@@ -488,6 +500,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(2) > div.form-group.col-md-4 > app-floating-label-form > div > input")
     public static WebElement Champ_Input_Profil_Auteur;
 
+    @FindBy(xpath = "//input[@id='theField']")
+    public static WebElement Champ_Input_Profil_Anniversaire;
+
+    @FindBy(css = " div.ui-block-content > ul > li > span")
+    public static WebElement Anniversaire_Afficher_Profil;
     @FindBy(css = "span.authorQuote")
     public static WebElement Auteur_Afficher_Profil;
 
@@ -496,6 +513,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "//a[contains(text(),'Vidéos')]")
     public static WebElement Menu_vidéos_profil;
+
+    @FindBy(css = "div.row > div:nth-child(1) > ul > li")
+    public static WebElement Menu_Accueil_Profil;
 
     @FindBy(css = "div.align-right > button")
     public static WebElement Bouton_Télécharger_vidéo;

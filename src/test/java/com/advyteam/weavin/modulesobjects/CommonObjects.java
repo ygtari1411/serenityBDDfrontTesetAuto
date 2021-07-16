@@ -114,7 +114,6 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]")
     public static WebElement Rubrique_Personnaliser;
 
-
     @FindBy(css = ".sidebar--small [title=Opportunités]")
     public static WebElement Bouton_Opportunite_menu_gauche;
 

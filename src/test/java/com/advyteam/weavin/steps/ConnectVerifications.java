@@ -1443,14 +1443,14 @@ public class ConnectVerifications {
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Contenu_Publication_Publié"), "innerText",
-                                datastore.get("Champ_Input_Publication"))));
+                                datastore.get("Champ_Input_Publication")+"\n")));
         //Waiting for the refreshed first album to render
         synchronized (driver) {
             driver.wait(3000);
         }
         //Asserting that first article contains the text published in the scenario
         assertThat(generalobjectsmap.get("Contenu_Publication_Publié").getAttribute("innerText"),
-                equalTo(datastore.get("Champ_Input_Publication")));
+                equalTo(datastore.get("Champ_Input_Publication")+"\n"));
     }
 
     // Vérification pour Journalisation
@@ -2220,5 +2220,15 @@ public class ConnectVerifications {
 
         Assert.assertFalse(trouve);
 
+    }
+
+    // Vérification pour anniversaire
+    @Then("vérifier que la date d anniversaire a été ajoutée")
+    public void vérifierQueLaDateDAnniversaireAÉtéAjoutée() {
+        logger.info("verifier que la date d anniversaire  a été ajoutée");
+        Assert.assertEquals(
+                "06-08-1996",
+                generalobjectsmap.get("Anniversaire_Afficher_Profil").getAttribute("innerText")
+        );
     }
 }
