@@ -1,6 +1,6 @@
 # Auteur: ygtari
 # Feature: BrainStorming
-# Scénario: Ajouter un vote a choix multiple
+# Scénario: Ajouter un vote a choix unique
 # Date de création: 17/07/2021
 
 Feature: Brainstorming
@@ -8,8 +8,8 @@ Feature: Brainstorming
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-BrainStorming
-  @WEAVIN-BrainStorming-0002
-  Scenario: Ajouter un vote a choix multiple
+  @WEAVIN-BrainStorming-0003
+  Scenario: Modifier un vote
 
   #Etape 1 : Connexion
 
@@ -29,11 +29,11 @@ Feature: Brainstorming
     And pause 5 secondes
     Then vérifier que la page de vote s affiche
     And pause 5 secondes
-    And l utilisateur saisit "ajouter un vote a choix multiple" dans le champs "Champ_Input_Titre_BrainStorming"
+    And l utilisateur saisit "Modifier un vote" dans le champs "Champ_Input_Titre_BrainStorming"
     And pause 5 secondes
     And l utilisateur selectionne "Normal" dans la liste deroulante "Liste_Affichage_BrainStorming"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Choix_Multiple_BrainStorming"
+    And l utilisateur clique sur "Bouton_Choix_Unique_BrainStorming"
     And pause 5 secondes
     And l utilisateur saisit "Question 1 ?" dans le champs "Champ_Input_Question_BrainStorming"
     And pause 5 secondes
@@ -54,12 +54,24 @@ Feature: Brainstorming
 
     Then verifier que le vote a ete ajoute avec succes
 
+  #Etape 4  : Modifier le vote
 
+    And l utilisateur clique sur "Bouton_Option_Vote"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Option_Editer_Vote"
+    And pause 5 secondes
+    And l utilisateur modifie "Test automatique Modification vote" dans le champs "Champ_Input_Titre_News"
+    And pause 5 secondes
+    And l utilisateur modifie "Question modifier" dans le champs "Champ_Input_Question_BrainStorming"
 
+  #Etape 5  : Verifier que le vote a été modifié
 
-
-
-
+    Then verefier que le vote a ete modifier
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Enregistrer_Vote"
+    And pause 5 secondes
+    And l utilisateur clique sur "Onglet_BrainStorming"
+    And pause 5 secondes
 
 
 

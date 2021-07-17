@@ -2243,4 +2243,10 @@ public class ConnectVerifications {
     }
 
 
+    @Then("verefier que le vote a ete modifier")
+    public void verefierQueLeVoteAEteModifier() {
+        logger.info("verifier que le vote a été modifié");
+
+    }
+
 }
