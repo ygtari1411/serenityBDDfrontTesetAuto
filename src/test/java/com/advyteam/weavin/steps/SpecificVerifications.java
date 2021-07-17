@@ -178,4 +178,27 @@ public class SpecificVerifications {
         Assert.assertEquals("https://weavin-nreg.bubbleyou.comm/portal/news", driver.getCurrentUrl());
         Assert.assertEquals("Actualités", generalobjectsmap.get("titre_page_news").getText());
     }
+
+    @Then("vérifier que la page affichée est la page BrainStorming")
+    public void vérifierQueLaPageAffichéeEstLaPageBrainStorming() {
+        logger.info("vérification que la page affichée est la page BrainStorming");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/pulse")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/pulse", driver.getCurrentUrl());
+
+    }
+
+    @Then("vérifier que la page de vote s affiche")
+    public void vérifierQueLaPageDeVoteSAffiche() {
+        logger.info("vérification que la page affichée est la page de vote Brainstorming");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/pulse/create-vote")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/pulse/create-vote", driver.getCurrentUrl());
+
+    }
+
+
+
 }

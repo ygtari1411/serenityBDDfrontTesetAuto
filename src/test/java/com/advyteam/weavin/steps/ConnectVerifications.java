@@ -2231,4 +2231,16 @@ public class ConnectVerifications {
                 generalobjectsmap.get("Anniversaire_Afficher_Profil").getAttribute("innerText")
         );
     }
+
+    // Vérification pour BrainStorming
+    @Then("verifier que le vote a ete ajoute avec succes")
+    public void verifierQueLeVoteAEteAjouteAvecSucces() {
+        logger.info("verifier que le vote a été ajouté");
+
+        Assert.assertEquals(datastore.get("Champ_Input_Titre_BrainStorming"),generalobjectsmap.get("Description_Premier_Vote_Afficher").getAttribute("innerText"));
+
+
+    }
+
+
 }

@@ -949,6 +949,45 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
     public static WebElement Bouton_Confirmer_Supprimer_Opportunite;
 
+    @FindBy(xpath = "//app-brainstorming-list/div/div/div")
+    public static WebElement Bouton_Ajouter_Vote_Sondage;
+
+    @FindBy(xpath = "//app-select-type-to-add/div[2]/div/a[2]")
+    public static WebElement BrainStorming_Vote;
+
+    @FindBy(xpath = "//app-floating-label-form/div/input")
+    public static WebElement Champ_Input_Titre_BrainStorming;
+
+    @FindBy(xpath = "//div[1]/div/ng-select/div")
+    public static WebElement Liste_Affichage_BrainStorming;
+
+    @FindBy(xpath = "//div[1]/div[2]/ul/li[1]")
+    public static WebElement Bouton_Choix_Unique_BrainStorming;
+
+    @FindBy(xpath = "//div[1]/div[1]/div[1]/input")
+    public static WebElement Champ_Input_Question_BrainStorming;
+
+    @FindBy(xpath = "//div[1]/div[2]/div/textarea")
+    public static WebElement Champ_Input_InfoSupp_BrainStorming;
+
+    @FindBy(xpath = "//div[2]/div[1]/div[2]/div/div/input")
+    public static WebElement Champ_Input_Premiere_Reponse_BrainStorming;
+
+    @FindBy(xpath = "//div[1]/div[3]/a/span")
+    public static WebElement Bouton_Ajouter_Reponse_BrainStorming;
+
+    @FindBy(xpath = "//div/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/input")
+    public static WebElement Champ_Input_Deuxieme_Reponse_BrainStorming;
+
+    @FindBy(xpath = "//app-form-new-vote/div[2]/div/button")
+    public static WebElement Bouton_Enregistrer_Vote;
+
+    @FindBy(xpath = "//div[1]/div/div[1]/div/a[2]")
+    public static WebElement Onglet_BrainStorming;
+
+    @FindBy(xpath = "//div/div[2]/div/div/div/div[2]/div[2]/div/a")
+    public static WebElement  Description_Premier_Vote_Afficher;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
