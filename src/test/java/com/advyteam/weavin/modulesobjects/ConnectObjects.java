@@ -988,6 +988,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div[2]/div/div/div/div[2]/div[2]/div/a")
     public static WebElement  Description_Premier_Vote_Afficher;
 
+    @FindBy(xpath = "//div/div[1]/div[1]/div[2]/ul/li[2]")
+    public static WebElement  Bouton_Choix_Multiple_BrainStorming;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
