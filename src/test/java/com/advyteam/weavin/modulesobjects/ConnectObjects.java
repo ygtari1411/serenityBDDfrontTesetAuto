@@ -997,6 +997,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[1]/div[2]/ul/li[2]/a")
     public static WebElement  Bouton_Option_Editer_Vote;
 
+    @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[1]/div[2]/ul/li[3]/a")
+    public static WebElement  Bouton_Option_Supprimer_Vote;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
