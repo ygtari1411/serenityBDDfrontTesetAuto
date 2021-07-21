@@ -949,7 +949,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
     public static WebElement Bouton_Confirmer_Supprimer_Opportunite;
 
-    @FindBy(xpath = "//app-brainstorming-list/div/div/div")
+    @FindBy(xpath = "//app-brainstorming-grid/div/div[1]/div")
     public static WebElement Bouton_Ajouter_Vote_Sondage;
 
     @FindBy(xpath = "//app-select-type-to-add/div[2]/div/a[2]")
@@ -1000,6 +1000,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[1]/div[2]/ul/li[3]/a")
     public static WebElement  Bouton_Option_Supprimer_Vote;
 
+    @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[3]/a")
+    public static WebElement  Bonton_Lancer_Premier_Vote_Afficher;
+
+    @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[1]/div[1]/span")
+    public static WebElement  Etat_Premier_Vote_Afficher;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

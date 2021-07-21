@@ -2255,5 +2255,12 @@ public class ConnectVerifications {
         Assert.assertNotEquals(datastore.get("Champ_Input_Titre_BrainStorming"),generalobjectsmap.get("Description_Premier_Vote_Afficher").getAttribute("innerText"));
     }
 
+    // Vérification pour BrainStorming
+    @Then("verifier que le vote est lance")
+    public void verifierQueLeVoteEstLance() {
+        logger.info("verifier que le vote a été lancé");
+        Assert.assertEquals("Ouvert",generalobjectsmap.get("Etat_Premier_Vote_Afficher").getAttribute("innerText"));
+    }
+
 
 }
