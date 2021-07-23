@@ -2262,5 +2262,12 @@ public class ConnectVerifications {
         Assert.assertEquals("Ouvert",generalobjectsmap.get("Etat_Premier_Vote_Afficher").getAttribute("innerText"));
     }
 
+    // Vérification pour BrainStorming
+    @Then("verifier que le vote est comptabilse")
+    public void verifierQueLeVoteEstComptabilse() {
+        logger.info("verifier que le vote a été comptabilisé");
+        Assert.assertEquals("Nous vous remercions pour votre participation au vote",generalobjectsmap.get("Accuser_De_reception_Brainstorming").getAttribute("innerText"));
+    }
+
 
 }

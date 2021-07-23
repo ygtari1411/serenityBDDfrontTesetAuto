@@ -1006,6 +1006,21 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/div/div/div[2]/div[1]/div[1]/span")
     public static WebElement  Etat_Premier_Vote_Afficher;
 
+    @FindBy(xpath = "//div/div[2]/div/div/div/div[2]/div[3]/a")
+    public static WebElement  Bouton_Participez_Premier_Vote_Afficher;
+
+    @FindBy(xpath = "//div/div/div[2]/div/div[1]/label/span[1]")
+    public static WebElement  Premier_Choix_Vote_Brainstorming;
+
+    @FindBy(xpath = "//div[2]/div[3]/form/div/div/button")
+    public static WebElement  Envoyer_Vote_Brainstorming;
+
+    @FindBy(xpath = "//*[@id=\"pdfTable\"]/p")
+    public static WebElement  Accuser_De_reception_Brainstorming;
+
+    @FindBy(xpath = "//div[2]/div/div[2]/label/span")
+    public static WebElement  Deuxieme_Choix_Vote_Brainstorming;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
