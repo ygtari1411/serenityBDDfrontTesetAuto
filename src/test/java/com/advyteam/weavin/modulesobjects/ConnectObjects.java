@@ -1036,6 +1036,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/app-users-selection/div[3]/button[2]")
     public static WebElement  Bouton_Ajouter_Menbre_BrainStorming;
 
+    @FindBy(xpath = "//div/div/div/button")
+    public static WebElement  Calendrier_BrainStorming;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
