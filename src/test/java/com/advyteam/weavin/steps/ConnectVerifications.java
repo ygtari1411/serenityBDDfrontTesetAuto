@@ -2269,5 +2269,16 @@ public class ConnectVerifications {
         Assert.assertEquals("Nous vous remercions pour votre participation au vote",generalobjectsmap.get("Accuser_De_reception_Brainstorming").getAttribute("innerText"));
     }
 
+    // Vérification pour BrainStorming
+    @Then("verifier que le cote a ete cloture")
+    public void verifierQueLeCoteAEteCloture() {
+        logger.info("verifier que le vote a été cloturé");
+        Assert.assertEquals("Clôturé",generalobjectsmap.get("Etat_Premier_Vote_Afficher").getAttribute("innerText"));
+
+
+
+    }
+
+
 
 }
