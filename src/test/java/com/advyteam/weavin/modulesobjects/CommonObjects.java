@@ -120,6 +120,8 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//div[3]/ng-select/div/span")
     public static WebElement Liste_Category_Opportunite;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/app-main-menu/div/div[1]/div/perfect-scrollbar/div/div[1]/ul/div/li[9]")
+    public static WebElement Bouton_BrainStorming_Menu_Gauche;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
