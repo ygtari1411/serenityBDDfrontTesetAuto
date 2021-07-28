@@ -1063,6 +1063,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/div/article/div/span")
     public static WebElement  Flash_Info_Rechercher;
 
+    @FindBy(xpath = "//li[1]/app-flash-infos-item/article/app-more-dropdown/div")
+    public static WebElement  Bouton_Option_Flash_Info;
+
+    @FindBy(xpath = "//li[1]/app-flash-infos-item/article/app-more-dropdown/div/ul/li[2]/a")
+    public static WebElement  Bouton_Supprimer_Flash_Info;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
