@@ -1054,6 +1054,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//ul/li/app-flash-infos-item/article/div")
     public static WebElement  Premiere_Flash_Info_Ajouter;
 
+    @FindBy(css = "#aside-custom-left > div > app-widget-flash-infos > div > app-flash-infos-list > ul > a")
+    public static WebElement  Bouton_Voir_Tous_Flash_Info;
+
+    @FindBy(xpath = "//form/div/div/div[1]/div/app-text-input/div/input")
+    public static WebElement  Rechercher_Flash_Info_Par_Titre;
+
+    @FindBy(xpath = "//div[2]/div/div/article/div/span")
+    public static WebElement  Flash_Info_Rechercher;
 
 
 
