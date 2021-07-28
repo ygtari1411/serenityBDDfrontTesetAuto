@@ -1,5 +1,6 @@
 package com.advyteam.weavin.steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.thucydides.core.annotations.Managed;
 import org.junit.Assert;
@@ -199,6 +200,15 @@ public class SpecificVerifications {
 
     }
 
+
+    @And("verifier que le widget flash info apparait")
+    public void verifierQueLeWidgetFlashInfoApparait() {
+        logger.info("vérifier que le widget flash info est affiché");
+
+        Assert.assertEquals(" Flash Info",generalobjectsmap.get("widget_flash_info").getAttribute("innerText"));
+
+
+    }
 
 
 }

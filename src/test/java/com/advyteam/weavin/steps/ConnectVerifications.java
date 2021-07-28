@@ -2279,6 +2279,12 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour Flash Info
+    @And("verifier que la flash info apparait pour les autre utilisateur")
+    public void verifierQueLaFlashInfoApparaitPourLesAutreUtilisateur() {
+        logger.info("verifier que la flash info apparait pour les autres utilisateurs");
+        Assert.assertEquals(datastore.get("titre_flash_info"),generalobjectsmap.get("Premiere_Flash_Info_Ajouter").getAttribute("innerText"));
 
+    }
 
 }
