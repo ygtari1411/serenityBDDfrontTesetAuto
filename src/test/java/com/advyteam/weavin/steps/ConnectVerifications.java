@@ -2279,6 +2279,30 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour Flash Info
+    @And("verifier que la flash info apparait pour les autre utilisateur")
+    public void verifierQueLaFlashInfoApparaitPourLesAutreUtilisateur() {
+        logger.info("verifier que la flash info apparait pour les autres utilisateurs");
+        Assert.assertEquals(datastore.get("titre_flash_info"),generalobjectsmap.get("Premiere_Flash_Info_Ajouter").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour Flash Info
+    @Then("verifier que la flash info afficher est c elle qui est rechercher")
+    public void verifierQueLaFlashInfoAfficherEstCElleQuiEstRechercher() {
+        logger.info("verifier que la flash Afficher qui est rechercher");
+        Assert.assertEquals(datastore.get("titre_flash_info"),generalobjectsmap.get("Flash_Info_Rechercher").getAttribute("innerText"));
+
+
+    }
+
+    // Vérification pour Flash Info
+    @Then("verifier que la flash info a ete supprime")
+    public void verifierQueLaFlashInfoAEteSupprime() {
+        logger.info("verifier que la flash info a ete supprime");
+        Assert.assertNotEquals(datastore.get("titre_flash_info"),generalobjectsmap.get("Premiere_Flash_Info_Ajouter").getAttribute("innerText"));
+
+    }
 
 
 }

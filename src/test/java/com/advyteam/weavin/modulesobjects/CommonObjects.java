@@ -123,6 +123,10 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "/html/body/app-root/app-layout-portal/app-main-menu/div/div[1]/div/perfect-scrollbar/div/div[1]/ul/div/li[9]")
     public static WebElement Bouton_BrainStorming_Menu_Gauche;
 
+    @FindBy(xpath = "//*[@id=\"aside-custom-left\"]/div/app-widget-flash-infos/div/div/h6")
+    public static WebElement widget_flash_info;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();

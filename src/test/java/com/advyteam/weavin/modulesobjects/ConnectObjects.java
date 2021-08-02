@@ -1039,6 +1039,37 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div/div/button")
     public static WebElement  Calendrier_BrainStorming;
 
+    @FindBy(xpath = "//div/app-widget-flash-infos/div/div/a")
+    public static WebElement  Bouton_Ajouter_Flash_Info;
+
+    @FindBy(xpath = "//div/form/app-floating-label-form[1]/div/input")
+    public static WebElement  titre_flash_info;
+
+    @FindBy(xpath = "//app-floating-label-form[2]/div/textarea")
+    public static WebElement  description_flash_info;
+
+    @FindBy(xpath = "//div/app-flash-infos-list/div/form/button[2]")
+    public static WebElement  Bouton_Enregistrer_Flash_Info;
+
+    @FindBy(xpath = "//ul/li/app-flash-infos-item/article/div")
+    public static WebElement  Premiere_Flash_Info_Ajouter;
+
+    @FindBy(css = "#aside-custom-left > div > app-widget-flash-infos > div > app-flash-infos-list > ul > a")
+    public static WebElement  Bouton_Voir_Tous_Flash_Info;
+
+    @FindBy(xpath = "//form/div/div/div[1]/div/app-text-input/div/input")
+    public static WebElement  Rechercher_Flash_Info_Par_Titre;
+
+    @FindBy(xpath = "//div[2]/div/div/article/div/span")
+    public static WebElement  Flash_Info_Rechercher;
+
+    @FindBy(xpath = "//li[1]/app-flash-infos-item/article/app-more-dropdown/div")
+    public static WebElement  Bouton_Option_Flash_Info;
+
+    @FindBy(xpath = "//li[1]/app-flash-infos-item/article/app-more-dropdown/div/ul/li[2]/a")
+    public static WebElement  Bouton_Supprimer_Flash_Info;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
