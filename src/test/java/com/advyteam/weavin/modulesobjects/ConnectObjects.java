@@ -583,6 +583,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'OK')]")
     public static WebElement Bouton_OK_Suppression_Album;
 
+    @FindBy(xpath = "//button[contains(text(),'OK')]")
+    public static WebElement Bouton_OK_Suppression_utilisateur;
+
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-post-picture-modal[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[3]/div[2]")
     public static WebElement Photo_d_Album;
 
@@ -670,8 +673,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-floating-label-form[1]/div[1]/input[1]")
     public static WebElement Champ_Input_Email_Nouvel_utilisateur;
 
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[3]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Email_Modifier_utilisateur;
+
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-floating-label-form[1]/div[1]/input[1]")
     public static WebElement Champ_Input_Prenom_Nouvel_utilisateur;
+
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[1]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Prenom_Modifier_utilisateur;
+
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[2]/app-floating-label-form[1]/div[1]/input[1]")
+    public static WebElement Champ_Input_Nom_Modifier_utilisateur;
 
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/app-floating-label-form[1]/div[1]/input[1]")
     public static WebElement Champ_Input_Nom_Nouvel_utilisateur;
@@ -679,14 +691,47 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.modal-footer.mt-4 > button.btn.btn-primary.mb-0.ml-2")
     public static WebElement Bouton_enregistrer_Nouvel_utilisateur;
 
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[5]/button[2]")
+    public static WebElement Bouton_enregistrer_Modifier_utilisateur;
+
     @FindBy(css = "app-text-input > div > input")
     public static WebElement Champ_Input_Chercher_des_membres;
 
     @FindBy(css = "div.members-settings-container > div > div > div > ul > li:nth-child(3) > a")
     public static WebElement invites_utilisateurs;
 
+    @FindBy(css = "#deactivated")
+    public static WebElement inactifs_utilisateurs;
+
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[4]/i[1]")
+    public static WebElement Bouton_Modifier_utilisateur;
+
+    @FindBy(css = "i.fas.fa-user-minus")
+    public static WebElement Bouton_Remove_Utilisateur;
+
+    @FindBy(css = "app-invited-users div.table-container.edition-mode > div.flex-table.flex-table-header > div.inline-items.inline-icon.nav-hidden > div.checkbox.checkbox-users > label > span > span")
+    public static WebElement Bouton_Selectionner_Tous_Utilisateurs;
+
+    @FindBy(css = "div.inline-items.inline-icon.nav-not-hidden-invited > div:nth-child(2) > i.fad.fa-trash-alt.mr-1")
+    public static WebElement Bouton_Remove_Tous_Utilisateurs;
+
     @FindBy(xpath = "//small[contains(text(),'karim.bennasr@yopmail.com')]")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
+
+    @FindBy(xpath = "//small[contains(text(),'yassine.gtari@advyteam.com')]")
+    public static WebElement Email_utilisateur_desactive;
+
+    @FindBy(xpath = "//span[contains(text(),'Muhammad Karim Ben nasr')]")
+    public static WebElement Nom_utilisateur_Modifiee;
+
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[4]/app-floating-label-form[1]/div[1]/ng-select[1]/div[1]/div[1]/div[3]/input[1]")
+    public static WebElement role_utilisateur;
+
+    @FindBy(css = "div:nth-child(4) > div.flex-row.flex-row-action > i.fas.fa-lock-alt.mr-1")
+    public static WebElement Bouton_Désactiver_Utilisateur;
+
+    @FindBy(css = "div.flex-row.flex-row-action > i.fas.fa-lock-open-alt.mr-1")
+    public static WebElement Bouton_Activer_Utilisateur;
 
     @FindBy(css = "div.ql-editor.ql-blank")
     public static WebElement Champ_Input_Publication;
