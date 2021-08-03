@@ -2305,4 +2305,42 @@ public class ConnectVerifications {
     }
 
 
+    // Vérification pour gestion des utilisateurs
+    @Then("vérifier que l utilisateur a été modifié")
+    public void vérifierQueLUtilisateurAÉtéModifié() {
+
+        logger.info("vérifier que l utilisateur a été modifié");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Nom_utilisateur_Modifiee"))));
+        Assert.assertTrue(generalobjectsmap.get("Nom_utilisateur_Modifiee").isDisplayed());
+        Assert.assertEquals("Muhammad Karim Ben nasr",generalobjectsmap.get("Nom_utilisateur_Modifiee").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour gestion des utilisateurs
+    @Then("vérifier que l email d utilisateur a été modifié")
+    public void vérifierQueLEmailDUtilisateurAÉtéModifié() {
+
+        logger.info("vérifier que l email d utilisateur a été modifié");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").isDisplayed());
+        Assert.assertEquals("muhammadkarim.bennasr@yopmail.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+
+    }
+
+    // Vérification pour gestion des utilisateurs
+    @Then("vérifier que le utilisateur a été desactivé")
+    public void vérifierQueLeUtilisateurAÉtéDesactivé() {
+
+        logger.info("vérifier que le utilisateur a été desactivé");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Email_utilisateur_desactive"))));
+        Assert.assertTrue(generalobjectsmap.get("Email_utilisateur_desactive").isDisplayed());
+        Assert.assertEquals("yassine.gtari@advyteam.com",generalobjectsmap.get("Email_utilisateur_desactive").getAttribute("innerText"));
+
+    }
 }
