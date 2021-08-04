@@ -1120,6 +1120,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div[3]/div/app-datepicker/div/div/button")
     public static WebElement  Calendrier_Date_Fin_Flash_Info;
 
+    @FindBy(xpath = "//section/app-opportunity-list/div[2]/div/div/div/ul/span[1]/li/a")
+    public static WebElement  Bouton_Premiere_Opportunite;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
