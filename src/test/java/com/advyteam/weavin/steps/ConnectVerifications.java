@@ -2343,4 +2343,29 @@ public class ConnectVerifications {
         Assert.assertEquals("yassine.gtari@advyteam.com",generalobjectsmap.get("Email_utilisateur_desactive").getAttribute("innerText"));
 
     }
+
+    //Verfification pour opportunité
+    @Then("verifier que les catégories afficher sont c elles qui sont choisis")
+    public void verifierQueLesCatégoriesAfficherSontCEllesQuiSontChoisis() {
+        logger.info("verifier que les catégories afficher sont c elles qui sont choisis");
+
+        List<WebElement> list = driver.findElements(By.xpath("//app-post-card-opportunity/div/article/div[2]/div[1]/a[1]"));
+
+        boolean trouve = true;
+
+        for (WebElement element : list) {
+
+            if (element.getAttribute("innerText").equalsIgnoreCase("OPPORTUNITÉ")) {
+                trouve = true;
+            } else {
+                trouve = false;
+            }
+
+        }
+
+        Assert.assertTrue(trouve);
+    }
+
+
+
 }

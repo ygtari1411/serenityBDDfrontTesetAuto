@@ -1114,6 +1114,15 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//li[1]/app-flash-infos-item/article/app-more-dropdown/div/ul/li[2]/a")
     public static WebElement  Bouton_Supprimer_Flash_Info;
 
+    @FindBy(xpath = "//div[2]/div/app-datepicker/div/div/button")
+    public static WebElement  Calendrier_Date_Debut_Flash_Info;
+
+    @FindBy(xpath = "//div/div[3]/div/app-datepicker/div/div/button")
+    public static WebElement  Calendrier_Date_Fin_Flash_Info;
+
+    @FindBy(xpath = "//section/app-opportunity-list/div[2]/div/div/div/ul/span[1]/li/a")
+    public static WebElement  Bouton_Premiere_Opportunite;
+
 
 
 
