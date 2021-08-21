@@ -404,6 +404,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.private-event-head.inline-items > div.more > ul > li:nth-child(1) > a")
     public static WebElement Bouton_supprimer_evenement_autre_adminstrateur;
 
+    @FindBy(css = "div.more > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_supprimer_evenement;
+
     @FindBy(css = "div > div.comments-shared > a")
     public static WebElement Bouton_commentaire_evenement;
 
@@ -712,8 +715,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-invited-users div.table-container.edition-mode > div.flex-table.flex-table-header > div.inline-items.inline-icon.nav-hidden > div.checkbox.checkbox-users > label > span > span")
     public static WebElement Bouton_Selectionner_Tous_Utilisateurs;
 
+    @FindBy(css = "app-activated-users > div > div.table-container.edition-mode > div.flex-table.flex-table-header > div.inline-items.inline-icon.nav-hidden > div.checkbox.checkbox-users > label > span > span")
+    public static WebElement Bouton_Selectionner_Tous_Utilisateurs_actifs;
+
     @FindBy(css = "div.inline-items.inline-icon.nav-not-hidden-invited > div:nth-child(2) > i.fad.fa-trash-alt.mr-1")
     public static WebElement Bouton_Remove_Tous_Utilisateurs;
+
+    @FindBy(css = "div.inline-items.inline-icon.nav-not-hidden > div:nth-child(2) > i.fas.fa-cloud-download")
+    public static WebElement Bouton_Rapport_Utilisateurs;
 
     @FindBy(xpath = "//small[contains(text(),'karim.bennasr@yopmail.com')]")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
@@ -748,8 +757,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
     public static WebElement Bouton_Supprimer_Publication;
 
-    @FindBy(xpath = "//a[contains(text(),'Journalisation')]")
-    public static WebElement Rubrique_Journalisation;
+    @FindBy(xpath = "//a[contains(text(),'Corbeille')]")
+    public static WebElement Rubrique_Corbeille;
+
+    @FindBy(css = "div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(1) > i")
+    public static WebElement Bouton_Corbeille_Supprimer_Puplication;
+
+    @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
+    public static WebElement Bouton_Corbeille_Supprimer_Confirmation;
+
+
+
 
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
     public static WebElement Modal_Gestion_publications;

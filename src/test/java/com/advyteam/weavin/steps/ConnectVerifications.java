@@ -562,11 +562,7 @@ public class ConnectVerifications {
     @Then("Vérifier que l'article a été supprimé avec succés")
     public void vérifierQueLArticleAÉtéSuppriméAvecSuccés() throws InterruptedException {
 
-
-
-
         logger.info("Vérification de la suppression correct de l'article");
-
 
         //Waiting for the first Article to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
@@ -1462,7 +1458,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_Gestion_publications"))));
         Assert.assertTrue(generalobjectsmap.get("Modal_Gestion_publications").isDisplayed());
-        Assert.assertEquals("Journalisation > Publications",generalobjectsmap.get("Modal_Gestion_publications").getAttribute("innerText"));
+        Assert.assertEquals("Corbeille > Publications",generalobjectsmap.get("Modal_Gestion_publications").getAttribute("innerText"));
 
     }
 
@@ -2367,5 +2363,14 @@ public class ConnectVerifications {
     }
 
 
+    @Then("vérifier que l evenement supprimé est affiché dans la liste corbeille publications")
+    public void vérifierQueLEvenementSuppriméEstAffichéDansLaListeJournalisationPublications() {
+        logger.info("vérifier que l evenement supprimé est affiché dans la liste corbeille publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("Calendrier et évènements",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
 
+    }
 }
