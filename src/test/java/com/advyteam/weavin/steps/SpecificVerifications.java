@@ -176,7 +176,7 @@ public class SpecificVerifications {
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
                         .urlMatches("https://weavin-nreg.bubbleyou.com/portal/news")));
-        Assert.assertEquals("https://weavin-nreg.bubbleyou.comm/portal/news", driver.getCurrentUrl());
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/news", driver.getCurrentUrl());
         Assert.assertEquals("Actualités", generalobjectsmap.get("titre_page_news").getText());
     }
 
