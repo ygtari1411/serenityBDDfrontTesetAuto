@@ -2366,7 +2366,7 @@ public class ConnectVerifications {
         Assert.assertTrue(trouve);
     }
 
-
+    //Journalisation
     @Then("vérifier que l evenement supprimé est affiché dans la liste corbeille publications")
     public void vérifierQueLEvenementSuppriméEstAffichéDansLaListeJournalisationPublications() {
         logger.info("vérifier que l evenement supprimé est affiché dans la liste corbeille publications");
@@ -2377,4 +2377,14 @@ public class ConnectVerifications {
         Assert.assertEquals("Calendrier et évènements",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
 
     }
+
+    //Timeline
+    @And("l utilisateur ajoute une photo a la time line")
+    public void lUtilisateurAjouteUnePhotoALaTimeLine() throws InterruptedException {
+        logger.info("l utilisateur ajoute une photo a la time line");
+
+        generalobjectsmap.get("Input_Media_TImeLine").sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg") ;
+
+    }
+
 }

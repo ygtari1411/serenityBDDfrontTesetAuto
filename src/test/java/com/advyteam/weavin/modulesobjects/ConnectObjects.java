@@ -1141,6 +1141,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//section/app-opportunity-list/div[2]/div/div/div/ul/span[1]/li/a")
     public static WebElement  Bouton_Premiere_Opportunite;
 
+    @FindBy(xpath = "//*[@id=\"streamlineShareBoxImages\"]")
+    public static WebElement  Input_Media_TImeLine;
 
 
 
