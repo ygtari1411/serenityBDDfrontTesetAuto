@@ -49,7 +49,11 @@ public class ConnectVerifications {
         }
 
         //Asserting that first publication contains the text published in the scenario
-        Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
+        //Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
+        Assert.assertTrue(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("champ_statut")));
+
+
+
     }
 
     //    Vérification pour Idéation
