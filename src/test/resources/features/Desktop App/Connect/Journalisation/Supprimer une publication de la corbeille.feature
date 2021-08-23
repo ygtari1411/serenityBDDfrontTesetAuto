@@ -45,4 +45,3 @@ Feature: Journalisation
     And l utilisateur clique sur "Bouton_Corbeille_Supprimer_Puplication"
     And l utilisateur clique sur "Bouton_Corbeille_Supprimer_Confirmation"
 
-_
