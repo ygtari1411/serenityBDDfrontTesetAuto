@@ -766,9 +766,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
     public static WebElement Bouton_Corbeille_Supprimer_Confirmation;
 
-
-
-
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
     public static WebElement Modal_Gestion_publications;
 
@@ -1143,6 +1140,45 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/app-stream-line-post-form/div/div/form/div[2]/div/a/input")
     public static WebElement  Input_Media_TImeLine;
+
+    @FindBy(xpath = "//app-donation-compaign-list/div[3]/div/div/div")
+    public static WebElement  Bouton_Ajout_Compagne_De_Don;
+
+    @FindBy(xpath = "//div/div/div/div/div/span[3]")
+    public static WebElement  Modal_ajout_Don;
+
+    @FindBy(xpath = "//div/form/div[1]/div[1]/div[1]/input")
+    public static WebElement  Champ_Input_Titre_Don;
+
+    @FindBy(xpath = "//div[2]/quill-editor/div[2]/div[1]/p")
+    public static WebElement  Descriptif_Compagne_De_Don;
+
+    @FindBy(xpath = "//app-floating-label-form/div/div/input")
+    public static WebElement  Date_Cloture_Don;
+
+    @FindBy(xpath = "//div/form/div[1]/div[1]/div[3]/div[2]/input")
+    public static WebElement  Heure_Cloture_Don;
+
+    @FindBy(xpath = "//div[1]/div/app-floating-label-form/div/input")
+    public static WebElement  Objectif_Compagne_Don;
+
+    @FindBy(xpath = "//div[5]/div[1]/div/div/div[1]/input")
+    public static WebElement  Montant_Don;
+
+    @FindBy(xpath = "//div[1]/div/label/app-floating-label-form/div/div/label/span")
+    public static WebElement  Bouton_Montant_Libre;
+
+    @FindBy(xpath = "//div[2]/div/label/app-floating-label-form/div/div/label")
+    public static WebElement  Bouton_Montant_Collecter;
+
+    @FindBy(xpath = "//div/form/div[2]/button[1]")
+    public static WebElement  Bouton_Sauvegarder_Don;
+
+    @FindBy(xpath = "//div[1]/div[2]/div[1]/div[2]/div/input")
+    public static WebElement  H_Upload_photo_Don;
+
+    @FindBy(xpath = "//div/table/tr[2]/td[1]/span")
+    public static WebElement  Etat_Compagne_Don;
 
 
 

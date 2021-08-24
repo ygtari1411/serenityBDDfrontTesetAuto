@@ -211,4 +211,14 @@ public class SpecificVerifications {
     }
 
 
+    @Then("vérifier que la page afficher est la page compagne de don")
+    public void vérifierQueLaPageAfficherEstLaPageCompagneDeDon() {
+        logger.info("vérification que la page affichée est la page compagne de don");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list", driver.getCurrentUrl());
+
+    }
+
 }

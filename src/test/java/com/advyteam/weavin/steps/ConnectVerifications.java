@@ -2395,6 +2395,46 @@ public class ConnectVerifications {
         driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/app-stream-line-post-form/div/div/form/div[2]/div/a/input")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4");
     }
 
+    //Compagne de Don
+    @Then("vérifier que le modal de création d'un don est affiché")
+    public void vérifierQueLeModalDeCréationDUnDonEstAffiché() {
+        logger.info("Vérification de l'affichage du modal de création d'un don");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_ajout_Don"))));
+        assertThat(generalobjectsmap.get("Modal_ajout_Don").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_ajout_Don").getAttribute("innerText"), equalTo("Créez votre campagne de dons"));
+
+
+
+    }
+
+    //Compagne de Don
+    @And("l utilisateur ajoute une photo de couverture pour la compagne de don")
+    public void lUtilisateurAjouteUnePhotoDeCouverturePourLaCompagneDeDon() throws InterruptedException {
+        logger.info("L'utilisateur ajoute une photo de couverture a la compagne de don");
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+
+
+        executor.executeScript("document.getElementById('bg-cover-file-compaign').removeAttribute('hidden');");
+        driver.findElement(By.id("bg-cover-file-compaign")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
+        synchronized (driver) {
+            driver.wait(1000);
+        }
+        executor.executeScript("arguments[0].click();", generalobjectsmap.get("Bouton_enregistrer_upload_image"));
+
+
+    }
+
+    //Compagne de Don
+    @Then("verifier que la campagne de don et creer et lancer")
+    public void verifierQueLaCampagneDeDonEtCreerEtLancer() {
+        logger.info("Vérifier que la campagne e don est créer et lancer");
+
+        Assert.assertEquals(generalobjectsmap.get("Etat_Compagne_Don").getAttribute("innerText"),"Collectés:");
+
+    }
 
 
 }
