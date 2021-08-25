@@ -1,6 +1,6 @@
 # Auteur: ygtari
 # Feature: Compagne de don
-# Scénario:Creation et lancement d une compagne de don
+# Scénario:Contibution a une compagne de don
 # Date de création: 24/08/2021
 
 
@@ -10,8 +10,8 @@ Feature: Compagne de Don
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-DON
-  @WEAVIN-DON-0001
-  Scenario: Creation et Lancement d une compagne de don
+  @WEAVIN-DON-0002
+  Scenario: Contribution a  une compagne de don
 
     #Etape 1 : Connexion
 
@@ -51,5 +51,20 @@ Feature: Compagne de Don
 
     Then verifier que la campagne de don et creer et lancer
 
+    #Etape 4 : L initiateur de la compagne de don se déconnecte
+
+    And  l utilisateur se deconnecte
+    And pause 10 secondes
+
+   #Etape 5 : Se connecter avec un utilisateur
+
+    And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Don_menu_gauche"
+    And pause 10 secondes
+    Then vérifier que la page afficher est la page compagne de don
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Faire_Un_Don"
+    And pause 10 secondes
 
 

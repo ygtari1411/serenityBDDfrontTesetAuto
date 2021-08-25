@@ -1180,6 +1180,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/table/tr[2]/td[1]/span")
     public static WebElement  Etat_Compagne_Don;
 
+    @FindBy(xpath = "//div[2]/div[2]/div/a")
+    public static WebElement  Bouton_Faire_Un_Don;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
