@@ -66,5 +66,10 @@ Feature: Compagne de Don
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Faire_Un_Don"
     And pause 10 secondes
-
-
+    And l utilisateur clique sur "Montant_Du_Don"
+    And pause 10 secondes
+    And l utilisateur saisit "utilisateur" dans le champs "Titulaire_de_la_carte"
+    And pause 10 secondes
+    And l utilisateur saisit "424242424242424242424242424" dans le champs "Numero_Carte"
+    And l utilisateur clique sur "Bouton_Valider_Un_Don"
+    And pause 10 secondes

@@ -1183,6 +1183,19 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div[2]/div/a")
     public static WebElement  Bouton_Faire_Un_Don;
 
+    @FindBy(xpath = "//form/div[2]/div[1]")
+    public static WebElement  Montant_Du_Don;
+
+    @FindBy(xpath = "//div/div/form/div[3]/input")
+    public static WebElement  Titulaire_de_la_carte;
+
+    @FindBy(xpath = "//div/div[2]/span/input")
+    public static WebElement  Numero_Carte;
+
+    @FindBy(xpath = "//app-donation-modal/div/div/form/button")
+    public static WebElement  Bouton_Valider_Un_Don;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
