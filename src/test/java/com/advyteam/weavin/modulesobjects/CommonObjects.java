@@ -126,6 +126,8 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"aside-custom-left\"]/div/app-widget-flash-infos/div/div/h6")
     public static WebElement widget_flash_info;
 
+    @FindBy(css = ".sidebar--small [title='Campagnes de dons']")
+    public static WebElement Bouton_Don_menu_gauche;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
