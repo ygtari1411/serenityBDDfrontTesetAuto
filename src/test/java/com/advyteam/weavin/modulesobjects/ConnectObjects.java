@@ -169,7 +169,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "*> div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
     public static WebElement Bouton_Like_Ideation;
 
-    @FindBy(css = "*> div:nth-child(3) > div > ng-select > div > span")
+    @FindBy(css = "*> div > div:nth-child(2) > div > ng-select > div")
     public static WebElement Liste_Deroulante_Tags_Ideation;
 
     @FindBy(css = "div.col.col-xl-2.col-lg-2.col-md-2.col-sm-2 > button")

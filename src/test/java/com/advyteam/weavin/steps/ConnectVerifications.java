@@ -447,8 +447,8 @@ public class ConnectVerifications {
 
         //Parcourir la liste des notes
 
-        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
-        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//section/app-list/div[3]/div[3]/app-post-card-ideation/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//section/app-list/div[3]/div[*]/app-post-card-ideation/div/article/div[2]/div[5]/div/span"));
         for (WebElement element1 : elements) {
 
             int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
@@ -477,8 +477,8 @@ public class ConnectVerifications {
 
         //Parcourir la liste des notes
 
-        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//div[2]/app-post-card/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
-        List<WebElement> elements = driver.findElements(By.xpath("//div[*]/app-post-card/div/article/div[2]/div[5]/div/span"));
+        int   LastValue  =Integer.parseInt( (driver.findElement(By.xpath("//section/app-list/div[3]/div[3]/app-post-card-ideation/div/article/div[2]/div[5]/div/span")).getAttribute("innerText")).trim() ) ;
+        List<WebElement> elements = driver.findElements(By.xpath("//section/app-list/div[3]/div[*]/app-post-card-ideation/div/article/div[2]/div[5]/div/span"));
         for (WebElement element1 : elements) {
 
             int ActualValue =Integer.parseInt((element1.getAttribute("innerText")).trim())   ;
@@ -502,7 +502,7 @@ public class ConnectVerifications {
 
         logger.info("Vérifier que les messages champs requis s'affichent");
 
-        Assert.assertEquals(driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),4);
+        Assert.assertEquals(driver.findElements(By.cssSelector(".invalid-feedback .error-box")).size(),3);
 
     }
 

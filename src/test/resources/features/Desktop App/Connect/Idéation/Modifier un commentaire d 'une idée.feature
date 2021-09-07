@@ -36,6 +36,7 @@ Feature: Idéation
      #Etape 3 : Vérification de la création de l'idée
 
     Then vérifier la publication correct de l idee
+    And pause 20 secondes
     And l utilisateur saisit "test automatisé modifier un commentaire d'une idee" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
 
      #Etape 4 : Commenter  l'idée
@@ -69,6 +70,7 @@ Feature: Idéation
     And pause 5 secondes
     #And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_Ideation"
     And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Ideation
+    And pause 15 secondes
     Then verifier que le commentaire est modifié
 
     #Etape 6 : Modifier l'interaction

@@ -157,7 +157,7 @@ public class SpecificVerifications {
                 (ExpectedConditions
                         .urlMatches("https://weavin-nreg.bubbleyou.com/portal/ideations/list")));
         Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/ideations/list", driver.getCurrentUrl());
-        Assert.assertEquals("Idéation", generalobjectsmap.get("titre_page_ideation").getText());
+        Assert.assertEquals("Idéations", generalobjectsmap.get("titre_page_ideation").getText());
     }
 
     @Then("vérifier que la page affichée est la page calendrier et évenement")

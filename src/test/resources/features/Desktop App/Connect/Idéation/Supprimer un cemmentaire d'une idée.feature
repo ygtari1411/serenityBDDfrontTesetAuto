@@ -36,7 +36,9 @@ Feature: Idéation
      #Etape 3 : Vérification de la création de l'idée
 
     Then vérifier la publication correct de l idee
+    And pause 5 secondes
     And l utilisateur saisit "Supprimer un commentaire d'une idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+    And pause 15 secondes
 
      #Etape 4 : Commenter  l'idée
 
