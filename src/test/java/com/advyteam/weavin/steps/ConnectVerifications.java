@@ -2384,7 +2384,7 @@ public class ConnectVerifications {
         logger.info("l utilisateur ajoute une photo a la time line");
 
         //generalobjectsmap.get("Input_Media_TImeLine").sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg") ;
-        driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/app-stream-line-post-form/div/div/form/div[2]/div/a/input")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
+        driver.findElement(By.xpath("//*[@id=\"streamlineShareBoxImages\"]")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
     }
 
     //Timeline
@@ -2436,5 +2436,15 @@ public class ConnectVerifications {
 
     }
 
+    //TimeLine
+    @And("l utilisateur ajoute une piece jointe a la time line")
+    public void lUtilisateurAjouteUnePieceJointeALaTimeLine() {
+        logger.info("l utilisateur ajoute une piece jointe a la time line");
+
+        //generalobjectsmap.get("Input_Media_TImeLine").sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg") ;
+        driver.findElement(By.xpath("//*[@id=\"streamlineShareBoxImages\"]")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/FichierTest.pdf");
+
+
+    }
 
 }
