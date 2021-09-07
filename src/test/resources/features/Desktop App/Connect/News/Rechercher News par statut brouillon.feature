@@ -36,6 +36,7 @@ Feature: News
     And pause 10 secondes
     And l utilisateur clique sur "Onglet_Liste_Des_News"
     And pause 10 secondes
+    And l utilisateur rafraichit la page
 
 
 

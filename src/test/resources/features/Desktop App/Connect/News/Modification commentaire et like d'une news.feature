@@ -67,6 +67,7 @@ Feature: News
     And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire_News"
     And pause 5 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_News"
+    And pause 15 secondes
     Then verifier que le commentaire news est modifié
     And pause 20 secondes
 

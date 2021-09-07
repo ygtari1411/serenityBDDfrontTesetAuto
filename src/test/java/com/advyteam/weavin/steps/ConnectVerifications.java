@@ -173,7 +173,7 @@ public class ConnectVerifications {
     public void vérifierQueLActualitéNeSAfficheQueSiLHeureEstÉgaleÀLHeureDeDateDeDébutDeLActualité() {
 
         logger.info("vérification du statut de la news");
-        Assert.assertEquals("PROGRAMMÉ",generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"));
+        Assert.assertEquals("PUBLIÉ",generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News

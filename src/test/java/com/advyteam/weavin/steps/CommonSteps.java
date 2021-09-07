@@ -268,4 +268,13 @@ public class CommonSteps {
     }
 
 
+    @And("l utilisateur rafraichit la page")
+    public void lUtilisateurRafraichitLaPage() {
+        logger.info("l'utilisateur rafraichit la page");
+
+        driver.navigate().refresh();
+
+
+    }
+
 }

@@ -44,6 +44,7 @@ Feature: News
 
     #Basculer vers la liste d'actualités
     And l utilisateur saisit "Test automatique rechercher news par titre" dans le champs "Champ_Input_Rechercher_News_Par_Titre"
+    And pause 15 secondes
     Then Vérifier que l'actualité affiche
 
 

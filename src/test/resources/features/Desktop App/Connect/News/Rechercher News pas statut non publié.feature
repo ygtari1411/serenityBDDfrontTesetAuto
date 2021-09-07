@@ -44,8 +44,10 @@ Feature: News
 
    #Etape 4 : Rechercher Les news avec le statut publié
 
-    When l utilisateur selectionne "Non Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
-    Then Vérifier que seuls les actualités "Non publié" s'affichent
+     #todo : remplacer non publié par expiré
+
+    #When l utilisateur selectionne "Non Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
+    #Then Vérifier que seuls les actualités "Non publié" s'affichent
 
 
 
