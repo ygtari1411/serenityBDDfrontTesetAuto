@@ -371,8 +371,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.birthday-author-name")
     public static WebElement Invite_interne_evenement_selectionne;
 
-    @FindBy(css = "button.btn.btn-md-2.btn-primary.mb-0.ml-3")
+    @FindBy(xpath = "//button[contains(text(),'Ajouter')]")
     public static WebElement Bouton_Ajouter_Invite_interne_evenement;
+
+    @FindBy(xpath = "//button[contains(text(),'Chercher')]")
+    public static WebElement Bouton_Chercher_Invite_interne_evenement;
 
     @FindBy(xpath ="//button[contains(text(),'Créer un évènement')]")
     public static WebElement Bouton_creer_evenement;
@@ -804,6 +807,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div:nth-child(3) > div > a > svg")
     public static WebElement Bouton_Invités_Internes;
+
+    @FindBy(css = "li.update-liste > span")
+    public static WebElement Bouton_Modifier_Invités_Internes;
 
     @FindBy(css = "div.swal2-actions > button.swal2-confirm.btn.btn-success.ml-sm")
     public static WebElement Accepter_envoi_mail_evenement;

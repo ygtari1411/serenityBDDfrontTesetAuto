@@ -28,7 +28,7 @@ Feature: Calendrier & évenements
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
     And l utilisateur selectionne "Weavin Admin" dans la liste deroulante "Calendrier"
-    And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
+    #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
     And l utilisateur saisit "Test automatique création evenement" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'un evenement" dans le champs "Champ_Input_Description_Evenement"
     And l utilisateur saisit "Tunis" dans le champs "Champ_Input_Lieu_Evenement"
@@ -44,12 +44,19 @@ Feature: Calendrier & évenements
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouveau_evenement"
     And pause 5 secondes
-    And l utilisateur selectionne "adriel jacobson" dans la liste deroulante des invites interne "invites_interne_evenement"
+    And l utilisateur clique sur "Bouton_Invités_Internes"
+    And pause 5 secondes
+    And l utilisateur saisit "Ennaceur" dans le champs "Champ_Input_invites_interne_evenement"
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Chercher_Invite_interne_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Invite_interne_evenement_selectionne"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
-    And pause 5 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 
@@ -63,7 +70,7 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     And l utilisateur clique sur "Option_modifier_evenement"
     And pause 5 secondes
-    And l utilisateur selectionne "Privé" dans la liste deroulante "Type_Evenement"
+    #And l utilisateur selectionne "Privé" dans la liste deroulante "Type_Evenement"
     And pause 5 secondes
     And l utilisateur saisit "Test automatique modification evenement" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de la modification d'un evenement" dans le champs "Champ_Input_Description_Evenement"
@@ -73,12 +80,20 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     And l utilisateur saisit "18:00" dans le champs "Heure_Fin_Evenement"
     And pause 5 secondes
-    And l utilisateur selectionne "aedan bradley" dans la liste deroulante des invites interne "invites_interne_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Modifier_Invités_Internes"
+    And pause 5 secondes
+    And l utilisateur saisit "Yassin" dans le champs "Champ_Input_invites_interne_evenement"
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Chercher_Invite_interne_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Invite_interne_evenement_selectionne"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_modifier_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
-    And pause 10 secondes
 
     #Etape 5 : Vérification de la modification de l'évenement
 
