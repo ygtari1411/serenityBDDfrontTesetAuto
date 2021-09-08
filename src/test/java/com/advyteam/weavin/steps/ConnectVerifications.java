@@ -628,7 +628,7 @@ public class ConnectVerifications {
     @Then("vérifier que l admin a reçu une notification pour l intercation et une notification pour le commentaire")
     public void vérifierQueLAdminAReçuUneNotificationPourLIntercationEtUneNotificationPourLeCommentaire() {
 
-        Assert.assertTrue(generalobjectsmap.get("Premiere_Notification_Afficher").getAttribute("innerText").contains("réagi à votre publication"));
+        Assert.assertTrue(generalobjectsmap.get("Premiere_Notification_Afficher").getAttribute("innerText").contains("a réagi a votre article"));
         Assert.assertTrue(generalobjectsmap.get("Deuxieme_Notification_Afficher").getAttribute("innerText").contains("a commenté votre"));
 
     }
@@ -650,7 +650,7 @@ public class ConnectVerifications {
         logger.info("vérifier que l'interaction a été modifiée avec succés");
 
         //Vérifier que l icone praise s'affiche
-        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),0);
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("div > a > span.reactions-icon-md-PRAISE.reactions-menu__icon")).size(),0);
 
 
     }
@@ -791,7 +791,7 @@ public class ConnectVerifications {
         logger.info("Vérifier que le like a été supprimé");
 
         //Vérifier que l icone LIKE ne s'affiche plus
-        Assert.assertEquals(0,driver.findElements(By.cssSelector("ul > li:nth-child(1) > div > a > span.reactions-menu__icon.reactions-icon-md-LIKE")).size());
+        Assert.assertEquals(0,driver.findElements(By.cssSelector("l > li:nth-child(1) > div > a > span.reactions-menu__icon.reactions-icon-md-LIKE")).size());
 
 
 

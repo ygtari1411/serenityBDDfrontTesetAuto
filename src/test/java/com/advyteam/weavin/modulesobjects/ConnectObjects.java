@@ -193,7 +193,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(3) > ng-select > div > div > div.ng-input > input[type=text]")
     public static WebElement  categorie_article;
 
-    @FindBy(css = "div:nth-child(2) > quill-editor > div.ql-container.ql-snow > div.ql-editor.ql-blank")
+    @FindBy(css = ".ql-container .ql-editor")
     public static WebElement  Champ_Input_Description_Article;
 
     @FindBy(css = "div.add-options-message > button.btn.btn-primary.btn-md-2")
@@ -229,7 +229,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "form > div > div:nth-child(1) > div > input")
     public static WebElement Champ_Input_Rechercher_Article_Par_Titre;
 
-    @FindBy(css = "div:nth-child(1) > div > app-post-card > div > article > div.post-content > a")
+    @FindBy(css = "div:nth-child(2) > div > app-post-card-useful-information > div")
     public static WebElement Premier_Article_Afficher_Utilisateur;
 
     @FindBy(css = "div > div.like-action.mr-lg")
@@ -309,7 +309,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
     public static WebElement Bouton_Editer_Supprimer_Article;
 
-    @FindBy(css = "form > div > div:nth-child(1) > div > input")
+    @FindBy(css = "div > app-text-input > div > input")
     public static WebElement Champ_Input_Rechercher_Article_Par_titre;
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
@@ -318,13 +318,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(2)")
     public static WebElement Bouton_Praise_News;
 
-    @FindBy(xpath ="//div[4]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
+    @FindBy(xpath ="//div/div[4]/div/app-datepicker/div/div/button")
     public static WebElement Calendrier_recherche_article_par_date_debut;
 
     @FindBy(xpath ="//span[@class='ng-arrow-wrapper']")
     public static WebElement rechercher_article_categorie;
 
-    @FindBy(xpath ="//div[3]/div[1]/app-datepicker[1]/div[1]/div[1]/button[1]")
+    @FindBy(xpath ="//div/div[5]/div/app-datepicker/div/div/button")
     public static WebElement Calendrier_recherche_article_par_date_Fin;
 
     @FindBy(css ="div:nth-child(5) > div > app-datepicker > div > input")

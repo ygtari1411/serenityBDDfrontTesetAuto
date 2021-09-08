@@ -87,7 +87,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".swal2-confirm.btn")
     public static WebElement Bouton_confirmer_action;
 
-    @FindBy(css = "#dropdownNotification > svg")
+    @FindBy(css = "#site-header > div > div > app-notification-list > div")
     public static WebElement Bouton_Notifications;
 
     @FindBy(css = "app-notification-list > div > div > ngb-tabset > ul > li:nth-child(2)")
@@ -96,10 +96,10 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(1) > div.notification-event > div")
     public static WebElement Premiere_Notification_Afficher;
 
-    @FindBy(css = "#T2-panel > perfect-scrollbar > div > div.ps-content > div > ul > li:nth-child(1) > div.notification-event > div")
+    @FindBy(xpath = "//*[@id=\"T1-panel\"]/perfect-scrollbar/div/div[1]/div/ul/li[1]")
     public static WebElement Premiere_Notification_Evenement_Afficher;
 
-    @FindBy(css = "ul > li:nth-child(2) > div.notification-event > div")
+    @FindBy(xpath = "//*[@id=\"T1-panel\"]/perfect-scrollbar/div/div[1]/div/ul/li[2]")
     public static WebElement Deuxieme_Notification_Afficher;
 
     @FindBy(css = "#site-header > div > div > div:nth-child(1) > app-chat-notification-list > div")

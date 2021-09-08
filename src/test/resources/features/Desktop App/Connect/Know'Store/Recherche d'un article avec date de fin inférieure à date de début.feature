@@ -31,7 +31,7 @@ Feature: Article
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvel_article"
     And l utilisateur saisit "C'est un test automatique de recherche d'un article avec date de fin inférieure à date de début" dans le champs "Champ_Input_Description_Article"
     And pause 10 secondes
-    And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
+    #And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_sauvegarder_article"
     And pause 10 secondes

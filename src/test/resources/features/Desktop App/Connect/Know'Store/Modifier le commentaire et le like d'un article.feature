@@ -27,12 +27,12 @@ Feature: Article
     Then vérifier que le modal de création d'un article est affiché
     And l utilisateur saisit "Test automatique modifier commentaire et like d'un article" dans le champs "Champ_Input_Titre_Article"
     And pause 15 secondes
-    And l utilisateur selectionne "Catégorie 1" dans la liste deroulante "categorie_article"
+    And l utilisateur selectionne "Article" dans la liste deroulante "categorie_article"
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvel_article"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'un article" dans le champs "Champ_Input_Description_Article"
     And pause 10 secondes
-    And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
+    #And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_sauvegarder_article"
     And pause 10 secondes
@@ -49,7 +49,7 @@ Feature: Article
 
     #Etape 5 : Le deuxieme utilisateur   se connecte  pour liker et commenter l'article
 
-    And l'utilisateur "josephine.berard@yopmail.com" est connecté
+    And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 10 secondes
@@ -74,12 +74,13 @@ Feature: Article
     And pause 5 secondes
     #And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_Article"
     And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Article
+    And pause 15 secondes
     Then verifier que le commentaire de l article est modifié
 
    #Etape 7 : modifier l'interaction
 
     When l utilisateur effectue un hover sur "Bouton_Interaction_Article"
-    And pause 5 secondes
+    And pause 15 secondes
     And l utilisateur clique sur "Bouton_Praise_Article"
     And pause 15 secondes
     Then verifier que l interaction de l article a été modifiée avec succés
