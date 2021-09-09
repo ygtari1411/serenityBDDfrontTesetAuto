@@ -78,7 +78,7 @@ Feature: Calendrier & évenements
     And l utilisateur clique sur "Bouton_Like_Evenement"
     And pause 10 secondes
     Then vérifier  que le like evenement a été ajouté
-    #And pause 10 secondes
+    And pause 10 secondes
 
    #Etape 5 : Modifier le commentaire
 

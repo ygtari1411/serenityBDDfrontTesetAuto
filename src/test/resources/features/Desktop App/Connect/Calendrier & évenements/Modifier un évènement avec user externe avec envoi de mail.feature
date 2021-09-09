@@ -29,7 +29,7 @@ Feature: Calendrier & évenements
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
     And l utilisateur selectionne "Weavin Admin" dans la liste deroulante "Calendrier"
-    And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
+    #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
     And l utilisateur saisit "Test automatique Modification évènement avec user externe avec envoi de mail" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de modifier un évènement avec user externe avec envoi de mail" dans le champs "Champ_Input_Description_Evenement"
     And l utilisateur saisit "Tunis" dans le champs "Champ_Input_Lieu_Evenement"
@@ -56,11 +56,14 @@ Feature: Calendrier & évenements
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Accepter_envoi_mail_evenement"
+    And pause 5 secondes
 
     #Etape3 : Vérification de la création de l'évenement
 
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
+    And pause 5 secondes
     Then vérifier la création du nouveau evenement de modifcation avec user externe avec envoi mail
+    And pause 5 secondes
 
     #Etape4 : la modification de l'évenement
 
@@ -68,7 +71,7 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     And l utilisateur clique sur "Option_modifier_evenement"
     And pause 5 secondes
-    And l utilisateur selectionne "Privé" dans la liste deroulante "Type_Evenement"
+    #And l utilisateur selectionne "Privé" dans la liste deroulante "Type_Evenement"
     And pause 5 secondes
     And l utilisateur saisit "Test automatique modification evenement" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de la modification d'un evenement" dans le champs "Champ_Input_Description_Evenement"

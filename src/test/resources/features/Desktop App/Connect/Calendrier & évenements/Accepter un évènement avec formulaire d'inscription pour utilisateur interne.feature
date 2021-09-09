@@ -44,11 +44,12 @@ Feature: Calendrier & évenements
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouveau_evenement"
     And pause 5 secondes
-    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Invités_Internes"
     And pause 5 secondes
-    And l utilisateur saisit "Nasser QA" dans le champs "Champ_Input_invites_interne_evenement"
+    And l utilisateur saisit "Ennaceur" dans le champs "Champ_Input_invites_interne_evenement"
     And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Chercher_Invite_interne_evenement"
+    And pause 5 secondes
     And l utilisateur clique sur "Invite_interne_evenement_selectionne"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
@@ -92,7 +93,7 @@ Feature: Calendrier & évenements
     #Etape 3 : Vérification de la création de l'évenement avec formulaire
 
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
-    Then vérifier la création du nouveau evenement avec formulaire
+    Then vérifier la création du nouveau evenement avec formulaire pour l acceptation
     And l utilisateur clique sur "Bouton_Fermer_Evenement"
     And pause 10 secondes
 
@@ -111,13 +112,14 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     And l utilisateur clique sur "Premiere_Notification_Evenement_Afficher"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Accepter_Ajouter_au_calendrier"
-    And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Accepter_Ajouter_au_calendrier"
+    #Remplir le formulaire
+    And pause 15 secondes
     And l utilisateur clique sur "Onglet_Calendrier_et_Evenement"
-    And pause 5 secondes
+    And pause 10 secondes
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
     And pause 5 secondes
-    Then vérifier la création du nouveau evenement d'acceptaion à partir de la notification
+    Then vérifier la création du nouveau evenement avec formulaire pour l acceptation
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_Evenement"
     And pause 10 secondes
@@ -137,4 +139,4 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Evenement_liste_Invités"
     And pause 5 secondes
-    Then vérifier l acceptation de l evenement
+    #Then vérifier l acceptation de l evenement

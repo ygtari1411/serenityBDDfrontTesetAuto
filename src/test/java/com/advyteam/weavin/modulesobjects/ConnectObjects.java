@@ -829,7 +829,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#notifications-tab")
     public static WebElement Bouton_Mes_Invitations;
 
-    @FindBy(css = "a.btn.btn-breez.btn-sm")
+    @FindBy(css = "a.btn.btn-primary")
     public static WebElement Bouton_Accepter_Ajouter_au_calendrier;
 
     @FindBy(css = "div.col.col-lg-5.col-md-5.col-sm-12.col-12 > div > guests-by-event > div > div.list-guests > a")
@@ -838,7 +838,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.member.pull-right.avatar-member")
     public static WebElement Invité_Acceptation;
 
-    @FindBy(css = "ngb-modal-window > div > div > app-event-detail > a")
+    @FindBy(css = "app-event-detail > div > a > svg")
     public static WebElement Bouton_Fermer_Evenement;
 
     @FindBy(css = "a.btn.btn-sm.btn-border-think.custom-color.c-grey")

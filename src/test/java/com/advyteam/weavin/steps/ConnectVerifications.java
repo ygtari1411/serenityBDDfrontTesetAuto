@@ -2046,7 +2046,7 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher").getAttribute("innerText"),
-                equalTo("Marc Parenteau vous a envoyé une invitation à un événement "));
+                equalTo("Marc Parenteau vous a envoyé une invitation à un événement Dans 2 heures"));
     }
 
     // Vérification pour calendrier et evenements
@@ -2447,4 +2447,15 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour calendrier et evenements
+    @Then("vérifier la création du nouveau evenement avec formulaire pour l acceptation")
+    public void vérifierLaCréationDuNouveauEvenementAvecFormulairePourLAcceptation() {
+        logger.info("vérifier la création du nouveau evenement avec formulaire pour user externe");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
+        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Acceptation evenement avec formulaire d'inscription pour utilisateur interne"));
+
+    }
 }

@@ -29,7 +29,7 @@ Feature: Calendrier & évenements
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
     And l utilisateur selectionne "Weavin Admin" dans la liste deroulante "Calendrier"
-    And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
+    #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
     And l utilisateur saisit "Test automatique création évènement avec user externe avec envoi de mail" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de l'ajout d'un évènement avec user externe avec envoi de mail" dans le champs "Champ_Input_Description_Evenement"
     And l utilisateur saisit "Tunis" dans le champs "Champ_Input_Lieu_Evenement"

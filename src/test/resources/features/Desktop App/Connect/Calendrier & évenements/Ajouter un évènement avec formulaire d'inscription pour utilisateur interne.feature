@@ -23,7 +23,7 @@ Feature: Calendrier & évenements
     And pause 5 secondes
     Then vérifier que la page affichée est la page calendrier et évenement
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajout_Evenement"
     And pause 5 secondes
@@ -46,11 +46,12 @@ Feature: Calendrier & évenements
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouveau_evenement"
     And pause 5 secondes
-    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Invités_Internes"
     And pause 5 secondes
-    And l utilisateur saisit "Nasser QA" dans le champs "Champ_Input_invites_interne_evenement"
+    And l utilisateur saisit "Ennaceur" dans le champs "Champ_Input_invites_interne_evenement"
     And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Chercher_Invite_interne_evenement"
+    And pause 5 secondes
     And l utilisateur clique sur "Invite_interne_evenement_selectionne"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
