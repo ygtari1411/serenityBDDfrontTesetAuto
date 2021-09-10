@@ -1101,7 +1101,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Profil_username"))));
         Assert.assertTrue(generalobjectsmap.get("Profil_username").isDisplayed());
-        Assert.assertEquals("Weavin Admin",generalobjectsmap.get("Profil_username").getAttribute("innerText"));
+        Assert.assertEquals("Marc Parenteau",generalobjectsmap.get("Profil_username").getAttribute("innerText"));
 
     }
 

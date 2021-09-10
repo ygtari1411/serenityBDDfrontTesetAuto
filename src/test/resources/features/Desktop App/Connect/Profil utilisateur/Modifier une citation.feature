@@ -1,6 +1,6 @@
 # Auteur: ygtari
 # Feature: Profil utilisateur
-# Scénario: Ajouter une citation
+# Scénario: Modifier une citation
 # Date de création: 25/02/2021
 
 Feature: Profil utilisateur
@@ -9,12 +9,12 @@ Feature: Profil utilisateur
   @WEAVIN-CONNECT
   @WEAVIN-PROFILUTILISATEUR
   @WEAVIN-PROFILUTILISATEUR-0004
-  Scenario: Ajouter une citation
+  Scenario: Modifier une citation
 
   #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
 
   #Etape2  : Ajout d'une citation
 

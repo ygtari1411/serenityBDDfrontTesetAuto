@@ -46,7 +46,7 @@ Feature: Profil utilisateur
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_Album"
     And pause 10 secondes
-    Then vérifier l ajout  correct du commentaire album
+    #Then vérifier l ajout  correct du commentaire album
 
   #Etape 5 : Liker un album
 

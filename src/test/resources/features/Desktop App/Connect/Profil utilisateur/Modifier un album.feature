@@ -42,7 +42,7 @@ Feature: Profil utilisateur
 
   #Etape4 : Modifier  l album  ajouté
 
-    And l utilisateur clique sur "Bouton_Femer_Derniere_Album"
+    And l utilisateur clique sur "Bouton_Fermer_Derniere_Album"
     And pause 5 secondes
     And l utilisateur effectue un hover sur "Derniere_Album"
     And pause 5 secondes

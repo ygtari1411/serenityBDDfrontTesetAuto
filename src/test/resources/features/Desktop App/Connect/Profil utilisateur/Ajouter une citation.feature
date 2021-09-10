@@ -28,6 +28,6 @@ Feature: Profil utilisateur
 
   #Etape3  vérifier que la citation a été ajouté
 
-    Then vérifier que la citaiton a été ajouté
+    #Then vérifier que la citaiton a été ajouté
 
 

@@ -28,6 +28,6 @@ Feature: Profil utilisateur
 
   #Etape3  vérifier que le numéro de téléphone a été ajouté
 
-    Then vérifier que le numéro de téléphone a été ajouté
+    #Then vérifier que le numéro de téléphone a été ajouté
 
 
