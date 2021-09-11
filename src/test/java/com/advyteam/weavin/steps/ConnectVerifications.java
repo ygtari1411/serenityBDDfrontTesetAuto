@@ -1399,12 +1399,12 @@ public class ConnectVerifications {
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Premier_utilisateur_Favoris"), "innerText",
-                                "Nasser QA")));
+                                "Mohamed Ennaceur Ben Yedder")));
         synchronized (driver) {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Premier_utilisateur_Favoris").getAttribute("innerText"),
-                equalTo("Nasser QA"));
+                equalTo("Mohamed Ennaceur Ben Yedder"));
     }
 
     // Vérification pour Annuaire
@@ -1820,12 +1820,12 @@ public class ConnectVerifications {
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Utilisateur_Chercher"), "innerText",
-                                "Nasser QA")));
+                                "Mohamed Ennaceur Ben Yedder")));
         synchronized (driver) {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Utilisateur_Chercher").getAttribute("innerText"),
-                equalTo("Nasser QA"));
+                equalTo("Mohamed Ennaceur Ben Yedder"));
     }
 
     // Vérification pour calendrier et evenements
@@ -1905,13 +1905,13 @@ public class ConnectVerifications {
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
-                                "Message Texte de Test")));
+                                "Vu Message Texte par destinataire")));
 
         synchronized (driver) {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
-                equalTo("Message Texte de Test"));
+                equalTo("Vu Message Texte par destinataire"));
     }
 
     // Vérification pour chat

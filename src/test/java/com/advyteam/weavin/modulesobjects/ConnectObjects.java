@@ -625,7 +625,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > delete-icon > span > svg")
     public static WebElement Bouton_Supprimer_loisir;
 
-    @FindBy(css = "#sidebar-right > div")
+    @FindBy(css = "#sidebar-right > div > a > svg")
     public static WebElement Bouton_Ouvrir_List_Chat;
 
     @FindBy(css = "div.mCustomScrollbar > perfect-scrollbar > div > div.ps-content > div > div")
@@ -652,13 +652,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "span.chat-message-item")
     public static WebElement Message_reçu;
 
-    @FindBy(css = "app-speed-access-user-item > li > div.more")
-    public static WebElement Bouton_Options_utilisateur;
 
-    @FindBy(css = "div.more > ul > li:nth-child(2)")
+    @FindBy(css = "app-speed-access-user-item > li > div.more")
     public static WebElement Bouton_Ajouter_utilisateur_Favoris;
 
-    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more > ul > li:nth-child(2)")
+    @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.more > div > svg")
     public static WebElement Bouton_Supprimer_utilisateur_Favoris;
 
     @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.author-status > a")

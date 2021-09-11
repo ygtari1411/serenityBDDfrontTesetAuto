@@ -22,7 +22,7 @@ Feature: Chat
 
     When l utilisateur clique sur "Bouton_Ouvrir_List_Chat"
     And pause 5 secondes
-    And l utilisateur saisit "Nasser QA" dans le champs "Champ_Input_Chercher_vos_amis"
+    And l utilisateur saisit "Mohamed Ennaceur Ben Yedder" dans le champs "Champ_Input_Chercher_vos_amis"
     And pause 5 secondes
     And l utilisateur clique sur "Utilisateur_Chercher"
     And pause 10 secondes
