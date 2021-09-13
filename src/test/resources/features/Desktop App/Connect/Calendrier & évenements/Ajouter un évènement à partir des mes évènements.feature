@@ -69,3 +69,10 @@ Feature: Calendrier & évenements
     And pause 10 secondes
     And l utilisateur clique sur "Evenement_Dans_Calendrier"
     #Then vérifier la création du nouveau evenement
+
+  #Etape 7 : Supprimer l'évenement
+
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"

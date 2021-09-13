@@ -90,9 +90,17 @@ Feature: Calendrier & évenements
     And l utilisateur clique sur "Bouton_modifier_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Accepter_envoi_mail_evenement"
-
+    And pause 5 secondes
 
     #Etape 5 : Vérification de la modification de l'évenement
 
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
+    And pause 5 secondes
     Then vérifier la modification de l evenement ajoute
+
+    #Etape 6 : Supprimer l'évenement
+
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"

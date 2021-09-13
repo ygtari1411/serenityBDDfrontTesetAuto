@@ -114,3 +114,21 @@ Feature: Calendrier & évenements
     And l utilisateur clique sur "Bouton_Notifications_Evenement"
     And pause 5 secondes
     Then vérifier la réception de l'invitation
+
+     #Etape 6 : Switch compte
+
+    And  l utilisateur se deconnecte
+    And pause 10 secondes
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
+    And pause 10 secondes
+
+    #Etape 7 : Supprimer l'évenement
+
+    When l utilisateur clique sur "Bouton_calendrier_menu_gauche"
+    And pause 5 secondes
+    When l utilisateur clique sur "Evenement_Dans_Calendrier"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"
+

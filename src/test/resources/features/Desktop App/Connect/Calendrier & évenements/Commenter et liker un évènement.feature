@@ -80,3 +80,10 @@ Feature: Calendrier & évenements
     Then vérifier  que le like evenement a été ajouté
     #And pause 10 secondes
 
+   #Etape 5 : Supprimer l'évenement
+
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"
+

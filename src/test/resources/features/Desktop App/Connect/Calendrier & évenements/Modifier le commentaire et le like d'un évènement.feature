@@ -105,4 +105,11 @@ Feature: Calendrier & évenements
     Then verifier que l'interaction de l évenement a été modifiée avec succés
 
 
+    #Etape 7 : Supprimer l'évenement
+
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"
+
 

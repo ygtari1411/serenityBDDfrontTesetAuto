@@ -833,6 +833,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.col.col-lg-5.col-md-5.col-sm-12.col-12 > div > guests-by-event > div > div.list-guests > a")
     public static WebElement Bouton_Evenement_liste_Invités;
 
+    @FindBy(css = "div.modal-header > a > svg")
+    public static WebElement Bouton_Fermer_liste_Invités;
+
     @FindBy(css = "div.member.pull-right.avatar-member")
     public static WebElement Invité_Acceptation;
 

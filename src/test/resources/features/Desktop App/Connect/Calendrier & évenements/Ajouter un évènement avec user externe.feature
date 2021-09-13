@@ -56,8 +56,16 @@ Feature: Calendrier & évenements
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
+    And pause 5 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
     Then vérifier la création du nouveau evenement avec user externe
+
+  #Etape 4 : Supprimer l'évenement
+
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_options_evenement"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_supprimer_evenement"
