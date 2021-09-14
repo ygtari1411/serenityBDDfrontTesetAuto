@@ -37,7 +37,7 @@ Feature: Journalisation
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And pause 5 secondes
-    And l utilisateur clique sur "Rubrique_Journalisation"
+    And l utilisateur clique sur "Rubrique_Corbeille"
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes

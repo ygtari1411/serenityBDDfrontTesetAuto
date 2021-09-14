@@ -14,7 +14,7 @@ Feature: Journalisation
   #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 5 secondes
 
   #Etape 2 : Ajouter une publication contenant des commentaires
@@ -24,7 +24,7 @@ Feature: Journalisation
     And l utilisateur clique sur "Bouton_publier_Publication"
     And pause 5 secondes
     And vérifier que la publication est publié
-    And pause 5 secondes
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_commentaire_publication"
     And pause 5 secondes
     And l utilisateur saisit "test automatisé commentaire" dans le champs "Champ_Input_Commentaire_Publication"
@@ -44,7 +44,7 @@ Feature: Journalisation
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And pause 5 secondes
-    And l utilisateur clique sur "Rubrique_Journalisation"
+    And l utilisateur clique sur "Rubrique_Corbeille"
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes

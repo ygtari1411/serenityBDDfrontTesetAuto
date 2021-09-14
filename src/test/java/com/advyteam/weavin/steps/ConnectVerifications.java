@@ -1475,7 +1475,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
         Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals("Publication",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+        Assert.assertEquals("publication",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
 
     }
 

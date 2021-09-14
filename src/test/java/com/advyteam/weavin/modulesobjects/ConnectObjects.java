@@ -413,7 +413,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.comments-shared > a")
     public static WebElement Bouton_commentaire_evenement;
 
-    @FindBy(css = "div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li.ng-star-inserted > div")
+    @FindBy(css = " div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a > span")
     public static WebElement Bouton_commentaire_publication;
 
     @FindBy(css = "div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank")
@@ -667,6 +667,8 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "//a[contains(text(),'Utilisateurs')]")
     public static WebElement Rubrique_utilisateurs;
+
+
 
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
     public static WebElement Modal_Gestion_utilisateurs;

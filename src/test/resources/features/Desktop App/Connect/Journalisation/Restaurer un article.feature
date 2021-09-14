@@ -15,14 +15,20 @@ Feature: Journalisation
   #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
+    And pause 5 secondes
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
+    And pause 5 secondes
 
   #Etape2  : Ajout Article
 
     When l utilisateur clique sur "Bouton_knowstore_menu_gauche"
+    And pause 5 secondes
     Then vérifier que la page affichée est la page knows store
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajout_Article"
+    And pause 5 secondes
     Then vérifier que le modal de création d'un article est affiché
+    And pause 5 secondes
     And l utilisateur saisit "Test automatique restaurer un article" dans le champs "Champ_Input_Titre_Article"
     And pause 15 secondes
     And l utilisateur selectionne "Article" dans la liste deroulante "categorie_article"
@@ -62,7 +68,7 @@ Feature: Journalisation
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And pause 5 secondes
-    And l utilisateur clique sur "Rubrique_Journalisation"
+    And l utilisateur clique sur "Rubrique_Corbeille"
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
@@ -72,7 +78,11 @@ Feature: Journalisation
   #Etape 7 : Restaurer l'Article
 
     And l utilisateur clique sur "Bouton_Restaurer_Article"
+    And pause 15 secondes
+    And l utilisateur clique sur "Bouton_confirmer_action"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
+    And pause 5 secondes
     Then vérifier que la page affichée est la page knows store
+    And pause 5 secondes
     Then vérifier la création du nouveau article
