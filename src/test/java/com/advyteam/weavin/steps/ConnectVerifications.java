@@ -1106,6 +1106,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
+    //Upload Method
     @And("l utilisateur upload photo de profil {string} dans le champs {string}")
     public void lUtilisateurUploadPhotoDeProfilDansLeChamps(String arg0, String arg1) {
 
@@ -1139,6 +1140,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
+    //Upload Method
     @And("l utilisateur upload photo de couverture {string} dans le champs {string}")
     public void lUtilisateurUploadPhotoDeCouvertureDansLeChamps(String arg0, String arg1) {
 
@@ -1215,6 +1217,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
+    //Upload Method
     @And("l utilisateur upload photo {string} dans l album' {string}")
     public void lUtilisateurUploadPhotoDansLAlbum(String arg0, String arg1) {
 
@@ -1859,6 +1862,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
+    //Upload Method
     @And("l utilisateur upload video {string} dans le champs {string}")
     public void lUtilisateurUploadVideoDansLeChamps(String arg0, String arg1) {
         logger.info("l utilisateur upload video dans profil utilisateur ");
@@ -1890,6 +1894,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour profil utilisateur
+    //Upload Method
     @And("l utilisateur ajoute la photo {string} dans le champs {string}")
     public void lUtilisateurAjouteLaPhotoDansLeChamps(String arg0, String arg1) {
         logger.info("l utilisateur upload photo dans profil utilisateur ");
@@ -1915,6 +1920,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour chat
+    //Upload Method
     @And("l utilisateur upload photo {string} dans le chat {string}")
     public void lUtilisateurUploadPhotoDansLeChat(String arg0, String arg1) {
         logger.info("l utilisateur upload photo dans le chat");
@@ -1942,6 +1948,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour chat
+    //Upload Method
     @And("l utilisateur upload fichier {string} dans le chat {string}")
     public void lUtilisateurUploadFichierDansLeChat(String arg0, String arg1) {
         logger.info("l utilisateur upload fichier dans le chat");
@@ -1983,6 +1990,7 @@ public class ConnectVerifications {
     }
 
     // Vérification pour chat
+    //Upload Method
     @And("l utilisateur upload video {string} dans le chat {string}")
     public void lUtilisateurUploadVideoDansLeChat(String arg0, String arg1) {
         logger.info("l utilisateur upload video dans chat ");
@@ -2379,6 +2387,7 @@ public class ConnectVerifications {
     }
 
     //Timeline
+    //Upload Method
     @And("l utilisateur ajoute une photo a la time line")
     public void lUtilisateurAjouteUnePhotoALaTimeLine() throws InterruptedException {
         logger.info("l utilisateur ajoute une photo a la time line");
@@ -2388,6 +2397,7 @@ public class ConnectVerifications {
     }
 
     //Timeline
+    //Upload Method
     @And("l utilisateur ajoute une video a la time line")
     public void lUtilisateurAjouteUneVideoALaTimeLine() {
         logger.info("l utilisateur ajoute une video a la time line");
@@ -2437,6 +2447,7 @@ public class ConnectVerifications {
     }
 
     //TimeLine
+    //Upload Method
     @And("l utilisateur ajoute une piece jointe a la time line")
     public void lUtilisateurAjouteUnePieceJointeALaTimeLine() {
         logger.info("l utilisateur ajoute une piece jointe a la time line");
