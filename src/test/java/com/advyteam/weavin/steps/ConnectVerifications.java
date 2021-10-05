@@ -1083,7 +1083,7 @@ public class ConnectVerifications {
     }
 
     //Vérification pour calendrier et événement
-    @Then("vérifier  que le like evenement a été supprimé")
+    @Then("vérifier  que le like a été supprimé")
     public void vérifierQueLeLikeEvenementAÉtéSupprimé() {
         logger.info("vérifier que le liké a été supprimé");
 
@@ -1091,7 +1091,6 @@ public class ConnectVerifications {
         Assert.assertEquals(driver.findElements(By.cssSelector(" article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")).size(), 0);
 
     }
-
     // Vérification pour profil utilisateur
     @Then("vérifier que le profil de l utilisateur est affiché")
     public void vérifierQueLeProfilDeLUtilisateurEstAffiché() {
@@ -2467,6 +2466,118 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
         assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
         assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique Acceptation evenement avec formulaire d'inscription pour utilisateur interne"));
+
+    }
+
+    // Vérification pour team lab
+    @Then("verifier que la bulle a ete ajoutee")
+    public void verifierQueLaBulleAEteAjoutee() throws InterruptedException {
+
+        logger.info("verifier que la bulle a ete ajoutee");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Bulle_Rechercher"), "innerText",
+                                datastore.get("Champ_Input_Name_Bulle"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Name_Bulle")));
+    }
+
+    // Vérification pour team lab
+    @Then("verifier que la bulle a ete modifie")
+    public void verifierQueLaBulleAEteModifie() throws InterruptedException {
+        logger.info("verifier que la bulle a ete modifie");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Bulle_Page"), "innerText",
+                                datastore.get("Champ_Input_Name_Bulle"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Titre_Bulle_Page").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Name_Bulle")));
+    }
+
+    // Vérification pour team lab
+    @And("l utilisateur clique sur Entree pour l envoi de message")
+    public void lUtilisateurCliqueSurEntreePourLEnvoiDeMessage() {
+        logger.info("l utilisateur clique sur Entree pour l envoi de message");
+        WebElement TagConnaissance = driver.findElement(By.cssSelector("#textInput"));
+        TagConnaissance.sendKeys(Keys.ENTER);
+    }
+
+    // Vérification pour team lab
+    @Then("vérifier l ajout correct du Like Bulle")
+    public void vérifierLAjoutCorrectDuLikeBulle() {
+
+        logger.info("vérifier l ajout correct du Like Bulle");
+        //Vérifier que l icone (y) s'affiche
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("#reaction27 > ul > li:nth-child(1)")).size(),0);
+        //Vérifier que le like a été comptabilisé
+        Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Message_Bulle").getAttribute("innerText"),"1");
+
+    }
+
+    // Vérification pour team lab
+    @And("l utilisateur upload fichier {string} dans le messgae Bulle {string}")
+    public void lUtilisateurUploadFichierDansLeMessgaeBulle(String arg0, String arg1) {
+        logger.info("l utilisateur upload fichier dans le message bulle");
+        driver.findElement(By.cssSelector("#modal-uplaod-photo > div > div > div.modal-body > a")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/FichierTest.pdf"
+        );
+    }
+
+    // Vérification pour team lab
+    @And("l utilisateur upload video {string} dans le message Bulle {string}")
+    public void lUtilisateurUploadVideoDansLeMessageBulle(String arg0, String arg1) {
+        logger.info("l utilisateur upload video dans le message Bulle ");
+        driver.findElement(By.cssSelector("#create-photo-album > div > div > div.modal-body > div > div > div > div > a > svg")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4"
+        );
+    }
+
+    // verifications profil utilisateur
+    @Then("vérifier l ajout correct du Like album")
+    public void vérifierLAjoutCorrectDuLikeAlbum() {
+        logger.info("vérifier  que le like evenement a été ajouté");
+        //Vérifier que l icone LIKE s'affiche
+        Assert.assertNotEquals(
+                driver.findElements(
+                        By.cssSelector(
+                                "span.likes-number.ml-sm"
+                        )
+                ).size(), 0
+        );
+        //Vérifier que le like a été comptabilisé
+        Assert.assertEquals(
+                generalobjectsmap.get("Nombre_Like_Album").getAttribute("innerText"),
+                "1"
+        );
+    }
+
+    @Then("vérifier que la photo de profil supprimé est affiché dans la liste corbeille publications")
+    public void vérifierQueLaPhotoSuppriméEstAffichéDansLaListeCorbeillePublications() {
+
+        logger.info("vérifier que la photo de profil supprimé est affiché dans la liste corbeille publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("Album du profil",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
 
     }
 }

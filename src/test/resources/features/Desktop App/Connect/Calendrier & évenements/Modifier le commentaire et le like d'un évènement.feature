@@ -84,11 +84,11 @@ Feature: Calendrier & évenements
 
     #When l utilisateur clique sur "Icone_Commentaire_Evenement"
     #And pause 20 secondes
-    And l utilisateur effectue un hover sur "Bouton_Option_Commentaire_Evenement"
+    And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Editer_Commentaire_Evenement"
+    And l utilisateur clique sur "Bouton_Editer_Commentaire"
     And pause 15 secondes
-    And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire_Evenement"
+    And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire"
     And pause 5 secondes
     #And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_Evenement"
     And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent
@@ -98,9 +98,9 @@ Feature: Calendrier & évenements
 
     #Etape 6 : Modifier l'interaction
 
-    When l utilisateur effectue un hover sur "Bouton_Interaction_Evenement"
+    When l utilisateur effectue un hover sur "Bouton_Interaction"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Praise_Evenement"
+    And l utilisateur clique sur "Bouton_Praise"
     And pause 10 secondes
     Then verifier que l'interaction de l évenement a été modifiée avec succés
 

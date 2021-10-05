@@ -432,12 +432,12 @@ public class ConnectObjects extends PageObject {
     public static WebElement Envoyer_Commentaire_Evenement;
 
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
-    public static WebElement Icone_Commentaire_Evenement;
+    public static WebElement Icone_Commentaire;
 
     @FindBy(css = "li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Evenement_Afficher;
 
-    @FindBy(css = "li:nth-child(1) > div > a > span.ml-2")
+    @FindBy(css = "div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > a > svg")
     public static WebElement Bouton_Interaction_Evenement;
 
     @FindBy(css = "li:nth-child(1) > div > div > button:nth-child(1) > span.reactions-icon-md-LIKE.reactions-menu__icon")
@@ -446,26 +446,32 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
     public static WebElement Nombre_Like_Evenement;
 
-    @FindBy(css = "app-more-dropdown > div")
-    public static WebElement Bouton_Option_Commentaire_Evenement;
+    @FindBy(css = "span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")
+    public static WebElement Nombre_Like_Album;
 
-    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(1) > a")
-    public static WebElement Bouton_Editer_Commentaire_Evenement;
+    @FindBy(css = "div.post__author.author.vcard.inline-items > app-more-dropdown > div")
+    public static WebElement Bouton_Option_Commentaire;
+
+    @FindBy(css = " div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(1) > a")
+    public static WebElement Bouton_Editer_Commentaire;
 
     @FindBy(xpath = "//li/div[1]/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
-    public static WebElement Champ_Input_Modification_Commenteraire_Evenement;
+    public static WebElement Champ_Input_Modification_Commenteraire;
 
     @FindBy(css = "div.parent-item-comment > app-post-comment-form > form > div > div.form-group.with-icon-right > div > button.btn.btn-sm.btn-blue.mt-0.btn-post")
     public static WebElement Envoyer_Commenteraire_Modifier_Evenement;
 
-    @FindBy(xpath = "//div[4]/app-post-reactions[1]/div[1]/ul[1]/li[1]/div[1]/div[1]/button[2]/span[2]")
+    @FindBy(css = "div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(2) > span.reactions-icon-md-PRAISE.reactions-menu__icon")
     public static WebElement Bouton_Praise_Evenement;
 
-    @FindBy(css = "app-more-dropdown > div > ul > li:nth-child(2) > a")
-    public static WebElement Bouton_Supprimer_Commentaire_Evenement;
+    @FindBy(css = "div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
+    public static WebElement Bouton_Supprimer_Commentaire;
 
     @FindBy(css = "div.row > div > div > div > ul > li:nth-child(3)")
     public static WebElement Onglet_Mes_Evenements;
+
+    @FindBy(css =  "div.author-thumb > span > span:nth-child(2) > svg")
+    public static WebElement Bouton_supprimer_photo_profil;
 
     @FindBy(css = ".photo-album-item.create-album.cursor")
     public static WebElement Bouton_Ajout_Mes_Evenements;
@@ -1207,8 +1213,114 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-reactions/div/ul/li[1]/div/a/span[2]")
     public static WebElement  Bouton_aime_News;
 
-    @FindBy(css = "a > span.reactions-menu__icon.reactions-icon-md-LIKE")
+    @FindBy(css = "ul > li:nth-child(1) > div > a")
     public static WebElement  Bouton_aime_Album;
+
+    @FindBy(css = "div.col.col-xl-3.col-lg-3.col-md-6.col-sm-6.col-12.col-xl-2 > div > div > a")
+    public static WebElement  Boutton_Ajouter_Bulle;
+
+    @FindBy(css = "#name")
+    public static WebElement  Champ_Input_Name_Bulle;
+
+    @FindBy(css = "#create-friend-group > div > div > div.modal-body > form > div:nth-child(2) > input")
+    public static WebElement  Champ_Input_Sujet_Bulle;
+
+    @FindBy(css = "div:nth-child(3) > ng-select > div > div > div.ng-input")
+    public static WebElement  Liste_Type_Bulle;
+
+    @FindBy(css = "#update-room > div > div > div.modal-body > form > div:nth-child(5) > input")
+    public static WebElement  Champ_Input_Apropos_Bulle;
+
+    @FindBy(css = "#update-room > div > div > div.modal-body > form > div:nth-child(6) > input")
+    public static WebElement  Champ_Input_Email_Bulle;
+
+    @FindBy(css = "div:nth-child(5) > div > a")
+    public static WebElement  Boutton_Inviter_Membres_Bulle;
+
+    @FindBy(css = "#create-friend-group > div > div > div.modal-body > button")
+    public static WebElement Bouton_Créer_Bulle;
+
+    @FindBy(css = "div:nth-child(1) > div > app-text-input > div > input")
+    public static WebElement Champ_input_Filtre_Nom_Bulle;
+
+    @FindBy(css = "#room23 > div > div > div > div.friend-avatar.mb-1 > div.author-content > a")
+    public static WebElement Titre_Bulle_Rechercher;
+
+    @FindBy(css = "div.profile-section > div.control-block-button > div > a")
+    public static WebElement Boutton_Modifier_Bulle;
+
+    @FindBy(css = "div.top-header-thumb > a > label > i")
+    public static WebElement Boutton_Modifier_photo_Bulle;
+
+    @FindBy(css = "#modal-uplaod-photo > div > div > div.modal-body > a")
+    public static WebElement H_Upload_photo_Bulle;
+
+    @FindBy(css = "#modal-uplaod-photo > div > div > div.modal-body > div > a > svg")
+    public static WebElement Boutton_Enregistre_photo_Bulle;
+
+    @FindBy(css = "#update-room > div > div > div.modal-body > button.btn.btn-primary.btn-lg.btn--half-width.ml-3")
+    public static WebElement Boutton_Enregistre_Modifier_Bulle;
+
+    @FindBy(css = "div.top-header-author > div.author-content.room-details > a")
+    public static WebElement  Titre_Bulle_Page;
+
+    @FindBy(css = "#textInput")
+    public static WebElement Champ_Input_Message_Bulle;
+
+    @FindBy(css = "button.btn.btn-primary.btn-lg.btn--half-width.delete-button")
+    public static WebElement Boutton_Supprimer_Bulle;
+
+    @FindBy(css = "div.modal-footer > button.btn.btn-primary")
+    public static WebElement Boutton_Confirmation_Supprimer_Bulle;
+
+    @FindBy(css = "a > a > svg")
+    public static WebElement Boutton_Reaction_Message_Bulle;
+;
+    @FindBy(css = "a > button.reaction-like")
+    public static WebElement Boutton_aime_Message_Bulle;
+
+    @FindBy(css = "#reaction27 > ul > li:nth-child(2) > span")
+    public static WebElement  Nombre_Like_Message_Bulle;
+
+    @FindBy(css = "span:nth-child(3) > a > svg")
+    public static WebElement Bouton_upload_photo_Bulle;
+
+    @FindBy(css = "#create-photo-album > div > div > div.modal-body > a.btn.btn-primary.btn-lg.btn--half-width")
+    public static WebElement Bouton_Publier_Album_Bulle;
+
+    @FindBy(css = "span:nth-child(2) > a > svg")
+    public static WebElement Bouton_Upload_Pièce_Jointe_Bulle;
+
+    @FindBy(css = "#modal-uplaod-photo > div > div > div.modal-body > a")
+    public static WebElement Champ_Input_Fichier_Message_Bulle;
+
+    @FindBy(css = "a.btn.btn-primary.btn-lg.btn--half-width.btn-file")
+    public static WebElement Bouton_Publier_Fichier_Bulle;
+
+    @FindBy(css = "#create-photo-album > div > div > div.modal-body > div > div > div > div > a > svg")
+    public static WebElement H_Upload_photo_Mesage_Bulle;
+
+    @FindBy(css = "span:nth-child(1) > a > svg")
+    public static WebElement  Bouton_Create_Sondage_Bulle;
+
+    @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
+    public static WebElement  Champ_Input_Question_Sondage;
+
+    @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
+    public static WebElement  Champ_Input_Option1_Sondage;
+
+    @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > a > svg")
+    public static WebElement  Bouton_Ajouter_Option_Sondage;
+
+    @FindBy(css = "div.ng-pristine.ng-invalid.ng-touched > div:nth-child(2) > div > input")
+    public static WebElement  Champ_Input_Option2_Sondage;
+
+    @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > div > button")
+    public static WebElement  Bouton_Lancer_Sondage;
+
+    @FindBy(css = "li > div.notification-event > div.reaction-chat > app-post-reactions > div > ul > li > div > a > svg")
+    public static WebElement  Bouton_Reaction_Message_Chat;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

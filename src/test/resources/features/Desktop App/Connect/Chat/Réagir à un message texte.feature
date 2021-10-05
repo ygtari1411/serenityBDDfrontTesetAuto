@@ -1,15 +1,15 @@
 # Auteur: BenYedder
 # Feature: Chat
-# Scénario: Envoyer un message texte
-# Date de création: 11/05/2021
+# Scénario: Réagir à un message texte
+# Date de création: 04/10/2021
 
 Feature: Chat
 
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-CHAT
-  @WEAVIN-CHAT-0004
-  Scenario: Envoyer un message texte
+  @WEAVIN-CHAT-0009
+  Scenario: Réagir à un message texte
 
   #Etape 1 : Connexion
 
@@ -26,7 +26,7 @@ Feature: Chat
     And pause 5 secondes
     And l utilisateur clique sur "Utilisateur_Chercher"
     And pause 5 secondes
-    And l utilisateur saisit "Message Texte de Test" dans le champs "Champ_Input_Message_Chat"
+    And l utilisateur saisit "Réagir à un message texte " dans le champs "Champ_Input_Message_Chat"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Envoyer_Chat"
     And pause 5 secondes
@@ -36,7 +36,7 @@ Feature: Chat
     And  l utilisateur se deconnecte
     And pause 10 secondes
 
-  #Etape 4 : l utilisateur 2 verifier la réception de message
+  #Etape 4 : l utilisateur 2 verifier la réception de message et réagir
 
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
     And pause 10 secondes
@@ -44,7 +44,24 @@ Feature: Chat
     And pause 5 secondes
     And l utilisateur clique sur "Premiere_Notification_chat_Afficher"
     And pause 5 secondes
-    And l utilisateur clique sur "Premiere_Notification_chat_Afficher"
-    Then vérifier que le message a été reçu avec succes
+    And l utilisateur clique sur "Bouton_Reaction_Message_Chat"
+    And pause 5 secondes
+
+  #Etape 5 : l'utilisateur 2 se deconnecte
+
+    And  l utilisateur se deconnecte
+    And pause 10 secondes
+
+  #Etape 5 : verfication de réaction
+
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
+    And pause 10 secondes
+    When l utilisateur clique sur "Bouton_Ouvrir_List_Chat"
+    And pause 5 secondes
+    And l utilisateur saisit "Mohamed Ennaceur Ben Yedder" dans le champs "Champ_Input_Chercher_vos_amis"
+    And pause 5 secondes
+    And l utilisateur clique sur "Utilisateur_Chercher"
+    And pause 5 secondes
+    #Then vérifier que la réaction a été reçu avec succes
 
 
