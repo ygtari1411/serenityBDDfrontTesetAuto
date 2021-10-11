@@ -1348,6 +1348,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-post/article/div[5]/app-post-reactions/div/ul/li[1]/div/a/span[2]")
     public static WebElement  bouton_Liker_statut;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li")
+    public static WebElement  premier_membre_afficher;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

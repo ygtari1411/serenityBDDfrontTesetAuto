@@ -2640,6 +2640,14 @@ public class ConnectVerifications {
 
     }
 
+    //TimeLine
+    @Then("verifier que le tag a ete ajoute")
+    public void verifierQueLeTagAEteAjoute() {
+        logger.info("vérifier que le tag est ajoute");
 
+        Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),1);
+
+
+    }
 
 }
