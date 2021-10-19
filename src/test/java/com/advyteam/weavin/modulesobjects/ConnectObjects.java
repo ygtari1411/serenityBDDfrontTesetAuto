@@ -1321,6 +1321,37 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "li > div.notification-event > div.reaction-chat > app-post-reactions > div > ul > li > div > a > svg")
     public static WebElement  Bouton_Reaction_Message_Chat;
 
+    @FindBy(xpath = "//div[1]/app-post[1]/article[1]/div[1]/app-more-dropdown[1]/div[1]")
+    public static WebElement  bouton_option_premiere_publication_afficher;
+
+    @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[1]/a")
+    public static WebElement  bouton_option_Editer_premiere_publication_afficher;
+
+    @FindBy(xpath = "//app-stream-line-post/app-stream-line-post-form/div/div/form/weavin-emoji-editor/div/quill-editor/div/div[1]")
+    public static WebElement  champ_statut_modification;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[2]/button")
+    public static WebElement  bouton_publier_statut_modifer;
+
+    @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[2]/a")
+    public static WebElement  bouton_option_Supprimer_premiere_publication_afficher;
+
+    @FindBy(xpath = "//div/weavin-emoji-editor/div/quill-editor/div/div[1]")
+    public static WebElement  champ_commentaire_statut;
+
+    @FindBy(xpath = "//div[1]/app-post/article/div[5]/app-post-reactions/div/ul/li[2]/div/a/span")
+    public static WebElement  bouton_commenter_statut;
+
+    @FindBy(xpath = "//div[1]/app-post/app-post-comment-form/form/div/div[2]/div/button")
+    public static WebElement  bouton_envoyer_commentaire_statut;
+
+    @FindBy(xpath = "//app-post/article/div[5]/app-post-reactions/div/ul/li[1]/div/a/span[2]")
+    public static WebElement  bouton_Liker_statut;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li")
+    public static WebElement  premier_membre_afficher;
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

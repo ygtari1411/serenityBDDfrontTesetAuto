@@ -2580,4 +2580,74 @@ public class ConnectVerifications {
         Assert.assertEquals("Album du profil",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
 
     }
+
+    //TimeLine
+    @Then("Vérifier que le statut est modifié")
+    public void vérifierQueLeStatutEstModifié() throws InterruptedException {
+        logger.info("vérifier que le statut est modifié");
+
+        //Waiting for the first publication of timeline to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"), "innerText",
+                                datastore.get("champ_statut_modification"))));
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first publication contains the text published in the scenario
+        //Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
+        Assert.assertTrue(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("champ_statut_modification")));
+
+
+
+    }
+
+    //TimeLine
+    @Then("Vérifier que le statut est supprime")
+    public void vérifierQueLeStatutEstSupprime() throws InterruptedException {
+        logger.info("vérifier que le statut est supprimé");
+
+        //Waiting for the first publication of timeline to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"), "innerText",
+                                datastore.get("champ_statut"))));
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first publication contains the text published in the scenario
+        //Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
+        Assert.assertFalse(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("champ_statut")));
+
+
+
+    }
+
+    //TimeLine
+    @Then("verifier que le commentaire et le like du statut on ete ajoute")
+    public void verifierQueLeCommentaireEtLeLikeDuStatutOnEteAjoute() {
+        logger.info("vérifier que le commentaire et le like on été ajouté");
+
+        Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),1);
+        //Assert.assertEquals(driver.findElements(By.cssSelector("inline-svg-icon reactions-icon-statistic-LIKE reactions-menu__icon")).size(),1);
+
+
+    }
+
+    //TimeLine
+    @Then("verifier que le tag a ete ajoute")
+    public void verifierQueLeTagAEteAjoute() {
+        logger.info("vérifier que le tag est ajoute");
+
+        Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),1);
+
+
+    }
+
 }
