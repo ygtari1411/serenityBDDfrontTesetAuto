@@ -3,7 +3,7 @@
 # Scénario: Ajouter un vote avec les deux choix
 # Date de création: 27/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Ajouter un vote avec les deux choix
 
   @WEAVIN
   @WEAVIN-CONNECT

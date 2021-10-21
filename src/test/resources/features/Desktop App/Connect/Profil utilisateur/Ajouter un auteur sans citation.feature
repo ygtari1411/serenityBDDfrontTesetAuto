@@ -3,7 +3,7 @@
 # Scénario: Ajouter un auteur sans citation
 # Date de création: 20/04/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter un auteur sans citation
 
   @WEAVIN
   @WEAVIN-CONNECT

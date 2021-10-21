@@ -3,7 +3,7 @@
 # Scénario: Ajouter un vote a choix unique
 # Date de création: 27/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Ajouter un vote avec une date de cloture
 
   @WEAVIN
   @WEAVIN-CONNECT

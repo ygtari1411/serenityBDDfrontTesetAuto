@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Création nouvelle news avec des champs vides
 
   @WEAVIN
   @WEAVIN-CONNECT

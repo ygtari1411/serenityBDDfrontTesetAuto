@@ -4,7 +4,7 @@
 # Date de création: 01/04/2021
 
 
-Feature: Journalisation
+Feature: Journalisation - Supprimer un article
 
   @WEAVIN
   @WEAVIN-CONNECT

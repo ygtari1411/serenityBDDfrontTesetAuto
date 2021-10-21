@@ -3,7 +3,7 @@
 # Scénario: Ajouter des loisirs
 # Date de création: 11/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter des loisirs
 
   @WEAVIN
   @WEAVIN-CONNECT

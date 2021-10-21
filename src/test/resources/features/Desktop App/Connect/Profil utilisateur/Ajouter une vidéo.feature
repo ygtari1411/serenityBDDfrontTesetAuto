@@ -3,7 +3,7 @@
 # Scénario: Ajouter une vidéo
 # Date de création: 06/05/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter une vidéo
 
   @WEAVIN
   @WEAVIN-CONNECT

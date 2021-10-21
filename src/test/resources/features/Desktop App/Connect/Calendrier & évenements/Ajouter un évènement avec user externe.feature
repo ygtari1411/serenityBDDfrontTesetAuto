@@ -3,7 +3,7 @@
 # Scénario: Ajouter un évènement avec user externe
 # Date de création: 22/04/2021
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Ajouter un évènement avec user externe
 
   @WEAVIN
   @WEAVIN-CONNECT

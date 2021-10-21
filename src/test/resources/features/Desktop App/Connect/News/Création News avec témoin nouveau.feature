@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Création news avec témoin nouveau
 
   @WEAVIN
   @WEAVIN-CONNECT

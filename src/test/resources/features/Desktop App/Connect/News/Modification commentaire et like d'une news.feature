@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Modification commentaire et like d'une news
 
   @WEAVIN
   @WEAVIN-CONNECT

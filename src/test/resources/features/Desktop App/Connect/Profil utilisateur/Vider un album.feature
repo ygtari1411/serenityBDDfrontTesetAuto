@@ -3,7 +3,7 @@
 # Scénario: Vider un album
 # Date de création: 09/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Vider un album
 
   @WEAVIN
   @WEAVIN-CONNECT

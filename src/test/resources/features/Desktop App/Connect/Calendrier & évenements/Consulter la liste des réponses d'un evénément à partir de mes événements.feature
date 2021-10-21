@@ -4,7 +4,7 @@
 # Date de création: 27/04/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Consulter la liste des réponses d'un événement à partir de mes événements
 
   @WEAVIN
   @WEAVIN-CONNECT

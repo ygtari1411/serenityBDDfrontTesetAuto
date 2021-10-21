@@ -6,7 +6,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Modification d'une idée
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: Supprimer une publication
 # Date de création: 30/03/2021
 
-Feature: Journalisation
+Feature: Journalisation - Supprimer une publication
 
   @WEAVIN
   @WEAVIN-CONNECT

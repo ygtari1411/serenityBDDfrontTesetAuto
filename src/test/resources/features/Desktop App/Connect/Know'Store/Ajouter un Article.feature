@@ -6,7 +6,7 @@
 
 
 
-Feature: Article
+Feature: Article - Ajouter un article
 
 
   @WEAVIN

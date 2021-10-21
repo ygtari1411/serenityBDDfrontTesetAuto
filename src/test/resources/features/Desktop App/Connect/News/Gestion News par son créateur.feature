@@ -3,7 +3,7 @@
 # Scénario: Gestion news par son créateur
 # Date de création: 19/04/2021
 
-Feature: News
+Feature: News - Gestion news par son créateur
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -4,7 +4,7 @@
 # Date de création: 27/10/2020
 
 
-Feature: Connexion-Deconnexion
+Feature: Connexion-Deconnexion - Connexion avec identifiants corrects / Connexion avec identifiants incorrects
 
 
   @WEAVIN

@@ -3,7 +3,7 @@
 # Scénario: Paramétrage de l'annuaire
 # Date de création: 04/06/2021
 
-Feature: Annuaire
+Feature: Annuaire - Paramétrage de l'annuaire
 
   @WEAVIN
   @WEAVIN-CONNECT

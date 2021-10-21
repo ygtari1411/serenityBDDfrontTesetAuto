@@ -5,7 +5,7 @@
 
 
 
-Feature: Annuaire
+Feature: Annuaire - Un utilisateur désactiver n'apparait pas dans la rubrique annuaire
 
   @WEAVIN
   @WEAVIN-CONNECT

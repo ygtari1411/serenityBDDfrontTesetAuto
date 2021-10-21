@@ -3,7 +3,7 @@
 # Scénario: Envoyer une vidéo
 # Date de création: 24/05/2021
 
-Feature: Chat
+Feature: Chat - Envoyer une vidéo
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -5,7 +5,7 @@
 
 
 
-Feature: Flash Info
+Feature: Flash Info - Ajouter une Flash Info
 
   @WEAVIN
   @WEAVIN-CONNECT

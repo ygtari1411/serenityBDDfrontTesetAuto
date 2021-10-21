@@ -4,7 +4,7 @@
 # Date de création: 18/02/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Ajouter un évènement à partir des mes évènements
 
   @WEAVIN
   @WEAVIN-CONNECT

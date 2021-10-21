@@ -6,7 +6,7 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Commenter une opportunite
 
 
   @WEAVIN

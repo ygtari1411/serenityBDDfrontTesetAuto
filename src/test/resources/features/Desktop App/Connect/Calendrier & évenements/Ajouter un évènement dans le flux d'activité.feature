@@ -4,7 +4,7 @@
 # Date de création: 29/04/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Ajouter un évènement dans le flux d'activité
 
   @WEAVIN
   @WEAVIN-CONNECT

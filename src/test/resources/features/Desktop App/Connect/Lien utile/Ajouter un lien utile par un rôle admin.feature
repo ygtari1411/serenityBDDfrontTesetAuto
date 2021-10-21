@@ -4,7 +4,7 @@
 # Date de création: 02/04/2021
 
 
-Feature: Ajouter un lien utile par un rôle admin
+Feature: Lien utile - Ajouter un lien utile par un rôle admin
 
   @WEAVIN
   @WEAVIN-CONNECT

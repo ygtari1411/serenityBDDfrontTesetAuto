@@ -3,7 +3,7 @@
 # Scénario: Suppression d'un article par autre adminstrateur
 # Date de création: 19/04/2021
 
-Feature: Article
+Feature: Article - Suppression d'un article par autre adminstrateur
 
   @WEAVIN
   @WEAVIN-CONNECT

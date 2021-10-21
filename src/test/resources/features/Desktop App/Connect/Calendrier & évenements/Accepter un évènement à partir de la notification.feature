@@ -4,7 +4,7 @@
 # Date de création: 29/04/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Accepter un évènement à partir de la notification
 
   @WEAVIN
   @WEAVIN-CONNECT

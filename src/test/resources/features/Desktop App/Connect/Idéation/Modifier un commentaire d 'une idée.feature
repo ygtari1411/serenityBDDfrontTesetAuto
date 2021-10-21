@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Modifier un commentaire d'un idée
 
   @WEAVIN
   @WEAVIN-CONNECT

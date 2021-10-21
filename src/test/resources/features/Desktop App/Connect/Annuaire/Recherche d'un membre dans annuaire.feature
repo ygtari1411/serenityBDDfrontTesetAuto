@@ -3,7 +3,7 @@
 # Scénario: Recherche d'un membre dans annuaire
 # Date de création: 10/06/2021
 
-Feature: Annuaire
+Feature: Annuaire - Recherche d'un membre dans annuaire
 
   @WEAVIN
   @WEAVIN-CONNECT

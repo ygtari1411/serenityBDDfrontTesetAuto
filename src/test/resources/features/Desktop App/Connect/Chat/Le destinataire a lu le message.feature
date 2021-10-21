@@ -3,7 +3,7 @@
 # Scénario:  Le destinataire a lu le message
 # Date de création: 10/06/2021
 
-Feature: Chat
+Feature: Chat - Le destinataire a lu le message
 
   @WEAVIN
   @WEAVIN-CONNECT

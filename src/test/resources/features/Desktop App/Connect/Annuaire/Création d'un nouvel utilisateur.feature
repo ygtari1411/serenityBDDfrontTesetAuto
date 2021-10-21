@@ -3,7 +3,7 @@
 # Scénario: Création d'un nouvel utilisateur
 # Date de création: 16/03/2021
 
-Feature: Annuaire
+Feature: Annuaire - Création d'un nouvel utilisateur
 
   @WEAVIN
   @WEAVIN-CONNECT

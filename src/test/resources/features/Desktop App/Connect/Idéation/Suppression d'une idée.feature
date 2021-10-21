@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Suppression d'une idée
 
   @WEAVIN
   @WEAVIN-CONNECT

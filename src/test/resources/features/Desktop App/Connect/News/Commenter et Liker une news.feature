@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Commenter et liker une news
 
   @WEAVIN
   @WEAVIN-CONNECT

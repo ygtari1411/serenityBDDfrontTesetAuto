@@ -5,7 +5,7 @@
 
 
 
-Feature: Connexion_Deconnexion
+Feature: Connexion_Deconnexion - Acceder au menu weavin
 
   @WEAVIN
   @WEAVIN-COMMONSCENARIOS

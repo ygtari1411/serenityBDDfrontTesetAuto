@@ -3,7 +3,7 @@
 # Scénario: Ajouter une photo de couverture
 # Date de création: 23/02/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter une photo de couverture
 
   @WEAVIN
   @WEAVIN-CONNECT

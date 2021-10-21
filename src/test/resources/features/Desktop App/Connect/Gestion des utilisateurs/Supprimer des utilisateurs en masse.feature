@@ -3,7 +3,7 @@
 # Scénario: Supprimer des utilisateurs en masse
 # Date de création: 02/08/2021
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Supprimer des utilisateurs en masse
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-GESTIONUTILISATEURS

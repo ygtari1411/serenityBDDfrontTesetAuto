@@ -3,7 +3,7 @@
 # Scénario: Repondre a un vote a choix unique
 # Date de création: 22/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Repondre a un vote a choix unique
 
   @WEAVIN
   @WEAVIN-CONNECT

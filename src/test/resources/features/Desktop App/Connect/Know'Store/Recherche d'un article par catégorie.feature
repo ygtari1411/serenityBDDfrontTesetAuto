@@ -6,7 +6,7 @@
 
 
 
-Feature: Article
+Feature: Article - Recherche d'un article par catégorie
 
 
   @WEAVIN

@@ -3,7 +3,7 @@
 # Scénario: Lancer un vote avec un choix multiple
 # Date de création: 17/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Lancer un vote avec un choix multiple
 
   @WEAVIN
   @WEAVIN-CONNECT

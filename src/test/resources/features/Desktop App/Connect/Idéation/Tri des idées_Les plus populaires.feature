@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Tri des idées les plus populaires
 
   @WEAVIN
   @WEAVIN-CONNECT

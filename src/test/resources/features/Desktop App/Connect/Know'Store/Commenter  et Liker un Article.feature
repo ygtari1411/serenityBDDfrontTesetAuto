@@ -6,7 +6,7 @@
 
 
 
-Feature: Article
+Feature: Article - Commenter et Liker un article
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -4,7 +4,7 @@
 # Date de création: 02/04/2021
 
 
-Feature: Supprimer un lien utile par un rôle admin
+Feature: Lien utile - Supprimer un lien utile par un rôle admin
 
   @WEAVIN
   @WEAVIN-CONNECT

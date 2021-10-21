@@ -5,7 +5,7 @@
 
 
 
-Feature: Timeline: Taguer un membre dans un commentaire
+Feature: Timeline - Taguer un membre dans un commentaire
 
   @WEAVIN
   @WEAVIN-CONNECT

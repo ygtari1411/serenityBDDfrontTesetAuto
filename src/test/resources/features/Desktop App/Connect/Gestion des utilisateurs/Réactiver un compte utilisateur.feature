@@ -3,7 +3,7 @@
 # Scénario: Réactiver un compte utilisateur
 # Date de création: 02/08/2021
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Réactiver un compte utilisateur
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-GESTIONUTILISATEURS

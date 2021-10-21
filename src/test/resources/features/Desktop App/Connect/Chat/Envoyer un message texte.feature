@@ -3,7 +3,7 @@
 # Scénario: Envoyer un message texte
 # Date de création: 11/05/2021
 
-Feature: Chat
+Feature: Chat - Envoyer un message texte
 
   @WEAVIN
   @WEAVIN-CONNECT

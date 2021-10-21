@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Disliker une idée
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -5,7 +5,7 @@
 
 
 
-Feature: Connexion_Deconnexion
+Feature: Connexion_Deconnexion - Afficher / Masquer le mot de passe
 
   @WEAVIN
   @WEAVIN-COMMONSCENARIOS

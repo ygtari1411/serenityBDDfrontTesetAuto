@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Tri des idées descendant prar note
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: Commenter et liker un album
 # Date de création: 11/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Commenter et liker un album
 
   @WEAVIN
   @WEAVIN-CONNECT

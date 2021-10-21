@@ -4,7 +4,7 @@
 # Date de création: 25/05/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Refuser un évènement avec formulaire d'inscription pour utilisateur interne
 
   @WEAVIN
   @WEAVIN-CONNECT

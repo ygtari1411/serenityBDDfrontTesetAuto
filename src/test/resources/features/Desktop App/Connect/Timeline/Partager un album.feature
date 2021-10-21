@@ -3,7 +3,7 @@
 # Scénario: Partager un album
 # Date de création: 07/09/2021
 
-Feature: Partager un album
+Feature: Timeline - Partager un album
 
   @WEAVIN
   @WEAVIN-CONNECT

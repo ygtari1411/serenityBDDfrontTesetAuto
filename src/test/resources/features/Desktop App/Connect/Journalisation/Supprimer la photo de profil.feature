@@ -3,7 +3,7 @@
 # Scénario: Supprimer la photo de profil
 # Date de création: 05/10/2021
 
-Feature: Journalisation
+Feature: Journalisation - Supprimer la photo de profil
 
   @WEAVIN
   @WEAVIN-CONNECT

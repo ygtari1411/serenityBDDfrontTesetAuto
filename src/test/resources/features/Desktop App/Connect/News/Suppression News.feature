@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Suppression news
 
   @WEAVIN
   @WEAVIN-CONNECT

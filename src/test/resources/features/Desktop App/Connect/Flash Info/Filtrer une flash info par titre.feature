@@ -5,7 +5,7 @@
 
 
 
-Feature: Flash Info
+Feature: Flash Info - Filtrer une Flash Info par titre
 
   @WEAVIN
   @WEAVIN-CONNECT

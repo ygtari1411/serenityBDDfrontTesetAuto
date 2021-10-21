@@ -6,7 +6,7 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Modifier une opportunité par un admin
 
 
   @WEAVIN

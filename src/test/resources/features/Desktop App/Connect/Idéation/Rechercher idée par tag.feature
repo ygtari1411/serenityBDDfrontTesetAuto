@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Rechercher idée par tag
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -4,9 +4,7 @@
 # Date de création: 09/11/2020
 
 
-
-
-Feature: News
+Feature: News - Rechercher News par statut non publié
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -4,7 +4,7 @@
 # Date de création: 06/08/2021
 
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Ajouter deux utilisateurs ayant la même adresse mail
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-GESTIONUTILISATEURS

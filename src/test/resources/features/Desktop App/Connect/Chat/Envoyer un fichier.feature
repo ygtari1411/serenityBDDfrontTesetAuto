@@ -3,7 +3,7 @@
 # Scénario: Envoyer un fichier
 # Date de création: 24/05/2021
 
-Feature: Chat
+Feature: Chat - Envoyer un fichier
 
   @WEAVIN
   @WEAVIN-CONNECT

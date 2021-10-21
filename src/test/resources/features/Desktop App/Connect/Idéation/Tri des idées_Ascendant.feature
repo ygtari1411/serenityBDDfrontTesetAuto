@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Tri des idées : Ascendant :Par Note
 
   @WEAVIN
   @WEAVIN-CONNECT

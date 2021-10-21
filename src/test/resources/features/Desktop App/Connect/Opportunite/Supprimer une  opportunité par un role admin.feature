@@ -6,7 +6,7 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Supprimer une opportunité par un role admin
 
 
   @WEAVIN

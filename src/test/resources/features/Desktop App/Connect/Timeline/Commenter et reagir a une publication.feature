@@ -5,7 +5,7 @@
 
 
 
-Feature: Timeline: Commenter et reagir a une publication
+Feature: Timeline - Commenter et reagir a une publication
 
   @WEAVIN
   @WEAVIN-CONNECT

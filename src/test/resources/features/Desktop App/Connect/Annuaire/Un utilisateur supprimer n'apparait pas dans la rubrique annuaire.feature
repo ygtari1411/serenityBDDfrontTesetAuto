@@ -5,7 +5,7 @@
 
 
 
-Feature: Annuaire
+Feature: Annuaire - Un utilisateur supprimer n'apparait pas dans la rubrique annuaire
 
   @WEAVIN
   @WEAVIN-CONNECT

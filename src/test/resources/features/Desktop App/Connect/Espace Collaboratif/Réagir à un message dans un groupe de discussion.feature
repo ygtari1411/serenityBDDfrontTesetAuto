@@ -4,7 +4,7 @@
 # Date de création: 28/09/2021
 
 
-Feature: TeamLab
+Feature: TeamLab - Réagir à un message dans un groupe de discussion
 
   @WEAVIN
   @WEAVIN-CONNECT

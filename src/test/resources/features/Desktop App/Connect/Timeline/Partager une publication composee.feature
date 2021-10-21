@@ -3,7 +3,7 @@
 # Scénario: Partager une publication composee
 # Date de création: 07/09/2021
 
-Feature: Partager une publication composee
+Feature: Timeline - Partager une publication composee
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: Chercher un utilisateur
 # Date de création: 04/05/2021
 
-Feature: Chat
+Feature: Chat - Chercher un utilisateur
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Rechercher News par date de publication
 
   @WEAVIN
   @WEAVIN-CONNECT

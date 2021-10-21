@@ -3,7 +3,7 @@
 # Scénario: Partager une image
 # Date de création: 23/08/2021
 
-Feature: Partager une image
+Feature: TImeline - Partager une image
 
   @WEAVIN
   @WEAVIN-CONNECT

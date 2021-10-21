@@ -3,7 +3,7 @@
 # Scénario: Supprimer une publication contenant des commentaires
 # Date de création: 15/07/2021
 
-Feature: Journalisation
+Feature: Journalisation - Supprimer une publication contenant des commentaires
 
   @WEAVIN
   @WEAVIN-CONNECT

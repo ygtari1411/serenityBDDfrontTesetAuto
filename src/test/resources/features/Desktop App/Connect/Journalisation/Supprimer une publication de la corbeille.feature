@@ -3,7 +3,7 @@
 # Scénario: Supprimer une publication de la corbeille
 # Date de création: 20/08/2021
 
-Feature: Journalisation
+Feature: Journalisation - Supprimer une publication de la corbeille
 
   @WEAVIN
   @WEAVIN-CONNECT

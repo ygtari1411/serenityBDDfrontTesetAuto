@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Création nouvelle news avec heure de début
 
    @WEAVIN
    @WEAVIN-CONNECT

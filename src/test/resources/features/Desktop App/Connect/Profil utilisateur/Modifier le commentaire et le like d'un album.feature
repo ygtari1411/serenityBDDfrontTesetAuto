@@ -3,7 +3,7 @@
 # Scénario: Modifier le commentaire et le like d'un album
 # Date de création: 05/10/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Modifier le commentaire et le like d'un album
 
   @WEAVIN
   @WEAVIN-CONNECT

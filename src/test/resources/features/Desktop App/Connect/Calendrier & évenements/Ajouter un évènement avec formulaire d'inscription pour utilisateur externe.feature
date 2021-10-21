@@ -4,7 +4,7 @@
 # Date de création: 28/05/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Ajouter un évènement avec formulaire d'inscription pour utilisateur externe
 
   @WEAVIN
   @WEAVIN-CONNECT

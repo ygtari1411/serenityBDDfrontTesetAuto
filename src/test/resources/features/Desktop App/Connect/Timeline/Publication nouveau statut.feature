@@ -5,7 +5,7 @@
 
 
 
-Feature: Timeline: Publication d'un nouveau statut
+Feature: Timeline - Publication d'un nouveau statut
 
   @WEAVIN
   @WEAVIN-CONNECT

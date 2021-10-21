@@ -3,7 +3,7 @@
 # Scénario: Partager une video
 # Date de création: 23/08/2021
 
-Feature: Partager une video
+Feature: Timeline - Partager une video
 
   @WEAVIN
   @WEAVIN-CONNECT

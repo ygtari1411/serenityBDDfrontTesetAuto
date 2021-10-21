@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Supprimer un commentaire d'une idée
 
   @WEAVIN
   @WEAVIN-CONNECT

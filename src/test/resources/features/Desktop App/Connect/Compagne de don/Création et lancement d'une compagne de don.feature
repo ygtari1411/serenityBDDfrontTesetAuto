@@ -5,7 +5,7 @@
 
 
 
-Feature: Compagne de Don
+Feature: Compagne de Don - Creation et Lancement d une compagne de don
 
   @WEAVIN
   @WEAVIN-CONNECT

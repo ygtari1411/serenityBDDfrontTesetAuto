@@ -6,7 +6,7 @@
 
 
 
-Feature: Article
+Feature: Article - Supprimer le commentaire et le like d'un article
 
   @WEAVIN
   @WEAVIN-CONNECT

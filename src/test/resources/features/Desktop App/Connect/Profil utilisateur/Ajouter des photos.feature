@@ -3,7 +3,7 @@
 # Scénario: Ajouter des photos
 # Date de création: 07/05/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter des photos
 
   @WEAVIN
   @WEAVIN-CONNECT

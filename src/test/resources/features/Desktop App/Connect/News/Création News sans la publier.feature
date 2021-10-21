@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Création news sans la publier
 
   @WEAVIN
   @WEAVIN-CONNECT

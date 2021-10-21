@@ -3,7 +3,7 @@
 # Scénario: Recherche d'un article avec date de fin inférieure à date de début
 # Date de création: 10/06/2020
 
-Feature: Article
+Feature: Article - Recherche d'un article avec date de fin inférieure à date de début
 
 
   @WEAVIN

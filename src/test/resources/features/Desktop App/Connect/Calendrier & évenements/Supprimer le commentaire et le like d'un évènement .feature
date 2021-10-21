@@ -4,7 +4,7 @@
 # Date de création: 17/02/2021
 
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Supprimer le  Commentaire et le  like d un évènement
 
   @WEAVIN
   @WEAVIN-CONNECT

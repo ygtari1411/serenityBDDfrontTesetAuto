@@ -4,7 +4,7 @@
 # Date de création: 28/09/2021
 
 
-Feature: TeamLab
+Feature: TeamLab - Envoyer une pièce jointe dans un groupe
 
   @WEAVIN
   @WEAVIN-CONNECT

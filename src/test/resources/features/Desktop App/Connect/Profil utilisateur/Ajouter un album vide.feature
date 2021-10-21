@@ -3,7 +3,7 @@
 # Scénario: Ajouter un album vide
 # Date de création: 05/04/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter un album vide
 
   @WEAVIN
   @WEAVIN-CONNECT

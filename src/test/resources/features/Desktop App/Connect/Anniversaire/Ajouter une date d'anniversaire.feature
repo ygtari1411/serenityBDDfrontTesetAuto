@@ -3,7 +3,7 @@
 # Scénario: Ajouter une date d'anniversaire
 # Date de création: 15/07/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter une date d'anniversaire
 
   @WEAVIN
   @WEAVIN-CONNECT

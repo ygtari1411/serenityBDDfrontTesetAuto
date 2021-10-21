@@ -3,7 +3,7 @@
 # Scénario: Cloturer un vote
 # Date de création: 17/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Cloturer un vote
 
   @WEAVIN
   @WEAVIN-CONNECT

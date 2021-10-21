@@ -3,7 +3,7 @@
 # Scénario: Rechercher un utilisateur
 # Date de création: 02/08/2021
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Rechercher un utilisateur
 
   @WEAVIN
   @WEAVIN-CONNECT

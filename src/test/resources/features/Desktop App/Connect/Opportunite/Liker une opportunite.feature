@@ -6,7 +6,7 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Liker une opportunite
 
 
   @WEAVIN

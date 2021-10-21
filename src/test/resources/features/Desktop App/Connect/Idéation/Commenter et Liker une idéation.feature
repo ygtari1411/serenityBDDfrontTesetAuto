@@ -6,7 +6,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Commenter et Liker une idée
 
   @WEAVIN
   @WEAVIN-CONNECT

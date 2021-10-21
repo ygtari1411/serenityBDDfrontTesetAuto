@@ -3,7 +3,7 @@
 # Scénario: Ajouter un numéro de téléphone
 # Date de création: 01/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter un numéro de téléphone
 
   @WEAVIN
   @WEAVIN-CONNECT

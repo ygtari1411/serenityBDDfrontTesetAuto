@@ -5,7 +5,7 @@
 
 
 
-Feature: Compagne de Don
+Feature: Compagne de Don - Contribution a  une compagne de don
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: Ajouter un album
 # Date de création: 01/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter un album
 
   @WEAVIN
   @WEAVIN-CONNECT

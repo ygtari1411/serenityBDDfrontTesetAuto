@@ -3,7 +3,7 @@
 # Scénario: Modifier un compte utilisateur (adresse mail)
 # Date de création: 02/08/2021
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Modifier un compte utilisateur (adresse mail)
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-GESTIONUTILISATEURS

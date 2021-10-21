@@ -3,7 +3,7 @@
 # Scénario: Supprimer un vote
 # Date de création: 17/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Supprimer un vote
 
   @WEAVIN
   @WEAVIN-CONNECT

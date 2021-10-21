@@ -5,7 +5,7 @@
 
 
 
-Feature: Connexion_Deconnexion
+Feature: Connexion_Deconnexion - Déconnexion de l'espace weavin
 
 
   @WEAVIN

@@ -3,7 +3,7 @@
 # Scénario: Supprimer des loisirs
 # Date de création: 05/04/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Supprimer des loisirs
 
   @WEAVIN
   @WEAVIN-CONNECT

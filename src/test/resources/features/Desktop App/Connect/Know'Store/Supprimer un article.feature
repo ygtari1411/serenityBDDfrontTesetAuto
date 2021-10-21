@@ -6,7 +6,7 @@
 
 
 
-Feature: Article
+Feature: Article - Supprimer un article
 
   @WEAVIN
   @WEAVIN-CONNECT

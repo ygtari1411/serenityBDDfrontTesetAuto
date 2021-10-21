@@ -3,7 +3,7 @@
 # Scénario: Ajouter un article avec des champs vides
 # Date de création: 02/02/2021
 
-Feature: Article
+Feature: Article - Ajouter un article avec des champs vides
 
   @WEAVIN
   @WEAVIN-CONNECT

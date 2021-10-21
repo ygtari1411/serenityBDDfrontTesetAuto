@@ -3,7 +3,7 @@
 # Scénario: Ajouter et supprimer un utilisateur à la liste des favoris
 # Date de création: 16/03/2021
 
-Feature: Chat
+Feature: Chat - Ajouter et supprimer un utilisateur à la liste des favoris
 
   @WEAVIN
   @WEAVIN-CONNECT

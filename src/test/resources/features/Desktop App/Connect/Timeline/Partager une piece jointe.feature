@@ -3,7 +3,7 @@
 # Scénario: Partager une piece jointe
 # Date de création: 23/08/2021
 
-Feature: Partager une piece jointe
+Feature: Timeline - Partager une piece jointe
 
   @WEAVIN
   @WEAVIN-CONNECT

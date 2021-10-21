@@ -3,7 +3,7 @@
 # Scénario: Ajouter un évènement avec envoi de mail
 # Date de création: 20/04/2021
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Ajouter un évènement avec envoi de mail
 
   @WEAVIN
   @WEAVIN-CONNECT

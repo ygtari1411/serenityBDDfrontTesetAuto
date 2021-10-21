@@ -3,7 +3,7 @@
 # Scénario: Modifier un évènement avec user externe avec envoi de mail
 # Date de création: 22/04/2021
 
-Feature: Calendrier & évenements
+Feature: Calendrier & évenements - Modifier un évènement avec user externe avec envoi de mail
 
   @WEAVIN
   @WEAVIN-CONNECT

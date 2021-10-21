@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Création nouvelle news avec date de fin
 
   @WEAVIN
   @WEAVIN-CONNECT

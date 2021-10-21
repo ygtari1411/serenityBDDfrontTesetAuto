@@ -3,7 +3,7 @@
 # Scénario: Modifier un album
 # Date de création: 08/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Modifier un album
 
   @WEAVIN
   @WEAVIN-CONNECT

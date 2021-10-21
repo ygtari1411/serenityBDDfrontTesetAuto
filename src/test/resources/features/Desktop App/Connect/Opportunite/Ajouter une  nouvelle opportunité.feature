@@ -6,14 +6,14 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Ajouter d une nouvelle opportunite
 
 
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-OPPORTUNITE
   @WEAVIN-OPPORTUNITE-0002
-  Scenario: Ajouter dune nouvelle opportunite
+  Scenario: Ajouter d une nouvelle opportunite
 
   #Etape 1 : Connexion
 

@@ -3,7 +3,7 @@
 # Scénario: Supprimer le commentaire et le like d'un album
 # Date de création: 05/04/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Supprimer le commentaire et le like d'un album
 
   @WEAVIN
   @WEAVIN-CONNECT

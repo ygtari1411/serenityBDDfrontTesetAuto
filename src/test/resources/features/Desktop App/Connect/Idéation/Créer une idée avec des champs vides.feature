@@ -5,7 +5,7 @@
 
 
 
-Feature: Idéation
+Feature: Idéation - Créer une idée avec des champs vides
 
   @WEAVIN
   @WEAVIN-CONNECT

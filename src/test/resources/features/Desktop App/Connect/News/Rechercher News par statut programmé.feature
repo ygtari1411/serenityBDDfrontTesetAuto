@@ -5,7 +5,7 @@
 
 
 
-Feature: News
+Feature: News - Rechercher News par statut programmé
 
   @WEAVIN
   @WEAVIN-CONNECT

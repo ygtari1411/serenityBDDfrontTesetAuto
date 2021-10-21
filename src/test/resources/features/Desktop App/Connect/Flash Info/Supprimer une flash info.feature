@@ -5,7 +5,7 @@
 
 
 
-Feature: Flash Info
+Feature: Flash Info - Supprimer une flash info
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: Ajouter un auteur
 # Date de création: 25/02/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter un auteur
 
   @WEAVIN
   @WEAVIN-CONNECT

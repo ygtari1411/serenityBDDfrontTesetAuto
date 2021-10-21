@@ -3,7 +3,7 @@
 # Scénario: Ajouter un vote pour un seul membre
 # Date de création: 22/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - Ajouter un vote pour un seul membre
 
   @WEAVIN
   @WEAVIN-CONNECT

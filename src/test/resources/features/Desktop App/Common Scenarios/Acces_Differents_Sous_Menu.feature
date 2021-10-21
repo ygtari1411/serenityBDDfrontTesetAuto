@@ -5,7 +5,7 @@
 
 
 
-Feature: Connexion_Deconnexion
+Feature: Connexion_Deconnexion - Accéder aux différents sous menu
 
 
   @WEAVIN

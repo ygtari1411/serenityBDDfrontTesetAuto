@@ -3,7 +3,7 @@
 # Scénario: Modification d'un article par autre adminstrateur
 # Date de création: 19/04/2021
 
-Feature: Article
+Feature: Article - Modification d'un article par autre adminstrateur
 
   @WEAVIN
   @WEAVIN-CONNECT

@@ -3,7 +3,7 @@
 # Scénario: lancer un vite avec choix unique
 # Date de création: 21/07/2021
 
-Feature: Brainstorming
+Feature: Brainstorming - lancer un vote avec choix unique
 
   @WEAVIN
   @WEAVIN-CONNECT

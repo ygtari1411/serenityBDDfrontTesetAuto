@@ -3,7 +3,7 @@
 # Scénario: Supprimer un album
 # Date de création: 09/03/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Supprimer un album
 
   @WEAVIN
   @WEAVIN-CONNECT

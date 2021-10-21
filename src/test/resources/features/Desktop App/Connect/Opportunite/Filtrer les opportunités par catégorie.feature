@@ -6,7 +6,7 @@
 
 
 
-Feature: Opportunite
+Feature: Opportunite - Filtrer les opportunités par catégorie
 
 
   @WEAVIN

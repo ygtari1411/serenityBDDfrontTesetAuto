@@ -3,7 +3,7 @@
 # Scénario: Ajouter une citation
 # Date de création: 25/02/2021
 
-Feature: Profil utilisateur
+Feature: Profil utilisateur - Ajouter une citation
 
   @WEAVIN
   @WEAVIN-CONNECT

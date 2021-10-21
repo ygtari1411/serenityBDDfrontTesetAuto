@@ -3,7 +3,7 @@
 # Scénario: Envoyer une image
 # Date de création: 24/05/2021
 
-Feature: Chat
+Feature: Chat - Envoyer une image
 
   @WEAVIN
   @WEAVIN-CONNECT

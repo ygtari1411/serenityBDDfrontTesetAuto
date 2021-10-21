@@ -3,7 +3,7 @@
 # Scénario: Générer un rapport des utilisateurs
 # Date de création: 06/08/2021
 
-Feature: Gestion des utilisateurs
+Feature: Gestion des utilisateurs - Générer un rapport des utilisateurs
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-GESTIONUTILISATEURS

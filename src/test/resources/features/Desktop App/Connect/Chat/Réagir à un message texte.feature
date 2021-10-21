@@ -3,7 +3,7 @@
 # Scénario: Réagir à un message texte
 # Date de création: 04/10/2021
 
-Feature: Chat
+Feature: Chat - Réagir à un message texte
 
   @WEAVIN
   @WEAVIN-CONNECT
