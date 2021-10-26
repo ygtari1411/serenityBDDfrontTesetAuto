@@ -1327,10 +1327,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[1]/a")
     public static WebElement  bouton_option_Editer_premiere_publication_afficher;
 
-    @FindBy(xpath = "//app-stream-line-post/app-stream-line-post-form/div/div/form/weavin-emoji-editor/div/quill-editor/div/div[1]")
+    @FindBy(xpath = "//div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
     public static WebElement  champ_statut_modification;
 
-    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[2]/button")
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[3]/button")
     public static WebElement  bouton_publier_statut_modifer;
 
     @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[2]/a")
@@ -1351,6 +1351,29 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li")
     public static WebElement  premier_membre_afficher;
 
+    @FindBy(xpath = "//div[1]/app-post/article/div[5]/app-post-statistics/div/ul/li[2]/a")
+    public static WebElement  bouton_commentaire_timeline;
+
+    @FindBy(xpath = "//app-post-comment/li/div[1]/div[1]/app-more-dropdown/div")
+    public static WebElement  bouton_option_commentaire;
+
+    @FindBy(xpath = "//div[1]/div[1]/app-more-dropdown/div/ul/li[2]/a")
+    public static WebElement  bouton_option_supprimer_commentaire;
+
+    @FindBy(xpath = "//app-post/app-post-comments-list/div/ul/app-post-comment/li/div[1]/div[1]/app-more-dropdown/div/ul/li[1]/a")
+    public static WebElement  bouton_option_editer_commentaire_timeline;
+
+    @FindBy(xpath = "//app-post-comments-list/div/ul/app-post-comment/li/div[1]/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
+    public static WebElement  champ_cemmentaire_modification_timeline;
+
+    @FindBy(xpath = "//app-post/app-post-comments-list/div/ul/app-post-comment/li/div[1]/app-post-comment-form/form/div/div[2]/div/button[1]")
+    public static WebElement  bouton_envoyer_commentaire_timeline_modifier;
+
+    @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/div[1]/p")
+    public static WebElement  premier_commentaire_afficher_time_line;
+
+    @FindBy(xpath = "//*[@id=\"cp-0001\"]/div/form/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li[2]")
+    public static WebElement  premier_membre_afficher_TimeLine;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

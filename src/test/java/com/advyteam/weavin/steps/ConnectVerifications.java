@@ -2650,4 +2650,59 @@ public class ConnectVerifications {
 
     }
 
+    //TimeLine
+    @Then("verifier que le commentaire a ete supprime avec success")
+    public void verifierQueLeCommentaireAEteSupprimeAvecSuccess() {
+        logger.info("vérifier que le commentaire a été supprimé");
+
+        Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),0);
+
+    }
+
+    //TimeLine
+    //Upload Method
+    @And("l utilisateur change le format de publication")
+    public void lUtilisateurChangeLeFormatDePublication() {
+        logger.info("l'utilisateur change le format de la publication");
+
+        driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[2]/div[1]/a/input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg"
+        );
+
+
+
+    }
+
+    //TimeLine
+    @Then("verifier que le commentaire a ete modifier avec success")
+    public void verifierQueLeCommentaireAEteModifierAvecSuccess() {
+        logger.info("verifier le changement de l'interaction");
+
+        Assert.assertTrue(generalobjectsmap.get("premier_commentaire_afficher_time_line").getAttribute("innerText").contains(datastore.get("champ_cemmentaire_modification_timeline")));
+
+    }
+
+    //TimeLine
+    @Then("Vérifier que le tag apparait dans le  statut  publié")
+    public void vérifierQueLeTagApparaitDansLeStatutPublié() {
+
+        logger.info("verifier que le tag apparait dans le statut ");
+
+        Assert.assertTrue(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("                Mohamed Ennaceur Ben Yedder\n")));
+
+    }
+
+    //TimeLine
+    //Upload Method
+    @And("l utilisateur saisit une photo dans le commentaire")
+    public void lUtilisateurSaisitUnePhotoDansLeCommentaire() {
+        logger.info("l utilisateur partage une photo dans le commentaire");
+
+        driver.findElement(By.xpath("//app-post/app-post-comment-form/form/div/div[2]/div/div/div/a/input")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest.jpg"
+        );
+
+    }
+
+
 }
