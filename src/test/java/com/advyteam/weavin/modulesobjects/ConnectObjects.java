@@ -73,7 +73,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-floating-label-form > div > input")
     public static WebElement Champ_Input_Titre_News;
 
-    @FindBy(css = ".ql-container.ql-snow > div.ql-editor.ql-blank")
+    @FindBy(css = "div.ql-editor.ql-blank > p")
     public static WebElement Champ_Input_Description_News;
 
     @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[1]/div[1]/div[3]/div[1]/div/app-floating-label-form/div/div/input")
@@ -85,7 +85,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "input[formcontrolname=\"beginningHourNews\"]")
     public static WebElement Champ_Input_Heure_Debut_News;
 
-    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button")
+    @FindBy(xpath = "//app-Bouton_Supprimer_Publication-administration/div/div/news-form/div/div/form/div[2]/button")
     public static WebElement Bouton_Publier_News;
 
     @FindBy(css = "div:nth-child(2) > app-post-card-news > div > article > div.post-content > a")
@@ -423,7 +423,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_Envoyer_Commentaire_Publication;
 
     @FindBy(css ="div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(2) > i")
-    public static WebElement Bouton_Restaurer_Article;
+    public static WebElement Bouton_Restaurer_Element;
 
     @FindBy(css = "div.ql-editor.ql-blank")
     public static WebElement Champ_Input_Commentaire_Evenement;
@@ -787,8 +787,41 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Gestion des liens utiles')]")
     public static WebElement Sous_Rubrique_Gestion_Liens_utiles;
 
+    @FindBy(xpath = "//a[contains(text(),'Paramètres généraux')]")
+    public static WebElement Sous_Rubrique_Parametres_generaux;
+
+    @FindBy(xpath = "//a[contains(text(),'Gestion des catégories')]")
+    public static WebElement Sous_Rubrique_Gestion_Catégories;
+
+    @FindBy(css = "div:nth-child(3) > div > span.category-item.add-category-item > svg")
+    public static WebElement Bouton_Ajout_Catégorie_Opportunité;
+
+    @FindBy(css = "app-floating-label-form > div > input")
+    public static WebElement Champ_Input_Catégorie_Opportunité;
+
+    @FindBy(css = "button.btn.btn-primary.mb-0.ml-2")
+    public static WebElement Bouton_Enregistrer_Catégorie_Opportunité;
+
+    @FindBy(css = "span:nth-child(3) > div.actions-container.position-relative > svg")
+    public static WebElement Bouton_Options_Catégorie_Opportunité;
+
+    @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(1)")
+    public static WebElement Bouton_Modifier_Catégorie_Opportunité;
+
     @FindBy(css = "div.useful-link-settings-header > button")
     public static WebElement Bouton_Ajout_Lien_Utile;
+
+    @FindBy(xpath = "//header/div[1]/div[1]/app-useful-link-list[1]/div[1]")
+    public static WebElement Bouton_List_Lien_Utile;
+
+    @FindBy(css = " app-useful-link-list > div > div > div > a > svg")
+    public static WebElement Bouton_Ajouter_Lien_Utile_HB;
+
+    @FindBy(css = "div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div.row.col-2 > a > i")
+    public static WebElement Bouton_Afficher_Commentaire_Publication;
+
+    @FindBy(css = "div.row.col-2 > a > i")
+    public static WebElement Icone_Commentaire_supprimée;
 
     @FindBy(css = "app-modal-useful-link > div.modal-header")
     public static WebElement Modal_ajout_Lien_Utile;
@@ -807,6 +840,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.name-container")
     public static WebElement Titre_Premiere_Lien_Utile;
+
+    @FindBy(css = "li:nth-child(1) > span")
+    public static WebElement Titre_Premiere_Lien_Utile_List;
 
     @FindBy(css = "div.flex-row.flex-row-action > i")
     public static WebElement Bouton_Supprimer_Lien_Utile;
@@ -1243,7 +1279,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div > app-text-input > div > input")
     public static WebElement Champ_input_Filtre_Nom_Bulle;
 
-    @FindBy(css = "#room23 > div > div > div > div.friend-avatar.mb-1 > div.author-content > a")
+    @FindBy(css = "div.friend-avatar.mb-1 > div.author-content > a")
     public static WebElement Titre_Bulle_Rechercher;
 
     @FindBy(css = "div.profile-section > div.control-block-button > div > a")
@@ -1306,7 +1342,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
     public static WebElement  Champ_Input_Question_Sondage;
 
-    @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
+    @FindBy(css = "div.ng-pristine.ng-invalid.ng-touched > div > div > input")
     public static WebElement  Champ_Input_Option1_Sondage;
 
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > a > svg")

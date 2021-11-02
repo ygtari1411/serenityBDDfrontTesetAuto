@@ -2581,7 +2581,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("Vérifier que le statut est modifié")
     public void vérifierQueLeStatutEstModifié() throws InterruptedException {
         logger.info("vérifier que le statut est modifié");
@@ -2605,7 +2605,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("Vérifier que le statut est supprime")
     public void vérifierQueLeStatutEstSupprime() throws InterruptedException {
         logger.info("vérifier que le statut est supprimé");
@@ -2629,7 +2629,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("verifier que le commentaire et le like du statut on ete ajoute")
     public void verifierQueLeCommentaireEtLeLikeDuStatutOnEteAjoute() {
         logger.info("vérifier que le commentaire et le like on été ajouté");
@@ -2640,7 +2640,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    // Vérification pour TimeLine
     @Then("verifier que le tag a ete ajoute")
     public void verifierQueLeTagAEteAjoute() {
         logger.info("vérifier que le tag est ajoute");
@@ -2650,7 +2650,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("verifier que le commentaire a ete supprime avec success")
     public void verifierQueLeCommentaireAEteSupprimeAvecSuccess() {
         logger.info("vérifier que le commentaire a été supprimé");
@@ -2659,7 +2659,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     //Upload Method
     @And("l utilisateur change le format de publication")
     public void lUtilisateurChangeLeFormatDePublication() {
@@ -2673,7 +2673,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("verifier que le commentaire a ete modifier avec success")
     public void verifierQueLeCommentaireAEteModifierAvecSuccess() {
         logger.info("verifier le changement de l'interaction");
@@ -2682,7 +2682,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    //Vérification pour TimeLine
     @Then("Vérifier que le tag apparait dans le  statut  publié")
     public void vérifierQueLeTagApparaitDansLeStatutPublié() {
 
@@ -2692,7 +2692,7 @@ public class ConnectVerifications {
 
     }
 
-    //TimeLine
+    // Vérification pour TimeLine
     //Upload Method
     @And("l utilisateur saisit une photo dans le commentaire")
     public void lUtilisateurSaisitUnePhotoDansLeCommentaire() {
@@ -2704,5 +2704,89 @@ public class ConnectVerifications {
 
     }
 
+    // Vérification pour journalisation
+    @And("vérifier que les commentaires du publication supprimé est affiché dans la liste journalisation publications")
+    public void vérifierQueLesCommentairesDuPublicationSuppriméEstAffichéDansLaListeJournalisationPublications() {
+        logger.info("vérifier que les commentaires du publication supprimé est affiché dans la liste journalisation publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Icone_Commentaire_supprimée"))));
+        Assert.assertTrue(generalobjectsmap.get("Icone_Commentaire_supprimée").isDisplayed());
+        Assert.assertEquals("Commantaire",generalobjectsmap.get("Icone_Commentaire_supprimée").getAttribute("title"));
 
+    }
+
+    // Vérification pour journalisation
+    @And("vérifier que la publication est restauré")
+    public void vérifierQueLaPublicationEstRestauré() throws InterruptedException {
+
+        logger.info("vérifier que la publication est restauré");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Contenu_Publication_Publié"), "innerText",
+                                datastore.get("Champ_Input_Publication")+"\n")));
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Contenu_Publication_Publié").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Publication")+"\n"));
+    }
+
+    // Vérification pour lien utile
+    @Then("vérifier que le lien utile est visible")
+    public void vérifierQueLeLienUtileEstVisible() throws InterruptedException {
+        logger.info("Vérification de la visualisation correct du lien utile");
+
+        //Waiting for the first publication of timeline to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_Lien_Utile_List"), "outerText",
+                                "Test automatisé Visualiser le lien utile"
+                        )
+                )
+        );
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first publication contains the text published in the scenario
+        Assert.assertEquals(
+                generalobjectsmap.get("Titre_Premiere_Lien_Utile_List").getAttribute("outerText"),
+                "Test automatisé Visualiser le lien utile"
+        );
+
+    }
+
+    // Vérification pour lien utile
+    @Then("vérifier que le lien utile est ajouté")
+    public void vérifierQueLeLienUtileEstAjouté() throws InterruptedException {
+        logger.info("Vérification de l'ajout correct du lien utile");
+
+        //Waiting for the first publication of timeline to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Titre_Premiere_Lien_Utile_List"), "outerText",
+                                "Test automatisé Ajout Lien Utile SONEDE"
+                        )
+                )
+        );
+
+        //Waiting for the refreshed first publication to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first publication contains the text published in the scenario
+        Assert.assertEquals(
+                generalobjectsmap.get("Titre_Premiere_Lien_Utile_List").getAttribute("outerText"),
+                "Test automatisé Ajout Lien Utile SONEDE"
+        );
+
+    }
 }
