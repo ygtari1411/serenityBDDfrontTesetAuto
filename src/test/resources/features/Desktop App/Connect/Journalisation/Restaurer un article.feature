@@ -77,7 +77,7 @@ Feature: Journalisation - Restaurer un article
 
   #Etape 7 : Restaurer l'Article
 
-    And l utilisateur clique sur "Bouton_Restaurer_Article"
+    And l utilisateur clique sur "Bouton_Restaurer_Element"
     And pause 15 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     And pause 5 secondes
