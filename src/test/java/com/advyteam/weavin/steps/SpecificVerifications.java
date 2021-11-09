@@ -61,20 +61,20 @@ public class SpecificVerifications {
     @Then("vérifier l'affichage correct de tous les sous-menu")
     public void vérifierLAffichageCorrectDeTousLesSousMenu() {
         logger.info("Vérification de la présence de tous les sous-menu");
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-close-icon.left-menu-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-home-icon.left-menu-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(3)")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(5)")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".sidebar--small:nth-child(1) div.mCustomScrollbar ul.left-menu li:nth-child(6) > a.ideation-link")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(8)")).isDisplayed());
-        Assert.assertEquals("Fermer le menu", driver.findElement(By.cssSelector("li:nth-child(1) .left-menu-title")).getText());
+        Assert.assertTrue(driver.findElement(By.cssSelector("*>div > div.ps-content > ul > div > li:nth-child(1) > a > span")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("*> div > div.ps-content > ul > div > li:nth-child(2) > a > span")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(3)")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(5)")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.cssSelector(".sidebar--small:nth-child(1) div.mCustomScrollbar ul.left-menu li:nth-child(6) > a.ideation-link")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.cssSelector(".fixed-sidebar.open .sidebar--large .olymp-calendar-icon.left-menu-icon")).isDisplayed());
+        //Assert.assertTrue(driver.findElement(By.cssSelector("#sidebar-left-1 > div > ul > li:nth-child(8)")).isDisplayed());
+        Assert.assertEquals("Fermer le menu", driver.findElement(By.cssSelector("*>div > div.ps-content > ul > div > li:nth-child(1) > a > span")).getText());
         Assert.assertEquals("Accueil", driver.findElement(By.cssSelector("li:nth-child(2) .left-menu-title")).getText());
-        Assert.assertEquals("Annuaire", driver.findElement(By.cssSelector("li:nth-child(3) .left-menu-title")).getText());
-        Assert.assertEquals("Know'store", driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText());
-        Assert.assertEquals("Idéation", driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText());
-        Assert.assertEquals("Calendrier & événements", driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText());
-        Assert.assertEquals("News", driver.findElement(By.cssSelector("li:nth-child(8) .left-menu-title")).getText());
+        //Assert.assertEquals("Annuaire", driver.findElement(By.cssSelector("li:nth-child(3) .left-menu-title")).getText());
+        //Assert.assertEquals("Know'store", driver.findElement(By.cssSelector("li:nth-child(5) .left-menu-title")).getText());
+        //Assert.assertEquals("Idéation", driver.findElement(By.cssSelector("li:nth-child(6) .left-menu-title")).getText());
+        //Assert.assertEquals("Calendrier & événements", driver.findElement(By.cssSelector("li:nth-child(7) .left-menu-title")).getText());
+        //Assert.assertEquals("News", driver.findElement(By.cssSelector("li:nth-child(8) .left-menu-title")).getText());
     }
 
     @Then("vérifer la fermeture du sous menu")
@@ -126,7 +126,7 @@ public class SpecificVerifications {
     @Then("vérifier que la page affichée est la page d'accueil")
     public void vérifierQueLaPageAffichéeEstLaPageDAccueil() {
         logger.info("Vérification que la page affichée est la page d'accueil");
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal", driver.getCurrentUrl());
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal", driver.getCurrentUrl());
         Assert.assertTrue(generalobjectsmap.get("Widget_flux_activite").isDisplayed());
     }
 
@@ -135,8 +135,8 @@ public class SpecificVerifications {
         logger.info("Vérification que la page affichée est la page annuaire");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-qa.accretio.io/portal/collaborators")));
-        Assert.assertEquals("https://weavin-qa.accretio.io/portal/collaborators", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/members")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/members", driver.getCurrentUrl());
         Assert.assertTrue(generalobjectsmap.get("Balise_filtre_annuaire").isDisplayed());
     }
 

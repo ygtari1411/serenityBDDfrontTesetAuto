@@ -61,6 +61,8 @@ Feature: Brainstorming - Supprimer un vote
     And l utilisateur clique sur "Bouton_Option_Supprimer_Vote"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
+    And pause 10 secondes
+
 
   #Etape 5  : Verifier que le vote a ete supprime
 

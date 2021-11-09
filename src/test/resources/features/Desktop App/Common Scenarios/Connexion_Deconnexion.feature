@@ -19,8 +19,8 @@ Feature: Connexion-Deconnexion - Connexion avec identifiants corrects / Connexio
     Then vérifier le résultat de la connexion
 
     Examples:
-      | User  | Password |
-      | admin | admin    |
-      | ssss  | pppp     |
-      | admin | pppp     |
-      | ssss  | admin    |
+      | User  | Password                           |
+      | marc.parenteau@yopmail.com | X3h6oStlry    |
+      | ssss  | pppp                               |
+      | admin | pppp                               |
+      | ssss  | admin                              |

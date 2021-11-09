@@ -44,6 +44,7 @@ Feature: News - Commenter et liker une news
   #Etape 4 : Commenter une news
 
     When l utilisateur clique sur "Bouton_accueil_menu_gauche"
+    And pause 10 secondes
     And l utilisateur clique sur la derniere news ajoutee
     And l utilisateur clique sur "Bouton_Repondre_News"
     And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"

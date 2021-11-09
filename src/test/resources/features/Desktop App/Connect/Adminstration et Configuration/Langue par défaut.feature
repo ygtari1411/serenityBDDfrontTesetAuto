@@ -20,10 +20,6 @@ Feature: Adminstration et Configuration - Longue par défaut
       #Etape 2 : Accéder au rubrique Personnaliser
 
     When l utilisateur effectue un hover sur "Username_menu"
-    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
-    And pause 5 secondes
     And l utilisateur clique sur "Rubrique_Personnaliser"
-    And pause 5 secondes
     And l utilisateur clique sur "Sous_Rubrique_Parametres_generaux"
-    And pause 5 secondes

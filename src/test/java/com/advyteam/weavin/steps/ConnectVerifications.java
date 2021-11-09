@@ -173,7 +173,7 @@ public class ConnectVerifications {
     public void vérifierQueLActualitéNeSAfficheQueSiLHeureEstÉgaleÀLHeureDeDateDeDébutDeLActualité() {
 
         logger.info("vérification du statut de la news");
-        Assert.assertEquals("PUBLIÉ",generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"));
+        Assert.assertEquals("PROGRAMMÉ",generalobjectsmap.get("Statut_Premiere_News_publier").getAttribute("innerText"));
     }
 
     //Vérification pour  News
@@ -223,7 +223,7 @@ public class ConnectVerifications {
         logger.info("Vérification de la modification correct de la news");
 
         //Waiting for the first news to refresh
-        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+        Boolean specialwait = (new WebDriverWait(driver, 300)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Titre_Premiere_News_publier"), "innerText",
                                 datastore.get("Champ_Input_Titre_News"))));
@@ -682,7 +682,7 @@ public class ConnectVerifications {
         String str= datastore.get("Champ_Input_Titre_News");
         Boolean modules = (new WebDriverWait(driver, 50))
                 .until(ExpectedConditions.refreshed(ExpectedConditions.attributeContains(
-                        By.cssSelector("div:nth-child(1) > div.news-details > h3"),
+                        By.cssSelector("*>div:nth-child(3) > div > div:nth-child(2) > app-post-card-news > div"),
                         "innerText",
                         str)));
         generalobjectsmap.get("Premiere_News_In_Home_List_News").click();
@@ -2234,7 +2234,7 @@ public class ConnectVerifications {
     public void vérifierQueLaDateDAnniversaireAÉtéAjoutée() {
         logger.info("verifier que la date d anniversaire  a été ajoutée");
         Assert.assertEquals(
-                "06-08-1996",
+                "6 Août 1996",
                 generalobjectsmap.get("Anniversaire_Afficher_Profil").getAttribute("innerText")
         );
     }
@@ -2259,6 +2259,7 @@ public class ConnectVerifications {
     @Then("verifier que le vote a ete supprime")
     public void verifierQueLeVoteAEteSupprime() {
         logger.info("verifier que le vote a été supprimé");
+
         Assert.assertNotEquals(datastore.get("Champ_Input_Titre_BrainStorming"),generalobjectsmap.get("Description_Premier_Vote_Afficher").getAttribute("innerText"));
     }
 

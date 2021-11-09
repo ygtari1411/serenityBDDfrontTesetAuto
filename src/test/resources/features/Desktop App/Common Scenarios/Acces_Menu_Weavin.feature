@@ -13,7 +13,7 @@ Feature: Connexion_Deconnexion - Acceder au menu weavin
   Scenario: Acceder au menu weavin
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 2 secondes
     When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
     And pause 2 secondes

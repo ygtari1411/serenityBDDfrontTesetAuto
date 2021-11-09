@@ -14,7 +14,7 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
   Scenario: Accéder aux différents sous menu
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    When l'utilisateur "admin" est connecté
+    When l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And l utilisateur clique sur "Bouton_accueil_menu_gauche"
     Then vérifier que la page affichée est la page d'accueil
     When l utilisateur clique sur "Bouton_annuaire_menu_gauche"

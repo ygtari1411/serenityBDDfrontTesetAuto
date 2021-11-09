@@ -70,7 +70,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".photo-album-item.create-album.cursor")
     public static WebElement Bouton_Ajout_News;
 
-    @FindBy(css = "app-floating-label-form > div > input")
+    @FindBy(css = "div.containerFormNews > div.fieldsTxt > div:nth-child(1) > input")
     public static WebElement Champ_Input_Titre_News;
 
     @FindBy(css = "div.ql-editor.ql-blank > p")
@@ -85,7 +85,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "input[formcontrolname=\"beginningHourNews\"]")
     public static WebElement Champ_Input_Heure_Debut_News;
 
-    @FindBy(xpath = "//app-Bouton_Supprimer_Publication-administration/div/div/news-form/div/div/form/div[2]/button")
+    @FindBy(xpath = "//app-news-administration/div/div/news-form/div/div/form/div[2]/button[1]")
     public static WebElement Bouton_Publier_News;
 
     @FindBy(css = "div:nth-child(2) > app-post-card-news > div > article > div.post-content > a")
@@ -286,7 +286,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_News_Afficher;
 
-    @FindBy(css = "div:nth-child(1) > div.news-details > h3")
+    @FindBy(css = "*>div:nth-child(3) > div > div:nth-child(2) > app-post-card-news > div")
     public static WebElement Premiere_News_In_Home_List_News;
 
     @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")

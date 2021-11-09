@@ -53,6 +53,10 @@ public class CommonSteps {
         if (generalobjectsmap.isEmpty()) {
             generalobjectsmap.putAll(CommonObjects.objectsMapper());
             generalobjectsmap.putAll(ConnectObjects.objectsMapper());
+            //Experimental step
+            NgWebDriver ngDriver1 =new NgWebDriver((JavascriptExecutor) driver);
+            ngDriver1.waitForAngularRequestsToFinish();
+
         }
     }
 

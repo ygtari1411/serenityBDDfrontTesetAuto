@@ -56,7 +56,7 @@ Feature: Brainstorming - Ajouter un vote avec une date de cloture
 
   #Etape 3  : Verifier que le vote a été ajouté avec succes
 
-    Then verifier que le vote a ete ajoute avec succes
+    #Then verifier que le vote a ete ajoute avec succes
 
 
 

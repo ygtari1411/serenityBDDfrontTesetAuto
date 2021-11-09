@@ -14,7 +14,7 @@ Feature: Connexion_Deconnexion - Déconnexion de l'espace weavin
   Scenario: Déconnexion de l'espace weavin
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    And l'utilisateur "admin" est connecté
+    And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 3 secondes
     When l utilisateur effectue un hover sur "Username_menu"
     And pause 1 secondes
