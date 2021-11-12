@@ -2790,4 +2790,19 @@ public class ConnectVerifications {
         );
 
     }
+
+    // Vérification pour journalisation
+    @Then("vérifier que la nouvelle supprimée est affiché dans la liste journalisation publications")
+    public void vérifierQueLaNouvelleSuppriméeEstAffichéDansLaListeJournalisationPublications() {
+
+        logger.info("vérifier que la nouvelle supprimée est affiché dans la liste journalisation publications");
+
+        WebElement specialwait = (
+                new WebDriverWait(driver, 10).until(
+                    ExpectedConditions.visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))
+                )
+        );
+        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
+        Assert.assertEquals("News", generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+    }
 }

@@ -16,9 +16,9 @@ Feature: Journalisation - Supprimer une nouvelle
   # Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
-    #And pause 10 secondes
+    And pause 10 secondes
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
-    And pause 30 secondes
+    And pause 20 secondes
 
   # Etape 2 : Ajout News
 
@@ -54,3 +54,12 @@ Feature: Journalisation - Supprimer une nouvelle
     Then Vérifier que l'actualité a été spprimer avec succés
 
   # Etape 4 : Verification | Suppression dans la journalisation
+  
+    When l utilisateur effectue un hover sur "Username_menu"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Configuration_utilisateur"
+    And pause 5 secondes
+    And l utilisateur clique sur "Rubrique_Corbeille"
+    Then vérifier que le modal de Gestion des publications est affiché
+    And pause 5 secondes
+    Then vérifier que la nouvelle supprimée est affiché dans la liste journalisation publications
