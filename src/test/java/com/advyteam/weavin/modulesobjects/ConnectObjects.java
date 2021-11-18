@@ -470,7 +470,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.row > div > div > div > ul > li:nth-child(3)")
     public static WebElement Onglet_Mes_Evenements;
 
-    @FindBy(css =  "div.author-thumb > span > span:nth-child(2) > svg")
+    @FindBy(css =  "div.author-thumb > span > span:nth-child(2)")
     public static WebElement Bouton_supprimer_photo_profil;
 
     @FindBy(css = ".photo-album-item.create-album.cursor")
