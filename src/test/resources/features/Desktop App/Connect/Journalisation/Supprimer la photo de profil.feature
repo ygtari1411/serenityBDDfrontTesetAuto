@@ -21,21 +21,18 @@ Feature: Journalisation - Supprimer la photo de profil
     When l utilisateur clique sur "Username_menu"
     Then vérifier que le profil de l utilisateur est affiché
     And l utilisateur upload photo de profil "image1" dans le champs "H_Upload_photo_de_profil"
-    And pause 5 secondes
     Then vérifier que l'image est ajoutée
+
 
   #Etape 3 : Suppresion de la photo de profil
 
-    When l utilisateur clique sur "Bouton_supprimer_photo_profil"
+    When l utilisateur effectue un hover sur "Photo_profil_user"
+    And l utilisateur clique sur "Bouton_supprimer_photo_profil"
 
   #Etape 4 : Verifier la suppression dans la journalisation
 
     When l utilisateur effectue un hover sur "Username_menu"
-    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
-    And pause 5 secondes
     And l utilisateur clique sur "Rubrique_Corbeille"
-    And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
-    And pause 20 secondes
-    Then vérifier que la photo supprimé est affiché dans la liste corbeille publications
+    Then vérifier que la photo de profil supprimé est affiché dans la liste corbeille publications
