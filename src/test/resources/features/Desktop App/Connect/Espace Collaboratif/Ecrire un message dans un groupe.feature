@@ -23,7 +23,7 @@ Feature: TeamLab - Ecrire un message dans un groupe
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Message Bulle Test" dans le champs "Champ_Input_Name_Bulle"
+    And l utilisateur saisit "Ecrire Un Message Dans Un Groupe" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Message Bulle de test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
@@ -44,7 +44,7 @@ Feature: TeamLab - Ecrire un message dans un groupe
 
    #Etape 3 : Verifier la création de bulle
 
-    And l utilisateur saisit "Message Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
+    And l utilisateur saisit "Ecrire Un Message Dans Un Groupe" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
     Then verifier que la bulle a ete ajoutee
 

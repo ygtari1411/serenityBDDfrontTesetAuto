@@ -23,7 +23,7 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Réagir à un message Bulle Test" dans le champs "Champ_Input_Name_Bulle"
+    And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Réagir à un message Bulle de test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
@@ -40,13 +40,14 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Créer_Bulle"
-    And pause 5 secondes
+    And pause 10 secondes
 
    #Etape 3 : Verifier la création de bulle
 
-    And l utilisateur saisit "Réagir à un message Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
+    And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
     Then verifier que la bulle a ete ajoutee
+    And pause 5 secondes
 
   #Etape 4 : Ecrire un message et faire une réaction
 
@@ -61,7 +62,8 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
     And l utilisateur clique sur "Boutton_Reaction_Message_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_aime_Message_Bulle"
-    Then vérifier l ajout correct du Like Bulle
+    And pause 5 secondes
+    #Then vérifier l ajout correct du Like Bulle
 
 
 

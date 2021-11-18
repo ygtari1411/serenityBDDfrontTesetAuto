@@ -23,7 +23,7 @@ Feature: TeamLab - Modifier un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Modifier Bulle Test" dans le champs "Champ_Input_Name_Bulle"
+    And l utilisateur saisit "Modifier Un Groupe De Discussion" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Bulle de test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
@@ -44,7 +44,7 @@ Feature: TeamLab - Modifier un groupe de discussion
 
    #Etape 3 : Verifier la création de bulle
 
-    And l utilisateur saisit "Modifier Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
+    And l utilisateur saisit "Modifier Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
     Then verifier que la bulle a ete ajoutee
 
@@ -54,9 +54,9 @@ Feature: TeamLab - Modifier un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Modifier_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Modifier Bulle Test modifiée" dans le champs "Champ_Input_Name_Bulle"
+    And l utilisateur saisit "Modifier Bulle Test Modifiée" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Sujet de Bulle de test modifié" dans le champs "Champ_Input_Sujet_Bulle"
+    And l utilisateur saisit "Sujet de Bulle de test modifié" dans le champs "Champ_Input_Modifier_Sujet_Bulle"
     And pause 5 secondes
     And l utilisateur selectionne "Privée" dans la liste deroulante "Liste_Type_Bulle"
     And pause 5 secondes
@@ -66,11 +66,11 @@ Feature: TeamLab - Modifier un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Enregistre_Modifier_Bulle"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Modifier_photo_Bulle"
-    And pause 5 secondes
-    And l utilisateur upload "image1" dans le champs "H_Upload_photo_Bulle"
-    And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Enregistre_photo_Bulle"
+    #And l utilisateur clique sur "Boutton_Modifier_photo_Bulle"
+    #And pause 10 secondes
+    #And l utilisateur upload "image1" dans le champs Bulle "H_Upload_photo_Bulle"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Boutton_Enregistre_photo_Bulle"
     And pause 5 secondes
     Then verifier que la bulle a ete modifie
 

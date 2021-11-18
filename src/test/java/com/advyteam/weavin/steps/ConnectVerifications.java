@@ -2517,6 +2517,7 @@ public class ConnectVerifications {
     @And("l utilisateur clique sur Entree pour l envoi de message")
     public void lUtilisateurCliqueSurEntreePourLEnvoiDeMessage() {
         logger.info("l utilisateur clique sur Entree pour l envoi de message");
+
         WebElement TagConnaissance = driver.findElement(By.cssSelector("#textInput"));
         TagConnaissance.sendKeys(Keys.ENTER);
     }
@@ -2527,7 +2528,7 @@ public class ConnectVerifications {
 
         logger.info("vérifier l ajout correct du Like Bulle");
         //Vérifier que l icone (y) s'affiche
-        Assert.assertNotEquals(driver.findElements(By.cssSelector("#reaction27 > ul > li:nth-child(1)")).size(),0);
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("#reaction62 > ul > li:nth-child(1) > img")).size(),0);
         //Vérifier que le like a été comptabilisé
         Assert.assertEquals(generalobjectsmap.get("Nombre_Like_Message_Bulle").getAttribute("innerText"),"1");
 
@@ -2637,7 +2638,6 @@ public class ConnectVerifications {
 
         Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),1);
         //Assert.assertEquals(driver.findElements(By.cssSelector("inline-svg-icon reactions-icon-statistic-LIKE reactions-menu__icon")).size(),1);
-
 
     }
 
@@ -2804,5 +2804,17 @@ public class ConnectVerifications {
         );
         Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
         Assert.assertEquals("News", generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+    }
+
+    // Vérification pour teamlab
+    @And("l utilisateur upload {string} dans le champs Bulle {string}")
+    public void lUtilisateurUploadDansLeChampsBulle(String arg0, String arg1) {
+
+        logger.info("l utilisateur upload photo dans la bulle");
+
+        driver.findElement(By.cssSelector("#modal-uplaod-photo > div > div > div.modal-body > a")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest4.jpg"
+        );
+
     }
 }

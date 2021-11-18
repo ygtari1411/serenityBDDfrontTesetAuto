@@ -23,7 +23,7 @@ Feature: TeamLab - Supprimer un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Supprimer Bulle Test" dans le champs "Champ_Input_Name_Bulle"
+    And l utilisateur saisit "Supprimer Un Groupe De Discussion" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Supprimer Bulle test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
@@ -44,7 +44,7 @@ Feature: TeamLab - Supprimer un groupe de discussion
 
    #Etape 3 : Verifier la création de bulle
 
-    And l utilisateur saisit "Supprimer Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
+    And l utilisateur saisit "Supprimer Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
     Then verifier que la bulle a ete ajoutee
 

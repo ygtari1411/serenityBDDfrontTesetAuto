@@ -365,7 +365,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//input[@id='shareBoxImages']")
     public static WebElement Fichier_attache_nouveau_evenement;
 
-    @FindBy(css = "div.form-group.label-floating.m0 > app-text-input > div > input")
+    @FindBy(css = "div.default-filter > div:nth-child(1) > div > app-text-input > div > input")
     public static WebElement Champ_Input_invites_interne_evenement;
 
     @FindBy(css = "div.birthday-author-name")
@@ -1252,7 +1252,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(1) > div > a")
     public static WebElement  Bouton_aime_Album;
 
-    @FindBy(css = "div.col.col-xl-3.col-lg-3.col-md-6.col-sm-6.col-12.col-xl-2 > div > div > a")
+    @FindBy(css = "div.col.col-xl-3.col-lg-3.col-md-6.col-sm-6.col-12.col-xl-2 > div > div > a > svg")
     public static WebElement  Boutton_Ajouter_Bulle;
 
     @FindBy(css = "#name")
@@ -1260,6 +1260,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "#create-friend-group > div > div > div.modal-body > form > div:nth-child(2) > input")
     public static WebElement  Champ_Input_Sujet_Bulle;
+
+    @FindBy(css = "form > div:nth-child(2) > input")
+    public static WebElement Champ_Input_Modifier_Sujet_Bulle;
 
     @FindBy(css = "div:nth-child(3) > ng-select > div > div > div.ng-input")
     public static WebElement  Liste_Type_Bulle;
@@ -1315,7 +1318,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "a > button.reaction-like")
     public static WebElement Boutton_aime_Message_Bulle;
 
-    @FindBy(css = "#reaction27 > ul > li:nth-child(2) > span")
+    @FindBy(css = "ul > li:nth-child(2) > span")
     public static WebElement  Nombre_Like_Message_Bulle;
 
     @FindBy(css = "span:nth-child(3) > a > svg")
