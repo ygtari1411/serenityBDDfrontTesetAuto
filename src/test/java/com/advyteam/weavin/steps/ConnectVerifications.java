@@ -36,7 +36,7 @@ public class ConnectVerifications {
     public void vérifierQueLeStatutEstPublié() throws InterruptedException {
 
         logger.info("Vérification de la publication correct du statut");
-
+/*
         //Waiting for the first publication of timeline to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
@@ -51,6 +51,20 @@ public class ConnectVerifications {
         //Asserting that first publication contains the text published in the scenario
         //Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
         Assert.assertTrue(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("champ_statut")));
+*/
+
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"), "innerText",
+                                datastore.get("champ_statut")+"\n")));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        Assert.assertEquals(datastore.get("champ_statut")+"\n",generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"));
 
 
 
@@ -2814,6 +2828,42 @@ public class ConnectVerifications {
 
         driver.findElement(By.cssSelector("#modal-uplaod-photo > div > div > div.modal-body > a")).sendKeys(
                 System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest4.jpg"
+        );
+
+    }
+
+    //Vérification pour timeline
+    @Then("Vérifier que le statut affiché est le statut publié")
+    public void vérifierQueLeStatutAffichéEstLeStatutPublié() throws InterruptedException {
+        logger.info("Vérifier que le statut affiché est le statut publié");
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Texte_Publication_Popup"), "innerText",
+                                datastore.get("champ_statut")+"\n")));
+
+        //Waiting for the refreshed first news to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first news contains the text published in the scenario
+        Assert.assertEquals(datastore.get("champ_statut")+"\n",generalobjectsmap.get("Texte_Publication_Popup").getAttribute("innerText"));
+
+    }
+
+    //Vérification pour timeline
+    @Then("verifier que le commentaire et le like du statut popup on ete ajoute")
+    public void verifierQueLeCommentaireEtLeLikeDuStatutPopupOnEteAjoute() {
+
+        logger.info("vérifier que le commentaire et le like on été ajouté");
+
+        Assert.assertEquals(driver.findElements(
+                By.cssSelector("div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg > use")).size(),
+                1
+        );
+        Assert.assertEquals(driver.findElements(
+                By.cssSelector(" div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size(),
+                1
         );
 
     }

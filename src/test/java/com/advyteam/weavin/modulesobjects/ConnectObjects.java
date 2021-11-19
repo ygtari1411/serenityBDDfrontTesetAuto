@@ -16,7 +16,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Publier')]")
     public static WebElement bouton_publier_statut;
 
-    @FindBy(css = "#newsfeed-items-grid .ui-block:nth-child(1) .d-inline")
+    @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/article/div[2]")
     public static WebElement Texte_Premiere_Publication_Timeline;
 
     @FindBy(css = ".photo-album-item.create-album.cursor")
@@ -1413,6 +1413,17 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "//*[@id=\"cp-0001\"]/div/form/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li[2]")
     public static WebElement  premier_membre_afficher_TimeLine;
+
+    @FindBy(css =  "div.ps-content > div > p")
+    public static WebElement Texte_Publication_Popup ;
+
+    @FindBy(css = "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li.ng-star-inserted > div > a")
+    public static WebElement Bouton_Repondre_Statut_Popup ;
+
+    @FindBy(css =  "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")
+    public static WebElement Bouton_Like_Statut_Popup ;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
