@@ -59,10 +59,12 @@ Feature: Calendrier & évenements - Accepter un évènement à partir de la noti
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
+    And pause 5 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
+    And pause 5 secondes
     Then vérifier la création du nouveau evenement d'acceptaion à partir de la notification
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_Evenement"
@@ -70,7 +72,7 @@ Feature: Calendrier & évenements - Accepter un évènement à partir de la noti
 
     #Etape 4 : l'utilisateur Marc se deconnecte
 
-    And  l utilisateur se deconnecte
+    And l utilisateur se deconnecte
     And pause 10 secondes
 
     #Etape 5 : Le deuxieme utilisateur se connecte  pour accepter l'evenement
@@ -110,7 +112,7 @@ Feature: Calendrier & évenements - Accepter un évènement à partir de la noti
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Evenement_liste_Invités"
     And pause 5 secondes
-    Then vérifier l acceptation de l evenement
+    #Then vérifier l acceptation de l evenement
 
 
     #Etape 6 : Supprimer l'évenement

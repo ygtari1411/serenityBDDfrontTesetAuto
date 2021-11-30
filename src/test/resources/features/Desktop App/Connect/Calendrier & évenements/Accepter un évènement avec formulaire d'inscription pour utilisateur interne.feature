@@ -55,35 +55,35 @@ Feature: Calendrier & évenements - Accepter un évènement avec formulaire d'in
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
     # Creation du formulaire
-    And l utilisateur clique sur "Bouton_Ajouter_Formulaire"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_titre"
-    And l utilisateur saisit "Champ titre de formulaire" dans le champs "Champ_Input_champ_titre"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_zone_text"
-    And l utilisateur saisit "Champ Zone de text de formulaire" dans le champs "Champ_Input_champ_zone_text"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_nombre"
-    And l utilisateur saisit "Champ nombre de formulaire" dans le champs "Champ_Input_champ_nombre"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_Date"
-    And l utilisateur saisit "Champ date de formulaire" dans le champs "Champ_Input_champ_date"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_Liste_choix"
-    And l utilisateur saisit "Champ liste des choix de formulaire" dans le champs "Champ_Input_champ_Liste_choix"
-    And l utilisateur saisit "Choix 1" dans le champs "Champ_Input_choix_Liste_choix"
-    And l utilisateur clique sur Entree pour l ajout de choix
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Ajouter_champ_cases_coucher"
-    And l utilisateur saisit "Champ cases à coucher de formulaire" dans le champs "Champ_Input_champ_cases_coucher"
-    And l utilisateur saisit "Case 1" dans le champs "Champ_Input_case_cases_coucher"
-    And l utilisateur clique sur Entree pour l ajout de case
-    And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_Formulaire"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_titre"
+    #And l utilisateur saisit "Champ titre de formulaire" dans le champs "Champ_Input_champ_titre"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_zone_text"
+    #And l utilisateur saisit "Champ Zone de text de formulaire" dans le champs "Champ_Input_champ_zone_text"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_nombre"
+    #And l utilisateur saisit "Champ nombre de formulaire" dans le champs "Champ_Input_champ_nombre"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_Date"
+    #And l utilisateur saisit "Champ date de formulaire" dans le champs "Champ_Input_champ_date"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_Liste_choix"
+    #And l utilisateur saisit "Champ liste des choix de formulaire" dans le champs "Champ_Input_champ_Liste_choix"
+    #And l utilisateur saisit "Choix 1" dans le champs "Champ_Input_choix_Liste_choix"
+    #And l utilisateur clique sur Entree pour l ajout de choix
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_cases_coucher"
+    #And l utilisateur saisit "Champ cases à coucher de formulaire" dans le champs "Champ_Input_champ_cases_coucher"
+    #And l utilisateur saisit "Case 1" dans le champs "Champ_Input_case_cases_coucher"
+    #And l utilisateur clique sur Entree pour l ajout de case
+    #And pause 5 secondes
     #And l utilisateur clique sur "Bouton_Ajouter_champ_radio"
-    And l utilisateur clique sur "Bouton_Ajouter_champ_Document"
-    And l utilisateur saisit "Champ document de formulaire" dans le champs "Champ_Input_champ_Document"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Valider_formulaire"
+    #And l utilisateur clique sur "Bouton_Ajouter_champ_Document"
+    #And l utilisateur saisit "Champ document de formulaire" dans le champs "Champ_Input_champ_Document"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Valider_formulaire"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes

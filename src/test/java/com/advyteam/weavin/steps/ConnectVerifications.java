@@ -2067,7 +2067,7 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher").getAttribute("innerText"),
-                equalTo("Marc Parenteau vous a envoyé une invitation à un événement Dans 2 heures"));
+                equalTo("Marc Parenteau vous a envoyé une invitation à un événement Dans une heure"));
     }
 
     // Vérification pour calendrier et evenements

@@ -94,6 +94,7 @@ Feature: Calendrier & évenements - Modifier un évènement
     And l utilisateur clique sur "Bouton_modifier_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
+    And pause 5 secondes
 
     #Etape 5 : Vérification de la modification de l'évenement
 

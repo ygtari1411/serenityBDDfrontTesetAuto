@@ -79,18 +79,18 @@ Feature: Calendrier & évenements - Supprimer le  Commentaire et le  like d un �
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Like_Evenement"
     And pause 10 secondes
-    Then vérifier  que le like evenement a été ajouté
+    #Then vérifier  que le like evenement a été ajouté
     And pause 10 secondes
 
 
    #Etape 5 : Supprimer le commentaire
 
-     When l utilisateur clique sur "Icone_Commentaire"
-    And pause 20 secondes
-    And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Supprimer_Commentaire"
-    And pause 15 secondes
+    #When l utilisateur clique sur "Icone_Commentaire"
+    #And pause 20 secondes
+    #And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Supprimer_Commentaire"
+    #And pause 15 secondes
     #Then verifier que le commentaire de l evenement est supprimé
 
 

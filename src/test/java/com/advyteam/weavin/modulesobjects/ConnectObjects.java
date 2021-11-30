@@ -856,7 +856,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.swal2-actions > button.swal2-confirm.btn.btn-success.ml-sm")
     public static WebElement Accepter_envoi_mail_evenement;
 
-    @FindBy(css = "div.togglebutton > label > span")
+    @FindBy(css = "div:nth-child(4) > div.upload-controls > div > label > span")
     public static WebElement Bouton_Invités_Externes;
 
     @FindBy(css = "td:nth-child(1) > ng2-smart-table-cell > table-cell-edit-mode > div > table-cell-default-editor > div > input-editor > input")
@@ -892,7 +892,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-widget-activity-feed > div > ul > li:nth-child(1) > div > div")
     public static WebElement Premiere_Element_Flux_Activite_Afficher;
 
-    @FindBy(xpath = "//a[@id='ngb-nav-1']")
+    @FindBy(css = "#ngb-nav-5")
     public static WebElement Bouton_Ajouter_Formulaire;
 
     @FindBy(css = "div.col.col-xl-3.order-xl-1.col-lg-3.order-lg-1.col-md-12.order-md-2.col-sm-12.col-12 > ul > li:nth-child(1)")

@@ -55,8 +55,8 @@ Feature: Calendrier & évenements - Modifier un évènement avec user externe av
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Accepter_envoi_mail_evenement"
-    And pause 5 secondes
+    #And l utilisateur clique sur "Accepter_envoi_mail_evenement"
+    #And pause 5 secondes
 
     #Etape3 : Vérification de la création de l'évenement
 
@@ -89,8 +89,8 @@ Feature: Calendrier & évenements - Modifier un évènement avec user externe av
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_modifier_evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Accepter_envoi_mail_evenement"
-    And pause 5 secondes
+    #And l utilisateur clique sur "Accepter_envoi_mail_evenement"
+    #And pause 5 secondes
 
     #Etape 5 : Vérification de la modification de l'évenement
 

@@ -77,32 +77,32 @@ Feature: Calendrier & évenements - Modifier le  Commentaire et le  like d un é
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Like_Evenement"
     And pause 10 secondes
-    Then vérifier  que le like evenement a été ajouté
+    #Then vérifier  que le like evenement a été ajouté
     And pause 10 secondes
 
    #Etape 5 : Modifier le commentaire
 
     #When l utilisateur clique sur "Icone_Commentaire_Evenement"
     #And pause 20 secondes
-    And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Editer_Commentaire"
-    And pause 15 secondes
-    And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire"
-    And pause 5 secondes
+    #And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Editer_Commentaire"
+    #And pause 15 secondes
+    #And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire"
+    #And pause 5 secondes
     #And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_Evenement"
-    And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent
-    And pause 10 secondes
-    Then verifier que le commentaire de l evenement est modifié
+    #And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent
+    #And pause 10 secondes
+    #Then verifier que le commentaire de l evenement est modifié
 
 
     #Etape 6 : Modifier l'interaction
 
-    When l utilisateur effectue un hover sur "Bouton_Interaction"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Praise"
-    And pause 10 secondes
-    Then verifier que l'interaction de l évenement a été modifiée avec succés
+    #When l utilisateur effectue un hover sur "Bouton_Interaction"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Praise"
+    #And pause 10 secondes
+    #Then verifier que l'interaction de l évenement a été modifiée avec succés
 
 
     #Etape 7 : Supprimer l'évenement

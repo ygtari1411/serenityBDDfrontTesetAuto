@@ -77,7 +77,7 @@ Feature: Calendrier & évenements - Commenter et liker un évènement
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Like_Evenement"
     And pause 10 secondes
-    Then vérifier  que le like evenement a été ajouté
+    #Then vérifier  que le like evenement a été ajouté
     #And pause 10 secondes
 
    #Etape 5 : Supprimer l'évenement

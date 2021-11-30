@@ -55,8 +55,8 @@ Feature: Calendrier & évenements - Ajouter un évènement avec user externe ave
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Accepter_envoi_mail_evenement"
-    And pause 5 secondes
+    #And l utilisateur clique sur "Accepter_envoi_mail_evenement"
+    #And pause 5 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 
