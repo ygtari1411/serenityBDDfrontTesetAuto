@@ -35,7 +35,9 @@ Feature: Brainstorming - Ajouter un vote pour un seul membre
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Membre"
     And pause 5 secondes
-    And l utilisateur saisit "Ben Yedder" dans le champs "Filtrer_Par_Nom_BrainStorming"
+    And l utilisateur saisit "Ennaceur" dans le champs "Filtrer_Par_Nom_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_chercher_membre_brainstorming"
     And pause 5 secondes
     And l utilisateur clique sur "Membre_Afficher_Brainstorming"
     And pause 5 secondes
@@ -54,7 +56,7 @@ Feature: Brainstorming - Ajouter un vote pour un seul membre
     And l utilisateur saisit "reponse 2" dans le champs "Champ_Input_Deuxieme_Reponse_BrainStorming"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Enregistrer_Vote"
-    And pause 5 secondes
+    And pause 7 secondes
     And l utilisateur clique sur "Onglet_BrainStorming"
     And pause 5 secondes
 

@@ -33,7 +33,7 @@ Feature: Brainstorming - Ajouter un vote avec une date de cloture
     And pause 5 secondes
     When l utilisateur clique sur "Calendrier_BrainStorming"
     And pause 5 secondes
-    And l utilisateur clique sur "Case_aujoudhui_Calendrier"
+    And l utilisateur saisit "01/01/2023" dans le champs "Champ_Input_Date_BrainStorming"
     And pause 10 secondes
     And l utilisateur selectionne "Normal" dans la liste deroulante "Liste_Affichage_BrainStorming"
     And pause 5 secondes
@@ -55,8 +55,7 @@ Feature: Brainstorming - Ajouter un vote avec une date de cloture
     And pause 5 secondes
 
   #Etape 3  : Verifier que le vote a été ajouté avec succes
-
-    #Then verifier que le vote a ete ajoute avec succes
+    Then verifier que le vote a ete ajoute avec succes
 
 
 

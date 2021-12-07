@@ -643,6 +643,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-speed-access-user-item > li > div.author-status > a")
     public static WebElement Utilisateur_Chercher;
 
+    @FindBy(css = "div.w-100.mt-3.text-right > button")
+    public static WebElement Bouton_chercher_membre_brainstorming;
+
     @FindBy(css = "div.col-lg-12.p0.chat-input-container > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank > p")
     public static WebElement Champ_Input_Message_Chat;
 
@@ -1068,6 +1071,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "//app-floating-label-form/div/input")
     public static WebElement Champ_Input_Titre_BrainStorming;
+
+    @FindBy(css = "div.field-settings.field-settings-date > div > div > input")
+    public static WebElement Champ_Input_Date_BrainStorming;
 
     @FindBy(xpath = "//div[1]/div/ng-select/div")
     public static WebElement Liste_Affichage_BrainStorming;

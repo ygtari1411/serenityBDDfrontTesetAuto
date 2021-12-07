@@ -379,7 +379,7 @@ public class ConnectVerifications {
         logger.info("vérifier que l'interaction a été modifiée avec succés");
 
         //Vérifier que l icone praise s'affiche
-        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.inline-svg-icon.reactions-icon-statistic-EMPATHY.reactions-menu__icon")).size(),0);
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("span.likes-number.ml-sm")).size(),0);
 
     }
 
