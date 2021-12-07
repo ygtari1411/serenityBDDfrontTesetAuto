@@ -37,5 +37,7 @@ Feature: Idéation - Modification d'une idée
     And l utilisateur clique sur "Bouton_modifier_ideation"
     And l utilisateur modifie "Ceci est la modification de l'idéation" dans le champs "Titre_nouvelle_idee"
     And l utilisateur modifie "Description modifiée" dans le champs "Description_nouvelle_idee"
+    And pause 3 secondes
     And l utilisateur clique sur "Bouton_enregistrer_nouvelle_idee"
+    And pause 3 secondes
     Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification

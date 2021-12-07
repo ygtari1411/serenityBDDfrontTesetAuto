@@ -36,6 +36,7 @@ Feature: Idéation - Tri des idées : Ascendant :Par Note
      #Etape 3 : Vérification de la création de l'idée
 
     Then vérifier la publication correct de l idee
+    And pause 5 secondes
 
      #Etape 4 : Trier les idées :Ascendant
 

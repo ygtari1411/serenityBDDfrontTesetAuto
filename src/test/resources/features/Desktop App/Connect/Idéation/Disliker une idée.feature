@@ -37,6 +37,7 @@ Feature: Idéation - Disliker une idée
 
     Then vérifier la publication correct de l idee
     And l utilisateur saisit "test automatisé commenter idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+    And pause 5 secondes
 
      #Etape 4 : Liker  l'idée
 
@@ -51,5 +52,5 @@ Feature: Idéation - Disliker une idée
 
     And l utilisateur clique sur "Bouton_Like_Ideation"
     And pause 20 secondes
-    Then vérifier que le dilike a été effectué
+    Then vérifier que le dislike a été effectué
 
