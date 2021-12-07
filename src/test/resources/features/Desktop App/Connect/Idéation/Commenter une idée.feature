@@ -37,7 +37,7 @@ Feature: Idéation - Commenter une idée
 
       Then vérifier la publication correct de l idee
       And l utilisateur saisit "test automatisé commenter idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
-
+      And pause 5 secondes
      #Etape 4 : Commenter  l'idée
 
      When l utilisateur clique sur "Derniere_Idee_Ajoutee"

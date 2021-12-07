@@ -404,8 +404,8 @@ public class ConnectVerifications {
     }
 
     //   Vérification pour Idéation
-    @Then("vérifier que le dilike a été effectué")
-    public void vérifierQueLeDilikeAÉtéEffectué() {
+    @Then("vérifier que le dislike a été effectué")
+    public void vérifierQueLeDislikeAÉtéEffectué() {
         logger.info("vérifier que le Dislike a été effectué");
 
         //Verifier que l'icone Like ne s'affiche

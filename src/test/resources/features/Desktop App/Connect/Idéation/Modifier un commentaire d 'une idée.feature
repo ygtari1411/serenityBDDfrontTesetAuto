@@ -1,17 +1,17 @@
 # Auteur: ygtari
 # Feature: Idéation
-# Scénario: Modifier un commentaire d'un idée
+# Scénario: Modifier un commentaire d'une idée
 # Date de création: 10/12/2020
 
 
 
-Feature: Idéation - Modifier un commentaire d'un idée
+Feature: Idéation - Modifier un commentaire d'une idée
 
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-IDEATION
   @WEAVIN-IDEATION-0006
-  Scenario: Modifier un commentaire d'un idée
+  Scenario: Modifier un commentaire d'une idée
 
     #Etape 1 : Connexion
 
@@ -38,6 +38,7 @@ Feature: Idéation - Modifier un commentaire d'un idée
     Then vérifier la publication correct de l idee
     And pause 20 secondes
     And l utilisateur saisit "test automatisé modifier un commentaire d'une idee" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+    And pause 5 secondes
 
      #Etape 4 : Commenter  l'idée
 

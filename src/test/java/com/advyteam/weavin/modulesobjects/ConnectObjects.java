@@ -55,7 +55,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".ngb-dp-today")
     public static WebElement Case_aujoudhui_Calendrier;
 
-    @FindBy(css = ".card-container-list:last-child .dropdown")
+    @FindBy(css = "#dropdownBasic2")
     public static WebElement Bouton_option_derniere_ideation;
 
     @FindBy(css = ".dropdown-menu.show .dropdown-item:nth-child(1)")
@@ -1252,7 +1252,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(1) > div > a")
     public static WebElement  Bouton_aime_Album;
 
-    @FindBy(css = "div.col.col-xl-3.col-lg-3.col-md-6.col-sm-6.col-12.col-xl-2 > div > div > a > svg")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-rooms/div[1]/div/div[1]")
     public static WebElement  Boutton_Ajouter_Bulle;
 
     @FindBy(css = "#name")
