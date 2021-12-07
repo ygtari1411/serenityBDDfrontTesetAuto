@@ -33,19 +33,20 @@ Feature: Idéation - Commenter une idée
      Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
      And pause 3 secondes
 
-     #Etape 3 : Vérification de la création de l'idée
+      #Etape 3 : Vérification de la création de l'idée
 
       Then vérifier la publication correct de l idee
-      And l utilisateur saisit "test automatisé commenter idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
+      And l utilisateur saisit "test automatisé  commenter et Liker une idée" dans le champs "Champ_Input_Rechercher_Ideation_Par_Titre"
       And pause 5 secondes
+
      #Etape 4 : Commenter  l'idée
 
-     When l utilisateur clique sur "Derniere_Idee_Ajoutee"
-     And pause 5 secondes
-     And l utilisateur clique sur "Bouton_Commenter_Ideation"
-     And l utilisateur saisit "test automatisé commenter idée" dans le champs "Champ_Input_Commenter_Ideation"
-     And pause 10 secondes
-     And l utilisateur clique sur "Envoyer_Commenteraire_Ideation"
-     And pause 10 secondes
-     Then vérifier l ajout  correct du commentaire
+      When l utilisateur clique sur "Derniere_Idee_Ajoutee"
+      And pause 5 secondes
+      And l utilisateur clique sur "Bouton_Commenter_Ideation"
+      And l utilisateur saisit "test automatisé commenter et Liker une idée" dans le champs "Champ_Input_Commenter_Ideation"
+      And pause 10 secondes
+      And l utilisateur clique sur "Envoyer_Commenteraire_Ideation"
+      And pause 10 secondes
+      Then vérifier l ajout  correct du commentaire
 
