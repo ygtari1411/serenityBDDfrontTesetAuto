@@ -59,7 +59,7 @@ Feature: Calendrier & évenements - Modifier un évènement
     And l utilisateur clique sur "Non_envoi_mail_evenement"
 
     #Etape 3 : Vérification de la création de l'évenement
-
+    And pause 10 secondes
     When l utilisateur clique sur "Evenement_Dans_Calendrier"
     Then vérifier la création du nouveau evenement
     And pause 5 secondes

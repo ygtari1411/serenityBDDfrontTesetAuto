@@ -26,7 +26,7 @@ Feature: Opportunite - Modifier une opportunité par un admin
      And pause 5 secondes
      And l utilisateur clique sur "Publier_Une_Opportnite"
      And pause 5 secondes
-     And l utilisateur saisit "Voiture" dans le champs "Nom_Categorie_Opportunite_Menu_Gauche"
+     And l utilisateur saisit "Voiture" dans le champs "Champ_input_titre_Opportunite"
      And pause 5 secondes
      And l utilisateur selectionne "Opportunité" dans la liste deroulante "Liste_Category_Opportunite"
      And pause 5 secondes
@@ -39,9 +39,9 @@ Feature: Opportunite - Modifier une opportunité par un admin
      And l utilisateur saisit "33655664422" dans le champs "tel_Opportunite"
      And pause 5 secondes
      And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
-     And pause 60 secondes
-     And l utilisateur clique sur "Sauvegarder_Opportunite"
-
+    And pause 20 secondes
+    And l utilisateur clique sur "Sauvegarder_Opportunite"
+    And pause 20 secondes
    #Etape 3 : Verifier que l'opportunite a été ajouté
 
      Then verifier que l opportunite a ete ajoute

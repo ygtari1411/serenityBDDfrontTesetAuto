@@ -57,6 +57,7 @@ Feature: Calendrier & évenements - Modifier le  Commentaire et le  like d un é
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
+    And pause 5 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 
