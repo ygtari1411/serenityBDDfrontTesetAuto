@@ -59,6 +59,7 @@ Feature: Calendrier & évenements - Ajouter un évènement dans le flux d'activi
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Non_envoi_mail_evenement"
+    And pause 10 secondes
 
     #Etape 3 : Vérification de la création de l'évenement
 

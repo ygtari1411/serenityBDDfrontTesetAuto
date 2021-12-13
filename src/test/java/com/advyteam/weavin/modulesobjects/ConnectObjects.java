@@ -805,10 +805,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "button.btn.btn-primary.mb-0.ml-2")
     public static WebElement Bouton_Enregistrer_Catégorie_Opportunité;
 
+    @FindBy(css = " li:nth-child(2) > div > a")
+    public static WebElement Bouton_Repondre_Opportunité;
+
     @FindBy(css = "span:nth-child(3) > div.actions-container.position-relative > svg")
     public static WebElement Bouton_Options_Catégorie_Opportunité;
 
-    @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(1)")
+    @FindBy(css = " div > ul > li:nth-child(2) > div > a")
     public static WebElement Bouton_Modifier_Catégorie_Opportunité;
 
     @FindBy(css = "div.useful-link-settings-header > button")
@@ -1010,7 +1013,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Publier_Une_Opportnite;
 
     @FindBy(css = "div.fieldsTxt > div:nth-child(1) > input")
-    public static WebElement Nom_Categorie_Opportunite_Menu_Gauche;
+    public static WebElement Champ_input_titre_Opportunite;
 
     @FindBy(css = "quill-editor > div.ql-container.ql-snow > div.ql-editor")
     public static WebElement Description_Categorie_Opportunite;
@@ -1042,7 +1045,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/app-post-card-opportunity/div/article/div[2]/div[3]")
     public static WebElement Premiere_Opportunite_Afficher;
 
-    @FindBy(css = "body > app-root > app-layout-portal > div.container.wrapper-portal > app-opportunity > section > app-opportunity-detail > div > div > div.col.col-xl-8.col-lg-12.col-md-12.col-sm-12.col-12.ng-star-inserted > div > article > div.post-additional-info.inline-items.mt0 > app-post-reactions > div > ul > li:nth-child(1) > div > a > span.ml-2.ng-star-inserted")
+    @FindBy(css = "ul > li:nth-child(1) > div > a")
     public static WebElement Bouton_Like_Opportinite;
 
     @FindBy(css = "div:nth-child(2) > div > app-post-card-opportunity > div > article > div.post-content > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > span.likes-number.ml-sm")

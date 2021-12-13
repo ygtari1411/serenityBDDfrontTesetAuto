@@ -26,7 +26,7 @@ Feature: Opportunite - Supprimer une opportunité par un role utilisateur
     And pause 5 secondes
     And l utilisateur clique sur "Publier_Une_Opportnite"
     And pause 5 secondes
-    And l utilisateur saisit "Voiture" dans le champs "Nom_Categorie_Opportunite_Menu_Gauche"
+    And l utilisateur saisit "Voiture" dans le champs "Champ_input_titre_Opportunite"
     And pause 5 secondes
     And l utilisateur selectionne "Opportunité" dans la liste deroulante "Liste_Category_Opportunite"
     And pause 5 secondes
@@ -39,13 +39,13 @@ Feature: Opportunite - Supprimer une opportunité par un role utilisateur
     And l utilisateur saisit "33655664422" dans le champs "tel_Opportunite"
     And pause 5 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
-    And pause 60 secondes
+    And pause 20 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-
+    And pause 20 secondes
   #Etape 3 : Verifier que l'opportunite a été ajouté
 
     Then verifier que l opportunite a ete ajoute
-
+    And pause 20 secondes
   #Etape 4 : l'initiateur se déconnecte
 
     And  l utilisateur se deconnecte
@@ -54,11 +54,11 @@ Feature: Opportunite - Supprimer une opportunité par un role utilisateur
    #Etape 5 : l'utilisateur  se connecte
 
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
-    And pause 10 secondes
+    And pause 15 secondes
     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
-    And pause 10 secondes
+    And pause 20 secondes
     And l utilisateur clique sur "Bouton_Option_Opportunite"
-    And pause 10 secondes
+    And pause 30 secondes
 
    #Etape 6 : l'utilisateur ne peut pas supprimer l'opportunité
 

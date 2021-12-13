@@ -2062,12 +2062,6 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher"), "innerText",
                                 "Marc Parenteau vous a envoyé une invitation à un événement ")));
-
-        synchronized (driver) {
-            driver.wait(3000);
-        }
-        assertThat(generalobjectsmap.get("Premiere_Notification_Evenement_Afficher").getAttribute("innerText"),
-                equalTo("Marc Parenteau vous a envoyé une invitation à un événement Dans une heure"));
     }
 
     // Vérification pour calendrier et evenements
@@ -2161,7 +2155,10 @@ public class ConnectVerifications {
     public void verifierQueLOpportuniteAEteAjoute() {
         logger.info("verifier que l'opportnité a été ajoutée");
 
-        Assert.assertEquals(datastore.get("Nom_Categorie_Opportunite_Menu_Gauche"),generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText"));
+        Assert.assertEquals(
+                datastore.get("Champ_input_titre_Opportunite"),
+                generalobjectsmap.get("titre_premiere_opportunite_afficher").getAttribute("innerText")
+        );
 
     }
 

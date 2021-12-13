@@ -32,18 +32,20 @@ Feature: Annuaire - Création d'un nouvel utilisateur
 
     And l utilisateur clique sur "Bouton_Ajouter_Nouvel_utilisateur"
     And pause 5 secondes
-    And l utilisateur saisit "karim.bennasr@yopmail.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
+    And l utilisateur saisit "karim.bennasr.1@yopmail.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
     And pause 5 secondes
     And l utilisateur saisit "Karim" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
     And pause 5 secondes
     And l utilisateur saisit "Bennasr" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
     And pause 5 secondes
     Then l utilisateur clique sur "Bouton_enregistrer_Nouvel_utilisateur"
+    And pause 20 secondes
 
   #Etape 4 : vérifier que le nouvel utilisateur a été ajouté
 
-    And l utilisateur saisit "Karim" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur "invites_utilisateurs"
+    And pause 10 secondes
+    And l utilisateur saisit "Karim" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 10 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
 
