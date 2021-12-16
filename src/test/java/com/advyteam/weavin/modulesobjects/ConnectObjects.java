@@ -437,10 +437,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Evenement_Afficher;
 
-    @FindBy(css = "div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > a > svg")
+    @FindBy(css = "div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")
     public static WebElement Bouton_Interaction_Evenement;
 
-    @FindBy(css = "li:nth-child(1) > div > div > button:nth-child(1) > span.reactions-icon-md-LIKE.reactions-menu__icon")
+    @FindBy(css = "div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div > div > button:nth-child(1) > span.reactions-icon-md-LIKE.reactions-menu__icon")
     public static WebElement Bouton_Like_Evenement;
 
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.likes-number.ml-sm")
@@ -736,7 +736,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.inline-items.inline-icon.nav-not-hidden > div:nth-child(2) > i.fas.fa-cloud-download")
     public static WebElement Bouton_Rapport_Utilisateurs;
 
-    @FindBy(xpath = "//small[contains(text(),'karim.bennasr@yopmail.com')]")
+    @FindBy(xpath = "//small[contains(text(),'karim.bennasr.1@yopmail.com')]")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
 
     @FindBy(xpath = "//small[contains(text(),'yassine.gtari@advyteam.com')]")
@@ -982,7 +982,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = ".fas.fa-lock-alt.mr-1:nth-child(2)")
     public static WebElement Bouton_Desactiver_Utilisateur;
 
-    @FindBy(css = ".fas.fa-lock-alt.mr-1:nth-child(3)")
+    @FindBy(css = "i.fas.fa-user-minus")
     public static WebElement Bouton_Supprimer_Utilisateur;
 
     @FindBy(css = "a[id=deactivated]")
@@ -991,8 +991,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.flex-row.flex-row-action > i.fas.fa-lock-open-alt.mr-1")
     public static WebElement Bouton_Reactiver_Utilisateur;
 
-    @FindBy(xpath = "//div[1]/div[1]/div[1]/input[1]")
+    @FindBy(css = "app-text-input > div > input")
     public static WebElement Champ_Input_Chercher_des_membres_Rubrique_Annuaire;
+
+    @FindBy(css = "div.w-100.mt-3.text-right > button")
+    public static WebElement Bouton_Chercher_des_membres_Annuaire;
 
     @FindBy(xpath = "//div[1]/div/div/div/div[2]/div[1]/a")
     public static WebElement Nom_premier_utilisateur_Afficher_Annuaire;
