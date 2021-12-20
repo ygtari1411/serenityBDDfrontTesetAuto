@@ -49,6 +49,8 @@ Feature: Annuaire - Un utilisateur désactiver n'apparait pas dans la rubrique a
 
       And l utilisateur saisit "yassine" dans le champs "Champ_Input_Chercher_des_membres_Rubrique_Annuaire"
       And pause 5 secondes
+      And l utilisateur clique sur "Bouton_Chercher_des_membres_Annuaire"
+      And pause 5 secondes
       Then verifier que la carte visite de l'utilisateur"yassine" n apparait pas dans l annuaire
 
 
@@ -66,6 +68,8 @@ Feature: Annuaire - Un utilisateur désactiver n'apparait pas dans la rubrique a
       And pause 20 secondes
       And l utilisateur clique sur "Onglet_inactif_utilisateur"
       And pause 5 secondes
+      And l utilisateur saisit "yassine" dans le champs "Champ_Input_Chercher_des_membres"
+      And pause 5 secondes
       And l utilisateur clique sur "Bouton_Reactiver_Utilisateur"
 
    #Etape 7 :rechercher la carte de visite de  l utilisateur dans la rubrique annuaire
@@ -74,6 +78,8 @@ Feature: Annuaire - Un utilisateur désactiver n'apparait pas dans la rubrique a
      And pause 5 secondes
      And l utilisateur saisit "yassine" dans le champs "Champ_Input_Chercher_des_membres_Rubrique_Annuaire"
      And pause 5 secondes
+      And l utilisateur clique sur "Bouton_Chercher_des_membres_Annuaire"
+      And pause 5 secondes
 
    #Etape 8 :Vérifier que la carte visite s'affiche
 

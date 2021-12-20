@@ -46,7 +46,7 @@ Feature: Annuaire - Création d'un nouvel utilisateur
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 10 secondes
     And l utilisateur saisit "Karim" dans le champs "Champ_Input_Chercher_des_membres"
-    And pause 10 secondes
+    And pause 20 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
 
 
