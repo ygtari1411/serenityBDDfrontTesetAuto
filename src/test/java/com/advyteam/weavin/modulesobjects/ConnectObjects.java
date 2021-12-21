@@ -1440,6 +1440,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(css =  "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")
     public static WebElement Bouton_Like_Statut_Popup ;
 
+    @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
+    public static WebElement champ_input_sous_commentaire_statut;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/article/div[5]/app-post-statistics/div/ul/li/a/span")
+    public static WebElement Logo_commentaire_statut;
+
+    @FindBy(xpath = "//span[contains(text(),'Répondre')]")
+    public static WebElement bouton_interagir_commentaire;
+
+    @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-comment-form/form/div/div[2]/div/button")
+    public static WebElement Envoyer_sous_commentaire;
 
     @FindBy(css = "div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_album_Afficher;
