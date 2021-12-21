@@ -1447,6 +1447,15 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-comment-form/form/div/div[2]/div/button")
     public static WebElement Envoyer_sous_commentaire;
 
+    @FindBy(xpath = "//div/ul/app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")
+    public static WebElement Logo_sous_commentaire_statut;
+
+    @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div/ul/li[1]/a")
+    public static WebElement Bouton_Editer_Sous_Commentaire;
+
+    @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div")
+    public static WebElement Bouton_Option_Sous_Commentaire;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
