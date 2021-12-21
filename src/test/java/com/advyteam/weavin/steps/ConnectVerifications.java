@@ -2864,4 +2864,14 @@ public class ConnectVerifications {
         );
 
     }
+
+    //Vérification pour timeline
+    @Then("verifier que le sous commentaire a ete comptabilise")
+    public void verifierQueLeSousCommentaireAEteComptabilise() {
+        logger.info("vérifier que le sous commentaire a ete comptabilise");
+
+        Assert.assertNotEquals(driver.findElements(By.xpath("//app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")),0);
+
+    }
+
 }
