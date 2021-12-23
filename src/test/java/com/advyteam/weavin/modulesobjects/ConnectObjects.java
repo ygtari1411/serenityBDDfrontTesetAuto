@@ -452,6 +452,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.post__author.author.vcard.inline-items > app-more-dropdown > div")
     public static WebElement Bouton_Option_Commentaire;
 
+
+
     @FindBy(css = " div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(1) > a")
     public static WebElement Bouton_Editer_Commentaire;
 
@@ -1366,6 +1368,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.ng-pristine.ng-invalid.ng-touched > div:nth-child(2) > div > input")
     public static WebElement  Champ_Input_Option2_Sondage;
 
+    @FindBy(css = " app-post-statistics > div > ul > li:nth-child(2) > a > svg")
+    public static WebElement  Bouton_Modificaton_commentaire;
+
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > div > button")
     public static WebElement  Bouton_Lancer_Sondage;
 
@@ -1436,6 +1441,11 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_Like_Statut_Popup ;
 
 
+    @FindBy(css = "div.parent-item-comment > p")
+    public static WebElement Premiere_Commentaire_album_Afficher;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/article/div[3]/app-post-reactions/div/ul/li[1]/div/div/button[2]/span[2]")
+    public static WebElement  Bouton_reaction_praise ;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

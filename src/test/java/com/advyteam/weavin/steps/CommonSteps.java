@@ -251,12 +251,12 @@ public class CommonSteps {
 
     @Then("vérifier que le message {string} s'affiche dans la notification")
     public void vérifierQueLeMessageSAfficheDansLaNotification(String textnotif) {
-        logger.info("vérification de l'affichage du message " + textnotif);
+        logger.info("vérification de l'affichage du message " +textnotif);
 
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Message_resultat_action"))));
-        Assert.assertEquals(generalobjectsmap.get("Message_resultat_action").getText(), textnotif);
+        Assert.assertEquals(generalobjectsmap.get("Message_resultat_action").getText(),textnotif);
     }
 
 

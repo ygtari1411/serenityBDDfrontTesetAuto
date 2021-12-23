@@ -17,7 +17,7 @@ Feature: Profil utilisateur - Modifier le commentaire et le like d'un album
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
 
   #Etape2  : Ajout d'un album
-
+    And pause 20 secondes
     When l utilisateur clique sur "Username_menu"
     And pause 10 secondes
     And l utilisateur clique sur "Menu_photos_profil"
@@ -59,22 +59,26 @@ Feature: Profil utilisateur - Modifier le commentaire et le like d'un album
 
     #When l utilisateur clique sur "Icone_Commentaire_Evenement"
     #And pause 20 secondes
+    And l utilisateur clique sur "Bouton_Modificaton_commentaire"
     And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Editer_Commentaire"
     And pause 15 secondes
     And l utilisateur modifie "commentaire modifiée" dans le champs "Champ_Input_Modification_Commenteraire"
     And pause 5 secondes
+
+    #And l utilisateur clique sur "Envoyer_Commenteraire_Album"
+    And l utilisateur clique sur Envoyer_commentaire_Album
     #And l utilisateur clique sur "Envoyer_Commenteraire_Modifier_Evenement"
-    And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent
+    #And l utilisateur clique sur le bouton Envoyer_Commenteraire_Modifier_Evenemeent
     And pause 10 secondes
-    Then verifier que le commentaire de l evenement est modifié
+    #Then verifier que le commentaire de l album est modifié
 
 
     #Etape 6 : Modifier l'interaction
 
     When l utilisateur effectue un hover sur "Bouton_Interaction_Evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Praise"
+    And l utilisateur clique sur "Bouton_reaction_praise"
     And pause 10 secondes
     Then verifier que l'interaction de l évenement a été modifiée avec succés
