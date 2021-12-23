@@ -1079,7 +1079,7 @@ public class ConnectVerifications {
         logger.info("vérifier que l'interaction a été modifiée avec succés");
 
         //Vérifier que l icone praise s'affiche
-        Assert.assertNotEquals(driver.findElements(By.cssSelector("article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),0);
+        Assert.assertNotEquals(driver.findElements(By.cssSelector(" span.inline-svg-icon.reactions-icon-statistic-PRAISE.reactions-menu__icon")).size(),0);
 
 
     }
@@ -2863,5 +2863,20 @@ public class ConnectVerifications {
                 1
         );
 
+    }
+//Vérification profile utilisateur
+    @Then("verifier que le commentaire de l album est modifié")
+    public void verifierQueLeCommentaireDeLAlbumEstModifié() {
+        logger.info("vérifier que le commentaire est modifié");
+        Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire"),generalobjectsmap.get("premiere_Commentaire_album_Afficher").getAttribute("innerText"));
+
+    }
+//vérificationn profile utilisateur
+    @And("l utilisateur clique sur Envoyer_commentaire_Album")
+    public void lUtilisateurCliqueSurEnvoyer_commentaire_Album() {
+        logger.info("l utilisateur clique sur Envoyer_commentaire_Album");
+        WebElement element = driver.findElement(By.xpath("/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/app-post-comment-form/form/div/div[2]/div/button"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
     }
 }
