@@ -55,11 +55,16 @@ Feature: Article - Commenter et Liker un article
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 10 secondes
     And l utilisateur clique sur "Premier_Article_Afficher_Utilisateur"
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Commentaire_Article"
+    And pause 10 secondes
     And l utilisateur saisit "Commenter et liker un article" dans le champs "Champ_Input_Commenter_Article"
     And l utilisateur clique sur "Envoyer_Commenteraire_Article"
+    And pause 10 secondes
     Then vérifier que le commentaire a été ajouté
-    When l utilisateur effectue un hover sur "Bouton_Interaction_Article"
-    And pause 15 secondes
+    And pause 10 secondes
+   # When l utilisateur effectue un hover sur "Bouton_Interaction_Article"
+    # And pause 15 secondes
     And l utilisateur clique sur "Bouton_Like_Article"
     And pause 15 secondes
     Then vérifier  que le like  a été ajouté

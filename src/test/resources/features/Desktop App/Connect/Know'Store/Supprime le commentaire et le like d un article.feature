@@ -54,6 +54,9 @@ Feature: Article - Supprimer le commentaire et le like d'un article
     And l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 10 secondes
     And l utilisateur clique sur "Premier_Article_Afficher_Utilisateur"
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Commentaire_Article"
+    And pause 10 secondes
     And l utilisateur saisit "Commenter et liker un article" dans le champs "Champ_Input_Commenter_Article"
     And l utilisateur clique sur "Envoyer_Commenteraire_Article"
     Then vérifier que le commentaire a été ajouté
