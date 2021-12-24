@@ -452,8 +452,6 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.post__author.author.vcard.inline-items > app-more-dropdown > div")
     public static WebElement Bouton_Option_Commentaire;
 
-
-
     @FindBy(css = " div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(1) > a")
     public static WebElement Bouton_Editer_Commentaire;
 
@@ -622,8 +620,8 @@ public class ConnectObjects extends PageObject {
     public static WebElement Tag_Connaissances;
 
     @FindBy(css = "app-tag-management.knowledge.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag:nth-child(1) > div > div > delete-icon > span")
-    public static WebElement Bouton_Supprimer_Connaissance
-;
+    public static WebElement Bouton_Supprimer_Connaissance;
+
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
     public static WebElement Champ_Input_Loisirs;
 
@@ -1328,7 +1326,7 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "a > a > svg")
     public static WebElement Boutton_Reaction_Message_Bulle;
-;
+
     @FindBy(css = "a > button.reaction-like")
     public static WebElement Boutton_aime_Message_Bulle;
 
@@ -1440,13 +1438,32 @@ public class ConnectObjects extends PageObject {
     @FindBy(css =  "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")
     public static WebElement Bouton_Like_Statut_Popup ;
 
+    @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-comment-form/form/div/div[2]/div/div/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
+    public static WebElement champ_input_sous_commentaire_statut;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/article/div[5]/app-post-statistics/div/ul/li/a/span")
+    public static WebElement Logo_commentaire_statut;
+
+    @FindBy(xpath = "//span[contains(text(),'Répondre')]")
+    public static WebElement bouton_interagir_commentaire;
+
+    @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-comment-form/form/div/div[2]/div/button")
+    public static WebElement Envoyer_sous_commentaire;
+
+    @FindBy(xpath = "//div/ul/app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")
+    public static WebElement Logo_sous_commentaire_statut;
+
+    @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div/ul/li[1]/a")
+    public static WebElement Bouton_Editer_Sous_Commentaire;
+
+    @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div")
+    public static WebElement Bouton_Option_Sous_Commentaire;
 
     @FindBy(css = "div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_album_Afficher;
 
     @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/article/div[3]/app-post-reactions/div/ul/li[1]/div/div/button[2]/span[2]")
     public static WebElement  Bouton_reaction_praise ;
-
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

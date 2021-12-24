@@ -2864,14 +2864,24 @@ public class ConnectVerifications {
         );
 
     }
-//Vérification profile utilisateur
+
+    //Vérification pour timeline
+    @Then("verifier que le sous commentaire a ete comptabilise")
+    public void verifierQueLeSousCommentaireAEteComptabilise() {
+        logger.info("vérifier que le sous commentaire a ete comptabilise");
+
+        Assert.assertNotEquals(driver.findElements(By.xpath("//app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")),0);
+
+    }
+
+    //Vérification profile utilisateur
     @Then("verifier que le commentaire de l album est modifié")
     public void verifierQueLeCommentaireDeLAlbumEstModifié() {
         logger.info("vérifier que le commentaire est modifié");
         Assert.assertEquals(datastore.get("Champ_Input_Modification_Commenteraire"),generalobjectsmap.get("premiere_Commentaire_album_Afficher").getAttribute("innerText"));
 
     }
-//vérificationn profile utilisateur
+    //vérificationn profile utilisateur
     @And("l utilisateur clique sur Envoyer_commentaire_Album")
     public void lUtilisateurCliqueSurEnvoyer_commentaire_Album() {
         logger.info("l utilisateur clique sur Envoyer_commentaire_Album");
@@ -2879,4 +2889,5 @@ public class ConnectVerifications {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
     }
+
 }
