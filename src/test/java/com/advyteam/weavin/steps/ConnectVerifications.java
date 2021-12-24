@@ -608,7 +608,7 @@ public class ConnectVerifications {
 
 
         //Vérifier que l'icone commentaire s'affiche
-        Assert.assertNotEquals(driver.findElements(By.cssSelector("app-post-statistics > div > ul > li > a > span")).size(),0);
+        Assert.assertNotEquals(driver.findElements(By.cssSelector(".page-has-right-panels app-root app-layout-portal div.container.wrapper-portal app-useful-information section.blog-post-wrap app-useful-information-detail div.container div.row.mt20 div.col.col-xl-8.col-lg-12.col-md-12.col-sm-12.col-12 div.ui-block article.hentry.blog-post.single-post.single-post-v3 div.post-additional-info.inline-items app-post-statistics div.lists-reactions-statistic ul li.pl-lg a")).size(),0);
         //cliquer sur l icone commentaire
         generalobjectsmap.get("Icone_Commentaire_Article").click();
         //Waiting

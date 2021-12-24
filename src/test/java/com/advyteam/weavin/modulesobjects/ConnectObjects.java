@@ -220,8 +220,12 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "button[title=\"Envoyer\"]")
     public static WebElement Envoyer_Commenteraire_Article;
 
-    @FindBy(xpath = "//div/article/div[6]/app-post-statistics/div/ul/li/a")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-useful-information/section/app-useful-information-detail/div/div/div[1]/div/article/div[6]/app-post-statistics/div/ul/li/a")
     public static WebElement Icone_Commentaire_Article;
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-useful-information/section/app-useful-information-detail/div/div/div[1]/div/article/div[1]/app-post-parent-reactions/div/div/div[2]")
+    public static WebElement Bouton_Commentaire_Article;
+    @FindBy(xpath = "div.comments-shared:nth-child(1)")
+    public static WebElement Bouton_Repondre_Article;
 
     @FindBy(css = "li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Article_Afficher;
@@ -235,7 +239,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div > div.like-action.mr-lg")
     public static WebElement Bouton_Interaction_Article;
 
-    @FindBy(css = "div > div.like-action.mr-lg > div > button:nth-child(1)")
+    @FindBy(css = ".list-group > li:nth-child(1) > div:nth-child(1)")
     public static WebElement Bouton_Like_Article;
 
     @FindBy(css = "li:nth-child(1) > span.likes-number.ml-sm")
