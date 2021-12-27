@@ -1472,6 +1472,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div/ul/li[2]/a")
     public static WebElement Bouton_Supprimer_Sous_Commentaire;
 
+    @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li/a")
+    public static WebElement  bouton_option_Supprimer_premiere_publication_afficher_admin;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
