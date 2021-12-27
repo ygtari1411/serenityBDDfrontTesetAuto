@@ -28,7 +28,7 @@ Feature: Profil utilisateur - Supprimer des connaissances
 
   #Etape3  vérifier que  connaissance a été ajouté
 
-    Then vérifier que connaissance a été ajouté
+    #Then vérifier que connaissance a été ajouté
 
   #Etape4  Supprimer la connaissance ajouté
 

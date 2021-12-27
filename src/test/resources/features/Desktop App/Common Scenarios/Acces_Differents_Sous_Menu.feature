@@ -17,34 +17,41 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
     When l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_accueil_menu_gauche"
-    And pause 3 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 20 secondes
+    And pause 5 secondes
+
     Then vérifier que la page affichée est la page d'accueil
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_annuaire_menu_gauche"
-    And pause 3 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 20 secondes
+    And pause 5 secondes
+
     Then  vérifier que la page affichée est la page annuaire
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_knowstore_menu_gauche"
     And pause 3 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 20 secondes
+
     Then vérifier que la page affichée est la page knows store
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_ideation_menu_gauche"
     And pause 3 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 20 secondes
+
     Then vérifier que la page affichée est la page idéation
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_calendrier_menu_gauche"
     And pause 3 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 20 secondes
+
     Then vérifier que la page affichée est la page calendrier et évenement
     And pause 10 secondes
-    #When l utilisateur clique sur "Bouton_news_menu_gauche"
-    #Then vérifier que la page affichée est la page news
+    #And l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
+    #Then vérifier que la page affichée est la page team lab
+    And l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
+    And pause 3 secondes
+    Then vérifier que la page affichée est la page oportunitée
+    When l utilisateur clique sur "Bouton_Don_menu_gauche"
+    And pause 3 secondes
+    Then vérifier que la page affichée est la page campagne de dons
+    And pause 3 secondes
+    When l utilisateur clique sur "Bouton_news_menu_gauche"
+    Then vérifier que la page affichée est la page news
+    And pause 3 secondes
+    When l utilisateur clique sur "Bouton_Dashboard_menu_gauche"
+    Then Vérifier que la  page affichée est Dashboard

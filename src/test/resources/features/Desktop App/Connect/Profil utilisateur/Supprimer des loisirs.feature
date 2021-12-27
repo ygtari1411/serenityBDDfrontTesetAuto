@@ -29,7 +29,7 @@ Feature: Profil utilisateur - Supprimer des loisirs
   #Etape3  vérifier que loisir a été ajouté
 
     Then vérifier que loisir a été ajouté
-
+    And pause 5 secondes
   #Etape4  Supprimer loisir ajouté
 
     When l utilisateur clique sur "Bouton_Supprimer_loisir"

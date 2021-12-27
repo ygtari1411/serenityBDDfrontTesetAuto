@@ -1256,7 +1256,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div/form/div[3]/input")
     public static WebElement  Titulaire_de_la_carte;
 
-    @FindBy(xpath = "//div/div[2]/span/input")
+    @FindBy(css = "/html/body/div/form/input[2]")
     public static WebElement  Numero_Carte;
 
     @FindBy(xpath = "//app-donation-modal/div/div/form/button")

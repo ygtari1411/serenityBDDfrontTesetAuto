@@ -18,6 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 import static com.advyteam.weavin.runner.setUp.datastore;
 import static com.advyteam.weavin.steps.CommonSteps.generalobjectsmap;
+import static org.hamcrest.JMock1Matchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SpecificVerifications {
 
@@ -135,7 +137,7 @@ public class SpecificVerifications {
         logger.info("Vérification que la page affichée est la page annuaire");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/members")));
+                       .urlMatches("https://weavin-nreg.bubbleyou.com/portal/members")));
         Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/members", driver.getCurrentUrl());
         Assert.assertTrue(generalobjectsmap.get("Balise_filtre_annuaire").isDisplayed());
     }
@@ -220,5 +222,46 @@ public class SpecificVerifications {
         Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list", driver.getCurrentUrl());
 
     }
+
+    @Then("vérifier que la page affichée est la page team lab")
+    public void vérifierQueLaPageAffichéeEstLaPageTeamLab() {
+        logger.info("vérifier que la page affichée est la page team lab");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/team-lab")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/team-lab", driver.getCurrentUrl());
+        Assert.assertTrue(generalobjectsmap.get("Balise_filtre_teamlab").isDisplayed());
+    }
+
+    @Then("vérifier que la page affichée est la page oportunitée")
+    public void vérifierQueLaPageAffichéeEstLaPageOportunitée() {
+        logger.info("vérifier que la page affichée est la page oportunitée");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/opportunity/list")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/opportunity/list", driver.getCurrentUrl());
+        Assert.assertEquals("Opportunités", generalobjectsmap.get("titre_page_opportunite").getText());
+
+    }
+
+    @Then("vérifier que la page affichée est la page campagne de dons")
+    public void vérifierQueLaPageAffichéeEstLaPageCampagneDeDons() {
+        logger.info("vérifier que la page affichée est la page oportunitée");
+        boolean specialwait = (new WebDriverWait(driver, 40)).until(
+                (ExpectedConditions
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list", driver.getCurrentUrl());
+        Assert.assertEquals("Campagnes de dons", generalobjectsmap.get("titre_page_campagnes_dons").getText());
+
+    }
+
+    @Then("Vérifier que la  page affichée est Dashboard")
+    public void vérifierQueLaPageAffichéeEstDashboard() {
+        logger.info("Vérifier que la  page affichée est Dashboard");
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/dashboard", driver.getCurrentUrl());
+        Assert.assertTrue(generalobjectsmap.get("Statistique_connexion_dashboard").isDisplayed());
+
+    }
+
 
 }
