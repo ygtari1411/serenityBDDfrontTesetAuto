@@ -2890,4 +2890,13 @@ public class ConnectVerifications {
         executor.executeScript("arguments[0].click();", element);
     }
 
+    //Vérification pour TimeLine
+    @Then("vérifier que le sous commentaire a ete supprime")
+    public void vérifierQueLeSousCommentaireAEteSupprime() {
+        logger.info("Verifier que le sous commentaire a ete supprime ");
+
+        Assert.assertEquals(driver.findElements(By.xpath("//app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")).size(),0);
+
+    }
+
 }
