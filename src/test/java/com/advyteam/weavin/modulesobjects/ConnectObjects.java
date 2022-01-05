@@ -1463,6 +1463,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"newsfeed-items-grid\"]/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div[1]/app-more-dropdown/div")
     public static WebElement Bouton_Option_Sous_Commentaire;
 
+    @FindBy(css = "div.row > div:nth-child(1) > ul > li > a")
+    public static WebElement Bouton_Accueil ;
+
     @FindBy(css = "div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_album_Afficher;
 

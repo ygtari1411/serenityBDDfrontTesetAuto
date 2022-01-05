@@ -21,6 +21,7 @@ Feature: Profil utilisateur - Supprimer des loisirs
 
     When l utilisateur clique sur "Username_menu"
     And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Accueil"
     And l utilisateur saisit "Test loisirs à supprimer" dans le champs "Champ_Input_Loisirs"
     And pause 5 secondes
     And l utilisateur clique sur Entree pour Loisirs
