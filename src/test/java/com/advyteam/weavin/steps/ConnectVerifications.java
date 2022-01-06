@@ -1329,7 +1329,27 @@ public class ConnectVerifications {
         TagConnaissance.sendKeys(Keys.ENTER);
     }
 
+    // Vérification pour profil utilisateur
+    @Then("vérifier que connaissance a été ajouté")
+    public void vérifierQueConnaissanceAÉtéAjouté() throws InterruptedException {
 
+        logger.info("vérifier que connaissance a été ajouté");
+
+        //Waiting for the first album to refresh
+        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+                (ExpectedConditions
+                        .attributeContains(generalobjectsmap.get("Tag_Connaissances"), "innerText",
+                                datastore.get("Champ_Input_Connaissances"))));
+
+        //Waiting for the refreshed first album to render
+        synchronized (driver) {
+            driver.wait(3000);
+        }
+
+        //Asserting that first article contains the text published in the scenario
+        assertThat(generalobjectsmap.get("Tag_Connaissances").getAttribute("innerText"),
+                equalTo(datastore.get("Champ_Input_Connaissances")));
+    }
 
     // Vérification pour profil utilisateur
     @And("l utilisateur clique sur Entree pour Loisirs")
@@ -2869,6 +2889,14 @@ public class ConnectVerifications {
         JavascriptExecutor executor = (JavascriptExecutor)driver;
         executor.executeScript("arguments[0].click();", element);
     }
+    //Vérification pour TimeLine
+    @Then("vérifier que le sous commentaire a ete supprime")
+    public void vérifierQueLeSousCommentaireAEteSupprime() {
+        logger.info("Verifier que le sous commentaire a ete supprime ");
+
+        Assert.assertEquals(driver.findElements(By.xpath("//app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")).size(),0);
+
+    }
 
     @And("etape test")
     public void etapeTest() {
@@ -2876,4 +2904,14 @@ public class ConnectVerifications {
         driver.findElement(By.name("cardnumber")).click();
         driver.findElement(By.xpath("//div[@id=\'root\']/form/div/div[2]/span/span[2]/div/div[2]/span/input")).sendKeys("2445 45");
     }
+
+    //Vérification pour TimeLine
+    @Then("vérifier que le sous commentaire a ete supprime")
+    public void vérifierQueLeSousCommentaireAEteSupprime() {
+        logger.info("Verifier que le sous commentaire a ete supprime ");
+
+        Assert.assertEquals(driver.findElements(By.xpath("//app-post-comment/li/div[2]/app-post-statistics/div/ul/li/a/span")).size(),0);
+
+    }
+
 }
