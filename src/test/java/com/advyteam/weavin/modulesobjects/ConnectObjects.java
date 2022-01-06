@@ -504,7 +504,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Enregistre')]")
     public static WebElement Bouton_Enregistrer_Parametre_Compte;
 
-    @FindBy(xpath = "//app-home/div/div[3]/div[1]/span[1]")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-profile/div/div[2]/app-home/div/div[3]/div[1]/span[1]")
     public static WebElement Citation_Afficher_Profil;
 
     @FindBy(xpath = "//input[@id='phoneNumber']")
