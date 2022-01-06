@@ -1478,6 +1478,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li/a")
     public static WebElement  bouton_option_Supprimer_premiere_publication_afficher_admin;
 
+    @FindBy(xpath = "//main/app-stream-line-post/div/div[1]/app-post/article/div[5]/app-post-statistics/div/ul/li")
+    public static WebElement  bouton_commentaire_timeline_administrateur;
+
+    @FindBy(xpath = "//div/ul/app-post-comment/li/div[1]/div[1]/app-more-dropdown/div/ul/li/a")
+    public static WebElement  bouton_option_supprimer_commentaire_administrateur;
+
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();
