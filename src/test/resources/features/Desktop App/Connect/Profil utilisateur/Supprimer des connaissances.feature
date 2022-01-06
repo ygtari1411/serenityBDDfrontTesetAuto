@@ -20,6 +20,7 @@ Feature: Profil utilisateur - Supprimer des connaissances
   #Etape2  : Ajout d'une citation
 
     When l utilisateur clique sur "Username_menu"
+    And l utilisateur clique sur "Bouton_Accueil"
     And pause 10 secondes
     And l utilisateur saisit "Test Connaissance à Supprimer" dans le champs "Champ_Input_Connaissances"
     And pause 5 secondes
@@ -28,7 +29,7 @@ Feature: Profil utilisateur - Supprimer des connaissances
 
   #Etape3  vérifier que  connaissance a été ajouté
 
-    Then vérifier que connaissance a été ajouté
+    #Then vérifier que connaissance a été ajouté
 
   #Etape4  Supprimer la connaissance ajouté
 

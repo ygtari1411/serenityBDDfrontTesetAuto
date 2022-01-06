@@ -66,10 +66,14 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "#sidebar-left-1 > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(1) > a > div")
     public static WebElement Bouton_Fermer_menu_gauche;
 
+    @FindBy(css = ".sidebar--small [title=Dashboard] ")
+    public static WebElement Bouton_Dashboard_menu_gauche;
+
+
     @FindBy(xpath = "//h6[contains(text(),\"Flux d'activité\")]")
     public static WebElement Widget_flux_activite;
 
-    @FindBy(xpath = "//label[contains(text(),'Filtrer par connaissances')]")
+    @FindBy(xpath = "//label[contains(text(),'Filtrer par membre')]")
     public static WebElement Balise_filtre_annuaire;
 
     @FindBy(css = ".h4")
@@ -81,7 +85,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "div.row > div > div > div > ul > li:nth-child(1)")
     public static WebElement titre_page_calendrier;
 
-    @FindBy(css = ".h4")
+    @FindBy(css = "div.title-section.mb-4 > span")
     public static WebElement titre_page_news;
 
     @FindBy(css = "#swal2-title")
@@ -132,6 +136,20 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".sidebar--small [title='Campagnes de dons']")
     public static WebElement Bouton_Don_menu_gauche;
 
+    @FindBy(xpath = "//label[contains(text(),'Filtrer par nom')]")
+    public static WebElement Balise_filtre_teamlab;
+
+    @FindBy(css = " div.title-section.mb-4 > span")
+    public static WebElement titre_page_opportunite;
+
+    @FindBy(css = "div.title-section.mb-4 > span")
+    public static WebElement titre_page_campagnes_dons;
+
+    @FindBy(css = "div:nth-child(1) > div.text-center.mt-3.mb-4 > h5")
+    public static WebElement titre_Statistique_dashboard;
+
+    @FindBy(css = "div:nth-child(1) > div.text-center.mt-3.mb-4 > h5")
+    public static WebElement Statistique_connexion_dashboard;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();
