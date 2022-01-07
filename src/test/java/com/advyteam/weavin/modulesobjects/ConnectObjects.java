@@ -504,7 +504,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Enregistre')]")
     public static WebElement Bouton_Enregistrer_Parametre_Compte;
 
-    @FindBy(xpath = "//app-home/div/div[3]/div[1]/span[1]")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-profile/div/div[2]/app-home/div/div[3]/div[1]/span[1]")
     public static WebElement Citation_Afficher_Profil;
 
     @FindBy(xpath = "//input[@id='phoneNumber']")
@@ -1388,8 +1388,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
     public static WebElement  champ_statut_modification;
 
-    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[3]/button")
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[2]/button")
     public static WebElement  bouton_publier_statut_modifer;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[3]/button")
+    public static WebElement  bouton_publier_statut_modiferr;
 
     @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[2]/a")
     public static WebElement  bouton_option_Supprimer_premiere_publication_afficher;

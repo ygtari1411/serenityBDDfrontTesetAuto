@@ -10,7 +10,7 @@ Feature: Timeline - Supprimer le sous commentaire d une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0019
+  @WEAVIN-TIMELINE-0017
   Scenario: Supprimer le sous commentaire d une publication
 
       #Etape 1 : Connexion

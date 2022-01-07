@@ -10,7 +10,7 @@ Feature: Timeline - Modification d'une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0008
+  @WEAVIN-TIMELINE-0018
   Scenario: Modification d'une publication
 
       #Etape 1 : Connexion

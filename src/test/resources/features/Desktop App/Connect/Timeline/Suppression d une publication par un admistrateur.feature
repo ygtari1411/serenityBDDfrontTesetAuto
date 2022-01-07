@@ -10,7 +10,7 @@ Feature: Timeline - Suppression d une publication par un administrateur
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0020
+  @WEAVIN-TIMELINE-0015
   Scenario: Suppression d une publication par un administrateur
 
       #Etape 1 : Connexion

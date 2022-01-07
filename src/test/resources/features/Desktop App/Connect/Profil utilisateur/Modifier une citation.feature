@@ -25,10 +25,11 @@ Feature: Profil utilisateur - Modifier une citation
     And l utilisateur saisit "ceci est un test automatique de l ajout d une citation" dans le champs "Champ_Input_Profil_Citation"
     And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
     And pause 20 secondes
-
+    And l utilisateur clique sur "Username_menu"
   #Etape3:  vérifier que la citation a été ajouté
 
     Then vérifier que la citaiton a été ajouté
+
 
   #Etape4:  vérifier que la citation a été ajouté
 
@@ -42,5 +43,5 @@ Feature: Profil utilisateur - Modifier une citation
     And pause 20 secondes
 
   #Etape5:  vérifier que la citation a été modifiée
-
+    And l utilisateur clique sur "Username_menu"
    Then verifier que la citation a été modifiée

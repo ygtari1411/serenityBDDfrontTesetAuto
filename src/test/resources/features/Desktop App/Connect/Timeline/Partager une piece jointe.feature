@@ -8,7 +8,7 @@ Feature: Timeline - Partager une piece jointe
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0006
+  @WEAVIN-TIMELINE-0010
   Scenario: Partager une piece jointe
 
    #Etape 1 : Connexion

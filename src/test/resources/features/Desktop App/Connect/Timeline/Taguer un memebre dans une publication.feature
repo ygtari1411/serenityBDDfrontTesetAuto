@@ -10,7 +10,7 @@ Feature: Timeline - Taguer une personne dans une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0014
+  @WEAVIN-TIMELINE-0020
   Scenario: Taguer une personne dans une publication
 
       #Etape 1 : Connexion

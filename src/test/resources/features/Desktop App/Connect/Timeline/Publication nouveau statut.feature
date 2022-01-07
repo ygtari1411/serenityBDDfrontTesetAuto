@@ -10,7 +10,7 @@ Feature: Timeline - Publication d'un nouveau statut
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0001
+  @WEAVIN-TIMELINE-0013
   Scenario: Publication d'un nouveau statut
 
       #Etape 1 : Connexion

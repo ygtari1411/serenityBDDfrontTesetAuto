@@ -8,7 +8,7 @@ Feature: Timeline - Partager une video
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0003
+  @WEAVIN-TIMELINE-0012
   Scenario: Partager une video
 
    #Etape 1 : Connexion

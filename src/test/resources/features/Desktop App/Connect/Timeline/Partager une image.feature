@@ -8,7 +8,7 @@ Feature: TImeline - Partager une image
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0002
+  @WEAVIN-TIMELINE-0009
   Scenario: Partager une image
 
    #Etape 1 : Connexion

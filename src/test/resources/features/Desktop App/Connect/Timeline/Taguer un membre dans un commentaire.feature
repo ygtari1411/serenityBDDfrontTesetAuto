@@ -10,7 +10,7 @@ Feature: Timeline - Taguer un membre dans un commentaire
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0010
+  @WEAVIN-TIMELINE-0019
   Scenario: Commenter et reagir a une publication
 
       #Etape 1 : Connexion
