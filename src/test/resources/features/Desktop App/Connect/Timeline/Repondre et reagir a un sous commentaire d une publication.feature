@@ -10,7 +10,7 @@ Feature: Timeline - Repondre et reagir a un sous commentaire d une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0017
+  @WEAVIN-TIMELINE-0014
   Scenario: Repondre et reagir a un sous commentaire d une publication
 
       #Etape 1 : Connexion

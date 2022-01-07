@@ -8,7 +8,7 @@ Feature: Timeline - Partager un album
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0004
+  @WEAVIN-TIMELINE-0008
   Scenario: Partager un album
 
    #Etape 1 : Connexion

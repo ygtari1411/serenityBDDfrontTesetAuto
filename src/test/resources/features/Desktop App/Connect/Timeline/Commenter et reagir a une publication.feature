@@ -10,7 +10,7 @@ Feature: Timeline - Commenter et reagir a une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0009
+  @WEAVIN-TIMELINE-0002
   Scenario: Commenter et reagir a une publication
 
       #Etape 1 : Connexion

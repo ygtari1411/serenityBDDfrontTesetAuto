@@ -8,7 +8,7 @@ Feature: Timeline - Envoyer une image en sous commentaire
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0016
+  @WEAVIN-TIMELINE-0003
 
   Scenario: Envoyer une image en sous commentaire
 

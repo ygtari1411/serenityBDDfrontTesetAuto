@@ -10,7 +10,7 @@ Feature: Timeline - Modifier le commentaire et la reaction d une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0009
+  @WEAVIN-TIMELINE-0004
   Scenario: Modifier le commentaire et la reaction d une publication
 
       #Etape 1 : Connexion
@@ -32,6 +32,7 @@ Feature: Timeline - Modifier le commentaire et la reaction d une publication
     And l utilisateur clique sur "bouton_commenter_statut"
     And l utilisateur saisit "Test automatisé commenter une publication" dans le champs "champ_commentaire_statut"
     And l utilisateur clique sur "bouton_envoyer_commentaire_statut"
+    And pause 10 secondes
     And l utilisateur clique sur "bouton_Liker_statut"
     And pause 10 secondes
 
@@ -45,6 +46,7 @@ Feature: Timeline - Modifier le commentaire et la reaction d une publication
     And l utilisateur clique sur "bouton_option_commentaire"
     And l utilisateur clique sur "bouton_option_editer_commentaire_timeline"
     And pause 5 secondes
+    And l utilisateur effectue un hover sur "champ_cemmentaire_modification_timeline"
     And l utilisateur modifie "Modification d'un commentaire" dans le champs "champ_cemmentaire_modification_timeline"
     And l utilisateur clique sur "bouton_envoyer_commentaire_timeline_modifier"
     Then verifier que le commentaire a ete modifier avec success

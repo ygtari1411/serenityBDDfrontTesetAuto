@@ -10,7 +10,7 @@ Feature: Timeline - Supprimer le commentaire et le like d une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0010
+  @WEAVIN-TIMELINE-0016
   Scenario: Supprimer le commentaire et le like d une publication
 
       #Etape 1 : Connexion

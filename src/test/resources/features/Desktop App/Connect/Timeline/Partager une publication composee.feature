@@ -8,7 +8,7 @@ Feature: Timeline - Partager une publication composee
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0005
+  @WEAVIN-TIMELINE-0011
   Scenario: Partager une publication composee
 
    #Etape 1 : Connexion

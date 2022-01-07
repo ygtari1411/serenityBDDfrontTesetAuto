@@ -1388,8 +1388,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/weavin-emoji-editor/div/quill-editor/div/div[1]/p")
     public static WebElement  champ_statut_modification;
 
-    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[3]/button")
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[2]/button")
     public static WebElement  bouton_publier_statut_modifer;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-update-post/app-stream-line-post-form/div/div/form/div[3]/button")
+    public static WebElement  bouton_publier_statut_modiferr;
 
     @FindBy(xpath = "//div[1]/app-post/article/div[1]/app-more-dropdown/div/ul/li[2]/a")
     public static WebElement  bouton_option_Supprimer_premiere_publication_afficher;

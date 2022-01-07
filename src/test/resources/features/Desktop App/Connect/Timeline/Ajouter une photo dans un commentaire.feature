@@ -10,7 +10,7 @@ Feature: Timeline - Ajouter une photo dans un commentaire
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0015
+  @WEAVIN-TIMELINE-0001
   Scenario: Ajouter une photo dans un commentaire
 
       #Etape 1 : Connexion

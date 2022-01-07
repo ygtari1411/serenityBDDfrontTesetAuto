@@ -10,7 +10,7 @@ Feature: Timeline - Modification d'une publication
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0007
+  @WEAVIN-TIMELINE-0006
   Scenario: Modification d'une publication
 
       #Etape 1 : Connexion
@@ -32,8 +32,9 @@ Feature: Timeline - Modification d'une publication
     And l utilisateur clique sur "bouton_option_premiere_publication_afficher"
     And l utilisateur clique sur "bouton_option_Editer_premiere_publication_afficher"
     And l utilisateur modifie "Modification d'une publication" dans le champs "champ_statut_modification"
+    And pause 10 secondes
     And l utilisateur clique sur "bouton_publier_statut_modifer"
-    And l utilisateur clique sur "bouton_publier_statut"
+    #And l utilisateur clique sur "bouton_publier_statut"
 
     #Etape 5 : Vérifier  la modification de la publication
 

@@ -10,7 +10,7 @@ Feature: Timeline - Modifier une publication a un autre type
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-TIMELINE
-  @WEAVIN-TIMELINE-0011
+  @WEAVIN-TIMELINE-0007
   Scenario: Modifier une publication a un autre type
 
       #Etape 1 : Connexion
@@ -31,11 +31,10 @@ Feature: Timeline - Modifier une publication a un autre type
 
     And l utilisateur clique sur "bouton_option_premiere_publication_afficher"
     And l utilisateur clique sur "bouton_option_Editer_premiere_publication_afficher"
-    And l utilisateur modifie " " dans le champs "champ_statut_modification"
+    And l utilisateur modifie "" dans le champs "champ_statut_modification"
     And l utilisateur change le format de publication
     And pause 10 secondes
-    And l utilisateur clique sur "bouton_publier_statut_modifer"
-    And l utilisateur clique sur "bouton_publier_statut"
+    And l utilisateur clique sur "bouton_publier_statut_modiferr"
 
     #Etape 5 : Vérifier  la modification de la publication
 
