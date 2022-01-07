@@ -1432,7 +1432,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_Gestion_utilisateurs"))));
         Assert.assertTrue(generalobjectsmap.get("Modal_Gestion_utilisateurs").isDisplayed());
-        Assert.assertEquals("Administration > Gestion des comptes",generalobjectsmap.get("Modal_Gestion_utilisateurs").getAttribute("innerText"));
+        Assert.assertEquals("Utilisateurs > Gestion des comptes",generalobjectsmap.get("Modal_Gestion_utilisateurs").getAttribute("innerText"));
 
     }
 

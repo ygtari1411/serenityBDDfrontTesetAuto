@@ -30,12 +30,16 @@ Feature: Gestion des catégories - Modifier des catégories "Opportunités"
     And l utilisateur clique sur "Bouton_Ajout_Catégorie_Opportunité"
     And l utilisateur saisit "Test auto Modifier catégorie opportunité" dans le champs "Champ_Input_Catégorie_Opportunité"
     And l utilisateur clique sur "Bouton_Enregistrer_Catégorie_Opportunité"
+    And pause 5 secondes
     # Vérification
 
   #Etape 2 : Modification catégorie opportunité
 
     And l utilisateur clique sur "Bouton_Options_Catégorie_Opportunité"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Modifier_Catégorie_Opportunité"
+    And pause 5 secondes
     And l utilisateur saisit "catégorie opportunité modifiée" dans le champs "Champ_Input_Catégorie_Opportunité"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Enregistrer_Catégorie_Opportunité"
     # Vérification

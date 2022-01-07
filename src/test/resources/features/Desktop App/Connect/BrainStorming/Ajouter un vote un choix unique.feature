@@ -18,8 +18,9 @@ Feature: Brainstorming - Ajouter un vote a choix unique
     And pause 20 secondes
 
  #Etape2  : Ajout vote ou un sondage
-
-    When l utilisateur clique sur "Bouton_BrainStorming_Menu_Gauche"
+    And l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
+    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_BrainStorming_Menu_Gauche_Ouvert"
     And pause 5 secondes
     Then vérifier que la page affichée est la page BrainStorming
     And pause 5 secondes
