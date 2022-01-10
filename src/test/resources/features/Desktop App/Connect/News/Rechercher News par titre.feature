@@ -37,7 +37,8 @@ Feature: News - Rechercher News par titre
 
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
 
   #Etape 4 : Vérifier que  la l'actualité rechercher s'affiche

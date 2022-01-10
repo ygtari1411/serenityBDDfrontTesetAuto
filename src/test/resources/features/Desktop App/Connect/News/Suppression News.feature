@@ -40,7 +40,8 @@ Feature: News - Suppression news
 
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
 
 

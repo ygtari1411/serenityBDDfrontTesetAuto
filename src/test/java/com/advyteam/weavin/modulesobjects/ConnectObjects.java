@@ -272,7 +272,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-news-administration > section > div > div:nth-child(2)")
     public static WebElement Derniere_News_Ajoutee;
 
-    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
+    @FindBy(css = "body > ngb-modal-window:nth-child(28) > div > div > app-modal-post > div > div > div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_News;
 
     @FindBy(css = "div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank")
@@ -1487,6 +1487,17 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/ul/app-post-comment/li/div[1]/div[1]/app-more-dropdown/div/ul/li/a")
     public static WebElement  bouton_option_supprimer_commentaire_administrateur;
 
+    @FindBy(css = "#aside-custom-right > div > app-widget-news > div > div > div.news-content-container > div > div.news-text-container > div:nth-child(1) > div.news-details > div.badge-small.mb-1 > small")
+    public static WebElement Temoin_Premiere_News_Affichee_accueil;
+
+    @FindBy(css = "#aside-custom-right")
+    public static WebElement Barre_Temoin_Premiere_News_Affichee_accueil;
+
+    @FindBy(css = "#aside-custom-right > div > app-widget-news > div > div > div.all-news")
+    public static WebElement widget_News_Affichee_accueil;
+
+    @FindBy(css = "div.container.wrapper-portal > app-all-news > div.row > div:nth-child(1) > app-post-card-news > div > article > div.post-content > a")
+    public static WebElement Titre_derniere_news;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

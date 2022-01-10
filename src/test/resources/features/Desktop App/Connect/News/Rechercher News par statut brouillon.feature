@@ -32,7 +32,7 @@ Feature: News - Rechercher News par statut brouillon
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    #And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
     And l utilisateur clique sur "Onglet_Liste_Des_News"
     And pause 10 secondes
@@ -41,7 +41,8 @@ Feature: News - Rechercher News par statut brouillon
 
 
     #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
 
    #Etape 4 : Rechercher Les news avec le statut Brouillon
