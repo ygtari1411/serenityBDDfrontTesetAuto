@@ -1439,7 +1439,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css =  "div.ps-content > div > p")
     public static WebElement Texte_Publication_Popup ;
 
-    @FindBy(css = "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li.ng-star-inserted > div > a")
+    @FindBy(css = " div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div")
     public static WebElement Bouton_Repondre_Statut_Popup ;
 
     @FindBy(css =  "div > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")

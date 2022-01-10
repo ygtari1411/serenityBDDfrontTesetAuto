@@ -23,6 +23,7 @@ Feature: Timeline - Supprimer le commentaire et le like d une publication
     And l utilisateur saisit "Test automatisé publication statut" dans le champs "champ_statut"
     And l utilisateur clique sur "bouton_publier_statut"
 
+
       #Etape 3 : verification de la création d'un statut
 
     Then Vérifier que le statut est publié

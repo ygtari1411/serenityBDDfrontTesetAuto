@@ -26,6 +26,7 @@ Feature: Timeline - Envoyer une image en sous commentaire
 
   #Etape3 : déconnection utilisateur 1/connection utilisateur 2
     When l utilisateur se deconnecte
+    And pause 10 secondes
     And  l'utilisateur "yassine.gtari@advyteam.com" est connecté
     And pause 5 secondes
 

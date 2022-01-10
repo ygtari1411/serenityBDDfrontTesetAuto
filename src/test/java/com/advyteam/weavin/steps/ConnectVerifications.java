@@ -2647,7 +2647,7 @@ public class ConnectVerifications {
     public void verifierQueLeCommentaireEtLeLikeDuStatutOnEteAjoute() {
         logger.info("vérifier que le commentaire et le like on été ajouté");
 
-        Assert.assertEquals(driver.findElements(By.cssSelector(" div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg > use")).size(),1);
+        Assert.assertEquals(driver.findElements(By.cssSelector("#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size(),1);
         //Assert.assertEquals(driver.findElements(By.cssSelector("inline-svg-icon reactions-icon-statistic-LIKE reactions-menu__icon")).size(),1);
 
     }
@@ -2855,11 +2855,11 @@ public class ConnectVerifications {
         logger.info("vérifier que le commentaire et le like on été ajouté");
 
         Assert.assertEquals(driver.findElements(
-                By.cssSelector("div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg > use")).size(),
+                By.cssSelector("div > app-modal-post > div > div > div > div > div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg")).size(),
                 1
         );
-        Assert.assertEquals(driver.findElements(
-                By.cssSelector(" div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon.ng-star-inserted")).size(),
+       Assert.assertEquals(driver.findElements(
+                By.cssSelector("body > ngb-modal-window > div > div > app-modal-post > div > div > div > div > div > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")).size(),
                 1
         );
 

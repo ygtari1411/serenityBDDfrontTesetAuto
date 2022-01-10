@@ -32,6 +32,7 @@ Feature: Timeline - Commenter et reagir a une publication
     And l utilisateur clique sur "bouton_commenter_statut"
     And l utilisateur saisit "Test automatisé commenter une publication" dans le champs "champ_commentaire_statut"
     And l utilisateur clique sur "bouton_envoyer_commentaire_statut"
+    And pause 10 secondes
     And l utilisateur clique sur "bouton_Liker_statut"
     And pause 10 secondes
 
