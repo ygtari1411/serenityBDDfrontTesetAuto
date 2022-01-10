@@ -1487,6 +1487,23 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/ul/app-post-comment/li/div[1]/div[1]/app-more-dropdown/div/ul/li/a")
     public static WebElement  bouton_option_supprimer_commentaire_administrateur;
 
+    @FindBy(xpath = "//a[contains(text(),' App store ')]")
+    public static WebElement  app_store;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-administration/div[2]/app-panel-admin/div/div[1]/div/div[2]/app-app-store/div/div[1]/button")
+    public static WebElement  Bouton_Configurer_youtube;
+
+    @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
+    public static WebElement  Bouton_Enregistrer_Configuration_youtube;
+
+    @FindBy(xpath = "//div/div[2]/app-app-store/app-youtube/form/div[1]/div[1]/div[3]/div[2]/label/app-floating-label-form/div/div")
+    public static WebElement  Bouton_Desactiver_youtube;
+
+    @FindBy(xpath = "//div/div[2]/app-app-store/app-youtube/form/div[1]/div[2]/app-tuto-slider/div/div[1]/a/div/div[1]")
+    public static WebElement  Modal_Configuration_youtube;
+
+    @FindBy(xpath = "//h3[contains(text(),'Étape 1:')]")
+    public static WebElement  Titre_Modal_configuration_Youtube;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
