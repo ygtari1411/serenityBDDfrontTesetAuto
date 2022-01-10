@@ -37,15 +37,16 @@ Feature: News - Rechercher News par statut non publié
 
 
     #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
 
    #Etape 4 : Rechercher Les news avec le statut publié
 
      #todo : remplacer non publié par expiré
 
-    #When l utilisateur selectionne "Non Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
-    #Then Vérifier que seuls les actualités "Non publié" s'affichent
+    When l utilisateur selectionne "Expiré" dans la liste deroulante "Liste_Deroulante_Statut_News"
+    Then Vérifier que seuls les actualités "Expiré" s'affichent
 
 
 

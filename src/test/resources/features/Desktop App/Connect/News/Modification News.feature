@@ -37,7 +37,8 @@ Feature: News - Modification news
     And pause 10 secondes
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 10 secondes
     Then vérifier la création de la nouvelle news
 
 
@@ -55,7 +56,8 @@ Feature: News - Modification news
     And l utilisateur clique sur "Bouton_Publier_News"
 
   #Etape 5 : Vérification enregistrement correct de la modification
-
+    And l utilisateur rafraichit la page
+   And pause 4 secondes
    Then Vérifier que l'actualité a été modifiée avec succés
 
 

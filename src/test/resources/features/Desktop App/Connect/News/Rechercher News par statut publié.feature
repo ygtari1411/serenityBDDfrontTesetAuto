@@ -23,7 +23,7 @@ Feature: News - Rechercher News par statut publié
    #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
     And l utilisateur clique sur "Bouton_news_menu_gauche"
     Then vérifier que la page affichée est la page news
-    And l utilisateur clique sur "Bouton_Ajout_News"
+    #And l utilisateur clique sur "Bouton_Ajout_News"
     Then vérifier que le modal de création d'une news est affiché
     And l utilisateur saisit "Test automatique de la recherche news par statut publié" dans le champs "Champ_Input_Titre_News"
     And l utilisateur saisit "C'est un test automatique de la recherche d 'une news par statut publié" dans le champs "Champ_Input_Description_News"
@@ -37,9 +37,10 @@ Feature: News - Rechercher News par statut publié
     And pause 10 secondes
 
     #Etape 3 : Vérification de la création de la News
-
-     Then vérifier la création de la nouvelle news
-     And pause 10 secondes
+      And l utilisateur rafraichit la page
+      And pause 4 secondes
+      Then vérifier la création de la nouvelle news
+      And pause 10 secondes
 
    #Etape 4 : Rechercher Les news avec le statut publié
 

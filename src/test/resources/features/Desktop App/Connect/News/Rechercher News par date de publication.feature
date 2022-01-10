@@ -20,7 +20,7 @@ Feature: News - Rechercher News par date de publication
 
   #Etape2  : Ajout News
 
-     #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
+
     And l utilisateur clique sur "Bouton_news_menu_gauche"
     Then vérifier que la page affichée est la page news
     And l utilisateur clique sur "Bouton_Ajout_News"
@@ -32,13 +32,14 @@ Feature: News - Rechercher News par date de publication
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    #And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"
     And pause 10 secondes
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
 
   #Etape 4 : Rechercher Les news avec la date de publication

@@ -686,7 +686,7 @@ public class ConnectVerifications {
     @And("vérifier que le témoin nouveau est affiché")
     public void vérifierQueLeTémoinNouveauEstAffiché() {
         logger.info("vérifier que le témoin nouveau est affiché");
-        Assert.assertEquals("NOUVEAU", generalobjectsmap.get("Temoin_Premiere_News_Affichee").getAttribute("innerText"));
+        Assert.assertEquals("Nouveau", generalobjectsmap.get("Temoin_Premiere_News_Affichee_accueil").getAttribute("innerText"));
     }
 
     // Vérification pour News
@@ -2647,7 +2647,7 @@ public class ConnectVerifications {
     public void verifierQueLeCommentaireEtLeLikeDuStatutOnEteAjoute() {
         logger.info("vérifier que le commentaire et le like on été ajouté");
 
-        Assert.assertEquals(driver.findElements(By.cssSelector(" div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg > use")).size(),1);
+        Assert.assertEquals(driver.findElements(By.cssSelector("div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg > use")).size(),1);
         //Assert.assertEquals(driver.findElements(By.cssSelector("inline-svg-icon reactions-icon-statistic-LIKE reactions-menu__icon")).size(),1);
 
     }
@@ -2657,9 +2657,9 @@ public class ConnectVerifications {
     public void verifierQueLeTagAEteAjoute() {
         logger.info("vérifier que le tag est ajoute");
 
-        Assert.assertEquals(driver.findElements(By.cssSelector("olymp-chat---messages-icon inline-svg-icon")).size(),1);
+        Assert.assertEquals(driver.findElements(By.cssSelector("#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size(),1);
 
-
+        //Assert.assertEquals(driver.findElements(By.cssSelector("div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(2) > a > svg > use")).size(),1);
     }
 
     //Vérification pour TimeLine

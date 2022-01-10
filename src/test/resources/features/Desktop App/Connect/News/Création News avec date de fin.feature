@@ -32,7 +32,7 @@ Feature: News - Création nouvelle news avec date de fin
     And pause 10 secondes
     And l utilisitateur saisit la date du jour dans le champs fin date news
     And pause 10 secondes
-    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
+    And# l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
@@ -41,7 +41,8 @@ Feature: News - Création nouvelle news avec date de fin
 
 
     #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 10 secondes
     Then vérifier la création de la nouvelle news
     #Then Vérifier que l'actualité ne s'affiche plus si la date systéme est égale à la date de fin de publication
 

@@ -34,13 +34,15 @@ Feature: News - Création nouvelle news avec heure de début
      And pause 15 secondes
      And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
      And pause 10 secondes
-     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+     #And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
      And pause 10 secondes
      And l utilisateur clique sur "Bouton_Publier_News"
 
 
     #Etape 3 : Vérification de la création de la News
-     Then vérifier la création de la nouvelle news
+       And l utilisateur rafraichit la page
+      And pause 10 secondes
+      Then vérifier la création de la nouvelle news
      Then Vérifier que l actualité ne s affiche que si l heure  est égale à l heure de date de début de l'actualité
 
 

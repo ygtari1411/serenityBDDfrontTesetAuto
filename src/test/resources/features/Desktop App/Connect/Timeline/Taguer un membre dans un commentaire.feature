@@ -21,10 +21,10 @@ Feature: Timeline - Taguer un membre dans un commentaire
       #Etape 2 : Creation statut
 
     And l utilisateur saisit "Test automatisé taguer un membre dans un commentaire" dans le champs "champ_statut"
-    And l utilisateur clique sur "bouton_publier_statut"
+    #And l utilisateur clique sur "bouton_publier_statut"
 
       #Etape 3 : verification de la création d'un statut
-
+    And pause 20 secondes
     Then Vérifier que le statut est publié
 
      #Etape 4 : Commenter et liker la publication
@@ -37,6 +37,6 @@ Feature: Timeline - Taguer un membre dans un commentaire
 
 
     #Etape 5 : Verifier l'ajout du commentaire et du like
-
+    And pause 10 secondes
     Then verifier que le tag a ete ajoute
 

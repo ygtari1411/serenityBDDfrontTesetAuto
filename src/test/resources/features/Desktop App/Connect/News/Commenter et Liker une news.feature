@@ -37,7 +37,8 @@ Feature: News - Commenter et liker une news
     And pause 10 secondes
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
     And pause 10 secondes
 
@@ -45,17 +46,22 @@ Feature: News - Commenter et liker une news
 
     When l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And pause 10 secondes
-    And l utilisateur clique sur la derniere news ajoutee
+    And l utilisateur effectue un hover sur "Barre_Temoin_Premiere_News_Affichee_accueil"
+    And l utilisateur clique sur "widget_News_Affichee_accueil"
+    And l utilisateur clique sur "Titre_derniere_news"
+    #And l utilisateur clique sur la derniere news ajoutee
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Repondre_News"
     And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
+    And l utilisateur clique sur "Bouton_aime_News"
     And pause 10 secondes
     Then vérifier l ajout  correct du commentaire news
 
   #Etape 5 : Liker une news
 
-    And l utilisateur clique sur "Bouton_aime_News"
+    #And l utilisateur clique sur "Bouton_aime_News"
     And pause 20 secondes
     Then vérifier l ajout  correct du Like news
 

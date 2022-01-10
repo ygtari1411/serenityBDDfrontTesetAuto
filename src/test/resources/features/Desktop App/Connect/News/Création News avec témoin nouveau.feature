@@ -37,12 +37,14 @@ Feature: News - Création news avec témoin nouveau
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Publier_News"
+    #And l utilisateur clique sur "Bouton_Publier_News"
     And pause 10 secondes
 
   #Etape 3 : Vérification de la création de la News avec temoin nouveau
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
+    And l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And pause 10 secondes
     And vérifier que le témoin nouveau est affiché
 
