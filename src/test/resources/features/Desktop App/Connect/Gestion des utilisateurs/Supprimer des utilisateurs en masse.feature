@@ -27,8 +27,20 @@ Feature: Gestion des utilisateurs - Supprimer des utilisateurs en masse
     And pause 5 secondes
     Then vérifier que le modal de Gestion des comptes est affiché
     And pause 5 secondes
+    #Etape 3 : Ajouter un nouvel utilisateur
 
-  #Etape 3 : Modifier un utilisateur
+    And l utilisateur clique sur "Bouton_Ajouter_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "zaineb.hamdouch@advyteam.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "Zaineb" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "Hamdouch" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
+    And pause 5 secondes
+    Then l utilisateur clique sur "Bouton_enregistrer_Nouvel_utilisateur"
+    And pause 10 secondes
+
+  #Etape 3 : Supprimer des utilisateurs en masse
 
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 10 secondes
