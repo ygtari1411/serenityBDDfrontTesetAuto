@@ -1445,7 +1445,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").isDisplayed());
-        Assert.assertEquals("karim.bennasr.1@yopmail.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+        Assert.assertEquals("zaineb.hamdouch@advyteam.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
 
     }
 
@@ -1920,16 +1920,16 @@ public class ConnectVerifications {
     @Then("vérifier que le message a été reçu avec succes")
     public void vérifierQueLeMessageAÉtéReçuAvecSucces() throws InterruptedException {
         logger.info("vérifier que le message a été reçu avec succes");
-        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+     /*   Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Message_reçu"), "innerText",
                                 "Vu Message Texte par destinataire")));
-
+  */
         synchronized (driver) {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
-                equalTo("Vu Message Texte par destinataire"));
+                equalTo("Message Texte de Test"));
     }
 
     // Vérification pour chat
@@ -1938,8 +1938,11 @@ public class ConnectVerifications {
     public void lUtilisateurUploadPhotoDansLeChat(String arg0, String arg1) {
         logger.info("l utilisateur upload photo dans le chat");
 
+       /* driver.findElement(By.cssSelector("div.options-chat-item.col-lg-12.p0.pull-left > div > div > a:nth-child(2) > svg > use")).sendKeys(
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg"
+        );*/
         driver.findElement(By.cssSelector("#media-chat")).sendKeys(
-                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imagetest4.jpg"
+                System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg"
         );
     }
 

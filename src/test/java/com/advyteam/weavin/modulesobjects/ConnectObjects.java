@@ -659,7 +659,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#file-chat")
     public static WebElement Champ_Input_Fichier_Chat;
 
-    @FindBy(css = "div.options-chat-item.col-lg-12.p0.pull-left > div > button > svg > path")
+    @FindBy(css = "div.options-chat-item.col-lg-12.p0.pull-left > div > button")
     public static WebElement Bouton_Envoyer_Chat;
 
     @FindBy(css = "span.chat-message-item")
@@ -1376,7 +1376,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > div > button")
     public static WebElement  Bouton_Lancer_Sondage;
 
-    @FindBy(css = "li > div.notification-event > div.reaction-chat > app-post-reactions > div > ul > li > div > a > svg")
+    @FindBy(css = "app-chat-conversations-message-item:nth-child(7) > li > div > div.reaction-chat > app-post-reactions")
     public static WebElement  Bouton_Reaction_Message_Chat;
 
     @FindBy(xpath = "//div[1]/app-post[1]/article[1]/div[1]/app-more-dropdown[1]/div[1]")
