@@ -148,8 +148,12 @@ public class CommonObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div.text-center.mt-3.mb-4 > h5")
     public static WebElement titre_Statistique_dashboard;
 
-    @FindBy(css = "div:nth-child(1) > div.text-center.mt-3.mb-4 > h5")
+    @FindBy(xpath = "//*[@id=\"sidebar-left-1\"]/div/perfect-scrollbar/div/div[1]/ul/div/li[9]")
+    public static WebElement Bouton_BrainStorming_Menu_Gauche_Ouvert;
+
+    @FindBy(xpath = "//*[@id=\"sidebar-left-1\"]/div/perfect-scrollbar/div/div[1]/ul/div/li[9]")
     public static WebElement Statistique_connexion_dashboard;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();

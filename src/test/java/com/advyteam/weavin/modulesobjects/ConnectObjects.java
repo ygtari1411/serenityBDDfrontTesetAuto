@@ -812,10 +812,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_Opportunité;
 
-    @FindBy(css = "span:nth-child(3) > div.actions-container.position-relative > svg")
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-category-management[1]/div[1]/div[3]/div[1]/span[4]/div[2]")
     public static WebElement Bouton_Options_Catégorie_Opportunité;
 
-    @FindBy(css = " div > ul > li:nth-child(2) > div > a")
+    @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(1)")
     public static WebElement Bouton_Modifier_Catégorie_Opportunité;
 
     @FindBy(css = "div.useful-link-settings-header > button")

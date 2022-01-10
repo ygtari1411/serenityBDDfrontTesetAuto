@@ -20,7 +20,7 @@ Feature: Gestion des utilisateurs - Désactiver un compte utilisateur
   #Etape 2 : Accéder au rubrique Gestion utilisateurs
 
     When l utilisateur effectue un hover sur "Username_menu"
-    And pause 5 secondes
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And pause 5 secondes
     And l utilisateur clique sur "Rubrique_utilisateurs"
