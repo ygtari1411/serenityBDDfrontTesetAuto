@@ -133,7 +133,7 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"aside-custom-left\"]/div/app-widget-flash-infos/div/div/h6")
     public static WebElement widget_flash_info;
 
-    @FindBy(css = ".sidebar--small [title='Campagnes de dons']")
+    @FindBy(css = "#sidebar-left > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(10) > a")
     public static WebElement Bouton_Don_menu_gauche;
 
     @FindBy(xpath = "//label[contains(text(),'Filtrer par nom')]")

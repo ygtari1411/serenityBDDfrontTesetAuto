@@ -27,7 +27,7 @@ Feature: Profil utilisateur - Modifier une citation
     And pause 20 secondes
     And l utilisateur clique sur "Username_menu"
   #Etape3:  vérifier que la citation a été ajouté
-
+    And pause 10 secondes
     Then vérifier que la citaiton a été ajouté
 
 
