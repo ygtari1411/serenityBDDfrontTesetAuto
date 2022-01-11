@@ -2910,6 +2910,13 @@ public class ConnectVerifications {
         driver.findElement(By.xpath("//div[@id=\'root\']/form/div/div[2]/span/span[2]/div/div[2]/span/input")).sendKeys("2445 45");
     }
 
+    //Vérification pour BubbleStore
+    @Then("verifier que le modal d'instruciton de configuration youtube s affiche")
+    public void verifierQueLeModalDInstrucitonDeConfigurationYoutubeSAffiche() {
+        logger.info("vérifier que le modal d'instruciton de configuration youtube s affiche ");
 
+        Assert.assertEquals(generalobjectsmap.get("Titre_Modal_configuration_Youtube").getAttribute("innerText"),"Étape 1:");
+
+    }
 
 }
