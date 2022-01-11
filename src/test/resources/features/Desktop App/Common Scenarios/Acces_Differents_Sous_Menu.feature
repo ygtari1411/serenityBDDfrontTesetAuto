@@ -46,10 +46,11 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
     And l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
     And pause 3 secondes
     Then vérifier que la page affichée est la page oportunitée
+    And pause 5 secondes
     When l utilisateur clique sur "Bouton_Don_menu_gauche"
     And pause 3 secondes
     Then vérifier que la page affichée est la page campagne de dons
-    And pause 3 secondes
+    And pause 10 secondes
     When l utilisateur clique sur "Bouton_news_menu_gauche"
     Then vérifier que la page affichée est la page news
     And pause 3 secondes

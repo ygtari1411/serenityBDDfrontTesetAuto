@@ -249,9 +249,9 @@ public class SpecificVerifications {
         logger.info("vérifier que la page affichée est la page oportunitée");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list")));
-        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list", driver.getCurrentUrl());
-        Assert.assertEquals("Campagnes de dons", generalobjectsmap.get("titre_page_campagnes_dons").getText());
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/monetization/donation-compaign/list")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/monetization/donation-compaign/list", driver.getCurrentUrl());
+        Assert.assertEquals("Monétisation", generalobjectsmap.get("titre_page_campagnes_dons").getText());
 
     }
 
