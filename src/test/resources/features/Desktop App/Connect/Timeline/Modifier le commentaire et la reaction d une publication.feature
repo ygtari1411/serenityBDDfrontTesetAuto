@@ -50,4 +50,5 @@ Feature: Timeline - Modifier le commentaire et la reaction d une publication
     And l utilisateur modifie "Modification d'un commentaire" dans le champs "champ_cemmentaire_modification_timeline"
     And l utilisateur effectue un hover sur "champ_cemmentaire_modification_timeline"
     And l utilisateur clique sur "bouton_envoyer_commentaire_timeline_modifier"
+    And pause 5 secondes
     Then verifier que le commentaire a ete modifier avec success

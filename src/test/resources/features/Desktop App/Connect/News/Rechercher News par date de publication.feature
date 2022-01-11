@@ -32,7 +32,7 @@ Feature: News - Rechercher News par date de publication
     And pause 10 secondes
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
-    #And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+    And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"
     And pause 10 secondes

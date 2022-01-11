@@ -1433,7 +1433,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/div[1]/p")
     public static WebElement  premier_commentaire_afficher_time_line;
 
-    @FindBy(xpath = "//*[@id=\"cp-0001\"]/div/form/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li[2]")
+    @FindBy(css = " form > weavin-emoji-editor > div > quill-editor > div > div.ql-mention-list-container.ql-mention-list-container-bottom > ul > li:nth-child(1)")
     public static WebElement  premier_membre_afficher_TimeLine;
 
     @FindBy(css =  "div.ps-content > div > p")
@@ -1516,6 +1516,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.container.wrapper-portal > app-all-news > div.row > div:nth-child(1) > app-post-card-news > div > article > div.post-content > a")
     public static WebElement Titre_derniere_news;
+
+    @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
+    public static WebElement Premiere_publication_afficher;
 
 
 
