@@ -49,7 +49,7 @@ Feature: Article - Recherche d'un article par catégorie
     #Etape 4 : Rechercher article par catégorie
 
     When l utilisateur selectionne "Article" dans la liste deroulante "rechercher_article_categorie"
-    And pause 7 secondes
+    And pause 10 secondes
     Then vérifier que seul les articles de "Article" s affichent
 
 

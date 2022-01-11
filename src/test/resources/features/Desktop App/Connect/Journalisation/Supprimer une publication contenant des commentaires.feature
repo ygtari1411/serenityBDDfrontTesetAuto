@@ -48,6 +48,6 @@ Feature: Journalisation - Supprimer une publication contenant des commentaires
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
-    Then vérifier que la publication supprimé est affiché dans la liste journalisation publications
+    Then vérifier que la publication contenant des commentaires supprimé est affiché dans la liste journalisation des publications
 
 

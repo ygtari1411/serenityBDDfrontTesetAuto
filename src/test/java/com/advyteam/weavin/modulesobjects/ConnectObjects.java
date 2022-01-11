@@ -707,7 +707,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//body/ngb-modal-window[1]/div[1]/div[1]/app-registration-user-modal[1]/div[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]/app-floating-label-form[1]/div[1]/input[1]")
     public static WebElement Champ_Input_Nom_Nouvel_utilisateur;
 
-    @FindBy(css = "div.modal-footer.mt-4 > button.btn.btn-primary.mb-0.ml-2")
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-registration-user-modal/div/form/div[2]/button[3]")
     public static WebElement Bouton_enregistrer_Nouvel_utilisateur;
 
     @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-users-settings[1]/div[1]/div[3]/app-invited-users[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/div[1]/div[5]/button[2]")
@@ -776,8 +776,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Corbeille')]")
     public static WebElement Rubrique_Corbeille;
 
-    @FindBy(css = "div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(1) > i")
-    public static WebElement Bouton_Corbeille_Supprimer_Puplication;
+    @FindBy(css = "div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(1) > i")
+    public static WebElement Bouton_Corbeille_Supprimer_Publication;
 
     @FindBy(xpath = "//button[contains(text(),'Oui, je confirme !')]")
     public static WebElement Bouton_Corbeille_Supprimer_Confirmation;
@@ -965,7 +965,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//form[1]/div[3]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]")
     public static WebElement Champ_Input_Resume;
 
-    @FindBy(xpath = "//a[contains(text(),'Divers')]")
+    @FindBy(css = "#collapseOne > ul > li:nth-child(2) > a")
     public static WebElement rubrique_divers;
 
     @FindBy(css = "div.col.col-xl-6.order-xl-36.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
@@ -1517,6 +1517,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.container.wrapper-portal > app-all-news > div.row > div:nth-child(1) > app-post-card-news > div > article > div.post-content > a")
     public static WebElement Titre_derniere_news;
 
+    @FindBy(xpath = "//span[contains(text(),'Karim Bennasr')]")
+    public static WebElement Nom_Nouvel_utilisateur_Ajoute;
+
+    @FindBy(css = " div.container-fluid > app-panel-admin > div > div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-content.background-grey > app-deleted-publications > div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow")
+    public static WebElement Contenu_Dernier_Element_Supprimé;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

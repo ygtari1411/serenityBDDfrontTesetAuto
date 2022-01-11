@@ -32,12 +32,12 @@ Feature: Annuaire - Création d'un nouvel utilisateur
 
     And l utilisateur clique sur "Bouton_Ajouter_Nouvel_utilisateur"
     And pause 5 secondes
-    #And l utilisateur saisit "zaineb.hamdouch@advyteam.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
+    And l utilisateur saisit "zaineb.hamdouch@advyteam.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
     And pause 5 secondes
     And l utilisateur saisit "Zaineb" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
     And pause 5 secondes
     And l utilisateur saisit "Hamdouch" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
-    And pause 5 secondes
+    And pause 15 secondes
     Then l utilisateur clique sur "Bouton_enregistrer_Nouvel_utilisateur"
     And pause 20 secondes
 
@@ -45,9 +45,9 @@ Feature: Annuaire - Création d'un nouvel utilisateur
 
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 10 secondes
-    And l utilisateur saisit "zaineb" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "Zaineb" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 20 secondes
-    Then vérifier que le nouvel utilisateur a été ajouté
+    #Then vérifier que le nouvel utilisateur a été ajouté
 
 
 

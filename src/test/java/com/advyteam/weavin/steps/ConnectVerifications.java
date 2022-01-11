@@ -1432,21 +1432,46 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_Gestion_utilisateurs"))));
         Assert.assertTrue(generalobjectsmap.get("Modal_Gestion_utilisateurs").isDisplayed());
-        Assert.assertEquals("Administration > Gestion des comptes",generalobjectsmap.get("Modal_Gestion_utilisateurs").getAttribute("innerText"));
+        Assert.assertEquals("Utilisateurs > Gestion des comptes",generalobjectsmap.get("Modal_Gestion_utilisateurs").getAttribute("innerText"));
 
     }
 
-    // Vérification pour Annuaire
-    @Then("vérifier que le nouvel utilisateur a été ajouté")
-    public void vérifierQueLeNouvelUtilisateurAÉtéAjouté() {
+    // Vérification pour Annuaire nom
+    @Then("vérifier que le nouvel utilisateur a été ajouté par nom")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParNom() {
 
         logger.info("vérifier que le nouvel utilisateur a été ajouté");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute"))));
-        Assert.assertTrue(generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").isDisplayed());
-        Assert.assertEquals("zaineb.hamdouch@advyteam.com",generalobjectsmap.get("Email_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
+        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Bennasr"));
+    }
+    // Vérification pour Annuaire Prénom
+    @Then("vérifier que le nouvel utilisateur a été ajouté par prénom")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParPrenom() {
 
+        logger.info("vérifier que le nouvel utilisateur a été ajouté");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
+        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Karim"));
+
+    }
+    // Vérification pour Annuaire nom et prénom
+    @Then("vérifier que le nouvel utilisateur a été ajouté par nom et prénom")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParNomEtPrenom() {
+
+        logger.info("vérifier que le nouvel utilisateur a été ajouté");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
+        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Karim Bennasr"));
     }
 
     // Vérification pour Journalisation
@@ -1489,9 +1514,9 @@ public class ConnectVerifications {
         logger.info("vérifier que l la publication supprimé est affiché dans la liste journalisation publications");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
-        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals("publication",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Supprimer une publication\n"));
 
     }
 
@@ -2918,5 +2943,34 @@ public class ConnectVerifications {
         Assert.assertEquals(generalobjectsmap.get("Titre_Modal_configuration_Youtube").getAttribute("innerText"),"Étape 1:");
 
     }
+    //Vérification pour annuaire
+    @Then("vérifier que le nouvel utilisateur a été ajouté Prenom erroné")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéPrenomErroné() {
+        logger.info("vérifier que le nouvel utilisateur a été ajouté Prenom erroné");
+        Assert.assertEquals(driver.findElements(By.xpath("/span[contains(text(),'Karim Bennasr')]")).size(),0);
 
+    }
+    // Vérification pour Annuaire
+    @Then("vérifier que le nouvel utilisateur a été ajouté")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjouté() {
+
+        logger.info("vérifier que le nouvel utilisateur a été ajouté");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Zaineb"));
+
+    }
+
+    @Then("vérifier que la publication de la courbeille supprimé est affiché dans la liste journalisation publications")
+
+    public void vérifierQueLaPublicationDeLaCourbeilleSuppriméEstAffichéDansLaListeJournalisationPublications() {
+        logger.info("vérifier que la publication de la courbeille supprimé est affiché dans la liste journalisation publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Supprimer une publication de la corbeille\n"));
+    }
 }
