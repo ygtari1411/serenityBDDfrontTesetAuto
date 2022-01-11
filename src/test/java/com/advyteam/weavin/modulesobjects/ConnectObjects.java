@@ -1517,6 +1517,25 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.container.wrapper-portal > app-all-news > div.row > div:nth-child(1) > app-post-card-news > div > article > div.post-content > a")
     public static WebElement Titre_derniere_news;
 
+    @FindBy(css = "app-app-store > div > div:nth-child(5) > button")
+    public static WebElement Bouton_Configurer_google_drive;
+
+    @FindBy(css = "//app-google-drive/form/div[1]/div[1]/div/div[2]/label/app-floating-label-form/div/div/label/span")
+    public static WebElement Bouton_Desactiver_google_drive;
+
+    @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
+    public static WebElement Bouton_Enregistrer_Configuration_google_drive;
+
+    @FindBy(css = "app-app-store > div > div.app-card.item.item-one-drive > button")
+    public static WebElement Bouton_Configurer_one_drive;
+
+    @FindBy(css = "div.togglebutton.m0 > label > app-floating-label-form > div > div > label > span")
+    public static WebElement Bouton_Desactiver_one_drive;
+
+    @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
+    public static WebElement Bouton_Enregistrer_Configuration_one_drive;
+
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
