@@ -36,25 +36,25 @@ Feature: Annuaire - Recherche d'un membre dans annuaire
     And l utilisateur saisit "Bennasr" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur Entree pour le champ recherche
     And pause 10 secondes
-    Then vérifier que le nouvel utilisateur a été ajouté
+    Then vérifier que le nouvel utilisateur a été ajouté par nom
 
   #Etape 4 : Rechercher l'utilisateur avec prénom
 
     And l utilisateur saisit "Karim" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur Entree pour le champ recherche
     And pause 10 secondes
-    Then vérifier que le nouvel utilisateur a été ajouté
+    Then vérifier que le nouvel utilisateur a été ajouté par prénom
 
   #Etape 5 : Rechercher l'utilisateur avec nom et prénom
 
     And l utilisateur saisit "Karim Bennasr" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur Entree pour le champ recherche
     And pause 10 secondes
-    Then vérifier que le nouvel utilisateur a été ajouté
-
+    Then vérifier que le nouvel utilisateur a été ajouté par nom et prénom
+    And pause 10 secondes
   #Etape 5 : Rechercher l'utilisateur avec prénom erroné
 
     And l utilisateur saisit "Karimoo" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur Entree pour le champ recherche
     And pause 10 secondes
-    #Then vérifier que le nouvel utilisateur a été ajouté
+    Then vérifier que le nouvel utilisateur a été ajouté Prenom erroné

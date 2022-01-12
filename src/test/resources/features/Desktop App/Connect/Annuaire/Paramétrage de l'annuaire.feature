@@ -30,7 +30,7 @@ Feature: Annuaire - Paramétrage de l'annuaire
     When l utilisateur clique sur "Date_de_naissance"
     And l utilisateur saisit "06/08/1996" dans le champs "Champ_Input_Profil_Anniversaire"
     And pause 5 secondes
-    And l utilisateur saisit "58 000 000" dans le champs "Champ_Input_Profil_Phone"
+    And l utilisateur saisit "+1 470 634 8800" dans le champs "Champ_Input_Profil_Phone"
     And pause 5 secondes
     And l utilisateur saisit "Ce qui compte, ce ne sont pas les coups que l'on donne, mais ceux que l'on reçoit et auxquels on résiste pour aller de l'avant." dans le champs "Champ_Input_Profil_Citation"
     And pause 5 secondes

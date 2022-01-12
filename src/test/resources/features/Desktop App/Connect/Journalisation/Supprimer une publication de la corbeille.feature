@@ -26,7 +26,7 @@ Feature: Journalisation - Supprimer une publication de la corbeille
 
   #Etape 3 : Supprimer une publication
 
-    When l utilisateur clique sur "Bouton_Options_Publication"
+    #When l utilisateur clique sur "Bouton_Options_Publication"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Supprimer_Publication"
     And pause 5 secondes
@@ -41,7 +41,8 @@ Feature: Journalisation - Supprimer une publication de la corbeille
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
-    Then vérifier que la publication supprimé est affiché dans la liste journalisation publications
-    And l utilisateur clique sur "Bouton_Corbeille_Supprimer_Puplication"
+    Then vérifier que la publication de la courbeille supprimé est affiché dans la liste journalisation publications
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Corbeille_Supprimer_Publication"
     And l utilisateur clique sur "Bouton_Corbeille_Supprimer_Confirmation"
 
