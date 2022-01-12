@@ -2730,7 +2730,7 @@ public class ConnectVerifications {
 
         logger.info("verifier que le tag apparait dans le statut ");
 
-        Assert.assertTrue(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText").contains(datastore.get("                Mohamed Ennaceur Ben Yedder\n")));
+        Assert.assertTrue(generalobjectsmap.get("Premiere_publication_afficher").getAttribute("innerText").contains("Yassine Gtari "));
 
     }
 

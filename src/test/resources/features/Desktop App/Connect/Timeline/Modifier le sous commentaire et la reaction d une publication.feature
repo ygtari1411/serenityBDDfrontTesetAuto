@@ -42,6 +42,7 @@ Feature: Timeline - Modifier le  sous commentaire et la reaction d une publicati
     And pause 10 secondes
     And l utilisateur clique sur "bouton_interagir_commentaire"
     And pause 10 secondes
+    And l utilisateur effectue un hover sur "champ_input_sous_commentaire_statut"
     And l utilisateur saisit "Test auto modifier un sous commentaire" dans le champs "champ_input_sous_commentaire_statut"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_sous_commentaire"

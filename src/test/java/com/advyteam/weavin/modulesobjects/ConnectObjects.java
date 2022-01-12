@@ -1433,7 +1433,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/div[1]/p")
     public static WebElement  premier_commentaire_afficher_time_line;
 
-    @FindBy(xpath = "//*[@id=\"cp-0001\"]/div/form/weavin-emoji-editor/div/quill-editor/div/div[3]/ul/li[2]")
+    @FindBy(css = " form > weavin-emoji-editor > div > quill-editor > div > div.ql-mention-list-container.ql-mention-list-container-bottom > ul > li:nth-child(1)")
     public static WebElement  premier_membre_afficher_TimeLine;
 
     @FindBy(css =  "div.ps-content > div > p")
@@ -1522,6 +1522,10 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = " div.container-fluid > app-panel-admin > div > div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-content.background-grey > app-deleted-publications > div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow")
     public static WebElement Contenu_Dernier_Element_Supprimé;
+
+    @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
+    public static WebElement Premiere_publication_afficher;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

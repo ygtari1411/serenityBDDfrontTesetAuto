@@ -27,14 +27,14 @@ Feature: News - Création nouvelle news avec heure de début
      Then vérifier que le modal de création d'une news est affiché
      And l utilisateur saisit "Test automatique création news avec heure début" dans le champs "Champ_Input_Titre_News"
      And l utilisateur saisit "C'est un test automatique de l'ajout d'une news avec date de début" dans le champs "Champ_Input_Description_News"
-     #And l utilisateur saisit "16:02" dans le champs "Champ_Input_Heure_Debut_News"
+     And l utilisateur saisit "16:02" dans le champs "Champ_Input_Heure_Debut_News"
      And l utilisateur saisit une heure supérieure à l'heure systéme
      And pause 10 secondes
      And l utilisitateur saisit la date du jour dans le champs debut date news
      And pause 15 secondes
      And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
      And pause 10 secondes
-     #And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
+     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
      And pause 10 secondes
      And l utilisateur clique sur "Bouton_Publier_News"
 

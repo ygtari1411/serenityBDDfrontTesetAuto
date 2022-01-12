@@ -32,7 +32,7 @@ Feature: News - Création nouvelle news avec date de fin
     And pause 10 secondes
     And l utilisitateur saisit la date du jour dans le champs fin date news
     And pause 10 secondes
-    #And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
+    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_news"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Sauvegarder_Creation_News"
     And pause 10 secondes
