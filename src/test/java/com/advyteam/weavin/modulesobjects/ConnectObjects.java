@@ -436,7 +436,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Envoyer_Commentaire_Evenement;
 
     @FindBy(css = "article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
-    public static WebElement Icone_Commentaire;
+    public static WebElement Icone_Commentaire_Evenement;
 
     @FindBy(css = "li > div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_Evenement_Afficher;
@@ -1298,7 +1298,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div > app-text-input > div > input")
     public static WebElement Champ_input_Filtre_Nom_Bulle;
 
-    @FindBy(css = "div.friend-avatar.mb-1 > div.author-content > a")
+    @FindBy(css = "#room147 > div > div > div > div.friend-avatar.mb-1 > div.author-content > a")
     public static WebElement Titre_Bulle_Rechercher;
 
     @FindBy(css = "div.profile-section > div.control-block-button > div > a")
@@ -1361,13 +1361,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
     public static WebElement  Champ_Input_Question_Sondage;
 
-    @FindBy(css = "div.ng-pristine.ng-invalid.ng-touched > div > div > input")
+    @FindBy(css = " div.ng-pristine.ng-invalid.ng-touched > div:nth-child(1) > div > input")
     public static WebElement  Champ_Input_Option1_Sondage;
 
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > a > svg")
     public static WebElement  Bouton_Ajouter_Option_Sondage;
 
-    @FindBy(css = "div.ng-pristine.ng-invalid.ng-touched > div:nth-child(2) > div > input")
+    @FindBy(css = " div.ng-pristine.ng-invalid.ng-touched > div:nth-child(2) > div > input")
     public static WebElement  Champ_Input_Option2_Sondage;
 
     @FindBy(css = " app-post-statistics > div > ul > li:nth-child(2) > a > svg")
@@ -1544,6 +1544,7 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
     public static WebElement Premiere_publication_afficher;
+
 
 
 

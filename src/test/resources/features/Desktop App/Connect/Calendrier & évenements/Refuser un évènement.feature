@@ -74,7 +74,7 @@ Feature: Calendrier & évenements - Refuser un évènement
     And  l utilisateur se deconnecte
     And pause 10 secondes
 
-    #Etape 5 : Le deuxieme utilisateur se connecte  pour refuser l'evenement
+    #Etape 5 : Le deuxieme utilisateur se connecte pour refuser l'evenement
 
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
     And pause 10 secondes

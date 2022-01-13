@@ -29,8 +29,8 @@ Feature: Calendrier & évenements - Supprimer un événement par un autre admini
     And pause 5 secondes
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
-    #And l utilisateur selectionne "Marc Parenteau" dans la liste deroulante "Calendrier"
-    #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
+     #And l utilisateur selectionne "Marc Parenteau" dans la liste deroulante "Calendrier"
+     #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
     And l utilisateur saisit "Test automatique Supprimer un événement par un autre administrateur" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de suppression d'un événement par un autre administrateur" dans le champs "Champ_Input_Description_Evenement"
     And l utilisateur saisit "Tunis" dans le champs "Champ_Input_Lieu_Evenement"
@@ -74,7 +74,7 @@ Feature: Calendrier & évenements - Supprimer un événement par un autre admini
     And  l utilisateur se deconnecte
     And pause 10 secondes
 
-    #Etape 5 : Le deuxieme utilisateur se connecte  pour supprimer l'evenement
+    #Etape 5 : Le deuxieme utilisateur se connecte pour supprimer l'evenement
 
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
     And pause 10 secondes
