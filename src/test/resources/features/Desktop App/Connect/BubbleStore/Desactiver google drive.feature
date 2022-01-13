@@ -10,7 +10,7 @@ Feature: BubbleStore - Desactiver google drive
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-BubbleStore
-  @WEAVIN-BubbleStore-0003
+  @WEAVIN-BubbleStore-0002
   Scenario: Desactiver google drive
 
   #Etape 1 : Connexion
@@ -31,7 +31,8 @@ Feature: BubbleStore - Desactiver google drive
 
   #Etape3: Verfier que youtube est désactivé
 
-    And l utilisateur clique sur "Bouton_Enregistrer_Configuration_one_drive"
-    Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
+    And l utilisateur clique sur "Bouton_Enregistrer_Configuration_google_drive"
+    #todo Configure the channel and take a new dump
+    #Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
 
 
