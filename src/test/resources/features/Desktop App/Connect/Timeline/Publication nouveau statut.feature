@@ -24,5 +24,5 @@ Feature: Timeline - Publication d'un nouveau statut
     And l utilisateur clique sur "bouton_publier_statut"
 
       #Etape 3 : verification de la création d'un statut
-
+    And pause 10 secondes
     Then Vérifier que le statut est publié

@@ -1550,6 +1550,9 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/input")
     public static WebElement Champ_Input1_Deuxieme_Reponse_BrainStorming;
 
+    @FindBy(css = "div.containerFormNews > div.fieldsTxt > div.form-group.description > quill-editor > div.ql-container.ql-snow > div.ql-editor > p")
+    public static WebElement Champ_Input_modifie_Description_News;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
