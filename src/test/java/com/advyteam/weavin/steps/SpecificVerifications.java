@@ -187,8 +187,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page BrainStorming");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal")));
-        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/pulse/votes")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/pulse/votes", driver.getCurrentUrl());
 
     }
 

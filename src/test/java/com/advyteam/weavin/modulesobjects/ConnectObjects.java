@@ -647,7 +647,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-speed-access-user-item > li > div.author-status > a")
     public static WebElement Utilisateur_Chercher;
 
-    @FindBy(css = "div.w-100.mt-3.text-right > button")
+    @FindBy(css = " div.w-100.mt-3.actions-filter > button")
     public static WebElement Bouton_chercher_membre_brainstorming;
 
     @FindBy(css = "div.col-lg-12.p0.chat-input-container > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank > p")
@@ -1079,7 +1079,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-select-type-to-add/div[2]/div/a[2]")
     public static WebElement BrainStorming_Vote;
 
-    @FindBy(xpath = "//app-floating-label-form/div/input")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-form-new-vote/div[1]/div[1]/div/div[2]/form/div/div[1]/div/input")
     public static WebElement Champ_Input_Titre_BrainStorming;
 
     @FindBy(css = "div.field-settings.field-settings-date > div > div > input")
@@ -1091,7 +1091,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/div[2]/ul/li[1]")
     public static WebElement Bouton_Choix_Unique_BrainStorming;
 
-    @FindBy(xpath = "//div[1]/div[1]/div[1]/input")
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div/div/div/div[3]/div[2]/div[1]/div[1]/div[1]/input")
     public static WebElement Champ_Input_Question_BrainStorming;
 
     @FindBy(xpath = "//div[1]/div[2]/div/textarea")
@@ -1142,7 +1142,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div[3]/form/div/div/button")
     public static WebElement  Envoyer_Vote_Brainstorming;
 
-    @FindBy(xpath = "//*[@id=\"pdfTable\"]/p")
+    @FindBy(css = "#pdfTable > p")
     public static WebElement  Accuser_De_reception_Brainstorming;
 
     @FindBy(xpath = "//div[2]/div/div[2]/label/span")
@@ -1151,7 +1151,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[1]/div[2]/ul/li[1]/a")
     public static WebElement  Bouton_Option_Cloturer_Vote;
 
-    @FindBy(xpath = "//div[2]/form/div/div[2]/div[4]/div/a")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-form-new-vote/div[1]/div[1]/div/div[2]/form/div/div[2]/div[4]/div/button")
     public static WebElement  Bouton_Ajouter_Membre;
 
     @FindBy(xpath = "//div/app-text-input/div/input")
@@ -1526,6 +1526,29 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
     public static WebElement Premiere_publication_afficher;
 
+    @FindBy(css = "#cdk-drop-list-1 > div > div > div > div.ui-block-content > div.not-collapsed-question > div.question-body > div.question-field.mb-3 > div.basic-info > input")
+    public static WebElement Champ_Input_Modifie_Question_BrainStorming;
+
+    @FindBy(css = "body > ngb-modal-window:nth-child(28) > div > div > app-acknowledgment-vote > div.close-modal > svg")
+    public static WebElement Bouton_fermer_popup_Brainstorming;
+
+    @FindBy(css = "app-brainstorming-grid > div > div:nth-child(2) > div > div > div > div.card-content > div.control-block-button > a")
+    public static WebElement resultat_vote;
+
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div[1]/input")
+    public static WebElement Champ_Input1_Question_BrainStorming;
+
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[1]/div[2]/div/textarea")
+    public static WebElement Champ_Input1_InfoSupp_BrainStorming;
+
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[2]/div/div/input")
+    public static WebElement Champ_Input1_Premiere_Reponse_BrainStorming;
+
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[3]/a/span")
+    public static WebElement Bouton_Ajouter1_Reponse_BrainStorming;
+
+    @FindBy(xpath = "//*[@id=\"cdk-drop-list-0\"]/div[2]/div/div/div[3]/div[2]/div[1]/div[2]/div[2]/div/input")
+    public static WebElement Champ_Input1_Deuxieme_Reponse_BrainStorming;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

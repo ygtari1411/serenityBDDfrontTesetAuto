@@ -62,7 +62,7 @@ Feature: Brainstorming - Modifier un vote
     And pause 5 secondes
     And l utilisateur modifie "Test automatique Modification vote" dans le champs "Champ_Input_Titre_BrainStorming"
     And pause 5 secondes
-    And l utilisateur modifie "Question modifier" dans le champs "Champ_Input_Question_BrainStorming"
+    And l utilisateur modifie "Question modifier" dans le champs "Champ_Input_Modifie_Question_BrainStorming"
 
   #Etape 5  : Verifier que le vote a été modifié
 
