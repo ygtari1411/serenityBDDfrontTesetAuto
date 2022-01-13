@@ -812,7 +812,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_Opportunité;
 
-    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-category-management[1]/div[1]/div[3]/div[1]/span[4]/div[2]")
+    @FindBy(css = "div:nth-child(3) > div > span.category-item.d-flex > div.actions-container.position-relative > svg")
     public static WebElement Bouton_Options_Catégorie_Opportunité;
 
     @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(1)")
@@ -1544,6 +1544,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
     public static WebElement Premiere_publication_afficher;
+
+    @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(2)")
+    public static WebElement Bouton_Supprimer_Catégorie_Opportunité;
 
 
 

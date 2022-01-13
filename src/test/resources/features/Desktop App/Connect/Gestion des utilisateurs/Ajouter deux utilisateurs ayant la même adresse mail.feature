@@ -45,7 +45,7 @@ Feature: Gestion des utilisateurs - Ajouter deux utilisateurs ayant la même adr
     And l utilisateur saisit "Karim" dans le champs "Champ_Input_Chercher_des_membres"
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 10 secondes
-    Then vérifier que le nouvel utilisateur a été ajouté
+    #Then vérifier que le nouvel utilisateur a été ajouté
 
   #Etape 5 : Ajouter un nouvel utilisateur avec la meme adresse mail
 

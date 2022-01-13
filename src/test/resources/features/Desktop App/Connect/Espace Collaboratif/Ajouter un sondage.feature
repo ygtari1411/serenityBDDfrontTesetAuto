@@ -52,7 +52,7 @@ Feature: TeamLab - Ajouter un sondage
     Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Envoyer une image
-
+    And pause 5 secondes
     And l utilisateur clique sur "Titre_Bulle_Rechercher"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Create_Sondage_Bulle"
