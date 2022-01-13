@@ -10,7 +10,7 @@ Feature: BubbleStore - Desactiver youtube
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-BubbleStore
-  @WEAVIN-BubbleStore-0002
+  @WEAVIN-BubbleStore-0001
   Scenario: Configurer une chaine youtube
 
   #Etape 1 : Connexion

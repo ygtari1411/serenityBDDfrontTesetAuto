@@ -1520,7 +1520,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-app-store > div > div:nth-child(5) > button")
     public static WebElement Bouton_Configurer_google_drive;
 
-    @FindBy(css = "//app-google-drive/form/div[1]/div[1]/div/div[2]/label/app-floating-label-form/div/div/label/span")
+    @FindBy(css = "div > div.togglebutton.m0 > label > app-floating-label-form > div > div > label > span")
     public static WebElement Bouton_Desactiver_google_drive;
 
     @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
@@ -1545,6 +1545,23 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > span > a")
     public static WebElement Premiere_publication_afficher;
 
+    @FindBy(css = "div.ui-block-content.background-grey > app-app-store > div > div.app-card.item.item-vimeo > button")
+    public static WebElement Bouton_Configurer_vimeo;
+
+    @FindBy(css = "div.togglebutton.m0 > label > app-floating-label-form > div > div > label > span")
+    public static WebElement Bouton_Desactiver_vimeo;
+
+    @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
+    public static WebElement Bouton_Enregistrer_Configuration_vimeo;
+
+    @FindBy(css = " div > div.ui-block-content.background-grey > app-app-store > div > div.app-card.item.item-twitter > button")
+    public static WebElement Bouton_Configurer_twitter;
+
+    @FindBy(css = "div.togglebutton.m0 > label > app-floating-label-form > div > div > label > span")
+    public static WebElement Bouton_Desactiver_twitter;
+
+    @FindBy(xpath = "//*[contains(text(),' Enregistrer ')]")
+    public static WebElement Bouton_Enregistrer_Configuration_twitter;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

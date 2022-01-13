@@ -10,7 +10,7 @@ Feature: BubbleStore - Desactiver youtube
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-BubbleStore
-  @WEAVIN-BubbleStore-0001
+  @WEAVIN-BubbleStore-0006
   Scenario: Desactiver youtube
 
   #Etape 1 : Connexion
@@ -32,6 +32,7 @@ Feature: BubbleStore - Desactiver youtube
   #Etape3: Verfier que youtube est désactivé
 
     And l utilisateur clique sur "Bouton_Enregistrer_Configuration_youtube"
-    Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
+    #todo Configure the channel and take a new dump
+    #Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
 
 
