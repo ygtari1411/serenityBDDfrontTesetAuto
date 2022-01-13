@@ -33,6 +33,6 @@ Feature: BubbleStore - Desactiver vimeo
 
     And l utilisateur clique sur "Bouton_Enregistrer_Configuration_vimeo"
     #todo Configure the channel and take a new dump
-    Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
+    #Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
 
 
