@@ -29,7 +29,7 @@ Feature: Calendrier & évenements - Refuser un évènement à partir de la notif
     And pause 5 secondes
     Then vérifier que le modal de création d'un evenement est affiché
     And pause 5 secondes
-    #And l utilisateur selectionne "Marc Parenteau" dans la liste deroulante "Calendrier"
+    #And l utilisateur selectionne "Marc Parenteau" dans la liste deroulante  "Calendrier"
     #And l utilisateur selectionne "PUBLIC" dans la liste deroulante "Type_Evenement"
     And l utilisateur saisit "Test automatique Refuser un évènement à partir de la notification" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de Refus d'un évènement à partir de la notification" dans le champs "Champ_Input_Description_Evenement"

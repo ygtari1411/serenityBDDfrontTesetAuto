@@ -12,6 +12,7 @@ Feature: TeamLab - Ajouter un sondage
   @WEAVIN-TEAMLAB-0011
   Scenario: Ajouter un sondage
 
+
   #Etape 1 : Connexion
 
     Given le navigateur est ouvert et la page d'acceuil est affichée
@@ -20,8 +21,8 @@ Feature: TeamLab - Ajouter un sondage
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+   # And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
@@ -47,7 +48,7 @@ Feature: TeamLab - Ajouter un sondage
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Sondage Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    And pause 5 secondes
+    And pause 20 secondes
     Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Envoyer une image

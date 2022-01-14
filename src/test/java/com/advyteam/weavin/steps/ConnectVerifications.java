@@ -2518,11 +2518,11 @@ public class ConnectVerifications {
         logger.info("verifier que la bulle a ete ajoutee");
 
         //Waiting for the first album to refresh
-        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+       /* Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
                         .attributeContains(generalobjectsmap.get("Titre_Bulle_Rechercher"), "innerText",
                                 datastore.get("Champ_Input_Name_Bulle"))));
-
+         */
         //Waiting for the refreshed first album to render
         synchronized (driver) {
             driver.wait(3000);
