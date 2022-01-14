@@ -1591,13 +1591,24 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.containerFormNews > div.fieldsTxt > div.form-group.description > quill-editor > div.ql-container.ql-snow > div.ql-editor > p")
     public static WebElement Champ_Input_modifie_Description_News;
+
     @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(2)")
     public static WebElement Bouton_Supprimer_Catégorie_Opportunité;
 
+    @FindBy(css = ".ng-select  .ng-select-container")
+    public static WebElement Liste_Deroulante_vimeo_TypeSource;
+
     @FindBy(css = "body > ngb-modal-window:nth-child(27) > div > div > app-modal-post > a > svg")
     public static WebElement Bouton_Fermer_News;
+
     @FindBy(css = ".sidebar--small [title=News]")
     public static WebElement Bouton_news2_menu_gauche;
+
+    @FindBy(css = "app-floating-label-form:nth-child(2) > div > input")
+    public static WebElement chaine_id_vimeo;
+
+    @FindBy(css = "div.form-group.col.col-lg-6.col-md-6.col-sm-12.col-12 > app-floating-label-form:nth-child(4) > div > input")
+    public static WebElement nombre_video_afficher_vimeo;
 
     @FindBy(css = "div.reaction-chat > app-post-reactions")
     public static WebElement  Icone_Reaction_Message_Chat;
