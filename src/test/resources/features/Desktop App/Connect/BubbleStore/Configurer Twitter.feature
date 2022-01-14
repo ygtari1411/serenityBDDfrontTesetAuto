@@ -1,17 +1,17 @@
 # Auteur: YGtari
 # Feature: Bubble Store
-# Scénario: Configurer vimeo
+# Scénario: Configurer twitter
 # Date de création: 14/01/2022
 
 
 
-Feature: BubbleStore - Configurer vimeo
+Feature: BubbleStore - Configurer twitter
 
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-BubbleStore
-  @WEAVIN-BubbleStore-0007
-  Scenario: Configurer vimeo
+  @WEAVIN-BubbleStore-0008
+  Scenario: Configurer twitter
 
   #Etape 1 : Connexion
 
@@ -25,7 +25,7 @@ Feature: BubbleStore - Configurer vimeo
     And pause 10 secondes
     And l utilisateur clique sur "app_store"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Configurer_vimeo"
+    And l utilisateur clique sur "Bouton_Configurer_twitter"
     And pause 10 secondes
     And l utilisateur selectionne "Utilisateur" dans la liste deroulante "Liste_Deroulante_vimeo_TypeSource"
     And pause 10 secondes
