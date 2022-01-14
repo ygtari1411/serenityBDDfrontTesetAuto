@@ -40,7 +40,7 @@ Feature: News - Création nouvelle news avec heure de début
 
 
     #Etape 3 : Vérification de la création de la News
-       And l utilisateur rafraichit la page
+      And l utilisateur rafraichit la page
       And pause 10 secondes
       Then vérifier la création de la nouvelle news
      Then Vérifier que l actualité ne s affiche que si l heure  est égale à l heure de date de début de l'actualité
