@@ -57,11 +57,14 @@ Feature: News - Commenter et liker une news
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
     And l utilisateur clique sur "Bouton_aime_News"
     And pause 10 secondes
-    Then vérifier l ajout  correct du commentaire news
+    And vérifier l'ajout du commentaire et le like
+
+    #And l utilisateur clique sur "icon_commentaire_news"
+    #Then vérifier l ajout  correct du commentaire news
 
   #Etape 5 : Liker une news
 
     #And l utilisateur clique sur "Bouton_aime_News"
-    And pause 20 secondes
-    Then vérifier l ajout  correct du Like news
+    #And pause 20 secondes
+    #Then vérifier l ajout  correct du Like news
 

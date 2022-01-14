@@ -272,7 +272,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-news-administration > section > div > div:nth-child(2)")
     public static WebElement Derniere_News_Ajoutee;
 
-    @FindBy(css = "body > ngb-modal-window:nth-child(28) > div > div > app-modal-post > div > div > div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
+    @FindBy(css ="body > ngb-modal-window:nth-child(27) > div > div > app-modal-post > div > div > div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(2) > div > a")
     public static WebElement Bouton_Repondre_News;
 
     @FindBy(css = "div > weavin-emoji-editor > div > quill-editor > div > div.ql-editor.ql-blank")
@@ -289,6 +289,9 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "div.parent-item-comment > p")
     public static WebElement Premiere_Commentaire_News_Afficher;
+
+    @FindBy(css = "div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")
+    public static WebElement icon_commentaire_news;
 
     @FindBy(css = "*>div:nth-child(3) > div > div:nth-child(2) > app-post-card-news > div")
     public static WebElement Premiere_News_In_Home_List_News;
@@ -1262,7 +1265,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-donation-modal/div/div/form/button")
     public static WebElement  Bouton_Valider_Un_Don;
 
-    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-reactions/div/ul/li[1]/div/a/span[2]")
+    @FindBy(css = "body > ngb-modal-window:nth-child(27) > div > div > app-modal-post > div > div > div.open-photo-content > article > div.post-additional-info.inline-items > app-post-reactions > div > ul > li:nth-child(1) > div")
     public static WebElement  Bouton_aime_News;
 
     @FindBy(css = "ul > li:nth-child(1) > div > a")
@@ -1565,7 +1568,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#cdk-drop-list-1 > div > div > div > div.ui-block-content > div.not-collapsed-question > div.question-body > div.question-field.mb-3 > div.basic-info > input")
     public static WebElement Champ_Input_Modifie_Question_BrainStorming;
 
-    @FindBy(css = "body > ngb-modal-window:nth-child(28) > div > div > app-acknowledgment-vote > div.close-modal > svg")
+    @FindBy(css = "body > ngb-modal-window:nth-child(27) > div > div > app-acknowledgment-vote > div.close-modal")
     public static WebElement Bouton_fermer_popup_Brainstorming;
 
     @FindBy(css = "app-brainstorming-grid > div > div:nth-child(2) > div > div > div > div.card-content > div.control-block-button > a")
@@ -1591,6 +1594,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(2)")
     public static WebElement Bouton_Supprimer_Catégorie_Opportunité;
 
+    @FindBy(css = "body > ngb-modal-window:nth-child(27) > div > div > app-modal-post > a > svg")
+    public static WebElement Bouton_Fermer_News;
+    @FindBy(css = ".sidebar--small [title=News]")
+    public static WebElement Bouton_news2_menu_gauche;
 
 
 

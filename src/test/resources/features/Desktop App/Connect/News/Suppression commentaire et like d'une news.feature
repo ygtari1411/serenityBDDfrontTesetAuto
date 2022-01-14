@@ -37,7 +37,8 @@ Feature: News - Suppression commentaire et like d'une news
     And pause 10 secondes
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 4 secondes
     Then vérifier la création de la nouvelle news
     And pause 10 secondes
 
@@ -50,16 +51,16 @@ Feature: News - Suppression commentaire et like d'une news
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
     And pause 10 secondes
-    Then vérifier l ajout  correct du commentaire news
+    #Then vérifier l ajout  correct du commentaire news
 
   #Etape 5 : Liker une news
 
     And l utilisateur clique sur "Bouton_Interaction_News"
     And pause 10 secondes
-    Then vérifier l ajout  correct du Like news
+    #Then vérifier l ajout  correct du Like news
 
   #Etape 6 : Supprimer le commentaire
-
+  And l utilisateur clique sur "Bouton_Repondre_News"
     When l utilisateur effectue un hover sur "Bouton_Option_Commentaire_News"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Supprimer_Commeaire_News"
