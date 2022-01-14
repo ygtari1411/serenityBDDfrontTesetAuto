@@ -1596,7 +1596,8 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(css = "body > ngb-modal-window:nth-child(27) > div > div > app-modal-post > a > svg")
     public static WebElement Bouton_Fermer_News;
-
+    @FindBy(css = ".sidebar--small [title=News]")
+    public static WebElement Bouton_news2_menu_gauche;
 
 
 
