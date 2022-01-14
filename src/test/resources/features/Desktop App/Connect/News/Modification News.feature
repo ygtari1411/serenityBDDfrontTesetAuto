@@ -50,7 +50,7 @@ Feature: News - Modification news
     And l utilisateur clique sur "Bouton_Editer_News"
     And pause 10 secondes
     And l utilisateur modifie "Test automatique Modification news" dans le champs "Champ_Input_Titre_News"
-    And l utilisateur modifie "C'est un test automatique de la modification d'une news" dans le champs "Champ_Input_Description_News"
+    And l utilisateur modifie "C'est un test automatique de la modification d'une news" dans le champs "Champ_Input_modifie_Description_News"
     And l utilisateur clique sur "Bouton_Editer_Modification_News"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_News"

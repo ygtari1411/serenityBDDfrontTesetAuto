@@ -45,8 +45,21 @@ Feature: Brainstorming - Ajouter un vote avec les deux choix
     And pause 5 secondes
     And l utilisateur saisit "reponse 2" dans le champs "Champ_Input_Deuxieme_Reponse_BrainStorming"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Choix_Unique_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur saisit "Question 1 ?" dans le champs "Champ_Input1_Question_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur saisit "Information Supplementaire" dans le champs "Champ_Input1_InfoSupp_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur saisit "reponse 1" dans le champs "Champ_Input1_Premiere_Reponse_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Ajouter1_Reponse_BrainStorming"
+    And pause 5 secondes
+    And l utilisateur saisit "reponse 2" dans le champs "Champ_Input1_Deuxieme_Reponse_BrainStorming"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Enregistrer_Vote"
     And pause 5 secondes
+    And l utilisateur rafraichit la page
     And l utilisateur clique sur "Onglet_BrainStorming"
     And pause 5 secondes
 
