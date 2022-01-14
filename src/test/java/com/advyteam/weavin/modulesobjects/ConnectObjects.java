@@ -740,7 +740,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.inline-items.inline-icon.nav-not-hidden > div:nth-child(2) > i.fas.fa-cloud-download")
     public static WebElement Bouton_Rapport_Utilisateurs;
 
-    @FindBy(xpath = "//small[contains(text(),'karim.bennasr.1@yopmail.com')]")
+    @FindBy(css = "app-invited-users > div > div.table-container.edition-mode > div.flex-table.flex-table-body > div.flex-row.first.position-relative > div.author-container > div.name-container > small")
     public static WebElement Email_Nouvel_utilisateur_Ajoute;
 
     @FindBy(xpath = "//small[contains(text(),'yassine.gtari@advyteam.com')]")
@@ -1376,7 +1376,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > div > button")
     public static WebElement  Bouton_Lancer_Sondage;
 
-    @FindBy(css = "app-chat-conversations-message-item:nth-child(7) > li > div > div.reaction-chat > app-post-reactions")
+    @FindBy(css = "div > button:nth-child(1) > span")
     public static WebElement  Bouton_Reaction_Message_Chat;
 
     @FindBy(xpath = "//div[1]/app-post[1]/article[1]/div[1]/app-more-dropdown[1]/div[1]")
@@ -1536,7 +1536,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_Enregistrer_Configuration_one_drive;
 
 
-    @FindBy(xpath = "//span[contains(text(),'Karim Bennasr')]")
+    @FindBy(css = "app-invited-users > div > div.table-container.edition-mode > div.flex-table.flex-table-body > div.flex-row.first.position-relative > div.author-container > div.name-container")
     public static WebElement Nom_Nouvel_utilisateur_Ajoute;
 
     @FindBy(css = " div.container-fluid > app-panel-admin > div > div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-content.background-grey > app-deleted-publications > div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow")
@@ -1591,7 +1591,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.actions-container.position-relative.acctions-open > div > span:nth-child(2)")
     public static WebElement Bouton_Supprimer_Catégorie_Opportunité;
 
-
+    @FindBy(css = "div.reaction-chat > app-post-reactions")
+    public static WebElement  Icone_Reaction_Message_Chat;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {

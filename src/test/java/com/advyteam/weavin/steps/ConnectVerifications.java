@@ -2959,12 +2959,11 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Zaineb"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
 
     }
-
+    // Vérification pour Journalisation
     @Then("vérifier que la publication de la courbeille supprimé est affiché dans la liste journalisation publications")
-
     public void vérifierQueLaPublicationDeLaCourbeilleSuppriméEstAffichéDansLaListeJournalisationPublications() {
         logger.info("vérifier que la publication de la courbeille supprimé est affiché dans la liste journalisation publications");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
@@ -2972,5 +2971,12 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Supprimer une publication de la corbeille\n"));
+    }
+    // Vérification pour Know'store
+    @Then("vérifier que seuls les articles de categorie Article saffiche")
+    public void vérifierQueSeulsLesArticlesDeCategorieArticleSaffiche() {
+        logger.info("vérifier que seuls les articles de categorie Article saffiche");
+        WebElement element= driver.findElement(By.cssSelector("div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > div.tags-container > a"));
+        Assert.assertEquals(element.getAttribute("innerText"),"ARTICLE");
     }
 }

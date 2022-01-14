@@ -34,7 +34,7 @@ Feature: Article - Recherche d'un article par catégorie
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvel_article"
     And l utilisateur saisit "C'est un test automatique recherche d'un article par catégorie" dans le champs "Champ_Input_Description_Article"
     And pause 10 secondes
-    #And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
+    And l utilisateur upload "image2" dans le champs "Fichier_attache_nouvel_article"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_sauvegarder_article"
     And pause 10 secondes
@@ -50,7 +50,8 @@ Feature: Article - Recherche d'un article par catégorie
 
     When l utilisateur selectionne "Article" dans la liste deroulante "rechercher_article_categorie"
     And pause 10 secondes
-    Then vérifier que seul les articles de "Article" s affichent
+    Then vérifier que seuls les articles de categorie Article saffiche
+    #Then vérifier que seul les articles de "Article" s affichent
 
 
 
