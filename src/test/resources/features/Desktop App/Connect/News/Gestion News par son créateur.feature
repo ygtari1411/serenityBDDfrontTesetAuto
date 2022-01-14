@@ -23,6 +23,7 @@ Feature: News - Gestion news par son créateur
     #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
     And l utilisateur clique sur "Bouton_news_menu_gauche"
     Then vérifier que la page affichée est la page news
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Ajout_News"
     Then vérifier que le modal de création d'une news est affiché
     And l utilisateur saisit "Test automatique gestion news par son créateur" dans le champs "Champ_Input_Titre_News"
@@ -37,7 +38,8 @@ Feature: News - Gestion news par son créateur
     And pause 20 secondes
 
   #Etape 3 : Vérification de la création de la News
-
+    And l utilisateur rafraichit la page
+    And pause 10 secondes
     Then vérifier la création de la nouvelle news
 
   #Etape 4 : l'utilisateur admin se deconnecte

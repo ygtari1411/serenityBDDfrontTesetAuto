@@ -2973,4 +2973,12 @@ public class ConnectVerifications {
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Supprimer une publication de la corbeille\n"));
     }
+//Vérification l'ajout d'un commentaire et like
+    @And("vérifier l'ajout du commentaire et le like")
+    public void vérifierLAjoutDuCommentaireEtLeLike() {
+        logger.info("vérifier que le commentaire et le like on été ajouté");
+        Assert.assertNotEquals(driver.findElements(By.cssSelector("div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size(),0);
+        //Assert.assertEquals(driver.findElements(By.cssSelector(" div.open-photo-content > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li:nth-child(1) > span.inline-svg-icon.reactions-icon-statistic-LIKE.reactions-menu__icon")).size(),1);
+
+    }
 }

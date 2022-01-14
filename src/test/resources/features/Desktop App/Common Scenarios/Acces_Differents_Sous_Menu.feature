@@ -27,6 +27,7 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
     Then  vérifier que la page affichée est la page annuaire
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_knowstore_menu_gauche"
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
     And pause 3 secondes
 
     Then vérifier que la page affichée est la page knows store
