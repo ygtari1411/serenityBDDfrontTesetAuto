@@ -842,7 +842,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-floating-label-form:nth-child(1) > div > input")
     public static WebElement Champ_Input_Titre_Lien_Utile;
 
-    @FindBy(css = "app-floating-label-form:nth-child(2) > div > input")
+    @FindBy(css = "app-modal-useful-link > div.modal-body > form > app-floating-label-form:nth-child(3) > div > input")
     public static WebElement Champ_Input_Lien_Lien_Utile;
 
     @FindBy(css = "button.btn.btn-md-2.btn-primary")
