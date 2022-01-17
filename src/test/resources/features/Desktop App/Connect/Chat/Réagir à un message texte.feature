@@ -44,6 +44,7 @@ Feature: Chat - Réagir à un message texte
     And pause 5 secondes
     And l utilisateur clique sur "Premiere_Notification_chat_Afficher"
     And pause 5 secondes
+    And l utilisateur effectue un hover sur "Icone_Reaction_Message_Chat"
     And l utilisateur clique sur "Bouton_Reaction_Message_Chat"
     And pause 5 secondes
 
