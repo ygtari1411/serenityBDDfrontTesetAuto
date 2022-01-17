@@ -21,10 +21,11 @@ Feature: TeamLab - Envoyer une pièce jointe dans un groupe
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     #And pause 5 secondes
-   # And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+   And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+   And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Envoyer une pièce jointe dans un groupe dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Envoi pièce jointe Bulle Test" dans le champs "Champ_Input_Sujet_Bulle"
@@ -33,7 +34,7 @@ Feature: TeamLab - Envoyer une pièce jointe dans un groupe
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Inviter_Membres_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Ennaceur" dans le champs "Champ_Input_invites_interne_evenement"
+    #And l utilisateur saisit "Ennaceur" dans le champs "Champ_Input_invites_interne_evenement"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Chercher_Invite_interne_evenement"
     And pause 5 secondes

@@ -21,10 +21,11 @@ Feature: TeamLab - Modifier un groupe de discussion
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     #And pause 5 secondes
-   # And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+   And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+   And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Modifier Un Groupe De Discussion" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Bulle de test" dans le champs "Champ_Input_Sujet_Bulle"
@@ -41,7 +42,7 @@ Feature: TeamLab - Modifier un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Créer_Bulle"
+    #And l utilisateur clique sur "Bouton_Créer_Bulle"
     And pause 5 secondes
 
    #Etape 3 : Verifier la création de bulle

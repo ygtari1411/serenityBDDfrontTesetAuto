@@ -21,10 +21,11 @@ Feature: TeamLab - Ajouter un groupe de discussion privée
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     #And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+    And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Bulle Test Privée" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
     And l utilisateur saisit "Sujet de Bulle de test" dans le champs "Champ_Input_Sujet_Bulle"

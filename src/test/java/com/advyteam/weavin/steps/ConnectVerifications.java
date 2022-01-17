@@ -2990,4 +2990,16 @@ public class ConnectVerifications {
         Assert.assertEquals(element.getAttribute("innerText"),"ARTICLE");
     }
 
+    //TeamLab
+    @And("l utilisateur clique sur le bouton ajouter bulle")
+    public void lUtilisateurCliqueSurLeBoutonAjouterBulle() {
+        logger.info("l utilisateur clique sur le bouton ajouter bulle");
+
+        WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-rooms/div[1]/div/div[1]/div/a"));
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+    }
+
+
 }

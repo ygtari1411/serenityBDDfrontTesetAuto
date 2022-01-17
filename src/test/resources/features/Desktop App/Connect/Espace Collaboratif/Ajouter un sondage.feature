@@ -24,11 +24,12 @@ Feature: TeamLab - Ajouter un sondage
    # And pause 5 secondes
     #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+    And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Sondage Bulle Test" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Sujet de Sondage Bulle Test" dans le champs "Champ_Input_Sujet_Bulle"
+    #And l utilisateur saisit "Sujet de Sondage Bulle Test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
     And l utilisateur selectionne "Publique" dans la liste deroulante "Liste_Type_Bulle"
     And pause 5 secondes

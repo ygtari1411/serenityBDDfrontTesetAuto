@@ -21,13 +21,14 @@ Feature: TeamLab - Envoyer une image dans un groupe
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     #And pause 5 secondes
-      # And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+    And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Envoi image Bulle Test" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
-    And l utilisateur saisit "Sujet de Envoi image Bulle Test" dans le champs "Champ_Input_Sujet_Bulle"
+    #And l utilisateur saisit "Sujet de Envoi image Bulle Test" dans le champs "Champ_Input_Sujet_Bulle"
     And pause 5 secondes
     And l utilisateur selectionne "Publique" dans la liste deroulante "Liste_Type_Bulle"
     And pause 5 secondes
