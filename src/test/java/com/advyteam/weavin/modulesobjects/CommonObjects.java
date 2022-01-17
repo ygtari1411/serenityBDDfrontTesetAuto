@@ -48,7 +48,7 @@ public class CommonObjects extends PageObject {
     @FindBy(css = ".sidebar--small [title=Annuaire]")
     public static WebElement Bouton_annuaire_menu_gauche;
 
-    @FindBy(css = ".sidebar--small [title=\"Know'store\"]")
+    @FindBy(css = "#sidebar-left > div > perfect-scrollbar > div > div.ps-content > ul > div > li:nth-child(4) > a > div > svg > use")
     public static WebElement Bouton_knowstore_menu_gauche;
 
     @FindBy(css = ".sidebar--small [title=Idéations]")

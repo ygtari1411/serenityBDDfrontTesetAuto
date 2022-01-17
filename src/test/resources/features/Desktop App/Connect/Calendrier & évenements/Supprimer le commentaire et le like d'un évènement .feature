@@ -103,7 +103,7 @@ Feature: Calendrier & évenements - Supprimer le  Commentaire et le  like d un �
     And pause 10 secondes
     #Then vérifier  que le like a été supprimé
 
-#Etape 7 : Supprimer l'évenement
+    #Etape 7 : Supprimer l'évenement
 
     #And pause 5 secondes
     And l utilisateur clique sur "Bouton_options_evenement"

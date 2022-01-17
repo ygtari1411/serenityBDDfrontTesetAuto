@@ -43,10 +43,10 @@ Feature: Journalisation - Restaurer une publication
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
-    Then vérifier que la publication supprimé est affiché dans la liste journalisation publications
+    Then vérifier que la publication à restaurer est supprimée et affichée dans le journal des publications
 
   #Etape 5 : restaurer la publication
-
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Restaurer_Element"
     And pause 15 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
@@ -54,4 +54,5 @@ Feature: Journalisation - Restaurer une publication
     And l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And pause 5 secondes
     And vérifier que la publication est restauré
+
 

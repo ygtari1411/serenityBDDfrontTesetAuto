@@ -33,6 +33,7 @@ Feature: Journalisation - Restaurer une publication contenant des commentaires
 
   #Etape 3 : Supprimer une publication
 
+    And pause 5 secondes
     When l utilisateur clique sur "Bouton_Options_Publication"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Supprimer_Publication"

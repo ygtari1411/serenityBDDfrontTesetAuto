@@ -27,13 +27,25 @@ Feature: Journalisation - Restaurer  la photo de profil
 
   #Etape 3 : Suppresion de la photo de profil
 
-    When l utilisateur effectue un hover sur "Username_menu"
+    When l utilisateur clique sur "Username_menu"
     And pause 5 secondes
-    And l utilisateur effectue un hover sur "Bouton_supprimer_photo_profil"
+    When l utilisateur effectue un hover sur "Photo_profil_user"
+    And l utilisateur clique sur "Bouton_supprimer_photo_profil"
     And pause 5 secondes
 
   #Etape 4 : Verifier la suppression dans la journalisation
 
+    #When l utilisateur effectue un hover sur "Username_menu"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Bouton_Configuration_utilisateur"
+    #And pause 5 secondes
+    #And l utilisateur clique sur "Rubrique_Corbeille"
+    #And pause 10 secondes
+    #Then vérifier que le modal de Gestion des publications est affiché
+    #And pause 20 secondes
+    #Then vérifier que la photo supprimé est affiché dans la liste corbeille publications
+
+  #Etape 5 : Restaurer la photo
     When l utilisateur effectue un hover sur "Username_menu"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
@@ -41,11 +53,6 @@ Feature: Journalisation - Restaurer  la photo de profil
     And l utilisateur clique sur "Rubrique_Corbeille"
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
-    And pause 20 secondes
-    Then vérifier que la photo supprimé est affiché dans la liste corbeille publications
-
-  #Etape 5 : Restaurer la photo
-
     And l utilisateur clique sur "Bouton_Restaurer_Element"
     And pause 15 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"

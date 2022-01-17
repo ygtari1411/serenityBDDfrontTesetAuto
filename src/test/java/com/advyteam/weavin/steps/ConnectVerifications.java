@@ -1529,7 +1529,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
         Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals("Know'store",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+        Assert.assertEquals( datastore.get("Champ_Input_Description_Article"),generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("innerText"));
 
     }
 
@@ -1954,7 +1954,7 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
-                equalTo("Message Texte de Test"));
+                equalTo("Vu Message Texte par destinataire"));
     }
 
 
@@ -2989,5 +2989,14 @@ public class ConnectVerifications {
         WebElement element= driver.findElement(By.cssSelector("div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > div.tags-container > a"));
         Assert.assertEquals(element.getAttribute("innerText"),"ARTICLE");
     }
-
+    // Vérification pour Journalisation
+    @Then("vérifier que la publication à restaurer est supprimée et affichée dans le journal des publications")
+    public void vérifierQueLaPublicationÀRestaurerEstSuppriméeEtAffichéeDansLeJournalDesPublications() {
+        logger.info("vérifier que la publication à restaurer est supprimée et affichée dans le journal des publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication\n"));
+    }
 }
