@@ -36,7 +36,7 @@ Feature: BubbleStore - Configurer twitter
 
   #Etape3: Verifier que a etait effectue avec succes
 
-    And l utilisateur clique sur "Bouton_Enregistrer_Configuration_vimeo"
+    And l utilisateur clique sur "Bouton_Enregistrer_Configuration_twitter"
     Then vérifier que le message "Opération effectuée avec succès" s'affiche dans la notification
 
 
