@@ -27,11 +27,15 @@ Feature: BubbleStore - Configurer twitter
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Configurer_twitter"
     And pause 10 secondes
-    And l utilisateur selectionne "Utilisateur" dans la liste deroulante "Liste_Deroulante_vimeo_TypeSource"
+    And l utilisateur saisit "Nasser" dans le champs "nom_utilisateur_twitter"
     And pause 10 secondes
-    And l utilisateur saisit "12345" dans le champs "chaine_id_vimeo"
+    And l utilisateur saisit "12345" dans le champs "cle_consommateur_twitter"
     And pause 10 secondes
-    And l utilisateur saisit "4" dans le champs "nombre_video_afficher_vimeo"
+    And l utilisateur saisit "12345" dans le champs "cle_securite_twitter"
+    And pause 10 secondes
+    And l utilisateur saisit "12345" dans le champs "jeton_acces_twitter"
+    And pause 10 secondes
+    And l utilisateur saisit "12345" dans le champs "jeton_secret_acces_twitter"
 
 
   #Etape3: Verifier que a etait effectue avec succes

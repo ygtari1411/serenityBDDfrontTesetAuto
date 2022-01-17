@@ -1601,6 +1601,21 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.form-group.col.col-lg-6.col-md-6.col-sm-12.col-12 > app-floating-label-form:nth-child(4) > div > input")
     public static WebElement nombre_video_afficher_vimeo;
 
+    @FindBy(css = "app-floating-label-form:nth-child(1) > div > input")
+    public static WebElement nom_utilisateur_twitter;
+
+    @FindBy(css = "app-floating-label-form:nth-child(2) > div > input")
+    public static WebElement cle_consommateur_twitter;
+
+    @FindBy(css = "app-floating-label-form:nth-child(3) > div > input")
+    public static WebElement cle_securite_twitter;
+
+    @FindBy(css = "app-floating-label-form:nth-child(4) > div > input")
+    public static WebElement jeton_acces_twitter;
+
+    @FindBy(css = "app-floating-label-form:nth-child(5) > div > input")
+    public static WebElement jeton_secret_acces_twitter;
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
