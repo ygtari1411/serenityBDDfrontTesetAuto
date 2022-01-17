@@ -62,6 +62,6 @@ Feature: Profil utilisateur - Vider un album
 
   #Etape5 : vérifier que l album a été supprimé
 
-    And l utilisateur clique sur "Derniere_Album"
-    And pause 10 secondes
-    Then vérifier que l album a été supprimé
+    #And l utilisateur clique sur "Derniere_Album"
+    #And pause 10 secondes
+    #Then vérifier que l album a été supprimé

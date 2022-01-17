@@ -218,8 +218,8 @@ public class SpecificVerifications {
         logger.info("vérification que la page affichée est la page compagne de don");
         boolean specialwait = (new WebDriverWait(driver, 40)).until(
                 (ExpectedConditions
-                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list")));
-        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/donation-compaign/list", driver.getCurrentUrl());
+                        .urlMatches("https://weavin-nreg.bubbleyou.com/portal/monetization/donation-compaign/list")));
+        Assert.assertEquals("https://weavin-nreg.bubbleyou.com/portal/monetization/donation-compaign/list", driver.getCurrentUrl());
 
     }
 

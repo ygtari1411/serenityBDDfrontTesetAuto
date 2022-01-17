@@ -19,8 +19,9 @@ Feature: Timeline - Suppression d une publication par un administrateur
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
 
       #Etape 2 : Creation statut
-
+    And pause 10 secondes
     And l utilisateur saisit "Test automatisé publication statut" dans le champs "champ_statut"
+    And pause 5 secondes
     And l utilisateur clique sur "bouton_publier_statut"
 
     #Etape 3 : verification de la création d'un statut

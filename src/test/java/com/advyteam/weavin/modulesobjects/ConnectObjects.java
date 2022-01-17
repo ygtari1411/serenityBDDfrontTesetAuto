@@ -842,7 +842,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-floating-label-form:nth-child(1) > div > input")
     public static WebElement Champ_Input_Titre_Lien_Utile;
 
-    @FindBy(css = "app-floating-label-form:nth-child(2) > div > input")
+    @FindBy(css = "app-modal-useful-link > div.modal-body > form > app-floating-label-form:nth-child(3) > div > input")
     public static WebElement Champ_Input_Lien_Lien_Utile;
 
     @FindBy(css = "button.btn.btn-md-2.btn-primary")
@@ -1211,7 +1211,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/app-stream-line-post-form/div/div/form/div[2]/div/a/input")
     public static WebElement  Input_Media_TImeLine;
 
-    @FindBy(xpath = "//app-donation-compaign-list/div[3]/div/div/div")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-monetization/app-donation-compaign/section/app-donation-compaign-list/div[2]/div/div/div/button")
     public static WebElement  Bouton_Ajout_Compagne_De_Don;
 
     @FindBy(xpath = "//div/div/div/div/div/span[3]")
@@ -1241,7 +1241,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div[2]/div/label/app-floating-label-form/div/div/label")
     public static WebElement  Bouton_Montant_Collecter;
 
-    @FindBy(xpath = "//div/form/div[2]/button[1]")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-monetization/app-donation-compaign/section/app-donation-compaign-list/app-donation-compaign-form/div/div/div/div/form/div[2]/button[1]\n")
     public static WebElement  Bouton_Sauvegarder_Don;
 
     @FindBy(xpath = "//div[1]/div[2]/div[1]/div[2]/div/input")
@@ -1259,7 +1259,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//div/div/form/div[3]/input")
     public static WebElement  Titulaire_de_la_carte;
 
-    @FindBy(css = "/html/body/div/form/input[2]")
+    @FindBy(css = "span + input.StripeField--fake")
     public static WebElement  Numero_Carte;
 
     @FindBy(xpath = "//app-donation-modal/div/div/form/button")
