@@ -29,7 +29,7 @@ Feature: Compagne de Don - Creation et Lancement d une compagne de don
     And l utilisateur ajoute une photo de couverture pour la compagne de don
     And l utilisateur saisit "Test de charge" dans le champs "Descriptif_Compagne_De_Don"
     And pause 15 secondes
-    And l utilisateur saisit "31/12/2021" dans le champs "Date_Cloture_Don"
+    And l utilisateur saisit "31/12/2022" dans le champs "Date_Cloture_Don"
     And pause 15 secondes
     And l utilisateur saisit "23:59" dans le champs "Heure_Cloture_Don"
     And pause 15 secondes

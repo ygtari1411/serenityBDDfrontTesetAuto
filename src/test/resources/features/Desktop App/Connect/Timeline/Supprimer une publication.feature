@@ -5,7 +5,7 @@
 
 
 
-Feature: Timeline - Modification d'une publication
+Feature: Timeline - Supprimer une publication
 
   @WEAVIN
   @WEAVIN-CONNECT
