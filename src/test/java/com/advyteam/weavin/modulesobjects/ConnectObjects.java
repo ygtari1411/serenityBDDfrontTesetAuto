@@ -1629,6 +1629,12 @@ public class ConnectObjects extends PageObject {
     public static WebElement  Icone_Reaction_Message_Chat;
 
 
+    @FindBy(xpath = "//app-about/div/div/form/div[1]/div/div/div[2]/app-floating-label-form/div/div/input")
+    public static WebElement profil_utilisateur_date_anniversaire;
+
+
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();
