@@ -1954,7 +1954,7 @@ public class ConnectVerifications {
             driver.wait(3000);
         }
         assertThat(generalobjectsmap.get("Message_reçu").getAttribute("innerText"),
-                equalTo("Vu Message Texte par destinataire"));
+                equalTo("Message Texte de Test"));
     }
 
 

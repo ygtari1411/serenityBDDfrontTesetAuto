@@ -638,7 +638,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > delete-icon > span > svg")
     public static WebElement Bouton_Supprimer_loisir;
 
-    @FindBy(css = "#sidebar-right > div > a > svg")
+    @FindBy(css = "#sidebar-right > div > a > svg > use")
     public static WebElement Bouton_Ouvrir_List_Chat;
 
     @FindBy(css = "div.mCustomScrollbar > perfect-scrollbar > div > div.ps-content > div > div")
@@ -647,7 +647,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#sidebar-right-1 > div.search-friend.inline-items > div > div > input")
     public static WebElement Champ_Input_Chercher_vos_amis;
 
-    @FindBy(css = "app-speed-access-user-item > li > div.author-status > a")
+    @FindBy(css = " div.author-status > a")
     public static WebElement Utilisateur_Chercher;
 
     @FindBy(css = " div.w-100.mt-3.actions-filter > button")
@@ -1379,7 +1379,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > div > button")
     public static WebElement  Bouton_Lancer_Sondage;
 
-    @FindBy(css = "div > button:nth-child(1) > span")
+    @FindBy(css = "app-chat-conversations-message-item:nth-child(15) > li > div > div.reaction-chat > app-post-reactions > div > ul > li > div > div > button:nth-child(1) > span")
     public static WebElement  Bouton_Reaction_Message_Chat;
 
     @FindBy(xpath = "//div[1]/app-post[1]/article[1]/div[1]/app-more-dropdown[1]/div[1]")
