@@ -154,6 +154,11 @@ public class CommonObjects extends PageObject {
     @FindBy(xpath = "//*[@id=\"sidebar-left-1\"]/div/perfect-scrollbar/div/div[1]/ul/div/li[9]")
     public static WebElement Statistique_connexion_dashboard;
 
+    @FindBy(xpath = "//a[contains(text(),'Profil utilisateur')]")
+    public static WebElement Sous_Rubrique_Parametres_Profil_Utilisateur;
+
+
+
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> COMMON_map = new HashMap<>();
