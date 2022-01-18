@@ -1632,6 +1632,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-about/div/div/form/div[1]/div/div/div[2]/app-floating-label-form/div/div/input")
     public static WebElement profil_utilisateur_date_anniversaire;
 
+    @FindBy(xpath = "//body/app-root[1]/app-layout-administration[1]/div[2]/app-panel-admin[1]/div[1]/div[1]/div[1]/div[2]/app-dynamic-fields[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/span[1]")
+    public static WebElement  Bouton_Ajouter_Champ_information;
+
+    @FindBy(xpath = "//app-panel-admin/div/div[1]/div/div[2]/app-dynamic-fields/div/div/div[1]/form/div/div/div/div/div[2]/div[1]/input")
+    public static WebElement  titre_nouveau_champ_profil_utilisateur;
+
+    @FindBy(xpath = "//button[contains(text(),'Enregistrer')]")
+    public static WebElement  Bouton_Enregistrer_information_supplementaire;
 
 
 
