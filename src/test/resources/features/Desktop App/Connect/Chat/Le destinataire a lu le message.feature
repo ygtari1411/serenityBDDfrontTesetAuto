@@ -38,9 +38,9 @@ Feature: Chat - Le destinataire a lu le message
 
   #Etape 4 : l utilisateur 2 verifier la réception de message
 
-    And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté" est connecté
+    And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
     And pause 10 secondes
-   # When l utilisateur clique sur "Bouton_Notifications_Chat"
+    When l utilisateur clique sur "Bouton_Notifications_Chat"
     And pause 5 secondes
     And l utilisateur clique sur "Premiere_Notification_chat_Afficher"
     And pause 5 secondes

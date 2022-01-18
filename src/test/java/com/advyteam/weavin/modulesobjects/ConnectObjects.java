@@ -429,7 +429,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css ="div.form-group.with-icon-right > div > button")
     public static WebElement Bouton_Envoyer_Commentaire_Publication;
 
-    @FindBy(css ="div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(2) > i")
+    @FindBy(css ="div:nth-child(6) > div > div.row.col-11.ml-1.mt-1 > div:nth-child(5) > a:nth-child(2) > i")
     public static WebElement Bouton_Restaurer_Element;
 
     @FindBy(css = "div.ql-editor.ql-blank")
@@ -477,7 +477,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.row > div > div > div > ul > li:nth-child(3)")
     public static WebElement Onglet_Mes_Evenements;
 
-    @FindBy(css =  "div.author-thumb > span > span:nth-child(2)")
+    @FindBy(css = "div.author-thumb > span > span:nth-child(2)")
     public static WebElement Bouton_supprimer_photo_profil;
 
     @FindBy(css = ".photo-album-item.create-album.cursor")
@@ -678,7 +678,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-speed-access-user-item:nth-child(1) > li > div.author-status > a")
     public static WebElement Premier_utilisateur_Favoris;
 
-    @FindBy(xpath = "//span[contains(text(),'Configuration')]")
+    @FindBy(css = " ul.account-settings > li:nth-child(2) > a")
     public static WebElement Bouton_Configuration_utilisateur;
 
     @FindBy(xpath = "//a[contains(text(),'Utilisateurs')]")
@@ -770,7 +770,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p")
     public static WebElement Contenu_Publication_Publié;
 
-    @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > svg")
+    @FindBy(css = "app-more-dropdown > div > svg")
     public static WebElement Bouton_Options_Publication;
 
     @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
@@ -788,7 +788,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
     public static WebElement Modal_Gestion_publications;
 
-    @FindBy(css = "div:nth-child(3) > div > div.row.col-11.ml-1.mt-1 > div.row.col-2 > i")
+    @FindBy(css = " div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow > p > p")
     public static WebElement Icone_Dernière_element_supprimée;
 
     @FindBy(xpath = "//a[contains(text(),'Personnaliser')]")

@@ -17,7 +17,7 @@ Feature: Journalisation - Restaurer un article
     Given le navigateur est ouvert et la page d'acceuil est affichée
     And pause 5 secondes
     And l'utilisateur "mohamed.benyedder@advyteam.com" est connecté
-    And pause 5 secondes
+    And pause 10 secondes
 
   #Etape2  : Ajout Article
 

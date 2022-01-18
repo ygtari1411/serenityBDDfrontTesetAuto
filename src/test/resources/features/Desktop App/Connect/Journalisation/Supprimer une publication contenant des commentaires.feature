@@ -19,17 +19,18 @@ Feature: Journalisation - Supprimer une publication contenant des commentaires
 
   #Etape 2 : Ajouter une publication contenant des commentaires
 
-    When l utilisateur saisit "test automatisé Supprimer une publication contenant des commentaires" dans le champs "Champ_Input_Publication"
+    When l utilisateur saisit "test automatisé Supprimer une publication " dans le champs "Champ_Input_Publication"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_publier_Publication"
-    And pause 5 secondes
-    And vérifier que la publication est publié
+    #And pause 5 secondes
+   #And vérifier que la publication est publié
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_commentaire_publication"
     And pause 5 secondes
     And l utilisateur saisit "test automatisé commentaire" dans le champs "Champ_Input_Commentaire_Publication"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Envoyer_Commentaire_Publication"
+    And pause 5 secondes
 
   #Etape 3 : Supprimer une publication
 
@@ -48,6 +49,6 @@ Feature: Journalisation - Supprimer une publication contenant des commentaires
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
-    Then vérifier que la publication contenant des commentaires supprimé est affiché dans la liste journalisation des publications
+    Then vérifier que la publication supprimé est affiché dans la liste journalisation publications
 
 

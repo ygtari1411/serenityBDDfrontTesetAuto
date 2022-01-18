@@ -25,7 +25,7 @@ Feature: Journalisation - Supprimer la photo de profil
 
 
   #Etape 3 : Suppresion de la photo de profil
-
+    And pause 10 secondes
     When l utilisateur effectue un hover sur "Photo_profil_user"
     And l utilisateur clique sur "Bouton_supprimer_photo_profil"
 
