@@ -1641,6 +1641,18 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//button[contains(text(),'Enregistrer')]")
     public static WebElement  Bouton_Enregistrer_information_supplementaire;
 
+    @FindBy(css = ".far.fa-cog")
+    public static WebElement  Ajouter_Restriction_Timeline;
+
+    @FindBy(css = "div.row > div:nth-child(1) > div > ng-select > div")
+    public static WebElement  Liste_Restriction_Timline_Par_Connaissance;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post-restriction/div[3]/button[2]")
+    public static WebElement  Bouton_Ajouter_Restriction_Timeline;
+
+    @FindBy(css = "#theField > div")
+    public static WebElement  Liste_Restriction_Timline_Par_Loisir;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
