@@ -1653,6 +1653,15 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#theField > div")
     public static WebElement  Liste_Restriction_Timline_Par_Loisir;
 
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post-restriction/div[2]/div/div[3]")
+    public static WebElement  Bouton_Autre_Critere_Timeline;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post-restriction/div[2]/div/div[4]/div/div/ng-select")
+    public static WebElement  Liste_nouveau_filtre_timeline;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post-restriction/div[2]/div/div[4]/div/div/ng-select")
+    public static WebElement  Bouton_ajouter_nouveau_filtre;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
