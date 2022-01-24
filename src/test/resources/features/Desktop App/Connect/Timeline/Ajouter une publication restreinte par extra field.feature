@@ -24,7 +24,7 @@ Feature: Timeline - Ajouter une publication restreinte par connaissance et par l
 
     #Etape 3 : ajout des restriction extra field
 
-    #todo :créer l'extra fiel et demander à ahmed de prendre un nouveau dump
+    #todo :créer l'extra field et demander à ahmed de prendre un nouveau dump
     #And l utilisateur clique sur "Ajouter_Restriction_Timeline"
     #And pause 10 secondes
     #And l utilisateur clique sur "Bouton_Autre_Critere_Timeline"
