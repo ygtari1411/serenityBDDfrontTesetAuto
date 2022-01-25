@@ -1662,6 +1662,12 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post-restriction/div[2]/div/div[4]/div/div/ng-select")
     public static WebElement  Bouton_ajouter_nouveau_filtre;
 
+    @FindBy(xpath = "//textarea[@name='Résumé']")
+    public static WebElement  Champ_Input_Profil_resume;
+
+    @FindBy(xpath = "//a[contains(text(),'Réseaux sociaux')]")
+    public static WebElement  rubrique_reseaux_sociaux;
+
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
