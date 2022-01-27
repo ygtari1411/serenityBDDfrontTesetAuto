@@ -25,4 +25,4 @@ Feature: Profil utilisateur - Ajouter un album vide
     And l utilisateur clique sur "Bouton_Ajout_Album"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Publier_Album"
-    Then vérifier que le message "L'album est vide " s'affiche dans la notification
+    Then vérifier que le message "Le titre de l'album est un champs obligatoire" s'affiche dans la notification
