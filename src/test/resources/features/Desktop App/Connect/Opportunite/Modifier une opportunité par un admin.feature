@@ -22,9 +22,10 @@ Feature: Opportunite - Modifier une opportunité par un admin
 
   #Etape 2 : Publier une opportunite
 
-     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
-     And pause 5 secondes
-     And l utilisateur clique sur "Publier_Une_Opportnite"
+    #When l utilisateur clique sur "Bouton_ouvrir_menu_gauche"
+    When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
+    And pause 10 secondes
+    And l utilisateur clique sur "Publier_Une_Opportnite"
      And pause 5 secondes
      And l utilisateur saisit "Voiture" dans le champs "Champ_input_titre_Opportunite"
      And pause 5 secondes
