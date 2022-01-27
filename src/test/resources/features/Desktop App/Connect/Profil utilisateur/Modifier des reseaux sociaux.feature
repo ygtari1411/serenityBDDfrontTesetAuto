@@ -24,9 +24,9 @@ Feature: Profil utilisateur - Ajouter les reseaux sociaux
     And pause 10 secondes
     And l utilisateur clique sur "rubrique_reseaux_sociaux"
     And pause 10 secondes
-    And l utilisateur saisit "ceci est un test automatique de l ajout d une citation avec auteur" dans le champs "Champ_reseau_facebook"
+    And l utilisateur saisit "https://fr-fr.facebook.com/zineb.hamdouch" dans le champs "Champ_reseau_facebook"
     And pause 10 secondes
-    And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
+    #And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
 
 
   #Etape3  vérifier que les reseaux socianx on était modifier
