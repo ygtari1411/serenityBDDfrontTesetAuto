@@ -1676,6 +1676,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(2) > div > div > div > ul > li > a")
     public static WebElement  Boutton_Les_categorie;
 
+    @FindBy(xpath = "//div[2]/div/div/form/div[1]/div[1]/app-floating-label-form/div/span/input")
+    public static WebElement  Champ_reseau_facebook;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
