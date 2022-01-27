@@ -41,7 +41,7 @@ Feature: Opportunite - Modifier une opportunité par son initiateur
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And pause 10 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-    And pause 15 secondes
+    And pause 40 secondes
   #Etape 3 : Verifier que l'opportunite a été ajouté
 
     Then verifier que l opportunite a ete ajoute

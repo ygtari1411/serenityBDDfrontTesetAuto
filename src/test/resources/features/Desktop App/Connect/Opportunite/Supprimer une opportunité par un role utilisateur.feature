@@ -41,7 +41,7 @@ Feature: Opportunite - Supprimer une opportunité par un role utilisateur
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And pause 20 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-    And pause 20 secondes
+    And pause 40 secondes
   #Etape 3 : Verifier que l'opportunite a été ajouté
 
     Then verifier que l opportunite a ete ajoute
@@ -62,4 +62,5 @@ Feature: Opportunite - Supprimer une opportunité par un role utilisateur
 
    #Etape 6 : l'utilisateur ne peut pas supprimer l'opportunité
 
-     Then verifier que le role utilisateur ne peut pas supprimer une opportunite
+#TODO CREE UN UTILISATEUR QUI A LE ROLE USER ET DE LUI DEMANDER A AHMED DE METTRE À JOUR LA BASE DE DONNER
+     #Then verifier que le role utilisateur ne peut pas supprimer une opportunite

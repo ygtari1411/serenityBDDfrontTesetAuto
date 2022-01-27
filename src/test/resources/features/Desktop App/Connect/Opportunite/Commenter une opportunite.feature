@@ -23,6 +23,7 @@ Feature: Opportunite - Commenter une opportunite
   #Etape 2 : Publier une opportunite
 
     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
+    And pause 10 secondes
     And pause 5 secondes
     And l utilisateur clique sur "Publier_Une_Opportnite"
     And pause 5 secondes
@@ -41,7 +42,7 @@ Feature: Opportunite - Commenter une opportunite
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And pause 20 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-    And pause 20 secondes
+    And pause 40 secondes
     #Etape 3 : Verifier que l'opportunite a été ajouté
 
     Then verifier que l opportunite a ete ajoute
@@ -72,7 +73,7 @@ Feature: Opportunite - Commenter une opportunite
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
     And pause 10 secondes
     And  l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
-    And pause 10 secondes
+    And pause 20 secondes
 
     #Etape 6 : vérifier que le like a été comptabilisé
 

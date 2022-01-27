@@ -23,6 +23,8 @@ Feature: Opportunite - Ajouter d une nouvelle opportunite
   #Etape 2 : Publier une opportunite
 
     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
+    And pause 10 secondes
+    And l utilisateur clique sur "Boutton_Les_categorie"
     And pause 5 secondes
     And l utilisateur clique sur "Publier_Une_Opportnite"
     And pause 5 secondes
@@ -41,7 +43,7 @@ Feature: Opportunite - Ajouter d une nouvelle opportunite
     And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And pause 20 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-    And pause 20 secondes
+    And pause 40 secondes
 
   #Etape 3 : Verifier que l'opportunite a été ajouté
 
