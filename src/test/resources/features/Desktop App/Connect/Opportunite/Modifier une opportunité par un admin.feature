@@ -41,7 +41,7 @@ Feature: Opportunite - Modifier une opportunité par un admin
      And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouvelle_idee"
     And pause 20 secondes
     And l utilisateur clique sur "Sauvegarder_Opportunite"
-    And pause 20 secondes
+    And pause 40 secondes
    #Etape 3 : Verifier que l'opportunite a été ajouté
 
      Then verifier que l opportunite a ete ajoute
@@ -58,7 +58,7 @@ Feature: Opportunite - Modifier une opportunité par un admin
     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
     And pause 10 secondes
     And l utilisateur clique sur "Bouton_Option_Opportunite"
-    And pause 10 secondes
+    And pause 20 secondes
 
    #Etape 6 : vérifer que L'admin ne peut pas modifier l'ooportunité
 

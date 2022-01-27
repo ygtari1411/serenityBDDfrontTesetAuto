@@ -1632,6 +1632,14 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//app-about/div/div/form/div[1]/div/div/div[2]/app-floating-label-form/div/div/input")
     public static WebElement profil_utilisateur_date_anniversaire;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/div/div[2]/a")
+    public static WebElement Nom_membres_sous_commentaire;
+
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comments-list/div/ul/app-post-comment/li/app-post-sub-comments/ul/li/div[1]/div/app-post-comment-form/form/div/div[2]/div/div")
+    public static WebElement  Input_Champs_Sous_commentaire_Modifie;
+
+    @FindBy(css = "div:nth-child(2) > div > div > div > ul > li > a")
+    public static WebElement  Boutton_Les_categorie;
 
 
 

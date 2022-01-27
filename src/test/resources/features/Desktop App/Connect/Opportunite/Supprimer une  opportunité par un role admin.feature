@@ -12,7 +12,7 @@ Feature: Opportunite - Supprimer une opportunité par un role admin
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-OPPORTUNITE
-  @WEAVIN-OPPORTUNITE-0007
+  @WEAVIN-OPPORTUNITE-0008
   Scenario: Supprimer une opportunité par un role admin
 
   #Etape 1 : Connexion
