@@ -959,7 +959,7 @@ public class ConnectVerifications {
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Modal_ajout_Evenement"))));
-        assertThat(generalobjectsmap.get("Modal_ajout_Evenement").isDisplayed(), IsEqual.equalTo(true));
+       assertThat(generalobjectsmap.get("Modal_ajout_Evenement").isDisplayed(), IsEqual.equalTo(true));
         assertThat(generalobjectsmap.get("Modal_ajout_Evenement").getAttribute("innerText"), equalTo("Créer un évènement"));
 
     }
@@ -990,11 +990,12 @@ public class ConnectVerifications {
     @Then("vérifier la création du nouveau evenement")
     public void vérifierLaCréationDuNouveauEvenement() {
         logger.info("vérifier la création du nouveau evenement");
-        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
-                (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Modal_Evenement"))));
-        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
-        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement"));
+       //WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                //(ExpectedConditions
+                //        .visibilityOf(generalobjectsmap.get("Titre_Event_Affiche"))));
+//        assertThat(generalobjectsmap.get("Modal_Evenement").isDisplayed(), IsEqual.equalTo(true));
+//        assertThat(generalobjectsmap.get("Modal_Evenement").getAttribute("innerText"), equalTo("Test automatique création evenement"));
+        Assert.assertEquals(datastore.get("Champ_Input_Titre_Evenement"),generalobjectsmap.get("Titre_Event_Affiche").getAttribute("innerText"));
     }
 
     // Vérification pour calendrier et evenements
@@ -1483,14 +1484,14 @@ public class ConnectVerifications {
         //Waiting for the first album to refresh
         Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
                 (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Contenu_Publication_Publié"), "innerText",
+                        .attributeContains(generalobjectsmap.get("Contenu_Publication_Publie"), "innerText",
                                 datastore.get("Champ_Input_Publication")+"\n")));
         //Waiting for the refreshed first album to render
         synchronized (driver) {
             driver.wait(3000);
         }
         //Asserting that first article contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Contenu_Publication_Publié").getAttribute("innerText"),
+        assertThat(generalobjectsmap.get("Contenu_Publication_Publie").getAttribute("innerText"),
                 equalTo(datastore.get("Champ_Input_Publication")+"\n"));
     }
 
@@ -1527,9 +1528,9 @@ public class ConnectVerifications {
         logger.info("vérifier que l article supprimé est affiché dans la liste journalisation publications");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
-        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals( datastore.get("Champ_Input_Description_Article"),generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("innerText"));
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertEquals(datastore.get("Champ_Input_Description_Article"),generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText"));
 
     }
 
@@ -1540,9 +1541,9 @@ public class ConnectVerifications {
         logger.info("vérifier que l article supprimé est affiché dans la liste journalisation publications");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))));
-        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals("Idéation",generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertEquals(datastore.get("Description_nouvelle_idee"),generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText"));
 
 
     }
@@ -2516,21 +2517,12 @@ public class ConnectVerifications {
     public void verifierQueLaBulleAEteAjoutee() throws InterruptedException {
 
         logger.info("verifier que la bulle a ete ajoutee");
+     //  WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+             //  (ExpectedConditions
+               //     .visibilityOf(generalobjectsmap.get("Titre_Bulle_Rechercher"))));
+       // Assert.assertTrue(generalobjectsmap.get("Titre_Bulle_Rechercher").isDisplayed());
+        assertThat(generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"),equalTo(datastore.get("Champ_Input_Name_Bulle")));
 
-        //Waiting for the first album to refresh
-       /* Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
-                (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Titre_Bulle_Rechercher"), "innerText",
-                                datastore.get("Champ_Input_Name_Bulle"))));
-         */
-        //Waiting for the refreshed first album to render
-        synchronized (driver) {
-            driver.wait(3000);
-        }
-
-        //Asserting that first article contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"),
-                equalTo(datastore.get("Champ_Input_Name_Bulle")));
     }
 
     // Vérification pour team lab
@@ -2764,18 +2756,17 @@ public class ConnectVerifications {
 
         logger.info("vérifier que la publication est restauré");
 
-        //Waiting for the first album to refresh
-        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
-                (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Contenu_Publication_Publié"), "innerText",
-                                datastore.get("Champ_Input_Publication")+"\n")));
-        //Waiting for the refreshed first album to render
+      //  Waiting for the first album to refresh
+//        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+//                (ExpectedConditions
+//                        .attributeContains(generalobjectsmap.get("Derniere_Publication_publie"), "innerText",
+//                                datastore.get("Champ_Input_Publication"))));
+//       // Waiting for the refreshed first album to render
         synchronized (driver) {
             driver.wait(3000);
         }
         //Asserting that first article contains the text published in the scenario
-        assertThat(generalobjectsmap.get("Contenu_Publication_Publié").getAttribute("innerText"),
-                equalTo(datastore.get("Champ_Input_Publication")+"\n"));
+        Assert.assertEquals(generalobjectsmap.get("Derniere_Publication_publie").getAttribute("innerText"),(datastore.get("Champ_Input_Publication")));
     }
 
     // Vérification pour lien utile
@@ -2840,11 +2831,11 @@ public class ConnectVerifications {
 
         WebElement specialwait = (
                 new WebDriverWait(driver, 10).until(
-                    ExpectedConditions.visibilityOf(generalobjectsmap.get("Icone_Dernière_element_supprimée"))
+                    ExpectedConditions.visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))
                 )
         );
-        Assert.assertTrue(generalobjectsmap.get("Icone_Dernière_element_supprimée").isDisplayed());
-        Assert.assertEquals("News", generalobjectsmap.get("Icone_Dernière_element_supprimée").getAttribute("title"));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertEquals(datastore.get("Champ_Input_Description_News"),generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText"));
     }
 
     // Vérification pour teamlab
@@ -3011,5 +3002,15 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication\n"));
+    }
+    // Vérification pour Journalisation
+    @Then("vérifier que la publication contenant des commentaires supprimé est affiché dans la liste journalisation publications")
+    public void vérifierQueLaPublicationContenantDesCommentairesSuppriméEstAffichéDansLaListeJournalisationPublications() {
+        logger.info("vérifier que la publication à restaurer est supprimée et affichée dans le journal des publications");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication contenant des commentaires\n"));
     }
 }

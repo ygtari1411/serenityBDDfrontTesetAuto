@@ -7,7 +7,7 @@ Feature: Journalisation - Restaurer  la photo de profil
 
   @WEAVIN
   @WEAVIN-CONNECT
-  @WEAVIN-JOURNALISATION
+  @WEAVIN-JOURNALISATIOnN
   @WEAVIN-JOURNALISATION-0010
   Scenario: Restaurer  la photo de profil
 

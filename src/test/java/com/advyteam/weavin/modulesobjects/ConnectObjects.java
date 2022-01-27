@@ -768,12 +768,12 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_publier_Publication;
 
     @FindBy(css = "#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.overflow-content-post.container > p")
-    public static WebElement Contenu_Publication_Publié;
+   public static WebElement Contenu_Publication_Publie;
 
-    @FindBy(css = "app-more-dropdown > div > svg")
+    @FindBy(css = " div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > svg > use")
     public static WebElement Bouton_Options_Publication;
 
-    @FindBy(css = "div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
+    @FindBy(css = " div:nth-child(1) > app-post > article > div.post__author.author.vcard.inline-items > app-more-dropdown > div > ul > li:nth-child(2) > a")
     public static WebElement Bouton_Supprimer_Publication;
 
     @FindBy(xpath = "//a[contains(text(),'Corbeille')]")
@@ -788,7 +788,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-title")
     public static WebElement Modal_Gestion_publications;
 
-    @FindBy(css = " div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow > p > p")
+    @FindBy(css = "div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow > i")
     public static WebElement Icone_Dernière_element_supprimée;
 
     @FindBy(xpath = "//a[contains(text(),'Personnaliser')]")
@@ -1301,7 +1301,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div > app-text-input > div > input")
     public static WebElement Champ_input_Filtre_Nom_Bulle;
 
-    @FindBy(css = "#room147 > div > div > div > div.friend-avatar.mb-1 > div.author-content > a")
+    @FindBy(css = "div.friend-avatar.mb-1 > div.author-content > a > font > font")
     public static WebElement Titre_Bulle_Rechercher;
 
     @FindBy(css = "div.profile-section > div.control-block-button > div > a")
@@ -1668,6 +1668,11 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//a[contains(text(),'Réseaux sociaux')]")
     public static WebElement  rubrique_reseaux_sociaux;
 
+    @FindBy(xpath = "//*[@id=\"headingOne-1\"]/h5/a")
+    public static WebElement Titre_Event_Affiche;
+
+    @FindBy(xpath = "div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > font > font")
+    public static WebElement Derniere_Publication_publie;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
