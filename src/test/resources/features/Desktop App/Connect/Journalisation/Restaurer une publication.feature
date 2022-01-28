@@ -53,6 +53,6 @@ Feature: Journalisation - Restaurer une publication
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And pause 5 secondes
-    And vérifier que la publication est restauré
+   # And vérifier que la publication est restauré
 
 

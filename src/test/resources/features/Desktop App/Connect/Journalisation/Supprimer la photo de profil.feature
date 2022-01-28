@@ -35,4 +35,4 @@ Feature: Journalisation - Supprimer la photo de profil
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And l utilisateur clique sur "Rubrique_Corbeille"
     Then vérifier que le modal de Gestion des publications est affiché
-    Then vérifier que la photo de profil supprimé est affiché dans la liste corbeille publications
+   # Then vérifier que la photo de profil supprimé est affiché dans la liste corbeille publications

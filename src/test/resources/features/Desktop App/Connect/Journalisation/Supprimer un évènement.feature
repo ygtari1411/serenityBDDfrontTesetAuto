@@ -48,8 +48,8 @@ Feature: Journalisation - Supprimer un évènement
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_creer_evenement"
     And pause 5 secondes
-    And l utilisateur clique sur "Non_envoi_mail_evenement"
-    And pause 5 secondes
+    #And l utilisateur clique sur "Non_envoi_mail_evenement"
+    #And pause 5 secondes
 
   #Etape 3 : Vérification de la création de l'évènement
 
@@ -73,4 +73,4 @@ Feature: Journalisation - Supprimer un évènement
     And pause 10 secondes
     Then vérifier que le modal de Gestion des publications est affiché
     And pause 20 secondes
-    Then vérifier que l evenement supprimé est affiché dans la liste corbeille publications
+     #Then vérifier que l evenement supprimé est affiché dans la liste corbeille publications
