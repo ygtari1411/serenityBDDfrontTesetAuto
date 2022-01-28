@@ -27,7 +27,7 @@ Feature: Profil utilisateur - Ajouter des connaissances
 
 
   #Etape3  vérifier que  connaissance a été ajouté
-
+    And pause 5 secondes
     Then vérifier que connaissance a été ajouté
 
 

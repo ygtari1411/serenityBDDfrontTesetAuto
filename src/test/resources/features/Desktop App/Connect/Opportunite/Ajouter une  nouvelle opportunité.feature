@@ -24,8 +24,6 @@ Feature: Opportunite - Ajouter d une nouvelle opportunite
 
     When l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
     And pause 10 secondes
-    And l utilisateur clique sur "Boutton_Les_categorie"
-    And pause 5 secondes
     And l utilisateur clique sur "Publier_Une_Opportnite"
     And pause 5 secondes
     And l utilisateur saisit "Voiture" dans le champs "Champ_input_titre_Opportunite"
