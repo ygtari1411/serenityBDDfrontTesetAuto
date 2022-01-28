@@ -48,5 +48,5 @@ Feature: TeamLab - Ajouter un groupe de discussion
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Ajouter Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    #And pause 10 secondes
-    #Then verifier que la bulle a ete ajoutee
+    And pause 20 secondes
+    Then verifier que la bulle a ete ajoutee

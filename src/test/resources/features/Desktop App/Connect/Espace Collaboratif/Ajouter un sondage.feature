@@ -21,8 +21,8 @@ Feature: TeamLab - Ajouter un sondage
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-   # And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
@@ -67,7 +67,8 @@ Feature: TeamLab - Ajouter un sondage
     And l utilisateur saisit "option 2" dans le champs "Champ_Input_Option2_Sondage"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Lancer_Sondage"
-    #Then verifier que le sondage a ete creé
+    And pause 10 secondes
+    Then verifier que le sondage a ete creé
 
 
 

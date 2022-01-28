@@ -20,8 +20,8 @@ Feature: TeamLab - Ecrire un message dans un groupe
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
@@ -59,7 +59,7 @@ Feature: TeamLab - Ecrire un message dans un groupe
     And pause 5 secondes
     And l utilisateur clique sur Entree pour l envoi de message
     And pause 5 secondes
-    #Then verifier que la message a ete envoye
+    Then verifier que la message a ete envoye
 
 
 

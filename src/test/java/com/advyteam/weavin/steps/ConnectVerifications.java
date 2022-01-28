@@ -2517,12 +2517,11 @@ public class ConnectVerifications {
     public void verifierQueLaBulleAEteAjoutee() throws InterruptedException {
 
         logger.info("verifier que la bulle a ete ajoutee");
-     //  WebElement specialwait = (new WebDriverWait(driver, 10)).until(
-             //  (ExpectedConditions
-               //     .visibilityOf(generalobjectsmap.get("Titre_Bulle_Rechercher"))));
-       // Assert.assertTrue(generalobjectsmap.get("Titre_Bulle_Rechercher").isDisplayed());
-        assertThat(generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"),equalTo(datastore.get("Champ_Input_Name_Bulle")));
-
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Titre_Bulle_Rechercher"))));
+        Assert.assertTrue(generalobjectsmap.get("Titre_Bulle_Rechercher").isDisplayed());
+        Assert.assertEquals((datastore.get("Champ_Input_Name_Bulle")),generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"));
     }
 
     // Vérification pour team lab
@@ -3012,5 +3011,80 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé"))));
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication contenant des commentaires\n"));
+    }
+
+    @Then("verifier que la bulle ne s affiche pas")
+    public void verifierQueLaBulleNeSAffichePas() {
+        logger.info("verifier que la bulle ne s affiche pas");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Titre_Bulle_Rechercher"))));
+       try {
+           Assert.assertEquals(driver.findElements(By.cssSelector("#room133 > div > div > div.private-room")).size(), 1);
+       }catch(Exception e){}
+
+    }
+
+    @Then("verifier que le sondage a ete creé")
+    public void verifierQueLeSondageAEteCreé() {
+        logger.info("verifier que le sondage a ete creé");
+
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Sondage_Bulle_Teamlab"))));
+        try {
+            Assert.assertEquals(driver.findElements(By.cssSelector("div.ui-block-content.sondage")).size(), 1);
+        }catch(Exception e){}
+
+    }
+
+    @Then("verifier que la message a ete envoye")
+    public void verifierQueLaMessageAEteEnvoye() {
+        logger.info("verifier que la message a ete envoye");
+
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Message_Bulle_Teamlab"))));
+        try {
+            Assert.assertEquals(driver.findElements(By.cssSelector("div.notification-event.min-width-7 > span")).size(), 1);
+        }catch(Exception e){}
+
+    }
+
+    //TEAMLAB
+    @And("l utilisateur saisit une image dans photo image bulle")
+    public void lUtilisateurSaisitUneImageDansPhotoImageBulle() {
+        logger.info("l utilisateur saisit une image dans photo image bulle");
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+
+        //executor.executeScript("document.getElementByXpath('/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input').removeAttribute('hidden');");
+        driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/imageTest4.jpg");
+
+
+
+    }
+
+    @And("l utilisateur saisit une video dans la bulle")
+    public void lUtilisateurSaisitUneVideoDansLaBulle() {
+        logger.info("l utilisateur saisit une video dans la bulle");
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+
+        //executor.executeScript("document.getElementByXpath('/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input').removeAttribute('hidden');");
+        driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/VideoTest2.mp4");
+
+    }
+
+    @And("l utilisateur saisit une piece jointe dans la bulle")
+    public void lUtilisateurSaisitUnePieceJointeDansLaBulle() {
+        logger.info("l utilisateur saisit une piece jointe dans la bulle");
+
+        JavascriptExecutor executor = (JavascriptExecutor)driver;
+
+        //executor.executeScript("document.getElementByXpath('/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input').removeAttribute('hidden');");
+        driver.findElement(By.xpath("/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input")).sendKeys(System.getProperty("user.dir") + "/src/test/resources/TestData/Uploads/FichierTest.pdf");
+
+
     }
 }
