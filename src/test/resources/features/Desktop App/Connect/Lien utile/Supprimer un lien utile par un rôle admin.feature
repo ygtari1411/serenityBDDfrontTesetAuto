@@ -53,9 +53,9 @@ Feature: Lien utile - Supprimer un lien utile par un rôle admin
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     And pause 5 secondes
-    And l utilisateur saisit "" dans le champs "Champ_Input_Rechercher_Lien_Utile"
+    And l utilisateur saisit "Test automatisé Ajout Lien Utile STEG" dans le champs "Champ_Input_Rechercher_Lien_Utile"
     And pause 5 secondes
-    And l utilisateur Vider le champ de rechercher Lien utile
+    #And l utilisateur Vider le champ de rechercher Lien utile
     And pause 10 secondes
     Then Vérifier que le lien utile est supprimé
 

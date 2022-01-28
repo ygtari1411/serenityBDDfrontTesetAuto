@@ -86,8 +86,7 @@ Feature: Brainstorming - Repondre a un vote a choix unique
   #Etape 8  : Vérifier que le vote a été ajouté
 
     Then verifier que le vote est comptabilse
-    And pause 5 secondes
-    And l utilisateur clique sur "Bouton_fermer_popup_Brainstorming"
+
 
 
 

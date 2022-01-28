@@ -23,6 +23,8 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_annuaire_menu_gauche"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
+
 
     Then  vérifier que la page affichée est la page annuaire
     And pause 10 secondes
@@ -34,26 +36,46 @@ Feature: Connexion_Deconnexion - Accéder aux différents sous menu
     And pause 10 secondes
     When l utilisateur clique sur "Bouton_ideation_menu_gauche"
     And pause 3 secondes
-
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
+    And pause 3 secondes
     Then vérifier que la page affichée est la page idéation
     And pause 10 secondes
+
+
     When l utilisateur clique sur "Bouton_calendrier_menu_gauche"
     And pause 3 secondes
-
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
+    And pause 3 secondes
     Then vérifier que la page affichée est la page calendrier et évenement
     And pause 10 secondes
+
     #And l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     #Then vérifier que la page affichée est la page team lab
     And l utilisateur clique sur "Bouton_Opportunite_menu_gauche"
     And pause 3 secondes
+    And pause 3 secondes
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
+    And pause 3 secondes
     Then vérifier que la page affichée est la page oportunitée
     And pause 5 secondes
+
     When l utilisateur clique sur "Bouton_Don_menu_gauche"
+    And pause 3 secondes
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
     And pause 3 secondes
     Then vérifier que la page affichée est la page campagne de dons
     And pause 10 secondes
+
+
+
     When l utilisateur clique sur "Bouton_news_menu_gauche"
+    And l utilisateur clique sur "Bouton_fermer_menu_gauche"
+    And pause 3 secondes
+
+
     Then vérifier que la page affichée est la page news
     And pause 3 secondes
+
+
     When l utilisateur clique sur "Bouton_Dashboard_menu_gauche"
     Then Vérifier que la  page affichée est Dashboard

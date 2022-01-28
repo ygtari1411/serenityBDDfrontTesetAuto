@@ -45,7 +45,7 @@ Feature: News - Rechercher News par statut publié
    #Etape 4 : Rechercher Les news avec le statut publié
 
      When l utilisateur selectionne "Publié" dans la liste deroulante "Liste_Deroulante_Statut_News"
-     And pause 20 secondes
+     And pause 30 secondes
      Then Vérifier que seuls les actualités "PUBLIÉ" s'affichent
 
 
