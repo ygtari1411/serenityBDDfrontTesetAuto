@@ -1685,6 +1685,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > font > font")
     public static WebElement Derniere_Publication_publie;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-administration/div[2]/app-panel-admin/div/div[1]/div/div[2]/app-app-store/app-vimeo/form/div[1]/div[1]/app-floating-label-form[3]/div/input")
+    public static WebElement  Champs_Token;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

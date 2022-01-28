@@ -29,9 +29,11 @@ Feature: BubbleStore - Configurer vimeo
     And pause 10 secondes
     And l utilisateur selectionne "Utilisateur" dans la liste deroulante "Liste_Deroulante_vimeo_TypeSource"
     And pause 10 secondes
-    And l utilisateur saisit "12345" dans le champs "chaine_id_vimeo"
+    And l utilisateur saisit "87e96b5bae865fc35fda5472434cef131ca72d2e" dans le champs "chaine_id_vimeo"
     And pause 10 secondes
-    And l utilisateur saisit "4" dans le champs "nombre_video_afficher_vimeo"
+    And l utilisateur saisit "https://api.vimeo.com/oauth/access_token" dans le champs "Champs_Token"
+    And pause 10 secondes
+    And l utilisateur saisit "3" dans le champs "nombre_video_afficher_vimeo"
 
 
   #Etape3: Verifier que a etait effectue avec succes

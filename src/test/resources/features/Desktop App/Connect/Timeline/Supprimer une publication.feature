@@ -33,5 +33,5 @@ Feature: Timeline - Supprimer une publication
     And l utilisateur clique sur "bouton_option_Supprimer_premiere_publication_afficher"
 
     #Etape 5 : Vérifier  la suppression de la publication
-
+    And pause 10 secondes
     Then Vérifier que le statut est supprime

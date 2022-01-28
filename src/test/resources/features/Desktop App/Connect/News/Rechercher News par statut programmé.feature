@@ -47,6 +47,7 @@ Feature: News - Rechercher News par statut programmé
    #Etape 4 : Rechercher Les news avec le statut programmé
 
     When l utilisateur selectionne "Programmé" dans la liste deroulante "Liste_Deroulante_Statut_News"
+    And pause 20 secondes
     Then Vérifier que seuls les actualités "PROGRAMMÉ" s'affichent
 
 
