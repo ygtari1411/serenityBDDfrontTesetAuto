@@ -1301,7 +1301,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div:nth-child(1) > div > app-text-input > div > input")
     public static WebElement Champ_input_Filtre_Nom_Bulle;
 
-    @FindBy(css = "div.friend-avatar.mb-1 > div.author-content > a > font > font")
+    @FindBy(css = ".card-container-list:nth-child(2) div.ui-block div.friend-item.friend-groups.position-relative div.friend-item-content.pb-0 div.friend-avatar.mb-1 div.author-content > a.h5.author-name")
     public static WebElement Titre_Bulle_Rechercher;
 
     @FindBy(css = "div.profile-section > div.control-block-button > div > a")
@@ -1340,7 +1340,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "ul > li:nth-child(2) > span")
     public static WebElement  Nombre_Like_Message_Bulle;
 
-    @FindBy(css = "span:nth-child(3) > a > svg")
+    @FindBy(css = "div > span:nth-child(3) > a > svg")
     public static WebElement Bouton_upload_photo_Bulle;
 
     @FindBy(css = "#create-photo-album > div > div > div.modal-body > a.btn.btn-primary.btn-lg.btn--half-width")
@@ -1355,7 +1355,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "a.btn.btn-primary.btn-lg.btn--half-width.btn-file")
     public static WebElement Bouton_Publier_Fichier_Bulle;
 
-    @FindBy(css = "#create-photo-album > div > div > div.modal-body > div > div > div > div > a > svg")
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-chat-discussion/div[11]/div/div/div[2]/div/div/div/div/input")
     public static WebElement H_Upload_photo_Mesage_Bulle;
 
     @FindBy(css = "span:nth-child(1) > a > svg")
@@ -1364,13 +1364,13 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.modal-body.poll-modal > form > div.form-group.label-floating > input")
     public static WebElement  Champ_Input_Question_Sondage;
 
-    @FindBy(css = " div.ng-pristine.ng-invalid.ng-touched > div:nth-child(1) > div > input")
+    @FindBy(css = "div.ng-untouched.ng-pristine.ng-invalid > div > div > input")
     public static WebElement  Champ_Input_Option1_Sondage;
 
     @FindBy(css = "#modal-add-sondage > div > div > div.modal-body.poll-modal > a > svg")
     public static WebElement  Bouton_Ajouter_Option_Sondage;
 
-    @FindBy(css = " div.ng-pristine.ng-invalid.ng-touched > div:nth-child(2) > div > input")
+    @FindBy(css = "div.ng-dirty.ng-touched.ng-invalid > div:nth-child(2) > div > input")
     public static WebElement  Champ_Input_Option2_Sondage;
 
     @FindBy(css = " app-post-statistics > div > ul > li:nth-child(2) > a > svg")
@@ -1684,6 +1684,12 @@ public class ConnectObjects extends PageObject {
 
     @FindBy(xpath = "div:nth-child(1) > app-post > article > div.overflow-content-post.container > p > font > font")
     public static WebElement Derniere_Publication_publie;
+
+    @FindBy(xpath = "#message201 > div.notification-event.min-width-7 > span")
+    public static WebElement Sondage_Bulle_Teamlab;
+
+    @FindBy(xpath = "//*[@id=\"bigContainer pb-2\"]/div[4]/div[2]/div[2]")
+    public static WebElement Message_Bulle_Teamlab;
 
     @FindBy(xpath = "/html/body/app-root/app-layout-administration/div[2]/app-panel-admin/div/div[1]/div/div[2]/app-app-store/app-vimeo/form/div[1]/div[1]/app-floating-label-form[3]/div/input")
     public static WebElement  Champs_Token;

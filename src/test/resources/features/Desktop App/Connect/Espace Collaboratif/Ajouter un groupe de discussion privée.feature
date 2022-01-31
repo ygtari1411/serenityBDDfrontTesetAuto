@@ -49,7 +49,7 @@ Feature: TeamLab - Ajouter un groupe de discussion privée
 
     And l utilisateur saisit "Bulle Test Privée" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
-   # Then verifier que la bulle a ete ajoutee
+    Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : l'utilisateur Marc se deconnecte
 
@@ -63,5 +63,5 @@ Feature: TeamLab - Ajouter un groupe de discussion privée
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
     And l utilisateur saisit "Bulle Test Privée" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    #And pause 5 secondes
-    # Then verifier que la bulle ne s affiche pas
+    And pause 5 secondes
+    Then verifier que la bulle ne s affiche pas

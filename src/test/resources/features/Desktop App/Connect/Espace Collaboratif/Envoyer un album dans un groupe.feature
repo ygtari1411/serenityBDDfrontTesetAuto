@@ -20,9 +20,9 @@ Feature: TeamLab - Envoyer un album dans un groupe
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-   # And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    #And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
@@ -48,21 +48,22 @@ Feature: TeamLab - Envoyer un album dans un groupe
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Envoyer Un Album Dans Un Groupe" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    And pause 5 secondes
-    Then verifier que la bulle a ete ajoutee
-
+    And pause 10 secondes
+    #Then verifier que la bulle a ete ajoutee
+    And pause 20 secondes
   #Etape 4 : Envoyer un album
 
     And l utilisateur clique sur "Titre_Bulle_Rechercher"
-    And pause 5 secondes
+    And pause 15 secondes
     And l utilisateur clique sur "Bouton_upload_photo_Bulle"
-    And pause 5 secondes
-    And l utilisateur upload "image1" dans le champs "H_Upload_photo_Mesage_Bulle"
-    And pause 5 secondes
-    And l utilisateur upload "image2" dans le champs "H_Upload_photo_Mesage_Bulle"
+    And pause 15 secondes
+    And l utilisateur saisit une image dans photo image bulle
+    #And l utilisateur upload "image1" dans le champs "H_Upload_photo_Mesage_Bulle"
+    #And pause 5 secondes
+    #And l utilisateur upload "image2" dans le champs "H_Upload_photo_Mesage_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Publier_Album_Bulle"
-    #Then verifier que l image a ete envoye
+   # Then verifier que l image a ete envoyee
 
 
 
