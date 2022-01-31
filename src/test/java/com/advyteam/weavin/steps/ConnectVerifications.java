@@ -2998,6 +2998,7 @@ public class ConnectVerifications {
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").isDisplayed());
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication\n"));
     }
+
     // Vérification pour Journalisation
     @Then("vérifier que la publication contenant des commentaires supprimé est affiché dans la liste journalisation publications")
     public void vérifierQueLaPublicationContenantDesCommentairesSuppriméEstAffichéDansLaListeJournalisationPublications() {
@@ -3009,6 +3010,7 @@ public class ConnectVerifications {
         Assert.assertTrue(generalobjectsmap.get("Contenu_Dernier_Element_Supprimé").getAttribute("innerText").contains("test automatisé Restaurer une publication contenant des commentaires\n"));
     }
 
+    //TEAMLAB
     @Then("verifier que la bulle ne s affiche pas")
     public void verifierQueLaBulleNeSAffichePas() {
         logger.info("verifier que la bulle ne s affiche pas");
@@ -3021,6 +3023,7 @@ public class ConnectVerifications {
 
     }
 
+    //TEAMLAB
     @Then("verifier que le sondage a ete creé")
     public void verifierQueLeSondageAEteCreé() {
         logger.info("verifier que le sondage a ete creé");
@@ -3034,6 +3037,7 @@ public class ConnectVerifications {
 
     }
 
+    //TEAMLAB
     @Then("verifier que la message a ete envoye")
     public void verifierQueLaMessageAEteEnvoye() {
         logger.info("verifier que la message a ete envoye");
@@ -3048,6 +3052,7 @@ public class ConnectVerifications {
     }
 
     //TEAMLAB
+    //Upload Method
     @And("l utilisateur saisit une image dans photo image bulle")
     public void lUtilisateurSaisitUneImageDansPhotoImageBulle() {
         logger.info("l utilisateur saisit une image dans photo image bulle");
@@ -3061,6 +3066,8 @@ public class ConnectVerifications {
 
     }
 
+    //TEAMLAB
+    //Upload Method
     @And("l utilisateur saisit une video dans la bulle")
     public void lUtilisateurSaisitUneVideoDansLaBulle() {
         logger.info("l utilisateur saisit une video dans la bulle");
@@ -3072,6 +3079,8 @@ public class ConnectVerifications {
 
     }
 
+    //TEAMLAB
+    //Upload Method
     @And("l utilisateur saisit une piece jointe dans la bulle")
     public void lUtilisateurSaisitUnePieceJointeDansLaBulle() {
         logger.info("l utilisateur saisit une piece jointe dans la bulle");
