@@ -20,11 +20,11 @@ Feature: TeamLab - Envoyer une image dans un groupe
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Envoi image Bulle Test" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes

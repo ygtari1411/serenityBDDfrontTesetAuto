@@ -20,9 +20,9 @@ Feature: TeamLab - Modifier un groupe de discussion
   #Etape 2 : Accéder au rubrique team lab
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    #And pause 5 secondes
-   And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    #And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
    And l utilisateur clique sur le bouton ajouter bulle
@@ -42,14 +42,14 @@ Feature: TeamLab - Modifier un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Créer_Bulle"
-    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Créer_Bulle"
+    And pause 15 secondes
 
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Modifier Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    And pause 5 secondes
-    Then verifier que la bulle a ete ajoutee
+    And pause 15 secondes
+    #Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Modifier la bulle
 
@@ -68,7 +68,7 @@ Feature: TeamLab - Modifier un groupe de discussion
     And l utilisateur saisit "Test.Bulle@bubble.com" dans le champs "Champ_Input_Email_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur "Boutton_Enregistre_Modifier_Bulle"
-    And pause 5 secondes
+    #And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Modifier_photo_Bulle"
     #And pause 10 secondes
     #And l utilisateur upload "image1" dans le champs Bulle "H_Upload_photo_Bulle"

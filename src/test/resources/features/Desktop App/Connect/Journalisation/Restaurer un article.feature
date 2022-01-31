@@ -85,4 +85,4 @@ Feature: Journalisation - Restaurer un article
     And pause 5 secondes
     Then vérifier que la page affichée est la page knows store
     And pause 5 secondes
-    Then vérifier la création du nouveau article
+    #Then vérifier la création du nouveau article
