@@ -51,11 +51,11 @@ Feature: News - Commenter et liker une news
     And l utilisateur clique sur "Titre_derniere_news"
     #And l utilisateur clique sur la derniere news ajoutee
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Repondre_News"
+    And l utilisateur clique sur "Bouton_Repondre_newss"
     And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
-    And l utilisateur clique sur "Bouton_aime_News"
+    And l utilisateur clique sur "Bouton_like_newss"
     And pause 10 secondes
     And vérifier l'ajout du commentaire et le like
 

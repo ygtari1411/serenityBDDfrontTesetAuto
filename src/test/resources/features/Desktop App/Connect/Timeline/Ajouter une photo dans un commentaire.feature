@@ -24,16 +24,18 @@ Feature: Timeline - Ajouter une photo dans un commentaire
     And l utilisateur clique sur "bouton_publier_statut"
 
       #Etape 3 : verification de la création d'un statut
-
+    And pause 10 secondes
     Then Vérifier que le statut est publié
 
      #Etape 4 : Commenter et liker la publication
 
     And l utilisateur clique sur "bouton_commenter_statut"
     And l utilisateur saisit une photo dans le commentaire
-    And l utilisateur clique sur "bouton_envoyer_commentaire_statut"
+    And pause 10 secondes
+    And l utilisateur clique sur "bouton_envoyer_commentaire_statutt"
 
     #Etape 5 : Verifier l'ajout du commentaire et du like
+    Then verifier que le commentaire a été ajoute
 
-    Then verifier que le commentaire et le like du statut on ete ajoute
+    #Then verifier que le commentaire et le like du statut on ete ajoute
 

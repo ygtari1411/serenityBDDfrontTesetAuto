@@ -45,16 +45,16 @@ Feature: News - Modification commentaire et like d'une news
 
     When l utilisateur clique sur "Bouton_accueil_menu_gauche"
     And l utilisateur clique sur la derniere news ajoutee
-    And l utilisateur clique sur "Bouton_Repondre_News"
-    And l utilisateur saisit "test automatisé modifier commentaire et like d'une news" dans le champs "Champ_Input_Commenter_News"
+    And l utilisateur clique sur "Bouton_Repondre_newss"
+    And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
-    And pause 10 secondes
+
     Then vérifier l ajout  correct du commentaire news
 
   #Etape 5 : Liker une news
 
-    And l utilisateur clique sur "Bouton_Interaction_News"
+    And l utilisateur clique sur "Bouton_like_newss"
     And pause 20 secondes
     Then vérifier l ajout  correct du Like news
 
