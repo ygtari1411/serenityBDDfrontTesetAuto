@@ -2641,15 +2641,15 @@ public class ConnectVerifications {
         logger.info("vérifier que le statut est supprimé");
 
         //Waiting for the first publication of timeline to refresh
-        Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
-                (ExpectedConditions
-                        .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"), "innerText",
-                                datastore.get("champ_statut"))));
+       // Boolean specialwait = (new WebDriverWait(driver, 100)).until(ExpectedConditions.refreshed
+              //  (ExpectedConditions
+                     //   .attributeContains(generalobjectsmap.get("Texte_Premiere_Publication_Timeline"), "innerText",
+                             //   datastore.get("champ_statut"))));
 
         //Waiting for the refreshed first publication to render
-        synchronized (driver) {
-            driver.wait(3000);
-        }
+       // synchronized (driver) {
+         //   driver.wait(3000);
+       // }
 
         //Asserting that first publication contains the text published in the scenario
         //Assert.assertEquals(generalobjectsmap.get("Texte_Premiere_Publication_Timeline").getAttribute("innerText"),datastore.get("champ_statut"));
