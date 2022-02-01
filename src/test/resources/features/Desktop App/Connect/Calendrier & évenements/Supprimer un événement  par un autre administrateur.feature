@@ -34,7 +34,7 @@ Feature: Calendrier & évenements - Supprimer un événement par un autre admini
     And l utilisateur saisit "Test automatique Supprimer un événement par un autre administrateur" dans le champs "Champ_Input_Titre_Evenement"
     And l utilisateur saisit "C'est un test automatique de suppression d'un événement par un autre administrateur" dans le champs "Champ_Input_Description_Evenement"
     And l utilisateur saisit "Tunis" dans le champs "Champ_Input_Lieu_Evenement"
-    And pause 5 secondes
+    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     When l utilisateur clique sur "Date_Debut_Evenement"
     And l utilisateur clique sur "Case_aujoudhui_Calendrier"
     And l utilisateur saisit "15:00" dans le champs "Heure_Debut_Evenement"
@@ -43,7 +43,7 @@ Feature: Calendrier & évenements - Supprimer un événement par un autre admini
     And l utilisateur clique sur "Case_aujoudhui_Calendrier"
     And l utilisateur saisit "16:00" dans le champs "Heure_Fin_Evenement"
     And pause 5 secondes
-    And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
+    #And l utilisateur upload "image1" dans le champs "H_Upload_photo_nouveau_evenement"
     And l utilisateur upload "image2" dans le champs "Fichier_attache_nouveau_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Invités_Internes"

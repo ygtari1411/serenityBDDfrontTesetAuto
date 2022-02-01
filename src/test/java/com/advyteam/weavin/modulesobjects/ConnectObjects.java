@@ -1694,6 +1694,23 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/app-root/app-layout-administration/div[2]/app-panel-admin/div/div[1]/div/div[2]/app-app-store/app-vimeo/form/div[1]/div[1]/app-floating-label-form[3]/div/input")
     public static WebElement  Champs_Token;
 
+    @FindBy(xpath = "/html/body/app-root/app-layout-portal/div[2]/app-portal/div/div/main/app-stream-line-post/div/div[1]/app-post/app-post-comment-form/form/div[1]/div[2]/div/button")
+    public static WebElement  bouton_envoyer_commentaire_statutt;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-modal-post/div/div/div[2]/article/div[3]/app-post-statistics/div/ul/li[2]")
+    public static WebElement  Icone_Commentaire_Album;
+
+    @FindBy(xpath = "//html/body/ngb-modal-window[2]/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-reactions/div/ul/li[2]/div")
+    public static WebElement  Bouton_Repondre_newss;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window[2]/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-reactions/div/ul/li[1]/div")
+    public static WebElement  Bouton_like_newss;
+
+    @FindBy(xpath = "/html/body/ngb-modal-window[2]/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-statistics/div/ul")
+    public static WebElement  Bouton_Commentairee;
+
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();

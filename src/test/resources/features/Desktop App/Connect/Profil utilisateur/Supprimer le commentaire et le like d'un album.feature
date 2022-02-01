@@ -56,7 +56,7 @@ Feature: Profil utilisateur - Supprimer le commentaire et le like d'un album
 
   #Etape 6 : Supprimer le commentaire
 
-    When l utilisateur clique sur "Icone_Commentaire"
+    When l utilisateur clique sur "Icone_Commentaire_Album"
     And pause 20 secondes
     And l utilisateur effectue un hover sur "Bouton_Option_Commentaire"
     And pause 5 secondes
@@ -66,6 +66,6 @@ Feature: Profil utilisateur - Supprimer le commentaire et le like d'un album
 
   #Etape 7 : Supprimer l'interaction
 
-    When l utilisateur effectue un hover sur "Bouton_aime_Album"
+    When  l utilisateur clique sur "Bouton_aime_Album"
     And pause 10 secondes
     Then vérifier  que le like a été supprimé

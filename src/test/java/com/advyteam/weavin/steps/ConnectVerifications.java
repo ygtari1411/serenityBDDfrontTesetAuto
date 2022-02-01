@@ -3092,4 +3092,10 @@ public class ConnectVerifications {
 
 
     }
+//timeline
+    @Then("verifier que le commentaire a été ajoute")
+    public void verifierQueLeCommentaireAÉtéAjoute() {
+        logger.info("verifier que le commentaire a été ajoute");
+        Assert.assertEquals(driver.findElements(By.cssSelector("#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size(),1);
+    }
 }

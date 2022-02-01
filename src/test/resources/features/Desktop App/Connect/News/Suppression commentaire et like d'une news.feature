@@ -45,30 +45,30 @@ Feature: News - Suppression commentaire et like d'une news
   #Etape 4 : Commenter une news
 
     When l utilisateur clique sur "Bouton_accueil_menu_gauche"
-    And l utilisateur clique sur la derniere news ajoutee
-    And l utilisateur clique sur "Bouton_Repondre_News"
-    And l utilisateur saisit "test automatisé supprimer commentaire et like d'une news" dans le champs "Champ_Input_Commenter_News"
+    And pause 10 secondes
+    And l utilisateur effectue un hover sur "Barre_Temoin_Premiere_News_Affichee_accueil"
+    And l utilisateur clique sur "widget_News_Affichee_accueil"
+    And l utilisateur clique sur "Titre_derniere_news"
+    #And l utilisateur clique sur la derniere news ajoutee
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Repondre_newss"
+    And l utilisateur saisit "test automatisé commenter et Liker une news" dans le champs "Champ_Input_Commenter_News"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_News"
+    And l utilisateur clique sur "Bouton_like_newss"
     And pause 10 secondes
-    #Then vérifier l ajout  correct du commentaire news
-
+    And vérifier l'ajout du commentaire et le like
   #Etape 5 : Liker une news
-
-    And l utilisateur clique sur "Bouton_Interaction_News"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_like_newss"
     And pause 10 secondes
-    #Then vérifier l ajout  correct du Like news
+    And l utilisateur clique sur "Bouton_Commentairee"
 
   #Etape 6 : Supprimer le commentaire
-  And l utilisateur clique sur "Bouton_Repondre_News"
+
     When l utilisateur effectue un hover sur "Bouton_Option_Commentaire_News"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Supprimer_Commeaire_News"
-    And pause 10 secondes
-    Then verifier que le commentaire news est supprimé
 
-  #Etape 7 : Supprimer l'interaction
+    #Then verifier que le commentaire news est supprimé // to do
 
-    When l utilisateur clique sur "Bouton_Interaction_News"
-    And pause 5 secondes
-    Then verifier que l'interaction news a été supprimée avec succés
