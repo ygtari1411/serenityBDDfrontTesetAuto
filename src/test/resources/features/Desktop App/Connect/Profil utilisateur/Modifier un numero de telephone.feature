@@ -1,15 +1,15 @@
-# Auteur: BenYedder
+# Auteur: ygtari
 # Feature: Profil utilisateur
-# Scénario: Ajouter un numéro de téléphone
-# Date de création: 01/03/2021
+# Scénario: Modifier un numéro de téléphone
+# Date de création: 01/02/2022
 
-Feature: Profil utilisateur - Ajouter un numéro de téléphone
+Feature: Profil utilisateur - Modifier un numéro de téléphone
 
   @WEAVIN
   @WEAVIN-CONNECT
   @WEAVIN-PROFILUTILISATEUR
-  @WEAVIN-PROFILUTILISATEUR-0005
-  Scenario: Ajouter un numéro de téléphone
+  @WEAVIN-PROFILUTILISATEUR-0029
+  Scenario: Modifier un numéro de téléphone
 
   #Etape 1 : Connexion
 
@@ -26,8 +26,10 @@ Feature: Profil utilisateur - Ajouter un numéro de téléphone
     And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
     And pause 20 secondes
 
-  #Etape3  vérifier que le numéro de téléphone a été ajouté
+  #Etape3  : Modfier le numero de telephone
 
-    #Then vérifier que le numéro de téléphone a été ajouté
+    And l utilisateur modifie "03 89 27 61 03" dans le champs "Champ_Input_Profil_Phone"
+    And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
+    And pause 20 secondes
 
 
