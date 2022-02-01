@@ -20,9 +20,9 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
   #Etape 2 : Accéder au rubrique team lab et création de Bulle
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    #And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    #And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
@@ -42,30 +42,30 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Créer_Bulle"
-    And pause 10 secondes
+    And l utilisateur clique sur "Bouton_Créer_Bulle"
+    And pause 15 secondes
 
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
-    Then verifier que la bulle a ete ajoutee
-    And pause 5 secondes
+    #Then verifier que la bulle a ete ajoutee
+    #And pause 5 secondes
 
   #Etape 4 : Ecrire un message et faire une réaction
 
     And l utilisateur clique sur "Titre_Bulle_Rechercher"
-    And pause 5 secondes
-    And l utilisateur saisit "Réagir à un message de Bulle de test" dans le champs "Champ_Input_Message_Bulle"
+    And pause 10 secondes
+    And l utilisateur saisit "Message de Bulle de test" dans le champs "Champ_Input_Message_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur Entree pour l envoi de message
+    And pause 10 secondes
+    Then verifier que la message a ete envoye
     And pause 5 secondes
-    #Then verifier que la message a ete envoye
-    And pause 5 secondes
-    And l utilisateur clique sur "Boutton_Reaction_Message_Bulle"
-    And pause 5 secondes
+    And l utilisateur effectue un hover sur "Boutton_Reaction_Message_Bulle"
+    And pause 10 secondes
     And l utilisateur clique sur "Boutton_aime_Message_Bulle"
-    And pause 5 secondes
+    #And pause 5 secondes
     #Then vérifier l ajout correct du Like Bulle
 
 

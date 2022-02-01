@@ -22,8 +22,8 @@ Feature: TeamLab - Envoyer un album dans un groupe
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+   # And pause 5 secondes
+  #  And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Envoyer Un Album Dans Un Groupe" dans le champs "Champ_Input_Name_Bulle"
@@ -43,12 +43,12 @@ Feature: TeamLab - Envoyer un album dans un groupe
     And l utilisateur clique sur "Bouton_Ajouter_Invite_interne_evenement"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Créer_Bulle"
-    And pause 5 secondes
+    And pause 15 secondes
 
    #Etape 3 : Verifier la création de bulle
 
     And l utilisateur saisit "Envoyer Un Album Dans Un Groupe" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    And pause 10 secondes
+    And pause 5 secondes
     #Then verifier que la bulle a ete ajoutee
     And pause 20 secondes
   #Etape 4 : Envoyer un album

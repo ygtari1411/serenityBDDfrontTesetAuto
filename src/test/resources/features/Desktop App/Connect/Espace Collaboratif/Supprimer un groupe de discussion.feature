@@ -20,8 +20,8 @@ Feature: TeamLab - Supprimer un groupe de discussion
   #Etape 2 : Accéder au rubrique team lab
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
@@ -49,7 +49,7 @@ Feature: TeamLab - Supprimer un groupe de discussion
 
     And l utilisateur saisit "Supprimer Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 5 secondes
-    Then verifier que la bulle a ete ajoutee
+    #Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Supprimer la bulle
 

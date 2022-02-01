@@ -22,8 +22,8 @@ Feature: TeamLab - Ecrire un message dans un groupe
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 5 secondes
-    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And pause 5 secondes
+   # And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Ecrire Un Message Dans Un Groupe" dans le champs "Champ_Input_Name_Bulle"
@@ -49,7 +49,7 @@ Feature: TeamLab - Ecrire un message dans un groupe
 
     And l utilisateur saisit "Ecrire Un Message Dans Un Groupe" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 20 secondes
-    Then verifier que la bulle a ete ajoutee
+    #Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Ecrire un message
     And pause 10 secondes

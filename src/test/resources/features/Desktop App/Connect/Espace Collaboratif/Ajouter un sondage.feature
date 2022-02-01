@@ -23,7 +23,7 @@ Feature: TeamLab - Ajouter un sondage
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    And pause 5 secondes
+   # And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
@@ -50,7 +50,7 @@ Feature: TeamLab - Ajouter un sondage
 
     And l utilisateur saisit "Sondage Bulle Test" dans le champs "Champ_input_Filtre_Nom_Bulle"
     And pause 20 secondes
-    Then verifier que la bulle a ete ajoutee
+    #Then verifier que la bulle a ete ajoutee
 
   #Etape 4 : Envoyer une image
     And pause 5 secondes

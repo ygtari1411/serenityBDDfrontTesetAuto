@@ -199,7 +199,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.add-options-message > button.btn.btn-primary.btn-md-2")
     public static WebElement  Bouton_sauvegarder_article;
 
-    @FindBy(css = " div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > a")
+    @FindBy(css = "div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > a")
     public static WebElement  Titre_Premier_Article_publier;
 
     @FindBy(css = "div:nth-child(2) > div > app-post-card-useful-information > div > article > div.post-content > div.d-inline-block.card-action > div")
@@ -342,7 +342,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "div.control-block-button")
     public static WebElement Bouton_Ajout_Evenement;
 
-    @FindBy(css = "div.modal-header")
+    @FindBy(css = "body > ngb-modal-window > div > div > app-event-form > div > div.modal-header")
     public static WebElement Modal_ajout_Evenement;
 
     @FindBy(css = "div:nth-child(1) > ng-select > div")
