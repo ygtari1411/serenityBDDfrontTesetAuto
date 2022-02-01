@@ -968,8 +968,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//form[1]/div[3]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]")
     public static WebElement Champ_Input_Resume;
 
-    @FindBy(css = "#collapseOne > ul > li:nth-child(2) > a")
-    public static WebElement rubrique_divers;
+    @FindBy(xpath = "//*[@id=\"collapseOne\"]/ul/li[2]/a")
+    public static WebElement Rubrique_divers;
 
     @FindBy(css = "div.col.col-xl-6.order-xl-36.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
     public static WebElement Champ_Input_Divers_Loisirs;

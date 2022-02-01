@@ -1447,7 +1447,7 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
         //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Bennasr"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Aubry"));
     }
     // Vérification pour Annuaire Prénom
     @Then("vérifier que le nouvel utilisateur a été ajouté par prénom")
@@ -1459,7 +1459,7 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
         //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Karim"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Suzanne"));
 
     }
     // Vérification pour Annuaire nom et prénom
@@ -1472,7 +1472,7 @@ public class ConnectVerifications {
                         .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
         //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Karim Bennasr"));
+        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Suzanne Aubry"));
     }
 
     // Vérification pour Journalisation
@@ -2945,7 +2945,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
         Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
+        Assert.assertFalse(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
 
     }
     // Vérification pour Journalisation
