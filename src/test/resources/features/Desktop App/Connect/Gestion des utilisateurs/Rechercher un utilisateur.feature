@@ -33,37 +33,38 @@ Feature: Gestion des utilisateurs - Rechercher un utilisateur
 
     And l utilisateur clique sur "Bouton_Ajouter_Nouvel_utilisateur"
     And pause 5 secondes
-    And l utilisateur saisit "zaineb.hamdouch@advyteam.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
+    And l utilisateur saisit "ghada.ayadi@advyteam.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
     And pause 5 secondes
-    And l utilisateur saisit "zaineb" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
+    And l utilisateur saisit "Ghada" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
     And pause 5 secondes
-    And l utilisateur saisit "HAMDOUCH" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
+    And l utilisateur saisit "AYADI" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
     And pause 5 secondes
     Then l utilisateur clique sur "Bouton_enregistrer_Nouvel_utilisateur"
+    And pause 10 secondes
 
   #Etape 4 : Rechercher utilisateur
 
-    And l utilisateur saisit "zaineb" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "ghada" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 5 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
     And pause 5 secondes
 
-    And l utilisateur saisit "ain" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "Gha" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 5 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
     And pause 5 secondes
 
-    And l utilisateur saisit "ham" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "AYA" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 5 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
     And pause 5 secondes
 
-    And l utilisateur saisit "hamdouch" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "ayadi" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 5 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
     And pause 5 secondes
 
-    And l utilisateur saisit "HAMDOUCH" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "AYADI" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 5 secondes
     Then vérifier que le nouvel utilisateur a été ajouté
     And pause 5 secondes
@@ -76,5 +77,12 @@ Feature: Gestion des utilisateurs - Rechercher un utilisateur
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     And l utilisateur clique sur "Bouton_OK_Suppression_utilisateur"
+
+     #Etape 7 : Rechercher l'utilisateur avec prénom erroné
+
+    And l utilisateur saisit "Ghaaaaada" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur clique sur Entree pour le champ recherche
+    And pause 10 secondes
+    Then vérifier que le nouvel utilisateur a été ajouté Prenom erroné
 
 

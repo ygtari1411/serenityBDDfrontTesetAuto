@@ -22,9 +22,9 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
-    #And pause 5 secondes
-    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes
+    #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
+    #And pause 5 secondes
     And l utilisateur clique sur le bouton ajouter bulle
     And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_Input_Name_Bulle"
     And pause 5 secondes
@@ -47,8 +47,8 @@ Feature: TeamLab - Réagir à un message dans un groupe de discussion
 
    #Etape 3 : Verifier la création de bulle
 
-    And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
-    And pause 5 secondes
+    #And l utilisateur saisit "Réagir A Un Message Dans Un Groupe De Discussion" dans le champs "Champ_input_Filtre_Nom_Bulle"
+    #And pause 5 secondes
     #Then verifier que la bulle a ete ajoutee
     #And pause 5 secondes
 

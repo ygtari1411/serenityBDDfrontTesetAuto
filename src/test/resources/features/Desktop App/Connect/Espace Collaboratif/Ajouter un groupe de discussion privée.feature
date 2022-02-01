@@ -21,7 +21,7 @@ Feature: TeamLab - Ajouter un groupe de discussion privée
 
     When l utilisateur clique sur "Bouton_Teamlab_menu_gauche"
     And pause 5 secondes
-    And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
+  # And l utilisateur clique sur "Bouton_Fermer_menu_gauche"
     #And pause 5 secondes
     #And l utilisateur clique sur "Boutton_Ajouter_Bulle"
     And pause 5 secondes

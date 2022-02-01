@@ -1437,44 +1437,6 @@ public class ConnectVerifications {
 
     }
 
-    // Vérification pour Annuaire nom
-    @Then("vérifier que le nouvel utilisateur a été ajouté par nom")
-    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParNom() {
-
-        logger.info("vérifier que le nouvel utilisateur a été ajouté");
-        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
-                (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Aubry"));
-    }
-    // Vérification pour Annuaire Prénom
-    @Then("vérifier que le nouvel utilisateur a été ajouté par prénom")
-    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParPrenom() {
-
-        logger.info("vérifier que le nouvel utilisateur a été ajouté");
-        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
-                (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Suzanne"));
-
-    }
-    // Vérification pour Annuaire nom et prénom
-    @Then("vérifier que le nouvel utilisateur a été ajouté par nom et prénom")
-    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéParNomEtPrenom() {
-
-        logger.info("vérifier que le nouvel utilisateur a été ajouté");
-        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
-                (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        //Assert.assertEquals("Bennasr",generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText"));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains("Suzanne Aubry"));
-    }
-
     // Vérification pour Journalisation
     @And("vérifier que la publication est publié")
     public void vérifierQueLaPublicationEstPublié() throws InterruptedException {
@@ -2516,6 +2478,7 @@ public class ConnectVerifications {
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Titre_Bulle_Rechercher"))));
+
         Assert.assertTrue(generalobjectsmap.get("Titre_Bulle_Rechercher").isDisplayed());
         Assert.assertEquals((datastore.get("Champ_Input_Name_Bulle")),generalobjectsmap.get("Titre_Bulle_Rechercher").getAttribute("innerText"));
     }
@@ -2929,13 +2892,6 @@ public class ConnectVerifications {
         Assert.assertEquals(generalobjectsmap.get("Titre_Modal_configuration_Youtube").getAttribute("innerText"),"Étape 1:");
 
     }
-    //Vérification pour annuaire
-    @Then("vérifier que le nouvel utilisateur a été ajouté Prenom erroné")
-    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéPrenomErroné() {
-        logger.info("vérifier que le nouvel utilisateur a été ajouté Prenom erroné");
-        Assert.assertEquals(driver.findElements(By.xpath("/span[contains(text(),'Karim Bennasr')]")).size(),0);
-
-    }
     // Vérification pour Annuaire
     @Then("vérifier que le nouvel utilisateur a été ajouté")
     public void vérifierQueLeNouvelUtilisateurAÉtéAjouté() {
@@ -2943,9 +2899,9 @@ public class ConnectVerifications {
         logger.info("vérifier que le nouvel utilisateur a été ajouté");
         WebElement specialwait = (new WebDriverWait(driver, 10)).until(
                 (ExpectedConditions
-                        .visibilityOf(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute"))));
-        Assert.assertTrue(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").isDisplayed());
-        Assert.assertFalse(generalobjectsmap.get("Nom_Nouvel_utilisateur_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
+                        .visibilityOf(generalobjectsmap.get("Nouvel_user_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nouvel_user_Ajoute").isDisplayed());
+        Assert.assertTrue(generalobjectsmap.get("Nouvel_user_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
 
     }
     // Vérification pour Journalisation
@@ -3032,7 +2988,7 @@ public class ConnectVerifications {
                 (ExpectedConditions
                         .visibilityOf(generalobjectsmap.get("Sondage_Bulle_Teamlab"))));
         try {
-            Assert.assertEquals(driver.findElements(By.cssSelector("div.ui-block-content.sondage")).size(), 1);
+            Assert.assertEquals(driver.findElements(By.cssSelector("div.ui-block > div.ui-block-title")).size(), 1);
         }catch(Exception e){}
 
     }
@@ -3097,5 +3053,17 @@ public class ConnectVerifications {
     public void verifierQueLeCommentaireAÉtéAjoute() {
         logger.info("verifier que le commentaire a été ajoute");
         Assert.assertEquals(driver.findElements(By.cssSelector("#newsfeed-items-grid > div:nth-child(1) > app-post > article > div.post-additional-info.inline-items > app-post-statistics > div > ul > li > a > svg")).size(),1);
+    }
+
+    @Then("vérifier que le nouvel utilisateur a été ajouté Prenom erroné")
+    public void vérifierQueLeNouvelUtilisateurAÉtéAjoutéPrenomErroné() {
+
+        logger.info("vérifier que le nouvel utilisateur a été ajouté Prenom erroné");
+        WebElement specialwait = (new WebDriverWait(driver, 10)).until(
+                (ExpectedConditions
+                        .visibilityOf(generalobjectsmap.get("Nouvel_user_Ajoute"))));
+        Assert.assertTrue(generalobjectsmap.get("Nouvel_user_Ajoute").isDisplayed());
+        Assert.assertFalse(generalobjectsmap.get("Nouvel_user_Ajoute").getAttribute("innerText").contains(datastore.get("Champ_Input_Chercher_des_membres")));
+
     }
 }
