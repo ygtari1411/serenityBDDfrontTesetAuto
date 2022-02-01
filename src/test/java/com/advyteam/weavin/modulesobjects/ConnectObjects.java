@@ -635,6 +635,10 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > div")
     public static WebElement Tag_Loisirs;
 
+    @FindBy(css = "tag-input > div > div > tag:nth-child(2)")
+    public static WebElement Tag_Loisirss;
+
+
     @FindBy(css = "app-tag-management.hobbies.ng-star-inserted > div > div:nth-child(2) > tag-input > div > div > tag > div > div > delete-icon > span > svg")
     public static WebElement Bouton_Supprimer_loisir;
 

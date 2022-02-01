@@ -40,8 +40,9 @@ Feature: Profil utilisateur - Supprimer le commentaire et le like d'un album
     Then vérifier que l album a été ajouté
 
   #Etape 4 : Commenter un album
-
+    And pause 10 secondes
     And l utilisateur clique sur "Bouton_Repondre_Album"
+    And pause 5 secondes
     And l utilisateur saisit "test automatisé supprimer le commentaire et le Like un album" dans le champs "Champ_Input_Commenter_Album"
     And pause 10 secondes
     And l utilisateur clique sur "Envoyer_Commenteraire_Album"
