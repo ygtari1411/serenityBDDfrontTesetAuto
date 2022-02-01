@@ -857,7 +857,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "li:nth-child(1) > span")
     public static WebElement Titre_Premiere_Lien_Utile_List;
 
-    @FindBy(css = "div.flex-row.flex-row-action > i")
+    @FindBy(css = "div:nth-child(2) > div.flex-row.flex-row-action > i")
     public static WebElement Bouton_Supprimer_Lien_Utile;
 
     @FindBy(css = "div:nth-child(3) > div > a > svg")
