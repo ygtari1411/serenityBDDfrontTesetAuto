@@ -38,17 +38,17 @@ Feature: Annuaire - Paramétrage de l'annuaire
     And pause 5 secondes
     And l utilisateur saisit "Souriant, dynamique et ponctuel" dans le champs "Champ_Input_Resume"
     And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
-    And pause 20 secondes
+    And pause 10 secondes
 
   #Etape 4  : Ajout des informations Divers
 
     When l utilisateur clique sur "rubrique_divers"
     And pause 5 secondes
     And l utilisateur saisit "Sport, Nature" dans le champs "Champ_Input_Divers_Loisirs"
-    And l utilisateur clique sur Entree pour ajout Loisirs
+    And l utilisateur clique sur "Bouton_Enregistrer_Informations_Supp"
     And pause 5 secondes
-    And l utilisateur saisit "Informatique" dans le champs "Champ_Input_Divers_Connaissances"
-    And l utilisateur clique sur Entree pour ajout de Connaissance
+   # And l utilisateur saisit "Informatique" dans le champs "Champ_Input_Divers_Connaissances"
+   # And l utilisateur clique sur Entree pour ajout de Connaissance
 
   #Etape 5  : Ajout des informations Réseaux sociaux
 

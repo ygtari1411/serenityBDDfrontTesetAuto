@@ -971,7 +971,7 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "#collapseOne > ul > li:nth-child(2) > a")
     public static WebElement rubrique_divers;
 
-    @FindBy(css = "div.col.col-xl-6.order-xl-36.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
+    @FindBy(css = "app-floating-label-form > div > input")
     public static WebElement Champ_Input_Divers_Loisirs;
 
     @FindBy(css = "div.col.col-xl-6.order-xl-6.col-lg-6.order-lg-3.col-md-6.col-sm-6.col-12.ng-star-inserted > app-tag-management > div > div:nth-child(2) > tag-input > div > div > tag-input-form > form > input")
@@ -1709,6 +1709,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "/html/body/ngb-modal-window[2]/div/div/app-modal-post/div/div/div[2]/article/div[4]/app-post-statistics/div/ul")
     public static WebElement  Bouton_Commentairee;
 
+    @FindBy(css = " div.save-button.text-right.mt-5 > button")
+    public static WebElement  Bouton_Enregistrer_Informations_Supp;
 
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
