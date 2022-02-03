@@ -33,7 +33,7 @@ Feature: Timeline - Ajouter une photo dans un commentaire
     And l utilisateur saisit une photo dans le commentaire
     And pause 10 secondes
     And l utilisateur clique sur "bouton_envoyer_commentaire_statutt"
-
+    And pause 10 secondes
     #Etape 5 : Verifier l'ajout du commentaire et du like
     Then verifier que le commentaire a été ajoute
 

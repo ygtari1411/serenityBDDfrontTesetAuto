@@ -34,6 +34,6 @@ Feature: Lien utile - Ajouter un lien utile à travers la barre horizontale
 
       #Etape 3 : verification de la création d'un lien utile
 
-    And pause 7 secondes
-    And l utilisateur clique sur "Bouton_List_Lien_Utile"
-    Then vérifier que le lien utile est ajouté
+    #And pause 7 secondes
+    #And l utilisateur clique sur "Bouton_List_Lien_Utile"
+    #Then vérifier que le lien utile est ajouté

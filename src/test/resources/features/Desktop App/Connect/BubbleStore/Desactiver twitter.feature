@@ -19,7 +19,7 @@ Feature: BubbleStore - Desactiver twitter
     And l'utilisateur "marc.parenteau@yopmail.com" est connecté
 
   #Etape2  : Désactiver twitter
-
+    And pause 10 secondes
     When l utilisateur effectue un hover sur "Username_menu"
     And l utilisateur clique sur "Bouton_Configuration_utilisateur"
     And pause 10 secondes

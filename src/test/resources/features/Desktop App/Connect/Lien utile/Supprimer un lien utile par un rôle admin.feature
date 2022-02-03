@@ -30,16 +30,16 @@ Feature: Lien utile - Supprimer un lien utile par un rôle admin
     And l utilisateur clique sur "Bouton_Ajout_Lien_Utile"
     Then vérifier que le modal de création d'un lien utile est affiché
     And pause 5 secondes
-    And l utilisateur saisit "Test automatisé Ajout Lien Utile STEG" dans le champs "Champ_Input_Titre_Lien_Utile"
+    And l utilisateur saisit "Test automatisé Ajout Lien Utile GOOGLE" dans le champs "Champ_Input_Titre_Lien_Utile"
     And pause 5 secondes
-    And l utilisateur saisit "https://www.steg.com.tn/fr/index.html" dans le champs "Champ_Input_Lien_Lien_Utile"
+    And l utilisateur saisit "https://www.google.com/" dans le champs "Champ_Input_Lien_Lien_Utile"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Modal_Ajouter_Lien_Utile"
 
       #Etape 3 : verification de la création d'un lien utile
 
     And pause 7 secondes
-    And l utilisateur saisit "Test automatisé Ajout Lien Utile STEG" dans le champs "Champ_Input_Rechercher_Lien_Utile"
+    And l utilisateur saisit "Test automatisé Ajout Lien Utile GOOGLE" dans le champs "Champ_Input_Rechercher_Lien_Utile"
     Then Vérifier que le lien utile est publié
 
      #Etape 4 : Suppression d'un lien utile
@@ -53,8 +53,7 @@ Feature: Lien utile - Supprimer un lien utile par un rôle admin
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     And pause 5 secondes
-    And l utilisateur saisit "Test automatisé Ajout Lien Utile STEG" dans le champs "Champ_Input_Rechercher_Lien_Utile"
-    And pause 5 secondes
+    And l utilisateur saisit "Test automatisé Ajout Lien Utile GOOGLE" dans le champs "Champ_Input_Rechercher_Lien_Utile"
     #And l utilisateur Vider le champ de rechercher Lien utile
     And pause 10 secondes
     Then Vérifier que le lien utile est supprimé
