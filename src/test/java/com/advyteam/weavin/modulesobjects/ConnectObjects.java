@@ -1543,7 +1543,7 @@ public class ConnectObjects extends PageObject {
     public static WebElement Bouton_Enregistrer_Configuration_one_drive;
 
 
-    @FindBy(css = "app-invited-users > div > div.table-container.edition-mode > div.flex-table.flex-table-body > div.flex-row.first.position-relative > div.author-container > div.name-container")
+    @FindBy(css = "app-invited-users > div >div.table-container.edition-mode > div:nth-child(2) > div.flex-row.first.position-relative > div.author-container > div.name-container > span")
     public static WebElement Nom_Nouvel_utilisateur_Ajoute;
 
     @FindBy(css = " div.container-fluid > app-panel-admin > div > div.col.col-xl-9.order-xl-2.col-lg-9.order-lg-2.col-md-12.order-md-1.col-sm-12.col-12 > div > div.ui-block-content.background-grey > app-deleted-publications > div > div:nth-child(4) > div > div.row.col-11.ml-1.mt-1 > div.col-2.mt-3.content-overflow")
@@ -1716,6 +1716,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = " div.save-button.text-right.mt-5 > button")
     public static WebElement  Bouton_Enregistrer_Informations_Supp;
 
+    @FindBy(css = "app-invited-users > div > div.table-container.edition-mode > div:nth-child(2) > div.flex-row.first.position-relative > div.author-container > div.name-container")
+    public static WebElement  Nouvel_user_Ajoute;
 
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();

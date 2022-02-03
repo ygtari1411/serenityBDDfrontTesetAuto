@@ -32,8 +32,22 @@ Feature: Annuaire - Un utilisateur supprimer n'apparait pas dans la rubrique ann
     Then vérifier que le modal de Gestion des comptes est affiché
     And pause 5 secondes
 
+   #Etape 3 : Ajouter un nouvel utilisateur
+    And l utilisateur clique sur "invites_utilisateurs"
+    And pause 5 secondes
+    And l utilisateur clique sur "Bouton_Ajouter_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "suzanne.aubry@yopmail.com" dans le champs "Champ_Input_Email_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "Suzanne" dans le champs "Champ_Input_Prenom_Nouvel_utilisateur"
+    And pause 5 secondes
+    And l utilisateur saisit "Aubry" dans le champs "Champ_Input_Nom_Nouvel_utilisateur"
+    And pause 5 secondes
+    Then l utilisateur clique sur "Bouton_enregistrer_Nouvel_utilisateur"
+
 
     #Etape 3 : Rechercher L'utilisateur a  supprimer
+    And pause 10 secondes
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 5 secondes
     And l utilisateur saisit "suzanne" dans le champs "Champ_Input_Chercher_des_membres"
@@ -42,7 +56,7 @@ Feature: Annuaire - Un utilisateur supprimer n'apparait pas dans la rubrique ann
     #Etape 4 :Supprimer l'utilisateur
 
     And l utilisateur clique sur "Bouton_Supprimer_Utilisateur"
-    And pause 10 secondes
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_confirmer_action"
     And pause 5 secondes
     Then vérifier que le message "Supprimé !" s'affiche dans la notification
