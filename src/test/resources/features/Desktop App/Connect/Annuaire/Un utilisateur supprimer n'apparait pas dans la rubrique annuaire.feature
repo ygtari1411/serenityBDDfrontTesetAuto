@@ -36,7 +36,7 @@ Feature: Annuaire - Un utilisateur supprimer n'apparait pas dans la rubrique ann
     #Etape 3 : Rechercher L'utilisateur a  supprimer
     And l utilisateur clique sur "invites_utilisateurs"
     And pause 5 secondes
-    And l utilisateur saisit "karim" dans le champs "Champ_Input_Chercher_des_membres"
+    And l utilisateur saisit "suzanne" dans le champs "Champ_Input_Chercher_des_membres"
     And pause 15 secondes
 
     #Etape 4 :Supprimer l'utilisateur
@@ -54,10 +54,10 @@ Feature: Annuaire - Un utilisateur supprimer n'apparait pas dans la rubrique ann
 
    #Etape 5 :Rechercher par nom et vérifier que la carte de visite  de l'utilsateur  n'apparait pas
 
-    And l utilisateur saisit "karim" dans le champs "Champ_Input_Chercher_des_membres_Rubrique_Annuaire"
+    And l utilisateur saisit "suzanne" dans le champs "Champ_Input_Chercher_des_membres_Rubrique_Annuaire"
     And pause 5 secondes
     And l utilisateur clique sur "Bouton_Chercher_des_membres_Annuaire"
     And pause 5 secondes
-    Then verifier que la carte visite de l'utilisateur"karim" n apparait pas dans l annuaire
+    Then verifier que la carte visite de l'utilisateur"suzanne" n apparait pas dans l annuaire
 
 

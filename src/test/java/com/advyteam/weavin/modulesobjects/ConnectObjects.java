@@ -972,8 +972,8 @@ public class ConnectObjects extends PageObject {
     @FindBy(xpath = "//form[1]/div[3]/div[1]/app-floating-label-form[1]/div[1]/textarea[1]")
     public static WebElement Champ_Input_Resume;
 
-    @FindBy(css = "#collapseOne > ul > li:nth-child(2) > a")
-    public static WebElement rubrique_divers;
+    @FindBy(xpath = "//*[@id=\"collapseOne\"]/ul/li[2]/a")
+    public static WebElement Rubrique_divers;
 
     @FindBy(css = "app-floating-label-form > div > input")
     public static WebElement Champ_Input_Divers_Loisirs;

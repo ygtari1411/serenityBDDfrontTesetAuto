@@ -28,7 +28,7 @@ Feature: Annuaire - Paramétrage de l'annuaire
   #Etape 3  : Ajout des informations A propos
 
     When l utilisateur clique sur "Date_de_naissance"
-    And l utilisateur saisit "06/08/1996" dans le champs "Champ_Input_Profil_Anniversaire"
+    And l utilisateur saisit "14/08/1996" dans le champs "Champ_Input_Profil_Anniversaire"
     And pause 5 secondes
     And l utilisateur saisit "+1 470 634 8800" dans le champs "Champ_Input_Profil_Phone"
     And pause 5 secondes
@@ -37,13 +37,14 @@ Feature: Annuaire - Paramétrage de l'annuaire
     And l utilisateur saisit "Randy Pausch" dans le champs "Champ_Input_Profil_Auteur"
     And pause 5 secondes
     And l utilisateur saisit "Souriant, dynamique et ponctuel" dans le champs "Champ_Input_Resume"
+    And pause 5 secondes
     And l utilisateur clique sur "Bouton_Enregistrer_Parametre_Compte"
     And pause 10 secondes
 
   #Etape 4  : Ajout des informations Divers
 
-    When l utilisateur clique sur "rubrique_divers"
-    And pause 5 secondes
+    And l utilisateur clique sur "Rubrique_divers"
+    And pause 10 secondes
     And l utilisateur saisit "Sport, Nature" dans le champs "Champ_Input_Divers_Loisirs"
     And l utilisateur clique sur "Bouton_Enregistrer_Informations_Supp"
     And pause 5 secondes
