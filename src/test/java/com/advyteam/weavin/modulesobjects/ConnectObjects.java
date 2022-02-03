@@ -1719,6 +1719,16 @@ public class ConnectObjects extends PageObject {
     @FindBy(css = "app-invited-users > div > div.table-container.edition-mode > div:nth-child(2) > div.flex-row.first.position-relative > div.author-container > div.name-container")
     public static WebElement  Nouvel_user_Ajoute;
 
+    @FindBy(xpath = "//div[2]/app-about/div/div[1]/div/app-additional-information/div[2]/form/div[1]/div/app-floating-label-form/div/input")
+    public static WebElement  Champ_Input_information_supplementaire;
+
+    @FindBy(xpath = "//*[@id=\"collapseOne\"]/ul/li[2]/a")
+    public static WebElement  rubrique_information_supplementaire;
+
+    @FindBy(xpath = "//div[2]/app-about/div/div[1]/div/app-additional-information/div[2]/form/div[2]/button")
+    public static WebElement  enregistrer_information_supplementaire;
+
+
     public static Map<String, WebElement> objectsMapper() throws IllegalAccessException {
         Map<String, WebElement> CN_map = new HashMap<>();
         Field[ ] allFields = ConnectObjects.class.getFields();
